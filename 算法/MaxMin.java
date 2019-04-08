@@ -2,10 +2,12 @@
  * @Author: delevin.ying 
  * @Date: 2019-03-29 14:53:33 
  * @Last Modified by: delevin.ying
- * @Last Modified time: 2019-03-29 15:02:44
+ * @Last Modified time: 2019-04-08 14:57:09
  */
 import java.util.Scanner;
-
+/**
+ * 极大极小值得剪枝算法
+ */
 public class MaxMin {
     private static int[] arr = new int[10];
     private static int t = 0;
@@ -40,7 +42,6 @@ public class MaxMin {
     }
 
     /**
-     * 展示当局结果
      */
     private static void displayRound() {
         System.out.println("--------------------------------");
@@ -56,7 +57,6 @@ public class MaxMin {
     }
 
     /**
-     * 初始化
      */
     private static void newGame() {
         System.out.println("new game ------------");
@@ -66,67 +66,62 @@ public class MaxMin {
     }
 
     /**
-     * 深度遍历
      * @param it
      * @return
      */
     private static int dfs(int it) {
         int chec = check();
-        if (chec != -1) {//如果等于-1说明打完了，出结果了
-            // System.out.println("chec== " + chec);
+        if (chec != -1) {//
             return chec;
         }
-        //下面是没打完去尝试下棋
         int ans = it == 1 ? -INF : INF;
         for (int i = 1; i <= 9; ++i) {
-            if (arr[i] > 0)//这一步已经下了
+            if (arr[i] > 0)//
                 continue;
-            if (it == 1) {//如果是类型1
+            if (it == 1) {//
                 arr[i] = 1;
-                ans = Math.max(ans, dfs(2));//取最大
+                ans = Math.max(ans, dfs(2));//
             } else {
                 arr[i] = 2;
                 ans = Math.min(ans, dfs(1));
             }
-            arr[i] = 0;//最后重置回去
+            arr[i] = 0;//
         }
-        System.out.println("ans== " + ans);//最终取得值
+        // System.out.println("ans== " + ans);//
         return ans;
     }
 
     /**
-     * 检测输赢
      * @return
      */
     private static int check() {
         int it = 0;
         for (int i = 1; i <= 3; i++) {
-            if (arr[i] == arr[i + 3] && arr[i + 3] == arr[i + 6] && arr[i] > 0) {//有同列
+            if (arr[i] == arr[i + 3] && arr[i + 3] == arr[i + 6] && arr[i] > 0) {
                 it = arr[i];
                 break;
             }
             int k = 3 * (i - 1) + 1;
-            if (arr[k] == arr[k + 1] && arr[k] == arr[k + 2] && arr[k] > 0) {//有同行
+            if (arr[k] == arr[k + 1] && arr[k] == arr[k + 2] && arr[k] > 0) {
                 it = arr[k];
                 break;
             }
         }
         if (it < 0) {
-            if (arr[1] == arr[5] && arr[1] == arr[9] && arr[1] > 0)//斜
+            if (arr[1] == arr[5] && arr[1] == arr[9] && arr[1] > 0)
                 it = arr[1];
-            else if (arr[3] == arr[5] && arr[5] == arr[7] && arr[5] > 0)//斜
+            else if (arr[3] == arr[5] && arr[5] == arr[7] && arr[5] > 0)
                 it = arr[5];
         }
-        //it如果不等于0 ，说明有人赢了
-        int cnt = 0;//cnt统计剩下可以走的步数
+        int cnt = 0;
         for (int i = 1; i <= 9; ++i)
             if (arr[i] == 0)
                 cnt++;
-        if (it == 0 && cnt == 0)//如果没有步子可以走而且没人赢，说明和棋了
+        if (it == 0 && cnt == 0)
             return 0;
-        if (it == 1)//如果类型1赢了，
+        if (it == 1)
             return cnt + 1;
-        else if (it == 2)//如果类型2赢了
+        else if (it == 2)
             return -(cnt + 1);
         else
             return -1;
