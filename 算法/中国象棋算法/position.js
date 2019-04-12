@@ -85,7 +85,7 @@ var IN_FORT_ = [
 
 // 辅助数组，用于校验将（帅）、士（仕）、象（相）的走法是否合法
 var LEGAL_SPAN = [
-                       0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
@@ -122,39 +122,39 @@ var LEGAL_SPAN = [
 
 // 辅助数组，用于校验马的走法是否合理。如果合理，返回对应马脚的方向；否则，返回0
 var KNIGHT_PIN_ = [
-                              0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,-16,  0,-16,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0, -1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0, -1,  0,  0,  0,  1,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0, 16,  0, 16,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-  0,  0,  0,  0,  0,  0,  0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, -16, 0, -16, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, -1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 16, 0, 16, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0,
 ];
 
 var KING_DELTA = [-16, -1, 1, 16];
@@ -166,124 +166,124 @@ var MVV_VALUE = [50, 10, 10, 30, 40, 30, 20, 0];	// MVV/LVA每种子力的价值
 // 棋子位置价值数组
 var PIECE_VALUE = [
   [	// 帅（与兵合并）
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  9,  9,  9, 11, 13, 11,  9,  9,  9,  0,  0,  0,  0,
-    0,  0,  0, 19, 24, 34, 42, 44, 42, 34, 24, 19,  0,  0,  0,  0,
-    0,  0,  0, 19, 24, 32, 37, 37, 37, 32, 24, 19,  0,  0,  0,  0,
-    0,  0,  0, 19, 23, 27, 29, 30, 29, 27, 23, 19,  0,  0,  0,  0,
-    0,  0,  0, 14, 18, 20, 27, 29, 27, 20, 18, 14,  0,  0,  0,  0,
-    0,  0,  0,  7,  0, 13,  0, 16,  0, 13,  0,  7,  0,  0,  0,  0,
-    0,  0,  0,  7,  0,  7,  0, 15,  0,  7,  0,  7,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  1,  1,  1,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  2,  2,  2,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0, 11, 15, 11,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 9, 9, 9, 11, 13, 11, 9, 9, 9, 0, 0, 0, 0,
+    0, 0, 0, 19, 24, 34, 42, 44, 42, 34, 24, 19, 0, 0, 0, 0,
+    0, 0, 0, 19, 24, 32, 37, 37, 37, 32, 24, 19, 0, 0, 0, 0,
+    0, 0, 0, 19, 23, 27, 29, 30, 29, 27, 23, 19, 0, 0, 0, 0,
+    0, 0, 0, 14, 18, 20, 27, 29, 27, 20, 18, 14, 0, 0, 0, 0,
+    0, 0, 0, 7, 0, 13, 0, 16, 0, 13, 0, 7, 0, 0, 0, 0,
+    0, 0, 0, 7, 0, 7, 0, 15, 0, 7, 0, 7, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 11, 15, 11, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ], [	// 仕
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0, 20,  0,  0,  0, 20,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0, 18,  0,  0, 20, 23, 20,  0,  0, 18,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0, 23,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0, 20, 20,  0, 20, 20,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 18, 0, 0, 20, 23, 20, 0, 0, 18, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 20, 20, 0, 20, 20, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ], [	// 相
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0, 20,  0,  0,  0, 20,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0, 18,  0,  0, 20, 23, 20,  0,  0, 18,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0, 23,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0, 20, 20,  0, 20, 20,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 20, 0, 0, 0, 20, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 18, 0, 0, 20, 23, 20, 0, 0, 18, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 23, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 20, 20, 0, 20, 20, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ], [	// 马
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0, 90, 90, 90, 96, 90, 96, 90, 90, 90,  0,  0,  0,  0,
-    0,  0,  0, 90, 96,103, 97, 94, 97,103, 96, 90,  0,  0,  0,  0,
-    0,  0,  0, 92, 98, 99,103, 99,103, 99, 98, 92,  0,  0,  0,  0,
-    0,  0,  0, 93,108,100,107,100,107,100,108, 93,  0,  0,  0,  0,
-    0,  0,  0, 90,100, 99,103,104,103, 99,100, 90,  0,  0,  0,  0,
-    0,  0,  0, 90, 98,101,102,103,102,101, 98, 90,  0,  0,  0,  0,
-    0,  0,  0, 92, 94, 98, 95, 98, 95, 98, 94, 92,  0,  0,  0,  0,
-    0,  0,  0, 93, 92, 94, 95, 92, 95, 94, 92, 93,  0,  0,  0,  0,
-    0,  0,  0, 85, 90, 92, 93, 78, 93, 92, 90, 85,  0,  0,  0,  0,
-    0,  0,  0, 88, 85, 90, 88, 90, 88, 90, 85, 88,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 90, 90, 90, 96, 90, 96, 90, 90, 90, 0, 0, 0, 0,
+    0, 0, 0, 90, 96, 103, 97, 94, 97, 103, 96, 90, 0, 0, 0, 0,
+    0, 0, 0, 92, 98, 99, 103, 99, 103, 99, 98, 92, 0, 0, 0, 0,
+    0, 0, 0, 93, 108, 100, 107, 100, 107, 100, 108, 93, 0, 0, 0, 0,
+    0, 0, 0, 90, 100, 99, 103, 104, 103, 99, 100, 90, 0, 0, 0, 0,
+    0, 0, 0, 90, 98, 101, 102, 103, 102, 101, 98, 90, 0, 0, 0, 0,
+    0, 0, 0, 92, 94, 98, 95, 98, 95, 98, 94, 92, 0, 0, 0, 0,
+    0, 0, 0, 93, 92, 94, 95, 92, 95, 94, 92, 93, 0, 0, 0, 0,
+    0, 0, 0, 85, 90, 92, 93, 78, 93, 92, 90, 85, 0, 0, 0, 0,
+    0, 0, 0, 88, 85, 90, 88, 90, 88, 90, 85, 88, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ], [	// 车
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,206,208,207,213,214,213,207,208,206,  0,  0,  0,  0,
-    0,  0,  0,206,212,209,216,233,216,209,212,206,  0,  0,  0,  0,
-    0,  0,  0,206,208,207,214,216,214,207,208,206,  0,  0,  0,  0,
-    0,  0,  0,206,213,213,216,216,216,213,213,206,  0,  0,  0,  0,
-    0,  0,  0,208,211,211,214,215,214,211,211,208,  0,  0,  0,  0,
-    0,  0,  0,208,212,212,214,215,214,212,212,208,  0,  0,  0,  0,
-    0,  0,  0,204,209,204,212,214,212,204,209,204,  0,  0,  0,  0,
-    0,  0,  0,198,208,204,212,212,212,204,208,198,  0,  0,  0,  0,
-    0,  0,  0,200,208,206,212,200,212,206,208,200,  0,  0,  0,  0,
-    0,  0,  0,194,206,204,212,200,212,204,206,194,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 206, 208, 207, 213, 214, 213, 207, 208, 206, 0, 0, 0, 0,
+    0, 0, 0, 206, 212, 209, 216, 233, 216, 209, 212, 206, 0, 0, 0, 0,
+    0, 0, 0, 206, 208, 207, 214, 216, 214, 207, 208, 206, 0, 0, 0, 0,
+    0, 0, 0, 206, 213, 213, 216, 216, 216, 213, 213, 206, 0, 0, 0, 0,
+    0, 0, 0, 208, 211, 211, 214, 215, 214, 211, 211, 208, 0, 0, 0, 0,
+    0, 0, 0, 208, 212, 212, 214, 215, 214, 212, 212, 208, 0, 0, 0, 0,
+    0, 0, 0, 204, 209, 204, 212, 214, 212, 204, 209, 204, 0, 0, 0, 0,
+    0, 0, 0, 198, 208, 204, 212, 212, 212, 204, 208, 198, 0, 0, 0, 0,
+    0, 0, 0, 200, 208, 206, 212, 200, 212, 206, 208, 200, 0, 0, 0, 0,
+    0, 0, 0, 194, 206, 204, 212, 200, 212, 204, 206, 194, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ], [	// 炮
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,100,100, 96, 91, 90, 91, 96,100,100,  0,  0,  0,  0,
-    0,  0,  0, 98, 98, 96, 92, 89, 92, 96, 98, 98,  0,  0,  0,  0,
-    0,  0,  0, 97, 97, 96, 91, 92, 91, 96, 97, 97,  0,  0,  0,  0,
-    0,  0,  0, 96, 99, 99, 98,100, 98, 99, 99, 96,  0,  0,  0,  0,
-    0,  0,  0, 96, 96, 96, 96,100, 96, 96, 96, 96,  0,  0,  0,  0,
-    0,  0,  0, 95, 96, 99, 96,100, 96, 99, 96, 95,  0,  0,  0,  0,
-    0,  0,  0, 96, 96, 96, 96, 96, 96, 96, 96, 96,  0,  0,  0,  0,
-    0,  0,  0, 97, 96,100, 99,101, 99,100, 96, 97,  0,  0,  0,  0,
-    0,  0,  0, 96, 97, 98, 98, 98, 98, 98, 97, 96,  0,  0,  0,  0,
-    0,  0,  0, 96, 96, 97, 99, 99, 99, 97, 96, 96,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 100, 100, 96, 91, 90, 91, 96, 100, 100, 0, 0, 0, 0,
+    0, 0, 0, 98, 98, 96, 92, 89, 92, 96, 98, 98, 0, 0, 0, 0,
+    0, 0, 0, 97, 97, 96, 91, 92, 91, 96, 97, 97, 0, 0, 0, 0,
+    0, 0, 0, 96, 99, 99, 98, 100, 98, 99, 99, 96, 0, 0, 0, 0,
+    0, 0, 0, 96, 96, 96, 96, 100, 96, 96, 96, 96, 0, 0, 0, 0,
+    0, 0, 0, 95, 96, 99, 96, 100, 96, 99, 96, 95, 0, 0, 0, 0,
+    0, 0, 0, 96, 96, 96, 96, 96, 96, 96, 96, 96, 0, 0, 0, 0,
+    0, 0, 0, 97, 96, 100, 99, 101, 99, 100, 96, 97, 0, 0, 0, 0,
+    0, 0, 0, 96, 97, 98, 98, 98, 98, 98, 97, 96, 0, 0, 0, 0,
+    0, 0, 0, 96, 96, 97, 99, 99, 99, 97, 96, 96, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ], [	// 兵（与帅合并）
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  9,  9,  9, 11, 13, 11,  9,  9,  9,  0,  0,  0,  0,
-    0,  0,  0, 19, 24, 34, 42, 44, 42, 34, 24, 19,  0,  0,  0,  0,
-    0,  0,  0, 19, 24, 32, 37, 37, 37, 32, 24, 19,  0,  0,  0,  0,
-    0,  0,  0, 19, 23, 27, 29, 30, 29, 27, 23, 19,  0,  0,  0,  0,
-    0,  0,  0, 14, 18, 20, 27, 29, 27, 20, 18, 14,  0,  0,  0,  0,
-    0,  0,  0,  7,  0, 13,  0, 16,  0, 13,  0,  7,  0,  0,  0,  0,
-    0,  0,  0,  7,  0,  7,  0, 15,  0,  7,  0,  7,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  1,  1,  1,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  2,  2,  2,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0, 11, 15, 11,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 9, 9, 9, 11, 13, 11, 9, 9, 9, 0, 0, 0, 0,
+    0, 0, 0, 19, 24, 34, 42, 44, 42, 34, 24, 19, 0, 0, 0, 0,
+    0, 0, 0, 19, 24, 32, 37, 37, 37, 32, 24, 19, 0, 0, 0, 0,
+    0, 0, 0, 19, 23, 27, 29, 30, 29, 27, 23, 19, 0, 0, 0, 0,
+    0, 0, 0, 14, 18, 20, 27, 29, 27, 20, 18, 14, 0, 0, 0, 0,
+    0, 0, 0, 7, 0, 13, 0, 16, 0, 13, 0, 7, 0, 0, 0, 0,
+    0, 0, 0, 7, 0, 7, 0, 15, 0, 7, 0, 7, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 1, 1, 1, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 11, 15, 11, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
   ],
 ];
 
@@ -330,22 +330,22 @@ function ASC(c) {
 
 function CHAR_TO_PIECE(c) {
   switch (c) {
-  case "K":
-    return PIECE_KING;
-  case "A":
-    return PIECE_ADVISOR;
-  case "B":
-    return PIECE_BISHOP;
-  case "N":
-    return PIECE_KNIGHT;
-  case "R":
-    return PIECE_ROOK;
-  case "C":
-    return PIECE_CANNON;
-  case "P":
-    return PIECE_PAWN;
-  default:
-    return -1;
+    case "K":
+      return PIECE_KING;
+    case "A":
+      return PIECE_ADVISOR;
+    case "B":
+      return PIECE_BISHOP;
+    case "N":
+      return PIECE_KNIGHT;
+    case "R":
+      return PIECE_ROOK;
+    case "C":
+      return PIECE_CANNON;
+    case "P":
+      return PIECE_PAWN;
+    default:
+      return -1;
   }
 }
 
@@ -444,23 +444,23 @@ function SAME_FILE(sqSrc, sqDst) {
 function RC4(key) {
   this.x = this.y = 0;
   this.state = [];
-  for (var i = 0; i < 256; i ++) {
+  for (var i = 0; i < 256; i++) {
     this.state.push(i);
   }
   var j = 0;
-  for (var i = 0; i < 256; i ++) {
+  for (var i = 0; i < 256; i++) {
     j = (j + this.state[i] + key[i % key.length]) & 0xff;
     this.swap(i, j);
   }
 }
 
-RC4.prototype.swap = function(i, j) {
+RC4.prototype.swap = function (i, j) {
   var t = this.state[i];
   this.state[i] = this.state[j];
   this.state[j] = t;
 }
 
-RC4.prototype.nextByte = function() {
+RC4.prototype.nextByte = function () {
   this.x = (this.x + 1) & 0xff;
   this.y = (this.y + this.state[this.x]) & 0xff;
   this.swap(this.x, this.y);
@@ -469,7 +469,7 @@ RC4.prototype.nextByte = function() {
 }
 
 // 生成32位随机数
-RC4.prototype.nextLong = function() {
+RC4.prototype.nextLong = function () {
   var n0 = this.nextByte();
   var n1 = this.nextByte();
   var n2 = this.nextByte();
@@ -484,10 +484,10 @@ var rc4 = new RC4([0]);
 PreGen_zobristKeyPlayer = rc4.nextLong();
 rc4.nextLong();
 PreGen_zobristLockPlayer = rc4.nextLong();
-for (var i = 0; i < 14; i ++) {
+for (var i = 0; i < 14; i++) {
   var keys = [];
   var locks = [];
-  for (var j = 0; j < 256; j ++) {
+  for (var j = 0; j < 256; j++) {
     keys.push(rc4.nextLong());
     rc4.nextLong();
     locks.push(rc4.nextLong());
@@ -497,21 +497,21 @@ for (var i = 0; i < 14; i ++) {
 }
 
 function Position() {
-  
+
 }
 
 // 初始化棋局数组
-Position.prototype.clearBoard = function() {
+Position.prototype.clearBoard = function () {
   this.sdPlayer = 0;	// 该谁走棋。0-红方；1-黑方
   this.squares = [];	// 这个就是一维棋局数组
-  for (var sq = 0; sq < 256; sq ++) {
+  for (var sq = 0; sq < 256; sq++) {
     this.squares.push(0);
   }
   this.zobristKey = this.zobristLock = 0;
   this.vlWhite = this.vlBlack = 0;
 }
 
-Position.prototype.setIrrev = function() {
+Position.prototype.setIrrev = function () {
   this.mvList = [0];				// 存放每步走法的数组
   this.pcList = [0];				// 存放每步被吃的棋子。如果没有棋子被吃，存放的是0
   this.keyList = [0];				// 存放zobristKey校验码
@@ -520,7 +520,7 @@ Position.prototype.setIrrev = function() {
 }
 
 // 将FEN串转为一维数组，初始化棋局
-Position.prototype.fromFen = function(fen) {
+Position.prototype.fromFen = function (fen) {
   this.clearBoard();
   var y = RANK_TOP;
   var x = FILE_LEFT;
@@ -533,7 +533,7 @@ Position.prototype.fromFen = function(fen) {
   while (c != " ") {
     if (c == "/") {
       x = FILE_LEFT;
-      y ++;
+      y++;
       if (y > RANK_BOTTOM) {
         break;
       }
@@ -545,7 +545,7 @@ Position.prototype.fromFen = function(fen) {
         if (pt >= 0) {
           this.addPiece(COORD_XY(x, y), pt + 8);
         }
-        x ++;
+        x++;
       }
     } else if (c >= "a" && c <= "z") {
       if (x <= FILE_RIGHT) {
@@ -553,98 +553,57 @@ Position.prototype.fromFen = function(fen) {
         if (pt >= 0) {
           this.addPiece(COORD_XY(x, y), pt + 16);
         }
-        x ++;
+        x++;
       }
     }
-    index ++;
+    index++;
     if (index == fen.length) {
       this.setIrrev();
-	  return;
+      return;
     }
     c = fen.charAt(index);
   }
-  index ++;
+  index++;
   if (index == fen.length) {
     this.setIrrev();
-	return;
+    return;
   }
 
   this.setIrrev();
 }
 
 // 生成棋局的所有走法，vls不为null时，生成吃子走法
-Position.prototype.generateMoves = function(vls) {
+Position.prototype.generateMoves = function (vls) {
   var mvs = [];
   var pcSelfSide = SIDE_TAG(this.sdPlayer);
   var pcOppSide = OPP_SIDE_TAG(this.sdPlayer);
-  for (var sqSrc = 0; sqSrc < 256; sqSrc ++) {
+  for (var sqSrc = 0; sqSrc < 256; sqSrc++) {
     var pcSrc = this.squares[sqSrc];
     if ((pcSrc & pcSelfSide) == 0) {
       continue;
     }
     switch (pcSrc - pcSelfSide) {
-    case PIECE_KING:
-      for (var i = 0; i < 4; i ++) {
-        var sqDst = sqSrc + KING_DELTA[i];
-        if (!IN_FORT(sqDst)) {
-          continue;
-        }
-        var pcDst = this.squares[sqDst];
-        if (vls == null) {
-          if ((pcDst & pcSelfSide) == 0) {
-            mvs.push(MOVE(sqSrc, sqDst));
+      case PIECE_KING:
+        for (var i = 0; i < 4; i++) {
+          var sqDst = sqSrc + KING_DELTA[i];
+          if (!IN_FORT(sqDst)) {
+            continue;
           }
-        } else if ((pcDst & pcOppSide) != 0) {	// 目标位置存在对方棋子（这是要生成吃子走法）
-          mvs.push(MOVE(sqSrc, sqDst));			// 存储吃子走法
-          vls.push(MVV_LVA(pcDst, 5));			// 该吃子走法的分值（MVV/LVA启发）
-        }
-      }
-      break;
-    case PIECE_ADVISOR:
-      for (var i = 0; i < 4; i ++) {
-        var sqDst = sqSrc + ADVISOR_DELTA[i];
-        if (!IN_FORT(sqDst)) {
-          continue;
-        }
-        var pcDst = this.squares[sqDst];
-        if (vls == null) {
-          if ((pcDst & pcSelfSide) == 0) {
-            mvs.push(MOVE(sqSrc, sqDst));
+          var pcDst = this.squares[sqDst];
+          if (vls == null) {
+            if ((pcDst & pcSelfSide) == 0) {
+              mvs.push(MOVE(sqSrc, sqDst));
+            }
+          } else if ((pcDst & pcOppSide) != 0) {	// 目标位置存在对方棋子（这是要生成吃子走法）
+            mvs.push(MOVE(sqSrc, sqDst));			// 存储吃子走法
+            vls.push(MVV_LVA(pcDst, 5));			// 该吃子走法的分值（MVV/LVA启发）
           }
-        } else if ((pcDst & pcOppSide) != 0) {
-          mvs.push(MOVE(sqSrc, sqDst));
-          vls.push(MVV_LVA(pcDst, 1));
         }
-      }
-      break;
-    case PIECE_BISHOP:
-      for (var i = 0; i < 4; i ++) {	// 象的4个方向
-        var sqDst = sqSrc + ADVISOR_DELTA[i];
-        if (!(IN_BOARD(sqDst) && HOME_HALF(sqDst, this.sdPlayer) &&
-            this.squares[sqDst] == 0)) {	//	象眼有棋子
-          continue;
-        }
-        sqDst += ADVISOR_DELTA[i];
-        var pcDst = this.squares[sqDst];
-        if (vls == null) {
-          if ((pcDst & pcSelfSide) == 0) {
-            mvs.push(MOVE(sqSrc, sqDst));
-          }
-        } else if ((pcDst & pcOppSide) != 0) {
-          mvs.push(MOVE(sqSrc, sqDst));
-          vls.push(MVV_LVA(pcDst, 1));
-        }
-      }
-      break;
-    case PIECE_KNIGHT:
-      for (var i = 0; i < 4; i ++) {
-        var sqDst = sqSrc + KING_DELTA[i];
-        if (this.squares[sqDst] > 0) {
-          continue;
-        }
-        for (var j = 0; j < 2; j ++) {
-          sqDst = sqSrc + KNIGHT_DELTA[i][j];
-          if (!IN_BOARD(sqDst)) {
+        break;
+      case PIECE_ADVISOR:
+        for (var i = 0; i < 4; i++) {
+          var sqDst = sqSrc + ADVISOR_DELTA[i];
+          if (!IN_FORT(sqDst)) {
             continue;
           }
           var pcDst = this.squares[sqDst];
@@ -657,79 +616,37 @@ Position.prototype.generateMoves = function(vls) {
             vls.push(MVV_LVA(pcDst, 1));
           }
         }
-      }
-      break;
-    case PIECE_ROOK:
-      for (var i = 0; i < 4; i ++) {
-        var delta = KING_DELTA[i];
-        var sqDst = sqSrc + delta;
-        while (IN_BOARD(sqDst)) {
-          var pcDst = this.squares[sqDst];
-          if (pcDst == 0) {
-            if (vls == null) {
-              mvs.push(MOVE(sqSrc, sqDst));
-            }
-          } else {
-            if ((pcDst & pcOppSide) != 0) {
-              mvs.push(MOVE(sqSrc, sqDst));
-              if (vls != null) {
-                vls.push(MVV_LVA(pcDst, 4));
-              }
-            }
-            break;
+        break;
+      case PIECE_BISHOP:
+        for (var i = 0; i < 4; i++) {	// 象的4个方向
+          var sqDst = sqSrc + ADVISOR_DELTA[i];
+          if (!(IN_BOARD(sqDst) && HOME_HALF(sqDst, this.sdPlayer) &&
+            this.squares[sqDst] == 0)) {	//	象眼有棋子
+            continue;
           }
-          sqDst += delta;
-        }
-      }
-      break;
-    case PIECE_CANNON:
-      for (var i = 0; i < 4; i ++) {
-        var delta = KING_DELTA[i];
-        var sqDst = sqSrc + delta;
-        while (IN_BOARD(sqDst)) {
+          sqDst += ADVISOR_DELTA[i];
           var pcDst = this.squares[sqDst];
-          if (pcDst == 0) {
-            if (vls == null) {
+          if (vls == null) {
+            if ((pcDst & pcSelfSide) == 0) {
               mvs.push(MOVE(sqSrc, sqDst));
             }
-          } else {
-            break;
-          }
-          sqDst += delta;
-        }
-        sqDst += delta;
-        while (IN_BOARD(sqDst)) {
-          var pcDst = this.squares[sqDst];
-          if (pcDst > 0) {
-            if ((pcDst & pcOppSide) != 0) {
-              mvs.push(MOVE(sqSrc, sqDst));
-              if (vls != null) {
-                vls.push(MVV_LVA(pcDst, 4));
-              }
-            }
-            break;
-          }
-          sqDst += delta;
-        }
-      }
-      break;
-    case PIECE_PAWN:
-      var sqDst = SQUARE_FORWARD(sqSrc, this.sdPlayer);
-      if (IN_BOARD(sqDst)) {
-        var pcDst = this.squares[sqDst];
-        if (vls == null) {
-          if ((pcDst & pcSelfSide) == 0) {
+          } else if ((pcDst & pcOppSide) != 0) {
             mvs.push(MOVE(sqSrc, sqDst));
+            vls.push(MVV_LVA(pcDst, 1));
           }
-        } else if ((pcDst & pcOppSide) != 0) {
-          mvs.push(MOVE(sqSrc, sqDst));
-          vls.push(MVV_LVA(pcDst, 2));
         }
-      }
-      if (AWAY_HALF(sqSrc, this.sdPlayer)) {
-        for (var delta = -1; delta <= 1; delta += 2) {
-          sqDst = sqSrc + delta;
-          if (IN_BOARD(sqDst)) {
+        break;
+      case PIECE_KNIGHT:
+        for (var i = 0; i < 4; i++) {
+          var sqDst = sqSrc + KING_DELTA[i];
+          if (this.squares[sqDst] > 0) {
+            continue;
+          }
+          for (var j = 0; j < 2; j++) {
+            sqDst = sqSrc + KNIGHT_DELTA[i][j];
+            if (!IN_BOARD(sqDst)) {
+              continue;
+            }
             var pcDst = this.squares[sqDst];
             if (vls == null) {
               if ((pcDst & pcSelfSide) == 0) {
@@ -737,87 +654,170 @@ Position.prototype.generateMoves = function(vls) {
               }
             } else if ((pcDst & pcOppSide) != 0) {
               mvs.push(MOVE(sqSrc, sqDst));
-              vls.push(MVV_LVA(pcDst, 2));
+              vls.push(MVV_LVA(pcDst, 1));
             }
           }
         }
-      }
-      break;
+        break;
+      case PIECE_ROOK:
+        for (var i = 0; i < 4; i++) {
+          var delta = KING_DELTA[i];
+          var sqDst = sqSrc + delta;
+          while (IN_BOARD(sqDst)) {
+            var pcDst = this.squares[sqDst];
+            if (pcDst == 0) {
+              if (vls == null) {
+                mvs.push(MOVE(sqSrc, sqDst));
+              }
+            } else {
+              if ((pcDst & pcOppSide) != 0) {
+                mvs.push(MOVE(sqSrc, sqDst));
+                if (vls != null) {
+                  vls.push(MVV_LVA(pcDst, 4));
+                }
+              }
+              break;
+            }
+            sqDst += delta;
+          }
+        }
+        break;
+      case PIECE_CANNON:
+        for (var i = 0; i < 4; i++) {
+          var delta = KING_DELTA[i];
+          var sqDst = sqSrc + delta;
+          while (IN_BOARD(sqDst)) {
+            var pcDst = this.squares[sqDst];
+            if (pcDst == 0) {
+              if (vls == null) {
+                mvs.push(MOVE(sqSrc, sqDst));
+              }
+            } else {
+              break;
+            }
+            sqDst += delta;
+          }
+          sqDst += delta;
+          while (IN_BOARD(sqDst)) {
+            var pcDst = this.squares[sqDst];
+            if (pcDst > 0) {
+              if ((pcDst & pcOppSide) != 0) {
+                mvs.push(MOVE(sqSrc, sqDst));
+                if (vls != null) {
+                  vls.push(MVV_LVA(pcDst, 4));
+                }
+              }
+              break;
+            }
+            sqDst += delta;
+          }
+        }
+        break;
+      case PIECE_PAWN:
+        var sqDst = SQUARE_FORWARD(sqSrc, this.sdPlayer);
+        if (IN_BOARD(sqDst)) {
+          var pcDst = this.squares[sqDst];
+          if (vls == null) {
+            if ((pcDst & pcSelfSide) == 0) {
+              mvs.push(MOVE(sqSrc, sqDst));
+            }
+          } else if ((pcDst & pcOppSide) != 0) {
+            mvs.push(MOVE(sqSrc, sqDst));
+            vls.push(MVV_LVA(pcDst, 2));
+          }
+        }
+        if (AWAY_HALF(sqSrc, this.sdPlayer)) {
+          for (var delta = -1; delta <= 1; delta += 2) {
+            sqDst = sqSrc + delta;
+            if (IN_BOARD(sqDst)) {
+              var pcDst = this.squares[sqDst];
+              if (vls == null) {
+                if ((pcDst & pcSelfSide) == 0) {
+                  mvs.push(MOVE(sqSrc, sqDst));
+                }
+              } else if ((pcDst & pcOppSide) != 0) {
+                mvs.push(MOVE(sqSrc, sqDst));
+                vls.push(MVV_LVA(pcDst, 2));
+              }
+            }
+          }
+        }
+        break;
     }
   }
   return mvs;
 }
 
 // 判断步骤是否合法。是则返回true，否则返回false
-Position.prototype.legalMove = function(mv) {
+Position.prototype.legalMove = function (mv) {
   var sqSrc = SRC(mv);						// 获取走法的起点位置
   var pcSrc = this.squares[sqSrc];			// 获取起点位置的棋子
   var pcSelfSide = SIDE_TAG(this.sdPlayer);	// 红黑标记(红子是8，黑子是16) 
-  
+
   if ((pcSrc & pcSelfSide) == 0) {
     // 起点位置的棋子，不是本方棋子。（是对方棋子，或者根本没有棋子）
-	return false;
+    return false;
   }
 
   var sqDst = DST(mv);				// 获取走法的终点位置
   var pcDst = this.squares[sqDst];	// 获取终点位置的棋子
-  
+
   if ((pcDst & pcSelfSide) != 0) {
     // 终点位置有棋子，而且是本方棋子
-	return false;
+    return false;
   }
 
   switch (pcSrc - pcSelfSide) {
-  case PIECE_KING:		// 起点棋子是将（帅），校验走法
-    return IN_FORT(sqDst) && KING_SPAN(sqSrc, sqDst);
-  case PIECE_ADVISOR:	// 起点棋子是仕（仕），校验走法
-    return IN_FORT(sqDst) && ADVISOR_SPAN(sqSrc, sqDst);
-  case PIECE_BISHOP:	// 起点棋子是象（相），校验走法
-    return SAME_HALF(sqSrc, sqDst) && BISHOP_SPAN(sqSrc, sqDst) &&
+    case PIECE_KING:		// 起点棋子是将（帅），校验走法
+      return IN_FORT(sqDst) && KING_SPAN(sqSrc, sqDst);
+    case PIECE_ADVISOR:	// 起点棋子是仕（仕），校验走法
+      return IN_FORT(sqDst) && ADVISOR_SPAN(sqSrc, sqDst);
+    case PIECE_BISHOP:	// 起点棋子是象（相），校验走法
+      return SAME_HALF(sqSrc, sqDst) && BISHOP_SPAN(sqSrc, sqDst) &&
         this.squares[BISHOP_PIN(sqSrc, sqDst)] == 0;
-  case PIECE_KNIGHT:	// 起点棋子是马，校验走法
-    var sqPin = KNIGHT_PIN(sqSrc, sqDst);
-    return sqPin != sqSrc && this.squares[sqPin] == 0;
-  case PIECE_ROOK:		// 起点棋子是车，校验走法
-  case PIECE_CANNON:	// 起点棋子是炮，校验走法
-    var delta;			// 标识沿哪个方向走棋
-    if (SAME_RANK(sqSrc, sqDst)) {
-	  // 起点和终点位于同一行。再根据起点和终点的大小关系，判断具体是沿哪个方向走棋。
-      delta = (sqDst < sqSrc ? -1 : 1);
-    } else if (SAME_FILE(sqSrc, sqDst)) {
-	  // 起点和终点位于同一列。再根据起点和终点的大小关系，判断具体是沿哪个方向走棋。
-      delta = (sqDst < sqSrc ? -16 : 16);
-    } else {
-	  // 起点和终点不在同一行，也不在同一列。走法是非法的。
-      return false;
-    }
-    var sqPin = sqSrc + delta;	// 沿着方向delta走一步棋
-    while (sqPin != sqDst && this.squares[sqPin] == 0) {
-      // 沿方向delta一步步向前走，直到遇到棋子，或者sqPin走到了终点的位置上
-	  sqPin += delta;
-    }
-    if (sqPin == sqDst) {
-	  // 如果终点没有棋子，不管是车还是炮，这步棋都是合法的。如果是车，不管终点有没有棋子（对方棋子），这步棋都合法。
-      return pcDst == 0 || pcSrc - pcSelfSide == PIECE_ROOK;
-    }
-	// 此时已经翻山，终点必须有棋子，并且行棋的是炮，否则这步棋不合法
-    if (pcDst == 0 || pcSrc - pcSelfSide != PIECE_CANNON) {
-      return false;
-    }
-    sqPin += delta;
-    while (sqPin != sqDst && this.squares[sqPin] == 0) {
+    case PIECE_KNIGHT:	// 起点棋子是马，校验走法
+      var sqPin = KNIGHT_PIN(sqSrc, sqDst);
+      return sqPin != sqSrc && this.squares[sqPin] == 0;
+    case PIECE_ROOK:		// 起点棋子是车，校验走法
+    case PIECE_CANNON:	// 起点棋子是炮，校验走法
+      var delta;			// 标识沿哪个方向走棋
+      if (SAME_RANK(sqSrc, sqDst)) {
+        // 起点和终点位于同一行。再根据起点和终点的大小关系，判断具体是沿哪个方向走棋。
+        delta = (sqDst < sqSrc ? -1 : 1);
+      } else if (SAME_FILE(sqSrc, sqDst)) {
+        // 起点和终点位于同一列。再根据起点和终点的大小关系，判断具体是沿哪个方向走棋。
+        delta = (sqDst < sqSrc ? -16 : 16);
+      } else {
+        // 起点和终点不在同一行，也不在同一列。走法是非法的。
+        return false;
+      }
+      var sqPin = sqSrc + delta;	// 沿着方向delta走一步棋
+      while (sqPin != sqDst && this.squares[sqPin] == 0) {
+        // 沿方向delta一步步向前走，直到遇到棋子，或者sqPin走到了终点的位置上
+        sqPin += delta;
+      }
+      if (sqPin == sqDst) {
+        // 如果终点没有棋子，不管是车还是炮，这步棋都是合法的。如果是车，不管终点有没有棋子（对方棋子），这步棋都合法。
+        return pcDst == 0 || pcSrc - pcSelfSide == PIECE_ROOK;
+      }
+      // 此时已经翻山，终点必须有棋子，并且行棋的是炮，否则这步棋不合法
+      if (pcDst == 0 || pcSrc - pcSelfSide != PIECE_CANNON) {
+        return false;
+      }
       sqPin += delta;
-    }
-    return sqPin == sqDst;
-  case PIECE_PAWN:
-    // 兵已过河，并且是左右两个方向走的
-    if (AWAY_HALF(sqDst, this.sdPlayer) && (sqDst == sqSrc - 1 || sqDst == sqSrc + 1)) {
-      return true;
-    }
-	// 判断兵是不是在向前走
-    return sqDst == SQUARE_FORWARD(sqSrc, this.sdPlayer);
-  default:
-    return false;
+      while (sqPin != sqDst && this.squares[sqPin] == 0) {
+        sqPin += delta;
+      }
+      return sqPin == sqDst;
+    case PIECE_PAWN:
+      // 兵已过河，并且是左右两个方向走的
+      if (AWAY_HALF(sqDst, this.sdPlayer) && (sqDst == sqSrc - 1 || sqDst == sqSrc + 1)) {
+        return true;
+      }
+      // 判断兵是不是在向前走
+      return sqDst == SQUARE_FORWARD(sqSrc, this.sdPlayer);
+    default:
+      return false;
   }
 }
 
@@ -825,41 +825,41 @@ Position.prototype.legalMove = function(mv) {
 * 判断将（帅）是否被对方攻击。
 * @return boolean true-被攻击 false-没有被攻击
 */
-Position.prototype.checked = function() {
+Position.prototype.checked = function () {
   var pcSelfSide = SIDE_TAG(this.sdPlayer);		// 己方红黑标记
   var pcOppSide = OPP_SIDE_TAG(this.sdPlayer);	// 对方红黑标记
-  for (var sqSrc = 0; sqSrc < 256; sqSrc ++) {
+  for (var sqSrc = 0; sqSrc < 256; sqSrc++) {
     // 遍历棋局数组，直到遇见己方的将（帅）
-	if (this.squares[sqSrc] != pcSelfSide + PIECE_KING) {
+    if (this.squares[sqSrc] != pcSelfSide + PIECE_KING) {
       continue;
     }
-    
-	// 判断对方进兵，是否会攻击到己方老将
-	if (this.squares[SQUARE_FORWARD(sqSrc, this.sdPlayer)] == pcOppSide + PIECE_PAWN) {
+
+    // 判断对方进兵，是否会攻击到己方老将
+    if (this.squares[SQUARE_FORWARD(sqSrc, this.sdPlayer)] == pcOppSide + PIECE_PAWN) {
       return true;
     }
-	// 判断对方平兵（前提是并已过河），是否会攻击到己方老将
+    // 判断对方平兵（前提是并已过河），是否会攻击到己方老将
     for (var delta = -1; delta <= 1; delta += 2) {
       if (this.squares[sqSrc + delta] == pcOppSide + PIECE_PAWN) {
         return true;
       }
     }
-	
-	// 判断对方马是否攻击到己方老将
-    for (var i = 0; i < 4; i ++) {
+
+    // 判断对方马是否攻击到己方老将
+    for (var i = 0; i < 4; i++) {
       if (this.squares[sqSrc + ADVISOR_DELTA[i]] != 0) {	// 马蹄有子，不用害怕哦
         continue;
       }
-      for (var j = 0; j < 2; j ++) {
+      for (var j = 0; j < 2; j++) {
         var pcDst = this.squares[sqSrc + KNIGHT_CHECK_DELTA[i][j]];
         if (pcDst == pcOppSide + PIECE_KNIGHT) {
           return true;
         }
       }
     }
-	
-	// 判断对方的车、炮是攻击到了己方老将，以及将帅是否对脸
-    for (var i = 0; i < 4; i ++) {
+
+    // 判断对方的车、炮是攻击到了己方老将，以及将帅是否对脸
+    for (var i = 0; i < 4; i++) {
       var delta = KING_DELTA[i];
       var sqDst = sqSrc + delta;
       while (IN_BOARD(sqDst)) {
@@ -890,9 +890,9 @@ Position.prototype.checked = function() {
 }
 
 // 无棋可走的话，返回true，否则返回false
-Position.prototype.isMate = function() {
+Position.prototype.isMate = function () {
   var mvs = this.generateMoves(null);
-  for (var i = 0; i < mvs.length; i ++) {
+  for (var i = 0; i < mvs.length; i++) {
     if (this.makeMove(mvs[i])) {
       this.undoMakeMove();
       return false;
@@ -902,49 +902,49 @@ Position.prototype.isMate = function() {
 }
 
 // 结合搜索深度的输棋分值
-Position.prototype.mateValue = function() {
+Position.prototype.mateValue = function () {
   return this.distance - MATE_VALUE;
 }
 
 // 结合搜索深度的长将判负分值
-Position.prototype.banValue = function() {
+Position.prototype.banValue = function () {
   return this.distance - BAN_VALUE;
 }
 
 // 和棋分值
-Position.prototype.drawValue = function() {
+Position.prototype.drawValue = function () {
   return (this.distance & 1) == 0 ? -DRAW_VALUE : DRAW_VALUE;
 }
 
 // 某步走过的棋是否被将军
-Position.prototype.inCheck = function() {
+Position.prototype.inCheck = function () {
   return this.chkList[this.chkList.length - 1];
 }
 
 //　某步走过的棋，是否是吃子走法
-Position.prototype.captured = function() {
+Position.prototype.captured = function () {
   return this.pcList[this.pcList.length - 1] > 0;
 }
 
 // 出现重复局面时，返回的分值
-Position.prototype.repValue = function(vlRep) {
+Position.prototype.repValue = function (vlRep) {
   var vlReturn = ((vlRep & 2) == 0 ? 0 : this.banValue()) +
-      ((vlRep & 4) == 0 ? 0 : -this.banValue());
+    ((vlRep & 4) == 0 ? 0 : -this.banValue());
   return vlReturn == 0 ? this.drawValue() : vlReturn;
 }
 
 // 判断是否出现重复局面
-Position.prototype.repStatus = function(recur_) {
+Position.prototype.repStatus = function (recur_) {
   var recur = recur_;
   var selfSide = false;
   var perpCheck = true;
   var oppPerpCheck = true;
   var index = this.mvList.length - 1;
   while (this.mvList[index] > 0 && this.pcList[index] == 0) {
-	if (selfSide) {
+    if (selfSide) {
       perpCheck = perpCheck && this.chkList[index];
       if (this.keyList[index] == this.zobristKey) {	// 这是出现循环局面了
-        recur --;
+        recur--;
         if (recur == 0) {
           return 1 + (perpCheck ? 2 : 0) + (oppPerpCheck ? 4 : 0);
         }
@@ -953,38 +953,38 @@ Position.prototype.repStatus = function(recur_) {
       oppPerpCheck = oppPerpCheck && this.chkList[index];
     }
     selfSide = !selfSide;
-    index --;
+    index--;
   }
   return 0;
 }
 
 // 切换走棋方
-Position.prototype.changeSide = function() {
+Position.prototype.changeSide = function () {
   this.sdPlayer = 1 - this.sdPlayer;
   this.zobristKey ^= PreGen_zobristKeyPlayer;
   this.zobristLock ^= PreGen_zobristLockPlayer;
 }
 
 // 走一步棋
-Position.prototype.makeMove = function(mv) {
+Position.prototype.makeMove = function (mv) {
   var zobristKey = this.zobristKey;
   this.movePiece(mv);
-  
+
   // 检查走棋是否被将军。如果是，说明这是在送死，撤销走棋并返回false。
-  if (this.checked()) {	
+  if (this.checked()) {
     this.undoMovePiece(mv);
     return false;
   }
   this.keyList.push(zobristKey);		// 存储局面的zobristKey校验码
   this.changeSide();					// 切换走棋方
   this.chkList.push(this.checked());	// 存储走完棋后，对方是否处于被将军的状态
-  this.distance ++;						// 搜索深度+1
+  this.distance++;						// 搜索深度+1
   return true;
 }
 
 // 取消上一步的走棋
-Position.prototype.undoMakeMove = function() {
-  this.distance --;		// 搜索深度减1
+Position.prototype.undoMakeMove = function () {
+  this.distance--;		// 搜索深度减1
   this.chkList.pop();
   this.changeSide();	// 切换走棋方
   this.keyList.pop();
@@ -992,18 +992,18 @@ Position.prototype.undoMakeMove = function() {
 }
 
 // 空步搜索
-Position.prototype.nullMove = function() {
+Position.prototype.nullMove = function () {
   this.mvList.push(0);
   this.pcList.push(0);
   this.keyList.push(this.zobristKey);
   this.changeSide();
   this.chkList.push(false);
-  this.distance ++;
+  this.distance++;
 }
 
 // 撤销上一步的空步搜索
-Position.prototype.undoNullMove = function() {
-  this.distance --;
+Position.prototype.undoNullMove = function () {
+  this.distance--;
   this.chkList.pop();
   this.changeSide();
   this.keyList.pop();
@@ -1012,7 +1012,7 @@ Position.prototype.undoNullMove = function() {
 }
 
 // 根据走法移动棋子，删除终点位置的棋子，将起点位置的棋子放置在终点的位置。
-Position.prototype.movePiece = function(mv) {
+Position.prototype.movePiece = function (mv) {
   var sqSrc = SRC(mv);
   var sqDst = DST(mv);
   var pc = this.squares[sqDst];
@@ -1028,7 +1028,7 @@ Position.prototype.movePiece = function(mv) {
 }
 
 // 取消上一步对棋子的移动
-Position.prototype.undoMovePiece = function() {
+Position.prototype.undoMovePiece = function () {
   var mv = this.mvList.pop();
   var sqSrc = SRC(mv);
   var sqDst = DST(mv);
@@ -1043,50 +1043,50 @@ Position.prototype.undoMovePiece = function() {
 }
 
 // 如果bDel为false，则将棋子pc添加进棋局中的sp位置；如果bDel为true，则删除sp位置的棋子。
-Position.prototype.addPiece = function(sq, pc, bDel) {
+Position.prototype.addPiece = function (sq, pc, bDel) {
   var pcAdjust;
-  
+
   // 添加或删除棋子
   this.squares[sq] = bDel ? 0 : pc;
-  
+
   // 更新红黑双方子粒分值
   if (pc < 16) {
     pcAdjust = pc - 8;
     this.vlWhite += bDel ? -PIECE_VALUE[pcAdjust][sq] :
-        PIECE_VALUE[pcAdjust][sq];
+      PIECE_VALUE[pcAdjust][sq];
   } else {
     pcAdjust = pc - 16;
     this.vlBlack += bDel ? -PIECE_VALUE[pcAdjust][SQUARE_FLIP(sq)] :
-        PIECE_VALUE[pcAdjust][SQUARE_FLIP(sq)];
-	pcAdjust += 7;
+      PIECE_VALUE[pcAdjust][SQUARE_FLIP(sq)];
+    pcAdjust += 7;
   }
-  
+
   // 更新局面的zobristKey校验码和zobristLock校验码
   this.zobristKey ^= PreGen_zobristKeyTable[pcAdjust][sq];
   this.zobristLock ^= PreGen_zobristLockTable[pcAdjust][sq];
 }
 
 // 局面评估函数，返回当前走棋方的优势
-Position.prototype.evaluate = function() {
+Position.prototype.evaluate = function () {
   var vl = (this.sdPlayer == 0 ? this.vlWhite - this.vlBlack :
-      this.vlBlack - this.vlWhite) + ADVANCED_VALUE;
+    this.vlBlack - this.vlWhite) + ADVANCED_VALUE;
   return vl == this.drawValue() ? vl - 1 : vl;	// 这里是评估出来的分值，要跟和棋的分值区分开。
 }
 
 // 当前局面的优势是否足以进行空步搜索
-Position.prototype.nullOkay = function() {
+Position.prototype.nullOkay = function () {
   return (this.sdPlayer == 0 ? this.vlWhite : this.vlBlack) > NULL_OKAY_MARGIN;
 }
 
 // 空步搜索得到的分值是否有效
-Position.prototype.nullSafe = function() {
+Position.prototype.nullSafe = function () {
   return (this.sdPlayer == 0 ? this.vlWhite : this.vlBlack) > NULL_SAFE_MARGIN;
 }
 
-Position.prototype.mirror = function() {
+Position.prototype.mirror = function () {
   var pos = new Position();
   pos.clearBoard();
-  for (var sq = 0; sq < 256; sq ++) {
+  for (var sq = 0; sq < 256; sq++) {
     var pc = this.squares[sq];
     if (pc > 0) {
       pos.addPiece(MIRROR_SQUARE(sq), pc);
@@ -1099,7 +1099,7 @@ Position.prototype.mirror = function() {
 }
 
 // 获取开局库中的走法
-Position.prototype.bookMove = function() {
+Position.prototype.bookMove = function () {
   if (typeof BOOK_DAT != "object" || BOOK_DAT.length == 0) {
     return 0;
   }
@@ -1116,13 +1116,13 @@ Position.prototype.bookMove = function() {
     return 0;
   }
 
-  index --;
+  index--;
   while (index >= 0 && BOOK_DAT[index][0] == lock) {
-    index --;
+    index--;
   }
   var mvs = [], vls = [];
   var value = 0;
-  index ++;
+  index++;
   while (index < BOOK_DAT.length && BOOK_DAT[index][0] == lock) {
     var mv = BOOK_DAT[index][1];
     mv = (mirror ? MIRROR_MOVE(mv) : mv);
@@ -1132,7 +1132,7 @@ Position.prototype.bookMove = function() {
       vls.push(vl);
       value += vl;
     }
-    index ++;
+    index++;
   }
   if (value == 0) {
     return 0;
@@ -1140,7 +1140,7 @@ Position.prototype.bookMove = function() {
 
   //一个局面会对应多种走法，这里是为了增加走棋的随机性。不过每步棋的比重是不一样的。
   value = Math.floor(Math.random() * value);
-  for (index = 0; index < mvs.length; index ++) {
+  for (index = 0; index < mvs.length; index++) {
     value -= vls[index];
     if (value < 0) {
       break;
@@ -1151,6 +1151,6 @@ Position.prototype.bookMove = function() {
 }
 
 // 获取历史表的指标
-Position.prototype.historyIndex = function(mv) {
+Position.prototype.historyIndex = function (mv) {
   return ((this.squares[SRC(mv)] - 8) << 8) + DST(mv);
 }
