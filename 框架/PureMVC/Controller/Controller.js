@@ -51,7 +51,7 @@
                 if (args === void 0) {
                     cmd.execute.call(cmd);
                 } else if (args instanceof Array) {
-                    cmd.execute.call(cmd, args);
+                    cmd.execute.apply(cmd, args);
                 } else {
                     cmd.execute.call(cmd, args);
                 }
