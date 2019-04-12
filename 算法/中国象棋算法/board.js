@@ -31,7 +31,7 @@ function SQ_Y(sq) {
 }
 
 function alertDelay(message) {
-  setTimeout(function() {
+  setTimeout(function () {
     alert(message);
   }, 250);
 }
@@ -54,16 +54,16 @@ function Board(container, images) {
   style.height = BOARD_HEIGHT + "px";
   style.background = "url(" + images + "board.jpg)";
   var this_ = this;
-  for (var sq = 0; sq < 256; sq ++) {
+  for (var sq = 0; sq < 256; sq++) {
     // 遍历虚拟棋盘的256个点
-	
-	// 1.判断该点是否位于真实棋盘
-	if (!IN_BOARD(sq)) {
+
+    // 1.判断该点是否位于真实棋盘
+    if (!IN_BOARD(sq)) {
       this.imgSquares.push(null);
       continue;
     }
-	
-	// 2.棋盘上的90个区域，每个区域都会定义一个对应的img标签
+
+    // 2.棋盘上的90个区域，每个区域都会定义一个对应的img标签
     var img = document.createElement("img");
     var style = img.style;
     style.position = "absolute";
@@ -72,21 +72,21 @@ function Board(container, images) {
     style.width = SQUARE_SIZE;
     style.height = SQUARE_SIZE;
     style.zIndex = 0;
-	
-	// 3.每个棋盘区域都会绑定点击事件，参数sq_表示了具体点击的区域。（这里用到了“闭包”的知识吧）
-    img.onmousedown = function(sq_) {
-      return function() {
+
+    // 3.每个棋盘区域都会绑定点击事件，参数sq_表示了具体点击的区域。（这里用到了“闭包”的知识吧）
+    img.onmousedown = function (sq_) {
+      return function () {
         this_.clickSquare(sq_);
       }
-    } (sq);
+    }(sq);
 
-	// 4.将定义好的img标签追加到html中
+    // 4.将定义好的img标签追加到html中
     container.appendChild(img);
-	
-	// 5.将img标签存储到imgSquares数组中，方便后续对该区域进行操作（比如，显示不同的棋子图片）
-	this.imgSquares.push(img);
+
+    // 5.将img标签存储到imgSquares数组中，方便后续对该区域进行操作（比如，显示不同的棋子图片）
+    this.imgSquares.push(img);
   }
-  
+
   // 电脑思考中的图片（也就是thinking.gif）
   this.thinking = document.createElement("img");
   this.thinking.src = images + "thinking.gif";
@@ -102,36 +102,36 @@ function Board(container, images) {
 }
 
 // 设置搜索算法
-Board.prototype.setSearch = function(hashLevel) {
+Board.prototype.setSearch = function (hashLevel) {
   this.search = hashLevel == 0 ? null : new Search(this.pos, hashLevel);
 }
 
 // 翻转棋盘位置（电脑执红，也就是电脑先走的时候，会把红棋显示在棋盘上面，黑棋显示在下面）
-Board.prototype.flipped = function(sq) {
+Board.prototype.flipped = function (sq) {
   return this.computer == 0 ? SQUARE_FLIP(sq) : sq;
 }
 
 // 如果该电脑走棋，返回true；否则，返回false
-Board.prototype.computerMove = function() {
+Board.prototype.computerMove = function () {
   return this.pos.sdPlayer == this.computer;
 }
 
 // 判断这步棋是否合法，如果合法，就执行这步棋
-Board.prototype.addMove = function(mv, computerMove) {
+Board.prototype.addMove = function (mv, computerMove) {
   // 判断这步棋是否合法
   if (!this.pos.legalMove(mv)) {
     return;
   }
-  
+
   // 执行这步棋
   if (!this.pos.makeMove(mv)) {
     return;
   }
-  
+
   this.postAddMove(mv, computerMove);
 }
 
-Board.prototype.postAddMove = function(mv, computerMove) {
+Board.prototype.postAddMove = function (mv, computerMove) {
   // 清除上一步的选中方框
   if (this.mvLast > 0) {
     this.drawSquare(SRC(this.mvLast), false);
@@ -141,16 +141,16 @@ Board.prototype.postAddMove = function(mv, computerMove) {
   // 显示这一步走棋的选中方框
   this.drawSquare(SRC(mv), true);
   this.drawSquare(DST(mv), true);
-  
+
   this.sqSelected = 0;
   this.mvLast = mv;
-  
+
   // 判断游戏是否结束
   if (this.pos.isMate()) {	// 无棋可走，实际上就是被将死了
     this.result = computerMove ? RESULT_LOSS : RESULT_WIN;
-	this.postMate(computerMove);
+    this.postMate(computerMove);
   }
-  
+
   // 判断是否出现长将
   var vlRep = this.pos.repStatus(3);
   if (vlRep > 0) {
@@ -168,18 +168,18 @@ Board.prototype.postAddMove = function(mv, computerMove) {
     this.busy = false;
     return;
   }
-  
+
   // 电脑回一步棋
   this.response();
 }
 
-Board.prototype.postMate = function(computerMove) {
+Board.prototype.postMate = function (computerMove) {
   alertDelay(computerMove ? "请再接再厉！" : "祝贺你取得胜利！");
   this.busy = false;
 }
 
 // 电脑回一步棋
-Board.prototype.response = function() {
+Board.prototype.response = function () {
   if (this.search == null || !this.computerMove()) {	// 搜索对象为null或者不该电脑走棋
     this.busy = false;
     return;
@@ -188,14 +188,14 @@ Board.prototype.response = function() {
   var this_ = this;
   var mvResult = 0;
   this.busy = true;
-  setTimeout(function() {
+  setTimeout(function () {
     this_.addMove(board.search.searchMain(LIMIT_DEPTH, 1000), true);
     this_.thinking.style.visibility = "hidden";
   }, 250);
 }
 
 // 点击棋盘的响应函数。点击棋盘（棋子或者空位置），就会调用该函数。sq_是点击的位置
-Board.prototype.clickSquare = function(sq_) {
+Board.prototype.clickSquare = function (sq_) {
   if (this.busy || this.result != RESULT_UNKNOWN) {
     return;
   }
@@ -203,8 +203,8 @@ Board.prototype.clickSquare = function(sq_) {
   var pc = this.pos.squares[sq];	// 点击的棋子
   if ((pc & SIDE_TAG(this.pos.sdPlayer)) != 0) {
     // 点击了己方棋子，直接选中该子
-	
-	if (this.mvLast != 0) {
+
+    if (this.mvLast != 0) {
       this.drawSquare(SRC(this.mvLast), false);
       this.drawSquare(DST(this.mvLast), false);
     }
@@ -215,20 +215,20 @@ Board.prototype.clickSquare = function(sq_) {
     this.sqSelected = sq;
   } else if (this.sqSelected > 0) {
     // 点击的不是己方棋子（对方棋子或者无子的位置），但有子选中了(一定是自己的子)，那么执行这个走法
-	this.addMove(MOVE(this.sqSelected, sq), false);
+    this.addMove(MOVE(this.sqSelected, sq), false);
   }
 }
 
 // 显示sq位置的棋子图片。如果该位置没棋子，则显示一张透明的图片。如果selected为true，则要显示棋子选中时的边框。
-Board.prototype.drawSquare = function(sq, selected) {
+Board.prototype.drawSquare = function (sq, selected) {
   var img = this.imgSquares[this.flipped(sq)];
   img.src = this.images + PIECE_NAME[this.pos.squares[sq]] + ".gif";
   img.style.backgroundImage = selected ? "url(" + this.images + "oos.gif)" : "";
 }
 
 // 重新显示棋盘上的棋子
-Board.prototype.flushBoard = function() {
-  for (var sq = 0; sq < 256; sq ++) {
+Board.prototype.flushBoard = function () {
+  for (var sq = 0; sq < 256; sq++) {
     if (IN_BOARD(sq)) {
       this.drawSquare(sq);
     }
@@ -236,7 +236,7 @@ Board.prototype.flushBoard = function() {
 }
 
 // 棋局重新开始
-Board.prototype.restart = function(fen) {
+Board.prototype.restart = function (fen) {
   if (this.busy) {				// 电脑正在思考中，不响应任何点击事件
     return;
   }
@@ -248,19 +248,19 @@ Board.prototype.restart = function(fen) {
 }
 
 // 悔棋
-Board.prototype.retract = function() {
+Board.prototype.retract = function () {
   if (this.busy) {
     return;
   }
 
   // 重置对局结果为“未知”
   this.result = RESULT_UNKNOWN;
-  
+
   // 如果走法数组不为空，那么就撤销一步棋
   if (this.pos.mvList.length > 1) {
     this.pos.undoMakeMove();
   }
-  
+
   // 如果走法数组不为空，并且该电脑走棋，那么需要再撤销一步棋
   if (this.pos.mvList.length > 1 && this.computerMove()) {
     this.pos.undoMakeMove();
