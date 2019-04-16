@@ -5,7 +5,7 @@
 #include "lodepng.h"
 #include "matrix.h"
 #include "util.h"
-
+//工具类
 int rand_int(int n) {
     int result;
     while (n <= (result = rand() / (RAND_MAX / n)));

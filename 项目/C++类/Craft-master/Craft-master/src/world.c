@@ -2,6 +2,7 @@
 #include "noise.h"
 #include "world.h"
 
+//创建世界
 void create_world(int p, int q, world_func func, void *arg) {
     int pad = 1;
     for (int dx = -pad; dx < CHUNK_SIZE + pad; dx++) {

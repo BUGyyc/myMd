@@ -16,7 +16,7 @@ void processInput(GLFWwindow *window);
 // settings
 const unsigned int SCR_WIDTH = 800;
 const unsigned int SCR_HEIGHT = 600;
-//关于坐标系统
+//TODO:关于坐标系统
 int main()
 {
     // glfw: initialize and configure

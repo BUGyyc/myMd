@@ -30,7 +30,7 @@ bool firstMouse = true;
 float deltaTime = 0.0f;	// time between current frame and last frame
 float lastFrame = 0.0f;
 /*
-关于摄像机
+TODO:关于摄像机
 */
 int main()
 {

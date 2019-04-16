@@ -61,6 +61,8 @@ const int items[] = {
 
 const int item_count = sizeof(items) / sizeof(int);
 
+
+//方块类型
 const int blocks[256][6] = {
     // w => (left, right, top, bottom, front, back) tiles
     {0, 0, 0, 0, 0, 0}, // 0 - empty
@@ -129,6 +131,7 @@ const int blocks[256][6] = {
     {207, 207, 207, 207, 207, 207}, // 63
 };
 
+//植物类型
 const int plants[256] = {
     // w => tile
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // 0 - 16
@@ -141,6 +144,7 @@ const int plants[256] = {
     54, // 23 - blue flower
 };
 
+//是否是植物
 int is_plant(int w) {
     switch (w) {
         case TALL_GRASS:
@@ -156,6 +160,7 @@ int is_plant(int w) {
     }
 }
 
+//
 int is_obstacle(int w) {
     w = ABS(w);
     if (is_plant(w)) {
@@ -170,6 +175,7 @@ int is_obstacle(int w) {
     }
 }
 
+//是否可见
 int is_transparent(int w) {
     if (w == EMPTY) {
         return 1;

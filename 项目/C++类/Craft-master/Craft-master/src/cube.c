@@ -4,6 +4,12 @@
 #include "matrix.h"
 #include "util.h"
 
+/*
+方块控制类
+ */
+
+
+//生成方块的面
 void make_cube_faces(
     float *data, float ao[6][4], float light[6][4],
     int left, int right, int top, int bottom, int front, int back,
@@ -79,11 +85,14 @@ void make_cube_faces(
     }
 }
 
+
+//生成方块
 void make_cube(
     float *data, float ao[6][4], float light[6][4],
     int left, int right, int top, int bottom, int front, int back,
     float x, float y, float z, float n, int w)
 {
+    //六面
     int wleft = blocks[w][0];
     int wright = blocks[w][1];
     int wtop = blocks[w][2];
@@ -97,6 +106,7 @@ void make_cube(
         x, y, z, n);
 }
 
+//生成植物
 void make_plant(
     float *data, float ao, float light,
     float px, float py, float pz, float n, int w, float rotation)
@@ -157,6 +167,7 @@ void make_plant(
     mat_apply(data, ma, 24, 0, 10);
 }
 
+//生成玩家
 void make_player(
     float *data,
     float x, float y, float z, float rx, float ry)
@@ -213,6 +224,7 @@ void make_cube_wireframe(float *data, float x, float y, float z, float n) {
     }
 }
 
+//角色？
 void make_character(
     float *data,
     float x, float y, float n, float m, char c)
@@ -297,6 +309,7 @@ void make_character_3d(
     }
 }
 
+//创建球
 int _make_sphere(
     float *data, float r, int detail,
     float *a, float *b, float *c,

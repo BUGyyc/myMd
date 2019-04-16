@@ -24,6 +24,8 @@ static mtx_t mtx;
 static cnd_t cnd;
 static mtx_t load_mtx;
 
+
+//数据库操作
 void db_enable() {
     db_enabled = 1;
 }

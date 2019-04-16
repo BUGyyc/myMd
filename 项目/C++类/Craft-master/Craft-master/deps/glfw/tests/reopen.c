@@ -113,14 +113,14 @@ int main(int argc, char** argv)
     int count = 0;
     GLFWwindow* window;
 
-    srand((unsigned int) time(NULL));
+    srand((unsigned int) time(NULL));//设置一个随机种子
 
-    glfwSetErrorCallback(error_callback);
+    glfwSetErrorCallback(error_callback);//监听报错
 
     if (!glfwInit())
         exit(EXIT_FAILURE);
 
-    for (;;)
+    for (;;)//无限循环
     {
         int width, height;
         GLFWmonitor* monitor = NULL;

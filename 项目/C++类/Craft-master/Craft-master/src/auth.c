@@ -6,7 +6,9 @@
 
 #define MAX_POST_LENGTH 1024
 #define MAX_RESPONSE_LENGTH 1024
-
+/*
+认证方法
+*/
 size_t write_function(char *data, size_t size, size_t count, void *arg) {
     size_t length = size * count;
     char *dst = (char *)arg;

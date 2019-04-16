@@ -27,6 +27,10 @@ static int qsize = 0;
 static thrd_t recv_thread;
 static mtx_t mutex;
 
+/*
+客户端操作
+*/
+
 void client_enable() {
     client_enabled = 1;
 }
