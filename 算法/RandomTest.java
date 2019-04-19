@@ -4,9 +4,6 @@ import java.util.Random;
 import java.util.Scanner;
 import java.util.Stack;
 
-/**
- * 极大极小值得剪枝算法
- */
 public class RandomTest {
     private static final int MAX_X = 14;
     private static final int MAX_Y = 40;
