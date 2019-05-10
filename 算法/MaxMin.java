@@ -1,10 +1,12 @@
+
 /*
  * @Author: delevin.ying 
  * @Date: 2019-03-29 14:53:33 
  * @Last Modified by: delevin.ying
- * @Last Modified time: 2019-04-08 14:57:09
+ * @Last Modified time: 2019-05-10 11:06:27
  */
 import java.util.Scanner;
+
 /**
  * 极大极小值得剪枝算法
  */
@@ -21,6 +23,7 @@ public class MaxMin {
         Scanner sc = new Scanner(System.in);
         System.out.println("t->");
         t = sc.nextInt();
+        // testInput();
         while (t > 0) {
             System.out.println("please choose your step!");
             int i = sc.nextInt();
@@ -31,7 +34,9 @@ public class MaxMin {
                     System.out.println("choose error !");
                 } else {
                     arr[i] = 1;
-                    System.out.println("dfs----" + dfs(1));
+                    int choose = dfs(1);
+                    System.out.println("dfs----" + choose);
+                    arr[choose + 1] = 2;
                     displayRound();
                     t--;
                 }
@@ -40,6 +45,18 @@ public class MaxMin {
         sc.close();
         return;
     }
+
+    // private static void testInput() {
+    // arr[1] = 1;
+    // arr[2] = 1;
+    // arr[3] = 0;
+    // arr[4] = 2;
+    // arr[5] = 2;
+    // arr[6] = 2;
+    // arr[7] = 0;
+    // arr[8] = 0;
+    // arr[9] = 0;
+    // }
 
     /**
      */
