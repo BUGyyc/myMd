@@ -96,7 +96,7 @@ void TicTacToe::findCompMove(int &bestMove, int &value, int alpha, int beta)
                 int tmp = -1, response = -1; // tmp没有用上
                 findHumanMove(tmp, response, value, beta);
                 board.unPlace(i); //把刚刚尝试放的那格重置
-                if (response > value)
+                if (response > value)//response是深度搜索后得出的最大值
                 {
                     value = response;
                     bestMove = i;
@@ -128,7 +128,7 @@ void TicTacToe::findHumanMove(int &bestMove, int &value, int alpha, int beta)
                 int tmp = -1, response = -1; // tmp 没有用上
                 findCompMove(tmp, response, alpha, value);
                 board.unPlace(i);//重置回去
-                if (response < value)
+                if (response < value)//response是深度搜索后得出的最小值
                 {
                     value = response;
                     bestMove = i;
