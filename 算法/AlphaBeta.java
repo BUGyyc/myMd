@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class AlphaBeta {
     private static int[] arr = new int[10];
     private static int t = 0;
-    private static int INF = Integer.MAX_VALUE;
+    // private static int INF = Integer.MAX_VALUE;
     private static String ME = "A";
     private static String AI = "B";
     private static int bestMove = 0;
