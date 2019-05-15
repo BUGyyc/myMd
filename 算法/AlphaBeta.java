@@ -63,14 +63,14 @@ public class AlphaBeta {
         else if (checkAINearWin())
             value = CompWin;
         else {
-            value = alpha;
+            value = alpha;           //beta > alpha
             for (int i = 1; i <= 9 && value < beta; i++) {
                 if (arr[i] == 0) {
                     arr[i] = 2;
                     int response = -1;
                     response = findManStep(response, alpha, beta);
                     arr[i] = 0;
-                    if (response > value) {
+                    if (response > value) {//beta > alpha
                         value = response;
                         bestMove = i;
                     }
@@ -86,14 +86,14 @@ public class AlphaBeta {
         else if (checkManNearWin())
             value = HumanWin;
         else {
-            value = beta;
+            value = beta;               //beta > alpha
             for (int i = 1; i <= 9 && value > alpha; i++) {
                 if (arr[i] == 0) {
                     arr[i] = 1;
                     int response = -1;
                     response = findAIStep(response, alpha, beta);
                     arr[i] = 0;
-                    if (response < value) {
+                    if (response < value) {//beta > alpha
                         value = response;
                         bestMove = i;
                     }
