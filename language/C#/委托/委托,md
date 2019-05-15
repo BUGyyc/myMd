@@ -1,0 +1,8 @@
+# delegate(委托)
+
+在事件派发中有运用到delegate
+https://github.com/BUGyyc/myMd/tree/master/Temporary/EventDispatcher
+
+
+
+https://docs.microsoft.com/zh-cn/dotnet/csharp/delegate-class
