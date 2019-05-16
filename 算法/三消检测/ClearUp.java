@@ -52,7 +52,7 @@ public class ClearUp {
             } else {
                 return false;
             }
-        } else if (d == Directions.LEFT) {
+        } else if (d == Directions.RIGHT) {
             if (y + 2 <= 8) {
                 if (type == arr[x][y + 1] && type == arr[x][y + 2]) {
                     return true;
