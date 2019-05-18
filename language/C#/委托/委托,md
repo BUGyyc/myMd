@@ -6,3 +6,78 @@ https://github.com/BUGyyc/myMd/tree/master/Temporary/EventDispatcher
 
 
 https://docs.microsoft.com/zh-cn/dotnet/csharp/delegate-class
+
+
+
+https://www.cnblogs.com/zhangchenliang/p/4968779.html
+
+http://www.tracefact.net/tech/009.html
+
+委托是一种类型，它使得方法可以像其他数据类型一样在方法中作为参数传递
+如下代码：
+
+```
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("关于委托");
+            AClass a = new AClass();
+            BClass b = new BClass(a);
+            CClass c = new CClass(a);
+            a.onComplete(1);//
+        }
+    }
+
+    /// <summary>
+    /// A的某个行为被B、C关注
+    /// 例如A是餐厅前台服务员，B、C点餐后，一直等着A叫号
+    /// 所以A是被观察者，B、C是观察者
+    /// </summary>
+    class AClass {
+        public delegate void CompleteFunDelegate(int number);
+        public event CompleteFunDelegate completeFunDelegate;
+        public AClass() {
+
+        }
+        public void onComplete(int number) {
+            if (completeFunDelegate != null) {
+                completeFunDelegate(number);
+            }
+        }
+    }
+
+    class BClass {
+        public AClass a;
+        public BClass(AClass a) {
+            this.a = a;
+            this.a.completeFunDelegate += new AClass.CompleteFunDelegate(isMyNumber);
+        }
+
+        public void isMyNumber(int number) {
+            Console.WriteLine("B  收到了A的叫号");
+        }
+    }
+
+    class CClass {
+        public AClass a;
+        public CClass(AClass a){
+            this.a = a;
+            this.a.completeFunDelegate += new AClass.CompleteFunDelegate(isMyNumber);
+        }
+        public void isMyNumber(int number) {
+            Console.WriteLine("C  收到了A的叫号");
+        }
+    }
+}
+
+```
+
