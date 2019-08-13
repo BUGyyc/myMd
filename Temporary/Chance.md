@@ -7,7 +7,7 @@
  - 知乎文章：https://www.zhihu.com/people/ying-yun-chao/posts
  - CSDN博客：https://blog.csdn.net/u011669081
 
- - 期望职位：H5游戏客户端，Unity3D游戏客户端
+ - 期望职位：H5游戏客户端 / Unity3D游戏客户端
  - 期望城市：深圳
 
 
@@ -19,21 +19,17 @@
 
 # 开源项目和作品
 
+部分作品截图：https://github.com/BUGyyc/MyGallery/blob/master/README.md
 
 ## 开源项目
-（对于程序员来讲，没有什么比Show me the code能有说服力了）
-
   - [STU](http://github.com/yourname/projectname)：项目的简要说明，Star和Fork数多的可以注明
   - [WXYZ](http://github.com/yourname/projectname)：项目的简要说明，Star和Fork数多的可以注明
 
 ## 技术文章
-（挑选你写作或翻译的技术文章，好的文章可以从侧面证实你的表达和沟通能力，也帮助招聘方更了解你）
-
 - [微信小游戏开发总结](https://zhuanlan.zhihu.com/p/54815838)
 - [CocosCreator H5小游戏开发](https://zhuanlan.zhihu.com/p/77779319)
     
 # 工作经历
-（工作经历按逆序排列，最新的在最前边，按公司做一级分组，公司内按二级分组）
 
 ## ABC公司 （ 2012年9月 ~ 2014年9月 ）
 
@@ -64,4 +60,16 @@
 
 （每个公司写2~3个核心项目就好了，如果你有非常大量的项目，那么按分类进行合并，每一类选一个典型写出来。其他的一笔带过即可。）
   
-  
+# 技能清单
+（我一般主张将技能清单写入到工作经历里边去。不过很难完整，所以有这么一段也不错）
+
+以下均为我熟练使用的技能
+
+- Web开发：PHP/Hack/Node
+- Web框架：ThinkPHP/Yaf/Yii/Lavarel/LazyPHP
+- 前端框架：Bootstrap/AngularJS/EmberJS/HTML5/Cocos2dJS/ionic
+- 前端工具：Bower/Gulp/SaSS/LeSS/PhoneGap
+- 数据库相关：MySQL/PgSQL/PDO/SQLite
+- 版本管理、文档和自动化部署工具：Svn/Git/PHPDoc/Phing/Composer
+- 单元测试：PHPUnit/SimpleTest/Qunit
+- 云和开放平台：SAE/BAE/AWS/微博开放平台/微信应用开发
