@@ -6,7 +6,7 @@ public class EventDispather {
     }
     public void addEventListener (string eventName, EventListenerDelegate callBack) {
         if (!this.eventDic.ContainsKey (eventName)) {
-            this.eventDic.Add (eventDic, new EventListener ());
+            this.eventDic.Add (eventName, new EventListener ());
         }
         this.eventDic[eventName].OnEvent += callBack;
     }
