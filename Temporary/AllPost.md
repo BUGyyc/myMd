@@ -16,7 +16,24 @@ https://gameinstitute.qq.com/community/detail/117767
 DrawCall
 Z轴缓存
 
+OpenGL简单流程
+- 顶点着色器：将输入的3D坐标转化为相应的3D坐标
+- 形状装配：将坐标组合为一个形状
+- 几何着色器：将形状细分成一些三角形
+- 光栅化：把三角形生成出多个像素点
+- 片段着色器：给像素点上色
+- 混合测试：因为图形有遮盖等层次关系，以及一些透明度遮挡，最后处理输出能展示的图形
+
 PureMVC
+
+-Mediator 与 View
+-Proxy 与 Model
+-Command 与 Controller
+
+Facade 单例直接管理 View、Model、Controller
+Facade 也可直接管理所有的Mediator、Proxy、Command
+
+传统的MVC模式下，Controller一般是最臃肿的
 
 https://blog.csdn.net/qq_29579137/article/details/73692842
 
