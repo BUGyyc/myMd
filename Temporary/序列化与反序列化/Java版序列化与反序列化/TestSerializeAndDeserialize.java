@@ -1,3 +1,10 @@
+
+/*
+ * @Author: delevin.ying 
+ * @Date: 2019-09-09 15:02:33 
+ * @Last Modified by: delevin.ying
+ * @Last Modified time: 2019-09-09 16:02:07
+ */
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.ObjectInputStream;
@@ -11,7 +18,7 @@ public class TestSerializeAndDeserialize {
     public static void main(String[] args) throws Exception {
         SerializePerson();
         Person p = DeserializePerson();
-        System.out.println("name={" + p.getName() + "},age={" + p.getAge() + "},sex={" + p.getSex() + "}");
+        System.out.println("name={" + p.getName() + "},age={" + p.getAge() + "},sex={" + p.getSex() + "},{weight="+p.weight+"}");
     }
 
     public static void SerializePerson() throws FileNotFoundException, IOException {
@@ -19,6 +26,7 @@ public class TestSerializeAndDeserialize {
         p.setAge(26);
         p.setName("delevin");
         p.setSex("man");
+        p.weight = 120;
         ObjectOutputStream outPutS = new ObjectOutputStream(new FileOutputStream(new File("D:/Person.txt")));
         outPutS.writeObject(p);
         outPutS.close();
@@ -36,6 +44,8 @@ class Person implements Serializable {
     private int age;
     private String name;
     private String sex;
+
+    public static int weight = 140;
 
     public int getAge() {
         return age;
