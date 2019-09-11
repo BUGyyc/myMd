@@ -1,0 +1,3 @@
+WebSocket
+WebSocket是一种在单个TCP连接上进行全双工通信的协议。WebSocket通信协议于2011年被IETF定为标准RFC 6455，并由RFC7936补充规范。WebSocket API也被W3C定为标准。
+它是为了解决HTTP连接的频繁断开再重连的消耗问题

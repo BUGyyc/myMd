@@ -1,5 +1,9 @@
 # delegate(委托)
 
+C#委托
+希望函数可以想参数一样传递，委托（Delegate）特别用于实现事件和回调方法。所有的委托（Delegate）都派生自 System.Delegate 类。
+https://www.cnblogs.com/murongxiaopifu/p/4149659.html
+
 在事件派发中有运用到delegate
 https://github.com/BUGyyc/myMd/tree/master/Temporary/EventDispatcher
 

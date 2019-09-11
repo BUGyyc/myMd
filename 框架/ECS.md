@@ -1,0 +1,3 @@
+ECS
+componement只包含数据
+compenmentSysttem包含行为
