@@ -31,29 +31,88 @@ class EventDispatcher {
     }
 }
 
-let callBack1 = function(){
+let callBack1 = function () {
     console.log("11111111111111111111")
 }
 
-let callBack2 = function(){
+let callBack2 = function () {
     console.log("2222222")
 }
 
-let callBack3 = function(){
+let callBack3 = function () {
     console.log("3333")
 }
 
 let eventSystem = new EventDispatcher();
-eventSystem.addEventListener("event1",callBack1);
-eventSystem.addEventListener("event2",callBack2);
-eventSystem.once("event3",callBack3);
+eventSystem.addEventListener("event1", callBack1);
+eventSystem.addEventListener("event2", callBack2);
+eventSystem.once("event3", callBack3);
 
 eventSystem.dispatcher("event1")
 eventSystem.dispatcher("event2")
 eventSystem.dispatcher("event3")
 
-eventSystem.removeEventListener("event1",callBack1)
+eventSystem.removeEventListener("event1", callBack1)
 
 eventSystem.dispatcher("event1")
 eventSystem.dispatcher("event2")
 eventSystem.dispatcher("event3")
+
+
+
+
+
+
+
+
+
+
+var name = "The Window";
+var object = {
+    name: "My Object",
+    getNameFunc: function () {
+        return function () {
+            return this.name;
+        };
+    }
+};
+alert(object.getNameFunc()());
+
+
+var name = "The Window";
+var object = {
+    name: "My Object",
+    prf: function () {
+        return this.name;
+    },
+    getNameFunc: function () {
+        return prf;
+    }
+};
+alert(object.getNameFunc()());
+
+
+var name = "The Window";
+var object = {
+    name: "My Object",
+    getNameFunc: function () {
+        return retFn;
+    }
+};
+var retFn = function () {
+    return this.name;
+}
+alert(object.getNameFunc()());
+
+
+var name = "The Window";
+var object = {
+    name: "My Object",
+    prf = function () {
+        return this.name;
+    },
+    getNameFunc: function () {
+        return prf;
+    }
+};
+alert(object.getNameFunc()());
