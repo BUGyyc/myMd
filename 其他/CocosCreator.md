@@ -22,5 +22,12 @@ WeldJoint要解决标枪连接刚体的问题，但是想让标枪一直跟随�
 -- 无限大地图
 
 
+# Cocos 的物理引擎
+
+Cocos用的物理引擎是Box2D
+
+## 关于Box2D
+
+https://github.com/erincatto/Box2D
 
 
