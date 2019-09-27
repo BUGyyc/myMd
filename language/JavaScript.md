@@ -208,3 +208,10 @@ console.log("doSomething.prototype.foo:  " + doSomething.prototype.foo);
 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Inheritance_and_the_prototype_chain
 
 
+# 其他
+
+https://blog.fundebug.com/2017/07/17/10-javascript-difficulties/
+
+https://juejin.im/entry/588037d38d6d810058af5d01
+
+
