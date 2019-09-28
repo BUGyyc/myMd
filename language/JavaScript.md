@@ -1,4 +1,21 @@
 
+
+
+https://www.w3cschool.cn/javascript/javascript-skillmap.html
+
+# javascript 中的类型
+
+Undefined NULL Number String Boolean Object
+
+# typeof 判断返回以下结果
+
+- udefined ， 值未定义
+- boolean , 值为布尔型
+- string , 值为字符串
+- number ， 值为数值类型
+- object , 值为对象类型或者null，null是特殊值，被认为是空的对象引用
+- function , 值为函数
+
 # Array
 
 - push() 尾部添加元素
