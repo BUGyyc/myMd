@@ -1,19 +1,4 @@
 //正整数
-let sumStrings = function (a, b) {
-    var result = [], count = 0;
-    if (a.length < b.length) b = [a, a = b][0];
-    b = Array(a.length - b.length + 1).join('0') + b;
-    var arrA = a.split('');
-    var arrB = b.split('');
-    for (var j = 0; j < a.length; j++) {
-        var temp = (Number(arrA.pop()) + Number(arrB.pop())) + count;
-        temp >= 10 ? [temp, count] = [temp - 10, 1] : count = 0;
-        result.push(temp);
-    }
-    result.push(count);
-    return result.reverse().join('').replace(/^0+/, '');
-}
-
 
 let sumStrings = function (a, b) {
     a = a.trim();
@@ -90,8 +75,9 @@ let lt = function (num1, num2) {
     }
 }
 
-console.log(sumStrings2("111111111111111","1"))
-console.log(sumStrings2("111111111111111","-1"))
-console.log(sumStrings2("-10000000000","-3"))
-console.log(sumStrings2("-999999999","9"))
-console.log(sumStrings2("333333333333333","-289687245"))
+console.log(sumStrings("111111111111111","1"))
+console.log(sumStrings("111111111111111","-1"))
+console.log(sumStrings("-10000000000","-3"))
+console.log(sumStrings("-999999999","9"))
+console.log(sumStrings("333333333333333","-289687245"))
+console.log(sumStrings("999999999999999999999999999999999999999999999999999991","1"))
