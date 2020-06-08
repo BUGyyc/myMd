@@ -232,3 +232,141 @@ https://blog.fundebug.com/2017/07/17/10-javascript-difficulties/
 https://juejin.im/entry/588037d38d6d810058af5d01
 
 
+---
+
+# Js中的变量与对象
+在Js中所有的变量都可以当作对象使用，除了两个例外null和undefined
+
+    function foo(){}
+    foo.a = 1;
+
+
+## 访问属性
+
+    var a = {b:1};
+    a['b']; //1
+
+## 删除属性
+
+
+# 原型
+
+Js 不包含传统的类继承模型，而是使用prototype原型模型
+
+## 属性查找
+
+Js的属性查找，会向上遍历查找原型链，直到找到给定名称的属性为止。
+到达原型链顶部Object.prototype，未找到就返回Undefined
+
+# 函数
+
+函数是Js中的一种对象，它可以像值一样传递。
+
+
+# This
+执行上下文
+
+# 闭包与引用
+
+    for(var i = 0;i<10;i++){
+        setTimeout(function(){
+            console.log(i);
+        },1000);
+    }
+
+    for(var i =0;i<10;i++){
+        (function(a){
+            setTimeout(function(){
+                console.log(a);
+            },1000)
+        })(i);
+    }
+
+    for(var i = 0;i<10;i++){
+        setTimeout(
+            (function(a){
+                return function(){
+                    console.log(a);
+                }
+            })(i),1000)
+    }
+
+# arguments
+
+
+# 构造函数
+
+# 作用域
+
+## 变量提升
+
+# 数组的操作技巧
+
+Js中数组是对象，
+避免使用 for in 遍历数组，因为会查找到原型链上，需要使用hasOwnProperty
+
+## 数组合并
+    Array.prototype.push.apply(arr1,arr2)
+    //相当于如下
+    arr1 = arr1+arr2//arr1包含1，2
+
+## 数组最大值与最小值
+
+    var arr = [1,2,3]
+    Math.max.apply(Math,arr);//3
+    Math.min.apply(Math,arr);//1
+
+delete 与 remove 都不能完全清理干净数组，数组长度依然没变，只是值变成了undefined
+
+## Array构造函数
+
+
+# 类型判断与比较
+
+Js是弱类型语言，这就意味着，==操作符会在比较前先进行强制类型转换
+
+    “” == “0” //false
+    0  == “”  //true
+    0  == "0" //true
+    false == "false" //false
+    false == "0"  //true
+    false == undefined  //false
+    false == null   //false
+    null == undefined //true
+
+## typeOf
+
+- typeof：JavaScript一元操作符，用于以字符串的形式返回变量的原始类型，注意，typeof null也会返回object，大多数的对象类型（数组Array、时间Date等）也会返回object
+
+
+
+## instanceOf
+
+instanceOf操作符应该仅仅用来比较来自同一个Js上下文的自定义对象。
+- instanceof：JavaScript操作符，会在原型链中的构造器中搜索，找到则返回true，否则 返回false
+
+
+    var arr = ["a", "b", "c"];
+    typeof arr;   
+    // 返回 "object" 
+    arr instanceof Array // true
+    arr.constructor();  //[]
+
+## undefined与null
+
+两者都表示‘空’，
+
+undefined表示一个值为undefined的类型
+
+在Js中null也是一种数据类型
+
+## setTimeout与setInterval
+
+由于Js是异步的，可以使用setTimeout与setInterval来计划执行函数
+
+# 其他
+
+## 对象转数组
+    var arr = Array.prototype.slice.call(arguments)
+
+
