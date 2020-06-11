@@ -7,6 +7,10 @@ https://www.w3cschool.cn/javascript/javascript-skillmap.html
 
 Undefined NULL Number String Boolean Object
 
+## typeof 与 instanceof
+
+http://jartto.wang/2019/01/17/js-typeof/
+
 # typeof 判断返回以下结果
 
 - udefined ， 值未定义
@@ -39,6 +43,8 @@ Undefined NULL Number String Boolean Object
 # 回收机制
 
 标记回收、引用计数
+
+https://segmentfault.com/a/1190000019276047
 
 ## 垃圾回收机制
 
@@ -248,7 +254,7 @@ https://juejin.im/entry/588037d38d6d810058af5d01
 
 ## 删除属性
 
-delete 数组中删除，数组长度不会变，被删除的项变为Undefined
+delete ，remove 数组中删除，数组长度不会变，被删除的项变为Undefined
 
 
 # 原型
