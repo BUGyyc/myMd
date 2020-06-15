@@ -7,3 +7,15 @@ https://www.jianshu.com/p/53f93a917799
 https://juejin.im/post/5b32ea55e51d4558bf7c45e0
 
 http://www.360doc.com/content/19/0822/15/15312904_856439392.shtml
+
+
+# gif
+
+# jpg
+
+https://zhuanlan.zhihu.com/p/40356456
+
+# png
+
+## png压缩算法
+
