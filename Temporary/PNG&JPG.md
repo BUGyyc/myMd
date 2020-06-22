@@ -19,3 +19,10 @@ https://zhuanlan.zhihu.com/p/40356456
 
 ## png压缩算法
 
+
+
+
+https://juejin.im/post/5c8e4feb6fb9a070aa5ce200
+
+
+https://zhuanlan.zhihu.com/p/19570424
