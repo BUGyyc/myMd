@@ -62,10 +62,73 @@ unity 编辑器（Editor工具，手写插件）
 模块掌握（UGUI系统、粒子系统、光照系统，动画系统，物理系统）
 
 
-
-
-
-
-
 Unity Mesh
 https://zhuanlan.zhihu.com/p/96084686
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---
+
+
+
+
+
+### plan
+
+
+png压缩算法
+
+
+序列化到Unity AB
+
+
+C# 魔值
+
+
+
+渲染管线
+
+
+
+排序
+
+
+
+shader
+
+
+
+
+3D多边形碰撞
+
+
+
+
+books
+- 开发者jc1-7
+- game ai
+
+
+
+xmind
+
+
+
+
+
