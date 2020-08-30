@@ -1,3 +1,7 @@
+---
+typora-root-url: #.res\pic
+---
+
 # myMd
 
 梳理所学，永久更新
@@ -54,7 +58,7 @@
                 if (root == null) {
                     return output;
                 }
-
+    
                 stack.add(root);
                 while (!stack.isEmpty()) {
                     TreeNode node = stack.pollLast();
@@ -78,7 +82,7 @@
             helper(root, res);
             return res;
         }
-
+    
         public void helper(TreeNode root, List < Integer > res) {
             if (root != null) {
                 if (root.left != null) {
@@ -118,6 +122,20 @@
 
 #### 层序遍历
 
+    void bfs(TreeNode root) {
+        Queue<TreeNode> queue = new ArrayDeque<>();
+        queue.add(root);
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll(); // Java 的 pop 写作 poll()
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+        }
+    }
+
 #### 二叉树的最大深度
 
 ### 堆栈
@@ -138,13 +156,23 @@
 
 ### 十大排序算法
 
+![1598754122780](/1598754122780.png)
+
 #### 冒泡排序
+
+两两比较
 
 #### 选择排序
 
+每次从未排序的列表中找出最大或最小的一项
+
 #### 插入排序
 
+将第一待排序序列第一个元素看做一个有序序列，把第二个元素到最后一个元素当成是未排序序列。从头到尾依次扫描未排序序列，将扫描到的每个元素插入有序序列的适当位置。（如果待插入的元素与有序序列中的某个元素相等，则将待插入元素插入到相等元素的后面。）
+
 #### 快速排序
+
+从数列中挑出一个元素，称为 “基准”（pivot）;重新排序数列，所有元素比基准值小的摆放在基准前面，所有元素比基准值大的摆在基准的后面（相同的数可以到任一边）。在这个分区退出之后，该基准就处于数列的中间位置。这个称为分区（partition）操作；递归地（recursive）把小于基准值元素的子数列和大于基准值元素的子数列排序；
 
 #### 归并排序
 
