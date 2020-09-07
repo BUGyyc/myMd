@@ -45,3 +45,8 @@
 
 - API
   - playable.GetTime() //获取该片段当前的播放时间进度
+
+
+Track 绑定 GameObject
+
+  playableDirector.SetGenericBinding(timelineEventTrack, gameObject);
