@@ -34,9 +34,27 @@
  */
 
 // @lc code=start
-public class Solution {
-    public int MaxArea(int[] height) {
-
+public class Solution
+{
+    public int MaxArea(int[] height)
+    {
+        int max = 0;
+        int i = 0;
+        int j = height.Length - 1;
+        while (i < j)
+        {
+            int result = Math.Min(height[i], height[j]) * (j - i);
+            max = Math.Max(result, max);
+            if (height[i] > height[j])
+            {
+                j--;
+            }
+            else
+            {
+                i++;
+            }
+        }
+        return max;
     }
 }
 // @lc code=end
