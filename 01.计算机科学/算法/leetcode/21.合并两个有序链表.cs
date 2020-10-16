@@ -38,9 +38,38 @@
  * }
  */
 public class Solution {
-    public ListNode MergeTwoLists(ListNode l1, ListNode l2) {
-        
+    public ListNode MergeTwoLists (ListNode l1, ListNode l2) {
+        ListNode p = null;
+        ListNode head = null;
+        while (l1 != null || l2 != null) {
+            int result = 0;
+            if (l1 != null && l2 != null) {
+                if (l1.val < l2.val) {
+                    result = l1.val;
+                    l1 = l1.next;
+                } else {
+                    result = l2.val;
+                    l2 = l2.next;
+                }
+            } else {
+                if (l1 == null) {
+                    result = l2.val;
+                    l2 = l2.next;
+                } else {
+                    result = l1.val;
+                    l1 = l1.next;
+                }
+            }
+
+            if (head == null) {
+                head = new ListNode (result);
+                p = head;
+            } else {
+                p.next = new ListNode (result);
+                p = p.next;
+            }
+        }
+        return head;
     }
 }
 // @lc code=end
-
