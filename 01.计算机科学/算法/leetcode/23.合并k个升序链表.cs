@@ -73,9 +73,43 @@
  * }
  */
 public class Solution {
-    public ListNode MergeKLists(ListNode[] lists) {
-        
+    public ListNode MergeKLists (ListNode[] lists) {
+        ListNode head = null;
+        ListNode p = null;
+        while (HasNullListNode (lists) == false) {
+            ListNode item = GetMinListNodeIndex (lists);
+            if (head == null) {
+                head = new ListNode (item.val);
+                p = head;
+            } else {
+                p.next = new ListNode (item.val);
+                p = p.next;
+            }
+            item = item.next;
+        }
+        return head;
+    }
+
+    public bool HasNullListNode (ListNode[] lists) {
+        foreach (var item in lists) {
+            if (item == null) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public ListNode GetMinListNodeIndex (ListNode[] lists) {
+        int minIndex = 0;
+        int minValue = int.MaxValue;
+        for (int i = 0; i < lists.Length; i++) {
+            var item = lists[i];
+            if (item != null && item.val < minValue) {
+                minIndex = i;
+                minValue = item.val;
+            }
+        }
+        return lists[minIndex];
     }
 }
 // @lc code=end
-
