@@ -44,10 +44,38 @@
  *     }
  * }
  */
+
+using System.Collections.Generic;
 public class Solution {
-    public IList<int> InorderTraversal(TreeNode root) {
-        
+    public IList<int> InorderTraversal (TreeNode root) {
+        List<int> list = new List<int> ();
+        Stack<TreeNode> stack = new Stack<TreeNode> ();
+
+        while (root != null || stack.Count > 0) {
+            while (root != null) {
+                stack.Push (root);
+                root = root.left;
+            }
+            root = stack.Pop ();
+            list.Add (root.val);
+            root = root.right;
+        }
+        return list;
+    }
+
+    private IList<int> func1 (TreeNode root) {
+        List<int> list = new List<int> ();
+        InOrder (ref list, root);
+        return list;
+    }
+
+    private void InOrder (ref List<int> list, TreeNode root) {
+        if (root == null) {
+            return;
+        }
+        InOrder (ref list, root.left);
+        list.Add (root.val);
+        InOrder (ref list, root.right);
     }
 }
 // @lc code=end
-
