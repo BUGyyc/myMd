@@ -34,31 +34,78 @@
  */
 
 // @lc code=start
-public class MyStack {
+public class MyStack
+{
+
+    Queue<int> q1;
+    Queue<int> q2;
+    // int first;
 
     /** Initialize your data structure here. */
-    public MyStack() {
-
+    public MyStack()
+    {
+        q1 = new Queue<int>();
+        q2 = new Queue<int>();
     }
-    
+
     /** Push element x onto stack. */
-    public void Push(int x) {
+    public void Push(int x)
+    {
+        while (q1.Count > 0)
+        {
+            int n = q1.Dequeue();
+            q2.Enqueue(n);
+        }
 
+        q1.Enqueue(x);
+        while (q2.Count > 0)
+        {
+            int n = q2.Dequeue();
+            q1.Enqueue(n);
+        }
     }
-    
+
     /** Removes the element on top of the stack and returns that element. */
-    public int Pop() {
-
+    public int Pop()
+    {
+        // while (q1.Count > 1)
+        // {
+        //     int x = q1.Dequeue();
+        //     q2.Enqueue(x);
+        // }
+        // int p = q1.Dequeue();
+        // // if (q2.Count > 1)
+        // // {
+        // while (q2.Count > 1)
+        // {
+        //     int x = q2.Dequeue();
+        //     q1.Enqueue(x);
+        // }
+        // int m = q2.Dequeue();
+        // first = m;
+        // q1.Enqueue(first);
+        // // }
+        // // else
+        // // {
+        // //     int m = q2.Dequeue();
+        // //     first = m;
+        // //     q1.Enqueue(first);
+        // // }
+        // return p;
+        int p = q1.Dequeue();
+        return p;
     }
-    
+
     /** Get the top element. */
-    public int Top() {
-
+    public int Top()
+    {
+        return q1.Peek();
     }
-    
-    /** Returns whether the stack is empty. */
-    public bool Empty() {
 
+    /** Returns whether the stack is empty. */
+    public bool Empty()
+    {
+        return q1.Count == 0;
     }
 }
 
