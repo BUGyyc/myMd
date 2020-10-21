@@ -34,22 +34,17 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    public IList<IList<int>> ThreeSum(int[] nums)
-    {
-        List<List<int>> result = new List<List<int>>();
-        for (int i = 0; i < nums.Length; i++)
-        {
+public class Solution {
+    public IList<IList<int>> ThreeSum (int[] nums) {
+        List<List<int>> result = new List<List<int>> ();
+        for (int i = 0; i < nums.Length - 1; i++) {
             int x = nums[i];
             int target = 0 - x;
-            List<int> list = new List<int>();
-            for (int i = 1; i < nums.Length; i++)
-            {
+            List<int> list = new List<int> ();
+            for (int j = i + 1; j < nums.Length; j++) {
                 
             }
         }
     }
 }
 // @lc code=end
-
