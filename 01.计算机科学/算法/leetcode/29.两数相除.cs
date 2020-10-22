@@ -49,7 +49,7 @@
 // @lc code=start
 public class Solution {
     public int Divide(int dividend, int divisor) {
-        `
+        
     }
 }
 // @lc code=end
