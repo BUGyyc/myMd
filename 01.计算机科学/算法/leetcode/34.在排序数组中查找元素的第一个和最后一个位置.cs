@@ -32,8 +32,60 @@
  */
 
 // @lc code=start
-public class Solution {
-    public int[] SearchRange(int[] nums, int target) {
+public class Solution
+{
+    public int[] SearchRange(int[] nums, int target)
+    {
+        if (nums.Length == 0)
+        {
+            return new int[2] { -1, -1 };
+        }
+        else if (nums.Length == 1)
+        {
+            if (nums[0] != target)
+            {
+                return new int[2] { -1, -1 };
+            }
+            else
+            {
+                return new int[2] { 0, 0 };
+            }
+        }
+
+        int s = 0;
+        int e = nums.Length - 1;
+        int start = -1;
+        int end = -1;
+        while (s <= e)
+        {
+
+            if (nums[s] < target)
+            {
+                s++;
+            }
+            else if (nums[s] == target)
+            {
+                if (start == -1) start = s;
+            }
+
+
+
+            if (nums[e] > target)
+            {
+                e--;
+            }
+            else if (nums[e] == target)
+            {
+                if (end == -1) end = e;
+            }
+
+            if (start != -1 && end != -1)
+            {
+                break;
+            }
+        }
+
+        return new int[2] { start, end };
 
     }
 }
