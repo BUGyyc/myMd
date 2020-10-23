@@ -36,7 +36,7 @@
 // @lc code=start
 public class Solution {
     public IList<IList<int>> ThreeSum (int[] nums) {
-        List<List<int>> result = new List<List<int>> ();
+        List<IList<int>> result = new List<IList<int>> ();
         for (int i = 0; i < nums.Length - 1; i++) {
             int x = nums[i];
             int target = 0 - x;
