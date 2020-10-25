@@ -74,42 +74,38 @@
  */
 public class Solution {
     public ListNode MergeKLists (ListNode[] lists) {
-        ListNode head = null;
-        ListNode p = null;
-        while (HasNullListNode (lists) == false) {
-            ListNode item = GetMinListNodeIndex (lists);
-            if (head == null) {
-                head = new ListNode (item.val);
-                p = head;
+        return Merge (lists, 0, lists.Length - 1);
+    }
+
+    private ListNode Merge (ListNode[] lists, int l, int r) {
+        if (l == r) {
+            return lists[l];
+        }
+        if (l > r) {
+            return null;
+        }
+        int mid = (l + r) / 2;
+        return MergeTwoList (Merge (lists, l, mid), Merge (lists, mid + 1, r));
+    }
+
+    private ListNode MergeTwoList (ListNode a, ListNode b) {
+        if (a == null || b == null) {
+            return a != null ? a : b;
+        }
+        ListNode head = new ListNode (0);
+        ListNode tail = head, aPtr = a, bPtr = b;
+        while (aPtr != null && bPtr != null) {
+            if (aPtr.val < bPtr.val) {
+                tail.next = aPtr;
+                aPtr = aPtr.next;
             } else {
-                p.next = new ListNode (item.val);
-                p = p.next;
+                tail.next = bPtr;
+                bPtr = bPtr.next;
             }
-            item = item.next;
+            tail = tail.next;
         }
-        return head;
-    }
-
-    public bool HasNullListNode (ListNode[] lists) {
-        foreach (var item in lists) {
-            if (item == null) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public ListNode GetMinListNodeIndex (ListNode[] lists) {
-        int minIndex = 0;
-        int minValue = int.MaxValue;
-        for (int i = 0; i < lists.Length; i++) {
-            var item = lists[i];
-            if (item != null && item.val < minValue) {
-                minIndex = i;
-                minValue = item.val;
-            }
-        }
-        return lists[minIndex];
+        tail.next = (aPtr != null ? aPtr : bPtr);
+        return head.next;
     }
 }
 // @lc code=end

@@ -45,9 +45,21 @@
 
 // @lc code=start
 public class Solution {
-    public int FirstMissingPositive(int[] nums) {
+    public int FirstMissingPositive (int[] nums) {
+        int n = nums.Length;
+        bool[] arr = new bool[n];
+        foreach (var item in nums) {
+            if (item > 0) {
+                arr[item - 1] = true;
+            }
+        }
 
+        for (int i = 0; i < arr.Length; i++) {
+            if (arr[i] == false) {
+                return i + 1;
+            }
+        }
+        return n;
     }
 }
 // @lc code=end
-
