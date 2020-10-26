@@ -41,9 +41,13 @@
 
 // @lc code=start
 public class Solution {
-    public IList<int> SpiralOrder(int[][] matrix) {
-
+    public IList<int> SpiralOrder (int[][] matrix) {
+        List<int> result = new List<int> ();
+        int m = matrix.Length;
+        int n = matrix[0].Length;
+        int i = 0;
+        int j = 0;
+        // int endI = 
     }
 }
 // @lc code=end
-

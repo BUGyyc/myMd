@@ -40,9 +40,32 @@
 
 // @lc code=start
 public class Solution {
-    public int StrStr(string haystack, string needle) {
+    public int StrStr (string haystack, string needle) {
+        int n = haystack.Length;
+        int step = needle.Length;
+        if (step == 0) {
+            return 0;
+        }
 
+        int p = 0;
+        while (p < n - step + 1) {
+            //找到第一个相等的字符
+            while (p < n - step + 1 && (haystack[p] != needle[0])) {
+                p++;
+            }
+            //往后滑动窗口
+            int currL = 0;
+            int stepL = 0;
+            while (stepL < step && p < n && (haystack[p] == needle[stepL])) {
+                p++;
+                stepL++;
+                currL++;
+            }
+            //最后判断一下是否窗口大小等于字符串长度
+            if (currL == step) return p - step;
+            p = p - currL + 1;
+        }
+        return -1;
     }
 }
 // @lc code=end
-
