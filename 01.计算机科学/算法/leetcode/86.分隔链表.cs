@@ -76,8 +76,14 @@ public class Solution
             }
             p = p.next;
         }
-        s.next = sec;
-        return f;
+        if (s != null)
+        {
+            s.next = sec; 
+            return f;
+        }else{
+            return sec;
+        }
+       
     }
 }
 // @lc code=end
