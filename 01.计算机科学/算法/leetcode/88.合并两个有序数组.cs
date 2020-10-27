@@ -52,11 +52,12 @@ public class Solution
 {
     public void Merge(int[] nums1, int m, int[] nums2, int n)
     {
-        int x = 0;
-        int y = 0;
-        while (x < n + m || y < n)
+        int i = m - 1, j = n - 1, pos = nums1.Length - 1;
+        while (pos >= 0 && j >= 0)
         {
-            
+            nums1[pos--] = i >= 0 && nums1[i] > nums2[j]
+                ? nums1[i--]
+                : nums2[j--];
         }
     }
 }
