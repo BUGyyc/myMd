@@ -34,17 +34,49 @@
  */
 
 // @lc code=start
-public class Solution {
-    public IList<IList<int>> ThreeSum (int[] nums) {
-        List<IList<int>> result = new List<IList<int>> ();
-        for (int i = 0; i < nums.Length - 1; i++) {
-            int x = nums[i];
-            int target = 0 - x;
-            List<int> list = new List<int> ();
-            for (int j = i + 1; j < nums.Length; j++) {
-                
+public class Solution
+{
+    public IList<IList<int>> ThreeSum(int[] nums)
+    {
+        List<IList<int>> result = new List<IList<int>>();
+        if (nums.Length <= 2) return result;
+        Array.Sort(nums);
+        int start = 0;
+        while (start < nums.Length - 2)
+        {
+            int left = start + 1;
+            int right = nums.Length - 1;
+            int target = 0 - nums[start];
+            while (left < right)
+            {
+                if (target > nums[left] + nums[right])
+                {
+                    left++;
+                }
+                else if (target < nums[left] + nums[right])
+                {
+                    right--;
+                }
+                else
+                {
+                    var list = new List<int>();
+                    list.Add(nums[start]);
+                    list.Add(nums[left]);
+                    list.Add(nums[right]);
+                    result.Add(list);
+
+                    while (left < right && nums[left] == list[1])
+                        ++left;
+                    while (left < right && nums[right] == list[2])
+                        --right;
+                }
             }
+            int currentStartNumber = nums[start];
+ 
+            while (start < nums.Length - 2 && nums[start] == currentStartNumber)
+                ++start;
         }
+        return result;
     }
 }
 // @lc code=end
