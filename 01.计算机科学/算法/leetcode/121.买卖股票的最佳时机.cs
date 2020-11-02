@@ -6,11 +6,11 @@
  * https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock/description/
  *
  * algorithms
- * Easy (55.07%)
+ * Easy (55.08%)
  * Likes:    1257
  * Dislikes: 0
- * Total Accepted:    305.1K
- * Total Submissions: 553.9K
+ * Total Accepted:    305.5K
+ * Total Submissions: 554.6K
  * Testcase Example:  '[7,1,5,3,6,4]'
  *
  * 给定一个数组，它的第 i 个元素是一支给定股票第 i 天的价格。
@@ -40,9 +40,17 @@
 
 // @lc code=start
 public class Solution {
-    public int MaxProfit(int[] prices) {
-        
+    public int MaxProfit (int[] prices) {
+        int min = int.MaxValue;
+        int max = 0;
+        for (int i = 0; i < prices.Length; i++) {
+            if (prices[i] < min) {
+                min = prices[i];
+            } else if (prices[i] - min > max) {
+                max = prices[i] - min;
+            }
+        }
+        return max;
     }
 }
 // @lc code=end
-

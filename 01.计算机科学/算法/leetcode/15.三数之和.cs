@@ -65,14 +65,15 @@ public class Solution
                     list.Add(nums[right]);
                     result.Add(list);
 
+                    //去除重复元素
                     while (left < right && nums[left] == list[1])
                         ++left;
                     while (left < right && nums[right] == list[2])
                         --right;
                 }
             }
+            //去除重复元素
             int currentStartNumber = nums[start];
- 
             while (start < nums.Length - 2 && nums[start] == currentStartNumber)
                 ++start;
         }
