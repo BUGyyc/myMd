@@ -37,7 +37,13 @@
 // @lc code=start
 public class Solution {
     public IList<IList<int>> FourSum(int[] nums, int target) {
-
+        Array.Sort(nums);
+        IList<IList<int>> result = new IList<IList<int>>();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            int c = i+1;
+            int l = 
+        }
     }
 }
 // @lc code=end
