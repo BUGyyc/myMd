@@ -64,11 +64,19 @@ public class Solution {
         int col = matrix[0].Length;
         int l = 0;
         int r = row * col - 1;
-        int mid = (l + r) / 2;
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            int n = matrix[mid / col][mid % col];
+            if (n > target) {
+                r = mid - 1;
+            } else if (n < target) {
+                l = mid + 1;
+            } else {
+                return true;
+            }
+        }
+        return false;
     }
 
-    private void Search (int l, int r, int[][] matrix, int target) {
-        int mid = (l + r) / 2;
-    }
 }
 // @lc code=end
