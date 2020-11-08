@@ -36,9 +36,44 @@
 
 // @lc code=start
 public class Solution {
-    public IList<IList<int>> Subsets(int[] nums) {
-
+    public IList<IList<int>> Subsets (int[] nums) {
+        List<IList<int>> result = new List<IList<int>> ();
+        int len = nums.Length;
+        if (len == 0) {
+            result.Add (new List<int> ());
+            return result;
+        }
+        // while (len > 0) {
+        //     BackTrack (nums, result, new List<int> (), new bool[len], 0, len);
+        //     len--;
+        // }
+        List<int> list = new List<int> ();
+        BackTrack (nums, result, list, 0);
+        return result;
     }
+
+    private void BackTrack (int[] nums, List<IList<int>> result, List<int> list, int start) {
+        result.Add (list.ToList());
+        for (int i = start; i < nums.Length; i++) {
+            list.Add (nums[i]);
+            BackTrack (nums, result, list, i + 1);
+            list.RemoveAt (list.Count - 1);
+        }
+    }
+
+    // private void BackTrack (int[] nums, List<IList<int>> result, List<int> list, bool[] visit, int count, int target) {
+    //     if (count == target) {
+    //         result.Add (list);
+    //         return;
+    //     }
+    //     for (int i = 0; i < nums.Length; i++) {
+    //         if (visit[i]) continue;
+    //         visit[i] = true;
+    //         list.Add (nums[i]);
+    //         BackTrack (nums, result, list, visit, count + 1, target);
+    //         list.RemoveAt (list.Count - 1);
+    //         visit[i] = false;
+    //     }
+    // }
 }
 // @lc code=end
-

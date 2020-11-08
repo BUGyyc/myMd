@@ -44,45 +44,31 @@
 // @lc code=start
 public class Solution {
     public string AddBinary (string a, string b) {
-        List<char> list = new List<char> ();
+        List<string> list = new List<string> ();
         int aLen = a.Length;
         int bLen = b.Length;
-        int i = 0;
-        int j = 0;
-        int carry;
-        while (i < aLen || j < bLen) {
-            char x = (i < aLen) ? a[i] : '0';
-            char y = (j < bLen) ? b[j] : '0';
-            string s = x.ToString () + y.ToString ();
-            if (s.Equals ("10") || s.Equals ("01") && carry != 1) {
-                list.Insert (0, "1");
-            } else if (s.Equals ("10") || s.Equals ("01") && carry == 1) {
-                list.Insert (0, "0");
-                carry = 1;
-            } else if (s.Equals ("11") && carry != 1) {
-                list.Insert (0, "0");
-                carry = 1;
-            } else if (s.Equals ("11") && carry == 1) {
-                list.Insert (0, "1");
-                carry = 1;
-            } else if (carry == 1) {
-                list.Insert (0, "1");
-                carry = 0;
-            } else if (carry != 1) {
-                list.Insert (0, "0");
-            }
+        int i = aLen - 1;
+        int j = bLen - 1;
+        int carry = 0;
+        while (i >= 0 || j >= 0) {
+            int x = (i >= 0) ? a[i] - '0' : 0;
+            int y = (j >= 0) ? b[j] - '0' : 0;
+            int sum = x + y + carry;
+            int result = sum % 2;
+            carry = sum / 2;
+            list.Insert (0, result.ToString ());
+            i--;
+            j--;
         }
-
         if (carry > 0) {
-            list.Insert (0, "1");
+            list.Insert (0, carry.ToString ());
         }
-        StringBuild sb = new StringBuild ();
+        string str = "";
         foreach (var item in list) {
-            sb.Append (item);
+
+            str += item;
         }
-
-        return sb.ToString ();
-
+        return str;
     }
 }
 // @lc code=end

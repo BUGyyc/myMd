@@ -32,24 +32,27 @@ public class Solution {
     public IList<IList<int>> PermuteUnique (int[] nums) {
         List<IList<int>> result = new List<IList<int>> ();
         LinkedList<int> list = new LinkedList<int> ();
-        BackTrack (nums, list, result, 0);
+        bool[] visit = new bool[nums.Length];
+        Array.Sort (nums);
+        BackTrack (nums, list, result, visit, 0);
         return result;
     }
 
-    private void BackTrack (int[] nums, LinkedList<int> list, List<IList<int>> result, int start) {
-        if (list.Count == nums.Length) {
+    private void BackTrack (int[] nums, LinkedList<int> list, List<IList<int>> result, bool[] visit, int deep) {
+        if (deep == nums.Length) {
             result.Add (new List<int> (list));
             return;
         }
 
-        for (int i = start; i < nums.Length; i++) {
-            if (list.Contains (nums[i])) {
-                //
-            } else {
-                list.AddLast (nums[i]);
-                BackTrack (nums, list, result, i + 1);
-                list.RemoveLast ();
+        for (int i = 0; i < nums.Length; i++) {
+            if (visit[i] || (i > 0) && nums[i] == nums[i - 1] && visit[i - 1] == false) {
+                continue;
             }
+            visit[i] = true;
+            list.AddLast (nums[i]);
+            BackTrack (nums, list, result, visit, deep + 1);
+            list.RemoveLast();
+            visit[i] = false;
         }
     }
 }
