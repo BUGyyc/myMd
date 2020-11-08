@@ -50,7 +50,7 @@ public class LRUCache {
     Dictionary<int, int> proDic = null;
     Dictionary<int, int> dic = null;
     int Max = 0;
-    int pro = 0;
+    int pro = 1;
     int count = 0;
     public LRUCache (int capacity) {
         Max = capacity;
@@ -73,15 +73,14 @@ public class LRUCache {
             dic[key] = value;
             proDic[key] = pro++;
         } else {
+            //不存在需要添加
+            dic.Add (key, value);
+            proDic.Add (key, pro++);
             if (count < Max) {
                 //未达到最大数量
-                dic.Add (key, value);
-                proDic.Add (key, pro++);
                 count++;
             } else {
                 //已经达到最大数量
-                proDic.Add (key, pro++);
-                dic.Add (key, value);
                 //需要移除多余的
                 CheckRemoveLast ();
             }
@@ -89,7 +88,7 @@ public class LRUCache {
     }
 
     private void CheckRemoveLast () {
-        int min = -1;
+        int min = int.MaxValue;
         int minKey = -1;
         foreach (var item in proDic) {
             if (min >= item.Value) {

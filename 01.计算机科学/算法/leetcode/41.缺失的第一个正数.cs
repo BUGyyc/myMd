@@ -47,9 +47,10 @@
 public class Solution {
     public int FirstMissingPositive (int[] nums) {
         int n = nums.Length;
+        if(n == 0)return 1;
         bool[] arr = new bool[n];
         foreach (var item in nums) {
-            if (item > 0) {
+            if (item > 0 && item - 1 < n) {
                 arr[item - 1] = true;
             }
         }
@@ -59,7 +60,7 @@ public class Solution {
                 return i + 1;
             }
         }
-        return n;
+        return n+1;
     }
 }
 // @lc code=end

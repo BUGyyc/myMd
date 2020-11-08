@@ -54,7 +54,11 @@
  */
 public class Solution {
     public ListNode ReverseKGroup(ListNode head, int k) {
-        
+        int count = k;
+        ListNode f = null;
+        ListNode e = null;
+        ListNode l = null;
+        ListNode r = null;
     }
 }
 // @lc code=end
