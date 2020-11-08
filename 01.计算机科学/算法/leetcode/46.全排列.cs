@@ -32,9 +32,27 @@
 
 // @lc code=start
 public class Solution {
-    public IList<IList<int>> Permute(int[] nums) {
+    public IList<IList<int>> Permute (int[] nums) {
+        List<IList<int>> result = new List<IList<int>> ();
+        LinkedList<int> list = new LinkedList<int> ();
+        BackTrack(nums,list,result);
+        return result;
+    }
 
+    private void BackTrack (int[] nums, LinkedList<int> list, List<IList<int>> result) {
+        if (list.Count == nums.Length) {
+            result.Add (new List<int> (list));
+            return;
+        }
+        for (int i = 0; i < nums.Length; i++) {
+            if(list.Contains(nums[i])){
+                //
+            }else{
+                list.AddLast(nums[i]);
+                BackTrack(nums,list,result);
+                list.RemoveLast();
+            }
+        }
     }
 }
 // @lc code=end
-
