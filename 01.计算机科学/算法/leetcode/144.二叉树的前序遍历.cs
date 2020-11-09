@@ -82,39 +82,51 @@
  * }
  */
 public class Solution {
-    public IList<int> PreorderTraversal(TreeNode root)
-    {
-        List<int> result = new List<int>();
+    public IList<int> PreorderTraversal (TreeNode root) {
+        List<int> result = new List<int> ();
         // PreorderTraversalFunc1(ref result, root);
-        PreorderTraversalFunc2(ref result, root);
+        // PreorderTraversalFunc2(ref result, root);
+        if (root == null) {
+            return result;
+        }
+        Stack<TreeNode> stack = new Stack<TreeNode> ();
+        // stack.Push (root);
+        while (root != null || stack.Count > 0) {
+            while (root != null) {
+                result.Add (root.val);
+                stack.Push (root);
+                root = root.left;
+            }
+            TreeNode curr = stack.Pop ();
+            root = curr.right;
+        }
+
         return result;
     }
 
-    private void PreorderTraversalFunc1(ref List<int> result, TreeNode root)
-    {
+    private void PreorderTraversalFunc1 (ref List<int> result, TreeNode root) {
         if (root == null) return;
-        result.Add(root.val);
-        if (root.left != null) PreorderTraversalFunc1(ref result, root.left);
-        if (root.right != null) PreorderTraversalFunc1(ref result, root.right);
+        result.Add (root.val);
+        if (root.left != null) PreorderTraversalFunc1 (ref result, root.left);
+        if (root.right != null) PreorderTraversalFunc1 (ref result, root.right);
     }
 
-    private void PreorderTraversalFunc2(ref List<int> result,TreeNode root){
-        Stack<TreeNode> stack = new Stack<TreeNode>();
-        if(root!=null){
-            stack.Push(root);
+    private void PreorderTraversalFunc2 (ref List<int> result, TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode> ();
+        if (root != null) {
+            stack.Push (root);
         }
-        while(stack.Count>0){
-            TreeNode node = stack.Pop();
-            result.Add(node.val);
-            if(node.right!=null){
-                stack.Push(node.right);
+        while (stack.Count > 0) {
+            TreeNode node = stack.Pop ();
+            result.Add (node.val);
+            if (node.right != null) {
+                stack.Push (node.right);
             }
-            if(node.left!=null){
-                stack.Push(node.left);
+            if (node.left != null) {
+                stack.Push (node.left);
             }
         }
     }
 
 }
 // @lc code=end
-

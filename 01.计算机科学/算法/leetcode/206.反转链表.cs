@@ -36,11 +36,32 @@
  */
 public class Solution {
     public ListNode ReverseList (ListNode head) {
+        if (head == null || head.next == null) {
+            return head;
+        }
+        ListNode p = ReverseList (head.next);
+        head.next.next = head;
+        head.next = null;
+        return p;
+    }
+
+    private ListNode Func1 (ListNode head) {
         if (head == null) return null;
+        //上一个节点
+        ListNode pre = null;
+        //当前节点
         ListNode p = head;
         while (p != null) {
-            
+            //取下下一个节点
+            ListNode tmp = p.next;
+            //当前节点的next 指向 上一个节点
+            p.next = pre;
+            //刷新pre 所指向的节点，方便下一次迭代使用
+            pre = p;
+            //当前指针往前移
+            p = tmp;
         }
+        return pre;
     }
 }
 // @lc code=end

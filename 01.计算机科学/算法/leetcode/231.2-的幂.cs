@@ -36,9 +36,16 @@
 
 // @lc code=start
 public class Solution {
-    public bool IsPowerOfTwo(int n) {
-
+    public bool IsPowerOfTwo (int n) {
+        if (n <= 0) return false;
+        int res = 1;
+        while (res < n) {
+            int tmp = res;
+            while (tmp < n) {
+                tmp <<= 1;
+            }
+        }
+        return false;
     }
 }
 // @lc code=end
-
