@@ -49,7 +49,30 @@
 // @lc code=start
 public class Solution {
     public int Divide(int dividend, int divisor) {
-        
+        int sign = (dividend^divisor)>>31;
+        if(dividend > 0)dividend = -dividend;
+        if(divisor > 0)divisor = -divisor;
+        long lDividend = (long)dividend;
+        long lDivisor = (long)divisor;
+        long res = 0;
+        while(lDividend <= lDivisor){
+            long temp = lDivisor;
+            long i = 1;
+            while(lDividend <= temp){
+                lDividend -= temp;
+                res+=i;
+                i<<=1;
+                temp<<=1;
+            }
+        }
+        if(sign == -1)res = -res;
+        if(res > int.MaxValue){
+            return int.MaxValue;
+        }else if(res < int.MinValue){
+            return int.MinValue;
+        }else{
+            return (int)res;
+        }
     }
 }
 // @lc code=end
