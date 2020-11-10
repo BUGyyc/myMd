@@ -117,6 +117,72 @@ public class Twitter {
     public void Unfollow (int followerId, int followeeId) {
 
     }
+
+    /// <summary>
+    /// 80
+    /// </summary>
+    /// <param name="nums"></param>
+    /// <returns></returns>
+    private int FilterArray(int[] nums){
+        if(nums.Length == 0)return 0;
+        int j = 0;
+        int count = 1;
+        int i = 1;
+        while(i++<nums.Length){
+            if(nums[i-1] == nums[i]){
+                count++;
+            }else{
+                count= 1;
+            }
+            if(count<=2){
+                nums[j++] = nums[i];
+            }
+        }
+        return j;
+    }
+    /// <summary>
+    /// 输入: nums = [2,5,6,7,0,1,2], target = 0
+    /// </summary>
+    /// <param name="nums"></param>
+    /// <param name="target"></param>
+    /// <returns></returns>
+    private bool FindTarget(int[] nums,int target){
+        if(nums.Length == 0)return false;
+        List<int> l1 = new List<int>();
+        List<int> l2 = new List<int>();
+        l1.Add(nums[0]);
+        int step = 1;
+        for(int i = 1;i<nums.Length;i++){
+            if(nums[i]>= nums[i-1]){
+                l1.Add(nums[i]);
+                step = i;
+            }
+        }
+
+        for(int i = step;i<nums.Length;i++){
+            l2.Add(nums[i]);
+        }
+        int[] arr1 = l1.ToList();
+        int[] arr2 = l2.ToList();
+        return ErSearch(arr1,target) || ErSearch(arr2,target);
+    }
+
+    private bool ErSearch(int[] nums,int target){
+        if(nums.Length == 0)return false;
+        int l = 0;
+        int r = nums.Length-1;
+        while(l<r){
+            int mid = (l+r)/2;
+            if(nums[mid] == target){
+                return true;
+            }else if(nums[mid] < target){
+                l = mid+1;
+            }else{
+                r = mid-1;
+            }
+        }
+        return false;
+    }
 }
 
 public struct TreeNode
