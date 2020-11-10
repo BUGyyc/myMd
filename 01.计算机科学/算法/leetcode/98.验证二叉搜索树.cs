@@ -58,9 +58,33 @@
  * }
  */
 public class Solution {
-    public bool IsValidBST(TreeNode root) {
+    public bool IsValidBST (TreeNode root) {
+        return CompareFunc (root, 0, 0, false, false);
+    }
 
+    private bool CompareFunc (TreeNode root, int low, int up, bool hasLow, bool hasUp) {
+        if (root == null) {
+            return true;
+        }
+
+        int val = root.val;
+        if (hasLow && val <= low) {
+            return false;
+        }
+
+        if (hasUp && val >= up) {
+            return false;
+        }
+
+        if (CompareFunc (root.left, low, val, hasLow, true) == false) {
+            return false;
+        }
+
+        if (CompareFunc (root.right, val, up, true, hasUp) == false) {
+            return false;
+        }
+
+        return true;
     }
 }
 // @lc code=end
-
