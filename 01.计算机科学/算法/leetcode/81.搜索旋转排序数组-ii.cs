@@ -41,43 +41,44 @@
 
 // @lc code=start
 public class Solution {
-    public bool Search(int[] nums, int target) {
- if(nums.Length == 0)return false;
-        List<int> l1 = new List<int>();
-        List<int> l2 = new List<int>();
-        l1.Add(nums[0]);
-        int step = 1;
-        for(int i = 1;i<nums.Length;i++){
-            if(nums[i]>= nums[i-1]){
-                l1.Add(nums[i]);
+    public bool Search (int[] nums, int target) {
+        if (nums.Length == 0) return false;
+        List<int> l1 = new List<int> ();
+        List<int> l2 = new List<int> ();
+        l1.Add (nums[0]);
+        int step = 0;
+        for (int i = 1; i < nums.Length; i++) {
+            if (nums[i] >= nums[i - 1]) {
+                l1.Add (nums[i]);
                 step = i;
+            } else {
+                break;
             }
         }
 
-        for(int i = step;i<nums.Length;i++){
-            l2.Add(nums[i]);
+        for (int i = step + 1; i < nums.Length; i++) {
+            l2.Add (nums[i]);
         }
-        int[] arr1 = l1.ToArray();
-        int[] arr2 = l2.ToArray();
-        return ErSearch(arr1,target) || ErSearch(arr2,target);
+        int[] arr1 = l1.ToArray ();
+        int[] arr2 = l2.ToArray ();
+        return ErSearch (arr1, target) || ErSearch (arr2, target);
     }
 
-         private bool ErSearch(int[] nums,int target){
-        if(nums.Length == 0)return false;
+    private bool ErSearch (int[] nums, int target) {
+        if (nums.Length == 0) return false;
         int l = 0;
-        int r = nums.Length-1;
-        while(l<r){
-            int mid = (l+r)/2;
-            if(nums[mid] == target){
+        int r = nums.Length - 1;
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (nums[mid] == target) {
                 return true;
-            }else if(nums[mid] < target){
-                l = mid+1;
-            }else{
-                r = mid-1;
+            } else if (nums[mid] < target) {
+                l = mid + 1;
+            } else {
+                r = mid - 1;
             }
         }
         return false;
     }
 }
 // @lc code=end
-
