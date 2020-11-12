@@ -36,7 +36,29 @@
  */
 public class Solution {
     public ListNode ReverseBetween(ListNode head, int m, int n) {
-
+        if(head == null || head.next == null)return head;
+        int step = 0;
+        ListNode p = head;
+        ListNode pre1 = null;
+        ListNode pre2 = null;
+        while(p!=null){
+            step++;
+            if(step == m-1){
+                pre1 = p;
+            }
+            if(step == n-1){
+                pre2 = p;
+            }
+            p = p.next;
+        }
+        
+        ListNode mNode = pre1.next;
+        ListNode nNode = pre2.next;
+        pre1.next = nNode;
+        nNode.next = mNode.next;
+        pre2.next = mNode.next;
+        mNode.next = pre2.next.next;
+        return head;
     }
 }
 // @lc code=end

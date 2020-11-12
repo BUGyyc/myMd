@@ -1,5 +1,18 @@
 using System.Collections.Generic;
 
+public struct TreeNode
+{
+    public int val;
+    public TreeNode left;
+    public TreeNode right;
+}
+
+public struct ListNode
+{
+    public int val;
+    public ListNode next;
+}
+
 public class LocalTry
 {
     public void Dived(int dividend, int divisor)
@@ -72,7 +85,108 @@ public class LocalTry
             }
         }
     }
+
+
+    private void StrMulti(string a,string b){
+        
+    }
+    /// <summary>
+    /// 82
+    /// </summary>
+    /// <param name="head"></param>
+    /// <returns></returns>
+    private ListNode DeleteMultiNode(ListNode head){
+        if(head == null || head.next == null)return head;
+        ListNode pre = new ListNode(-1);
+        pre.next = head;
+        ListNode newHead = pre;
+        ListNode l = null;
+        ListNode r = null;
+        while(pre.next!=null){
+            l = pre.next;
+            r = pre.next;
+            while(r.next!=null && r.next.val == l.val){
+                r = r.next;
+            }
+            if(l == r){
+                pre = pre.next;
+            }else{
+                pre.next = r.next;
+            }
+        }
+        return newHead.next;
+    }
+
+    private ListNode ChangeList(ListNode list,int m,int n){
+        if(list == null || list.next == null)return list;
+        int step = 0;
+        ListNode p = list;
+        ListNode pre1 = null;
+        ListNode pre2 = null;
+        while(p!=null){
+            step++;
+            if(step == m-1){
+                pre1 = p;
+            }
+            if(step == n-1){
+                pre2 = p;
+            }
+        }
+        
+        ListNode mNode = pre1.next;
+        ListNode nNode = pre2.next;
+        pre1.next = nNode;
+        nNode.next = mNode.next;
+        pre2.next = mNode.next;
+        mNode.next = pre2.next.next;
+    }
+    /// <summary>
+    /// [99,99]  [1,0,1,1]1
+    /// 2
+    /// </summary>
+    /// <param name="nums"></param>
+    /// <param name="k"></param>
+    /// <returns></returns>
+    private bool FindTarget(int[] nums,int k){
+        if(nums.Length == 0)return false;
+        if(k<=0)return false;
+        Dictionary<int,int> dic = new Dictionary<int,int>();
+        for(int i = 0;i<nums.Length;i++){
+            if(dic.ContainsKey(nums[i])){
+                int value = i - dic[nums[i]];
+                if(value<= k){
+                    return true;
+                }else{
+                    dic[nums[i]] = i;
+                }
+            }else{
+                dic.Add(nums[i],i);
+            }            
+        }
+        return false;
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 public class Twitter {
     Dictionary<int, List<int>> allTweetDic;
@@ -183,17 +297,4 @@ public class Twitter {
         }
         return false;
     }
-}
-
-public struct TreeNode
-{
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-}
-
-public struct ListNode
-{
-    public int val;
-    public ListNode next;
 }
