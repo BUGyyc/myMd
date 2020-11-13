@@ -165,6 +165,31 @@ public class LocalTry
         }
         return false;
     }
+
+    private TreeNode Exchange(TreeNode root){
+        if(root == null){
+            return null;
+        }
+        root.left = Exchange(root.right);
+        root.right = Exchange(root.left);
+        return root;
+    }
+
+    private IList<string> MergeList(int[] nums){
+        List<string> result = new List<string>();
+        if(nums.Length == 0){
+            return result;
+        }
+        if(nums.Lenght == 1){
+            result.Add(nums[0].ToString());
+            return result;
+        }
+        int pre = nums[0];
+        // StringBuilder sb = new StringBuilder();
+        // for(int i = 1;i<nums.Length;i++){
+        //     if(nums)
+        // }
+    }
 }
 
 
@@ -188,113 +213,3 @@ public class LocalTry
 
 
 
-public class Twitter {
-    Dictionary<int, List<int>> allTweetDic;
-    List<int> allFollow;
-    /** Initialize your data structure here. */
-    public Twitter () {
-        allTweetDic = new Dictionary<int, Tweet> ();
-        allFollow = new List<int> ();
-    }
-
-    /** Compose a new tweet. */
-    public void PostTweet (int userId, int tweetId) {
-        if (allTweetDic.ContainsKey (userId)) {
-            var list = allTweetDic[userId];
-            list.Insert (0,tweetId);
-            allTweetDic[userId] = list;
-        } else {
-            List<int> list = new List<int> ();
-            list.Insert (0,tweetId);
-            allTweetDic.Add (userId, list);
-        }
-    }
-
-    /** Retrieve the 10 most recent tweet ids in the user's news feed. Each item in the news feed must be posted by users who the user followed or by the user herself. Tweets must be ordered from most recent to least recent. */
-    public IList<int> GetNewsFeed (int userId) {
-        if (allFollow == null || allFollow.Count < 1 || allFollow.Contains (userId) == false) {
-            return new List<int> ();
-        } else 
-        if(allTweetDic.ContainsKey(userId)){
-            return allTweetDic[userId];
-        }else{
-            return new List<int>();
-        }
-    }
-
-    /** Follower follows a followee. If the operation is invalid, it should be a no-op. */
-    public void Follow (int followerId, int followeeId) {
-
-    }
-
-    /** Follower unfollows a followee. If the operation is invalid, it should be a no-op. */
-    public void Unfollow (int followerId, int followeeId) {
-
-    }
-
-    /// <summary>
-    /// 80
-    /// </summary>
-    /// <param name="nums"></param>
-    /// <returns></returns>
-    private int FilterArray(int[] nums){
-        if(nums.Length == 0)return 0;
-        int j = 0;
-        int count = 1;
-        int i = 1;
-        while(i++<nums.Length){
-            if(nums[i-1] == nums[i]){
-                count++;
-            }else{
-                count= 1;
-            }
-            if(count<=2){
-                nums[j++] = nums[i];
-            }
-        }
-        return j;
-    }
-    /// <summary>
-    /// 输入: nums = [2,5,6,7,0,1,2], target = 0
-    /// </summary>
-    /// <param name="nums"></param>
-    /// <param name="target"></param>
-    /// <returns></returns>
-    private bool FindTarget(int[] nums,int target){
-        if(nums.Length == 0)return false;
-        List<int> l1 = new List<int>();
-        List<int> l2 = new List<int>();
-        l1.Add(nums[0]);
-        int step = 1;
-        for(int i = 1;i<nums.Length;i++){
-            if(nums[i]>= nums[i-1]){
-                l1.Add(nums[i]);
-                step = i;
-            }
-        }
-
-        for(int i = step;i<nums.Length;i++){
-            l2.Add(nums[i]);
-        }
-        int[] arr1 = l1.ToList();
-        int[] arr2 = l2.ToList();
-        return ErSearch(arr1,target) || ErSearch(arr2,target);
-    }
-
-    private bool ErSearch(int[] nums,int target){
-        if(nums.Length == 0)return false;
-        int l = 0;
-        int r = nums.Length-1;
-        while(l<r){
-            int mid = (l+r)/2;
-            if(nums[mid] == target){
-                return true;
-            }else if(nums[mid] < target){
-                l = mid+1;
-            }else{
-                r = mid-1;
-            }
-        }
-        return false;
-    }
-}
