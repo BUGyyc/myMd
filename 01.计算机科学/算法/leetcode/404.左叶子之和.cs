@@ -41,9 +41,35 @@
  * }
  */
 public class Solution {
-    public int SumOfLeftLeaves(TreeNode root) {
+    private int result = 0;
+    public int SumOfLeftLeaves (TreeNode root) {
+        if (root == null) {
+            return 0;
+        }
+        if (root.left != null) {
+            GetLeftSum (root.left, true);
+        }
 
+        if (root.right != null) {
+            GetLeftSum (root.right, false);
+        }
+
+        return result;
+    }
+
+    private void GetLeftSum (TreeNode root, bool isLeft) {
+        if (root == null) {
+            return;
+        }
+        if (isLeft) {
+            result + root.val;
+        }
+        if (root.left) {
+            GetLeftSum (root.left, true);
+        }
+        if (root.right) {
+            GetLeftSum (root.right, false);
+        }
     }
 }
 // @lc code=end
-
