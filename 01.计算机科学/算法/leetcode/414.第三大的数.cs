@@ -51,15 +51,30 @@
 // @lc code=start
 public class Solution {
     public int ThirdMax (int[] nums) {
-        int f = int.MinValue;
-        int s = int.MinValue;
-        int t = int.MinValue;
-        foreach (var item in nums) {
-            if (item > f) {
-                f = item;
+        long f, s, t;
+        int count = 0;
+        f = long.MinValue;
+        s = long.MinValue;
+        t = long.MinValue;
+        for (int i = 0; i < nums.Length; i++) {
+            if (nums[i] > f) {
+                count++;
+                t = s;
+                s = f;
+                f = nums[i];
+            } else if (nums[i] > s && nums[i] < f) {
+                count++;
+                t = s;
+                s = nums[i];
+            } else if (nums[i] > t && nums[i] < s) {
+                count++;
+                t = nums[i];
             }
         }
-        return t == int.MinValue?f : t;
+        if (count < 3)
+            return (int) f;
+        else
+            return (int) t;
     }
 }
 // @lc code=end

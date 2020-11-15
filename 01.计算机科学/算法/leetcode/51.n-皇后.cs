@@ -54,9 +54,53 @@
 
 // @lc code=start
 public class Solution {
-    public IList<IList<string>> SolveNQueens(int n) {
+    public IList<IList<string>> SolveNQueens (int n) {
+        char[][] cs = new char[n][];
+        List<IList<string>> result = new List<IList<string>> ();
+        Func1 (n, cs, result, 0);
+        return result;
+    }
 
+    private void Func1 (int n, char[][] cs, List<IList<string>> result, int row) {
+        if (row == n) {
+            List<string> list = new List<string> ();
+            for (int i = 0; i < cs.Length; i++) {
+                list.Add (new string (cs[i]));
+            }
+            result.Add (list);
+            return;
+        }
+        for (int col = 0; col < n; col++) {
+            if (Check (cs, row, col)) {
+                cs[row][col] = 'Q';
+                Func1 (n, cs, result, row + 1);
+                cs[row][col] = '.';
+            }
+        }
+    }
+
+    private bool Check (char[][] chess, int row, int col) {
+        //判断当前列有没有皇后,因为他是一行一行往下走的，
+        //我们只需要检查走过的行数即可，通俗一点就是判断当前
+        //坐标位置的上面有没有皇后
+        for (int i = 0; i < row; i++) {
+            if (chess[i][col] == 'Q') {
+                return false;
+            }
+        }
+        //判断当前坐标的右上角有没有皇后
+        for (int i = row - 1, j = col + 1; i >= 0 && j < chess.Length; i--, j++) {
+            if (chess[i][j] == 'Q') {
+                return false;
+            }
+        }
+        //判断当前坐标的左上角有没有皇后
+        for (int i = row - 1, j = col - 1; i >= 0 && j >= 0; i--, j--) {
+            if (chess[i][j] == 'Q') {
+                return false;
+            }
+        }
+        return true;
     }
 }
 // @lc code=end
-

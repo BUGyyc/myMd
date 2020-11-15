@@ -53,13 +53,14 @@
  * }
  */
 public class Solution {
-    public ListNode ReverseKGroup(ListNode head, int k) {
+    public ListNode ReverseKGroup (ListNode head, int k) {
         int count = k;
-        ListNode f = null;
-        ListNode e = null;
-        ListNode l = null;
-        ListNode r = null;
+        ListNode p = head;
+        //循环链表
+        while (p.next != null) {
+            p = p.next;
+        }
+        p.next = head;
     }
 }
 // @lc code=end
-

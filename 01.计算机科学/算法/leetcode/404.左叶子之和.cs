@@ -61,13 +61,13 @@ public class Solution {
         if (root == null) {
             return;
         }
-        if (isLeft) {
-            result + root.val;
+        if (isLeft && root.left == null && root.right == null) {
+            result += root.val;
         }
-        if (root.left) {
+        if (root.left!=null) {
             GetLeftSum (root.left, true);
         }
-        if (root.right) {
+        if (root.right!=null) {
             GetLeftSum (root.right, false);
         }
     }

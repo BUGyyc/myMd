@@ -42,18 +42,33 @@
  */
 public class Solution {
     public bool IsPalindrome (ListNode head) {
-        if (head == null) return true;
-        if (head.next == null) return true;
+        // if (head == null) return true;
+        // if (head.next == null) return true;
 
-        ListNode halfNode = HalfNode (head);
-        ListNode newHead = ReverseList (halfNode.next);
-        while (newHead != null) {
-            if (head.val != newHead.val) {
+        // ListNode halfNode = HalfNode (head);
+        // ListNode newHead = ReverseList (halfNode.next);
+        // while (newHead != null) {
+        //     if (head.val != newHead.val) {
+        //         return false;
+        //     }
+        //     head = head.next;
+        //     newHead = newHead.next;
+        // }
+        // return true;
+        ListNode p = head;
+        Stack<int> stack = new Stack<int>();
+        while(p!=null){
+            stack.Push(p.val);
+            p = p.next;
+        }
+
+        while(head != null){
+            if(head.val != stack.Pop()){
                 return false;
             }
             head = head.next;
-            newHead = newHead.next;
         }
+
         return true;
     }
 
