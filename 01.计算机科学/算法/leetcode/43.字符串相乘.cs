@@ -37,42 +37,34 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    //     "123"
-    // "456"
-    public string Multiply(string num1, string num2)
-    {
-        StringBuilder sb = new StringBuilder();
-        for (int i = num1.Length - 1; i >= 0; i--)
-        {
-            int a = int.Parse(num1[i].ToString());
-            int carry = 0;
-            for (int j = num2.Length - 1; j >= 0; j--)
-            {
-                int b = int.Parse(num2[j].ToString());
-                int result = a * b;
-                result += carry;
-                int s = result % 10;
-                carry = result / 10;
-                sb.Append(s);
+public class Solution {
+    //TODO:
+    public string Multiply (string num1, string num2) {
+        if (num1.Equals ("0") || num2.Equals ("0")) {
+            return "0";
+        }
+        int m = num1.Length, n = num2.Length;
+        //存储每位相乘的结果
+        int[] ansArr = new int[m + n];
+        for (int i = m - 1; i >= 0; i--) {
+            int x = num1[i] - '0';
+            for (int j = n - 1; j >= 0; j--) {
+                int y = num2[j] - '0';
+                ansArr[i + j + 1] += x * y;
             }
         }
-
-        if (carry > 0)
-        {
-            sb.Append(carry);
+        for (int i = m + n - 1; i > 0; i--) {
+            ansArr[i - 1] += ansArr[i] / 10;
+            ansArr[i] %= 10;
         }
-
-        StringBuilder sb2 = new StringBuilder();
-        string s1 = sb.ToString();
-        for (int i = s1.Length - 1; i >= 0; i--)
-        {
-            sb2.Append(s1[i]);
+        //如果首位不为0，说明有进位，肯定是1 
+        int index = ansArr[0] == 0 ? 1 : 0;
+        StringBuilder ans = new StringBuilder ();
+        while (index < m + n) {
+            ans.Append(ansArr[index]);
+            index++;
         }
-
-        return sb.ToString();
+        return ans.ToString ();
     }
 }
 // @lc code=end
-
