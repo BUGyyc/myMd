@@ -29,7 +29,34 @@
 // @lc code=start
 public class Solution {
     public void NextPermutation(int[] nums) {
-
+        int len = nums.Length;
+        if (len <= 1) return;
+        bool find = false;
+        int i = 0;
+        int j = 0;
+        for (i = len - 1; i >= 0; i--)
+        {
+            for (j = i - 1; j >= 0; j--)
+            {
+                if (nums[i] > nums[j])
+                {
+                    find = true;
+                    break;
+                }
+            }
+        }
+        if (find)
+        {
+            int temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
+        else
+        {
+            List<int> list = new List<int> (nums);
+            list.Reverse ();
+            nums = list.ToArray ();
+        }
     }
 }
 // @lc code=end

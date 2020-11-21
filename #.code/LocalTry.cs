@@ -90,6 +90,22 @@ public class LocalTry
     private void StrMulti(string a,string b){
         
     }
+
+    private void addStrings(string a,string b){
+        if(a==null || a.Equals("") == true){
+            return b;
+        }
+        if(b==null || b.Equals("") == true){
+            return a;
+        }
+        bool state = (a[0].Equals("") == true ^ b[0].Equals("") == true);
+
+        if(state){
+
+        }else{
+
+        }
+    }
     /// <summary>
     /// 82
     /// </summary>
@@ -166,30 +182,9 @@ public class LocalTry
         return false;
     }
 
-    private TreeNode Exchange(TreeNode root){
-        if(root == null){
-            return null;
-        }
-        root.left = Exchange(root.right);
-        root.right = Exchange(root.left);
-        return root;
-    }
 
-    private IList<string> MergeList(int[] nums){
-        List<string> result = new List<string>();
-        if(nums.Length == 0){
-            return result;
-        }
-        if(nums.Lenght == 1){
-            result.Add(nums[0].ToString());
-            return result;
-        }
-        int pre = nums[0];
-        // StringBuilder sb = new StringBuilder();
-        // for(int i = 1;i<nums.Length;i++){
-        //     if(nums)
-        // }
-    }
+
+    
 }
 
 
