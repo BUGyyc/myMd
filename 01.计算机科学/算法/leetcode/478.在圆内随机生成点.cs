@@ -6,7 +6,7 @@
  * https://leetcode-cn.com/problems/generate-random-point-in-a-circle/description/
  *
  * algorithms
- * Medium (42.05%)
+ * Medium (42.03%)
  * Likes:    40
  * Dislikes: 0
  * Total Accepted:    4K
@@ -51,13 +51,25 @@
 
 // @lc code=start
 public class Solution {
+    private double radius;
+    private double x_center;
+    private double y_center;
 
-    public Solution(double radius, double x_center, double y_center) {
-
+    public Solution (double radius, double x_center, double y_center) {
+        this.radius = radius;
+        this.x_center = x_center;
+        this.y_center = y_center;
     }
-    
-    public double[] RandPoint() {
 
+    public double[] RandPoint () {
+        Random random = new Random();
+        double x = (x_center-radius) + 2*radius*random.NextDouble();
+        double y = (y_center-radius) + 2*radius*random.NextDouble();
+        while(Math.Sqrt(Math.Pow(x - x_center, 2) + Math.Pow(y - y_center, 2)) > radius){
+            x = x_center-radius + 2*radius*random.NextDouble();
+            y = y_center-radius + 2*radius*random.NextDouble();
+        }
+        return new double[]{x, y};
     }
 }
 
@@ -67,4 +79,3 @@ public class Solution {
  * double[] param_1 = obj.RandPoint();
  */
 // @lc code=end
-

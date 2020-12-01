@@ -180,4 +180,9 @@ public class LocalTry {
     public int FurthestBuilding (int[] heights, int bricks, int ladders) {
         
     }
+
+    public void NextArray(int[] nums){
+        int len = nums.Length;
+        if(len <= 1)return;
+    }
 }
