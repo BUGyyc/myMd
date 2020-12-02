@@ -56,9 +56,28 @@
  * }
  */
 public class Solution {
-    public void Flatten(TreeNode root) {
-        
+    public void Flatten (TreeNode root) {
+        List<TreeNode> list = new List<TreeNode> ();
+        Stack<TreeNode> stack = new Stack<TreeNode> ();
+        TreeNode node = root;
+        while (stack.Count > 0 || node != null) {
+            while (node != null) {
+                list.Add (node);
+                stack.Push (node);
+                node = node.left;
+            }
+            node = stack.Pop ();
+            node = node.right;
+        }
+        if (list.Count > 0) {
+            TreeNode pre = list[0];
+            for (int i = 1; i < list.Count; i++) {
+                TreeNode curr = list[i];
+                pre.left = null;
+                pre.right = curr;
+                pre = curr;
+            }
+        }
     }
 }
 // @lc code=end
-

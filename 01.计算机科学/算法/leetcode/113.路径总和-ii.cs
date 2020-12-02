@@ -49,32 +49,36 @@
  *     public TreeNode(int x) { val = x; }
  * }
  */
-public class Solution
-{
-    public IList<IList<int>> PathSum(TreeNode root, int sum)
-    {
-        List<IList<int>> result = new List<IList<int>>();
+public class Solution {
+    List<IList<int>> result = new List<IList<int>> ();
 
+    public IList<IList<int>> PathSum (TreeNode root, int sum) {
+        List<int> path = new List<int> ();
+        Func1 (path, root, sum);
+        return result;
     }
 
-    private void Func1(ref List<int> path, TreeNode root, int sum)
-    {
-        if (root == null) return null;
-        if (root.left == null && root.right == null)
-        {
-            if (root.val == sum)
-            {
-                if (path == null)
-                {
-                    path = new List<int>();
-                }
-                path.Add(root.val);
-                return path;
+    private void Func1 (List<int> path, TreeNode root, int sum) {
+        if (root == null) return;
+        sum -= root.val;
+
+        List<int> list = new List<int> (path);
+        list.Add (root.val);
+
+        if (root.left == null && root.right == null) {
+            if (sum == 0) {
+                result.Add (list);
+                return;
             }
         }
-        sum -= root.val;
-        return null;
+
+        if (root.left != null) {
+            Func1 (list, root.left, sum);
+        }
+
+        if (root.right != null) {
+            Func1 (list, root.right, sum);
+        }
     }
 }
 // @lc code=end
-
