@@ -117,4 +117,93 @@ public class LocalCommon
         }
         return min;
     }
+
+    public int CheckArray(int[] nums){
+        Dictionary<int,int> result = new Dictionary<int,int>();
+        int all = 0;
+        int sum;
+        for(int i = 0;i<nums.Length;i++){
+            all += nums[i];
+            if(result.ContainsKey(nums[i]) == false){
+                sum += nums[i];
+                result.Add(nums[i],nums[i]);
+            }
+        }
+        return (3*sum - all)/2;
+    }
+
+    public ListNode ResetListNode(ListNode head){
+        if (head == null) return;
+        ListNode p1 = head;
+        ListNode p2 = ReverseList(head);
+        int len = 0;
+        ListNode p = head;
+        while (p != null)
+        {
+            p = p.next;
+            len++;
+        }
+        int step = 0;
+        ListNode cur = new ListNode(-1);
+        cur.next = head;
+        while (step < len)
+        {
+            if (step % 2 == 0)
+            {
+                cur.next = p1;
+                cur = cur.next;
+                p1 = p1.next;
+            }
+            else
+            {
+                cur.next = p2;
+                cur = cur.next;
+                p2 = p2.next;
+            }
+            step++;
+        }
+    }
+
+    public ListNode ReverseList(ListNode head){
+        ListNode cur = head;
+        ListNode pre = null;
+        while(cur!=null){
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
+        }
+        return pre;
+    }
+
+    public int GetMaxMul(int[] nums){
+        //[3,-1,4]
+        int max = int.MinValue;
+        int[] result = new int[nums.Length];
+        int[] mins = new int[nums.Length];
+        result[0] = nums[0];
+        for(int i = 1;i< nums.Length; i++){
+            result[i] = Math.Max(Math.Max(result[i-1]*nums[i],nums[i]) , Math.Max(mins[i-1]*nums[i],nums[i]));
+            mins[i] = Math.Min(Math.Min(result[i-1]*nums[i],nums[i]),Math.Min(mins[i-1]*nums[i],nums[i]));
+        }
+        for(int i = 0;i<result.Length;i++){
+            max = Math.Max(max, result[i]);
+        }
+        return max;
+    }
+
+    int nodeNum = 0;
+    public int GetNum(TreeNode root){
+        if(root == null)return 0;
+        if(root.left==null && root.right==null){
+            return 1;
+        }
+
+        if(root.left!=null){
+            return 1+GetNum(root.left);
+        }
+        if(root.right!=null){
+            return 1+GetNum(root.right);
+        }
+    }
 }
