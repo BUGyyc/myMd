@@ -72,11 +72,49 @@ public class LocalCommon
             nums[i] = nums[j];
             nums[j] = temp;
         }
-        else
+        else 
         {
             List<int> list = new List<int> (nums);
             list.Reverse ();
             nums = list.ToArray ();
         }
+    }
+
+    public List<int> GetRightArray(TreeNode root){
+        Stack<int> stack = new Stack<int> ();
+        List<int> list = new List<int>();
+        if(root == null){
+            return list;
+        }
+        while(root != null || stack.Count > 0){
+            while(root != null){
+                
+            }
+        }
+    }
+
+    public TreeNode SortedListToBST(ListNode head) {
+        
+    }
+
+    public int MinimumTotal(IList<IList<int>> triangle) {
+        int row = triangle.Count;
+        if(row == 0)return 0;
+        int[,] result = new int[row,row];
+
+        result[0,0] = triangle[0][0];
+
+        for(int i = 1;i<row;i++) {
+            result[i,0] = result[i-1,0] + triangle[i][0];
+            for(int j = 1;j<i;j++){
+                result[i,j] = Math.Min(result[i-1,j-1],result[i-1,j]) + triangle[i][j];
+            }
+            result[i,i] = result[i-1,i-1] + triangle[i][i];
+        }
+        int min = result[row-1,0];
+        for(int i = 0;i<row;i++){
+            min = Math.Min(min,result[row-1,i]);
+        }
+        return min;
     }
 }
