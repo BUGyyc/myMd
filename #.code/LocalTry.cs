@@ -185,4 +185,82 @@ public class LocalTry {
         int len = nums.Length;
         if(len <= 1)return;
     }
+
+    public void DFS(ref List<string> result,TreeNode root,string str){
+        if(root == null){
+            return;
+        }
+        StringBuilder sb = new StringBuilder(str);
+        sb.Append(root.val.ToString());
+
+        if(root.left == null && root.right == null){
+            result.Add (sb.ToString());
+            return;
+        }
+
+        sb.Append("->");
+        if(root.left!=null){
+            DFS(ref result,root.left,sb.ToString());
+        }
+
+        if(root.right!=null){
+            DFS(ref result,root.right,sb.ToString());
+        }
+    }
+
+    public void Func(TreeNode root){
+        if(root == null)return;
+        List<TreeNode> list = new List<TreeNode>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        TreeNode node = root;
+        while(node!=null || stack.Count > 0){
+            while(node!=null){
+                list.Add(node);
+                stack.Push(node);
+                node = node.left;
+            }
+            node = stack.Pop();
+            node = node.right;
+        }
+        TreeNode pre = list[0];
+        for(i=1;i<list.Count;i++){
+            TreeNode curr = list[i];
+            pre.left = null;
+            pre.right = curr;
+            pre = curr;
+        }
+    }
+
+    private void Func2(TreeNode node){
+        List<TreeNode> list = new List<TreeNode>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while(node!=null || stack.Count > 0){
+            while(node!=null){
+                list.Add(node);
+                stack.Push(node);
+                node = node.left;
+            }
+            node = stack.Pop();
+            node = node.right;
+        }
+    }
+    int all;
+    private void GetPathSum(TreeNode root,int sum){
+        if(root == null){
+            return;
+        }
+        sum = sum*10+root.val;
+
+        if(root.left == null && root.right == null){
+            all += sum;
+        }
+
+        if(root.left!=null){
+            GetPathSum(root.left,sum);
+        }
+
+        if(root.right!=null){
+            GetPathSum(root.right,sum);
+        }
+    }
 }
