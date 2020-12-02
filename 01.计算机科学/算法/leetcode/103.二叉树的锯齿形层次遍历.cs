@@ -52,7 +52,6 @@ public class Solution {
         if (root == null) {
             return result;
         }
-
         DFS (root, 0, result);
         return result;
     }
@@ -70,7 +69,6 @@ public class Solution {
                 result[level].Insert (0, treeNode.val);
             }
         }
-
         if (treeNode.left != null) DFS (treeNode.left, level + 1, result);
         if (treeNode.right != null) DFS (treeNode.right, level + 1, result);
     }
