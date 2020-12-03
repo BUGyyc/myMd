@@ -254,6 +254,6 @@ public class LocalCommon
                 }
             }
         }
-        return arr[row, col];
+        return arr[row-1, col-1];
     }
 }
