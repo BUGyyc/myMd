@@ -39,15 +39,7 @@
 // @lc code=start
 public class Solution {
     public bool ContainsDuplicate (int[] nums) {
-        // List<int> list = new List<int> ();
         if (nums.Length <= 1) return false;
-        // foreach (var item in nums) {
-        //     if (list.Contains (item)) {
-        //         return true;
-        //     } else {
-        //         list.Add (item);
-        //     }
-        // }
         Array.Sort (nums);
         for (int i = 0; i < nums.Length - 1; i++) {
             if (nums[i] == nums[i + 1]) {
