@@ -57,23 +57,23 @@
 
 // @lc code=start
 public class MinStack {
-  Stack stack = null;
-   public struct Item {
+    Stack stack = null;
+    public struct Item {
         public int val;
-       public int min;
+        public int min;
     }
     /** initialize your data structure here. */
- public MinStack () {
+    public MinStack () {
         stack = new Stack ();
     }
 
     public void Push (int x) {
-        int min = GetMin();
-        int n = (x>min)?min:x;
-        Item item = new Item();
+        int min = GetMin ();
+        int n = (x > min) ? min : x;
+        Item item = new Item ();
         item.val = x;
         item.min = n;
-        stack.Push(item);
+        stack.Push (item);
     }
 
     public void Pop () {
@@ -81,7 +81,7 @@ public class MinStack {
     }
 
     public int Top () {
-        Item item = (Item)stack.Peek ();
+        Item item = (Item) stack.Peek ();
         return item.val;
     }
 
@@ -89,7 +89,7 @@ public class MinStack {
         if (stack.Count == 0) {
             return int.MaxValue;
         } else {
-            Item item = (Item)stack.Peek ();
+            Item item = (Item) stack.Peek ();
             return item.min;
         }
     }
