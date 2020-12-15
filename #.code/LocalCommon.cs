@@ -256,4 +256,8 @@ public class LocalCommon
         }
         return arr[row-1, col-1];
     }
+
+    private void CheckInt(int num){
+        
+    }
 }
