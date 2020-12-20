@@ -37,35 +37,29 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    //TODO:
-    public string LongestCommonPrefix(string[] strs)
-    {
+public class Solution {
+    //分治
+    public string LongestCommonPrefix (string[] strs) {
         if (strs.Length == 0) return "";
         if (strs.Length == 1) return strs[0];
         int len = 1;
         int max = strs[0].Length;
-        while (len <= max)
-        {
-            string s = strs[0].Substring(0, len);
-            if (Check(strs, s, len) == false) return strs[0].Substring(0, len - 1);
+        while (len <= max) {
+            string s = strs[0].Substring (0, len);
+            if (Check (strs, s, len) == false) return strs[0].Substring (0, len - 1);
             len++;
         }
         return strs[0];
     }
 
-    private bool Check(string[] strs, string s, int len)
-    {
-        for (int i = 1; i < strs.Length; i++)
-        {
+    private bool Check (string[] strs, string s, int len) {
+        for (int i = 1; i < strs.Length; i++) {
             string item = strs[i];
             if (item.Length < len) return false;
-            if (item.Substring(0, len).Equals(s) == false) return false;
+            if (item.Substring (0, len).Equals (s) == false) return false;
         }
 
         return true;
     }
 }
 // @lc code=end
-
