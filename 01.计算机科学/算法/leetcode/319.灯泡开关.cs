@@ -34,6 +34,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public int BulbSwitch(int n) {
 
     }

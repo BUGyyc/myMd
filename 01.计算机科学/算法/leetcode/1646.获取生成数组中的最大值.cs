@@ -71,9 +71,9 @@
 
 // @lc code=start
 public class Solution {
-    public int GetMaximumGenerated(int n) {
+    //TODO:
+    public int GetMaximumGenerated (int n) {
 
     }
 }
 // @lc code=end
-

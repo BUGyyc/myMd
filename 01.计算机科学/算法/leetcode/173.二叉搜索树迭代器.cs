@@ -57,18 +57,18 @@
  * }
  */
 public class BSTIterator {
-
-    public BSTIterator(TreeNode root) {
+    //TODO:
+    public BSTIterator (TreeNode root) {
 
     }
-    
+
     /** @return the next smallest number */
-    public int Next() {
+    public int Next () {
 
     }
-    
+
     /** @return whether we have a next smallest number */
-    public bool HasNext() {
+    public bool HasNext () {
 
     }
 }
@@ -80,4 +80,3 @@ public class BSTIterator {
  * bool param_2 = obj.HasNext();
  */
 // @lc code=end
-

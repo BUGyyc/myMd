@@ -49,6 +49,7 @@
 
 // @lc code=start
 public class Solution {
+    //回溯
     public IList<IList<int>> CombinationSum2 (int[] candidates, int target) {
         Array.Sort (candidates);
         List<IList<int>> result = new List<IList<int>> ();

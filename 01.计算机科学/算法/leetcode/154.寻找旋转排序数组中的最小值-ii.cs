@@ -42,9 +42,9 @@
 
 // @lc code=start
 public class Solution {
-    public int FindMin(int[] nums) {
+    //TODO:
+    public int FindMin (int[] nums) {
 
     }
 }
 // @lc code=end
-

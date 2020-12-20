@@ -57,49 +57,49 @@
 
 // @lc code=start
 public class MyCircularDeque {
-
+    //TODO:
     /** Initialize your data structure here. Set the size of the deque to be k. */
-    public MyCircularDeque(int k) {
+    public MyCircularDeque (int k) {
 
     }
-    
+
     /** Adds an item at the front of Deque. Return true if the operation is successful. */
-    public bool InsertFront(int value) {
+    public bool InsertFront (int value) {
 
     }
-    
+
     /** Adds an item at the rear of Deque. Return true if the operation is successful. */
-    public bool InsertLast(int value) {
+    public bool InsertLast (int value) {
 
     }
-    
+
     /** Deletes an item from the front of Deque. Return true if the operation is successful. */
-    public bool DeleteFront() {
+    public bool DeleteFront () {
 
     }
-    
+
     /** Deletes an item from the rear of Deque. Return true if the operation is successful. */
-    public bool DeleteLast() {
+    public bool DeleteLast () {
 
     }
-    
+
     /** Get the front item from the deque. */
-    public int GetFront() {
+    public int GetFront () {
 
     }
-    
+
     /** Get the last item from the deque. */
-    public int GetRear() {
+    public int GetRear () {
 
     }
-    
+
     /** Checks whether the circular deque is empty or not. */
-    public bool IsEmpty() {
+    public bool IsEmpty () {
 
     }
-    
+
     /** Checks whether the circular deque is full or not. */
-    public bool IsFull() {
+    public bool IsFull () {
 
     }
 }
@@ -117,4 +117,3 @@ public class MyCircularDeque {
  * bool param_8 = obj.IsFull();
  */
 // @lc code=end
-

@@ -41,6 +41,7 @@
  * }
  */
 public class Solution {
+    //迭代
     public IList<int> RightSideView (TreeNode root) {
         List<int> result = new List<int> ();
         if (root == null) {

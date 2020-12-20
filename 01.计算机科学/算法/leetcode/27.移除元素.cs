@@ -65,6 +65,7 @@
 
 // @lc code=start
 public class Solution {
+    //双索引记位
     public int RemoveElement (int[] nums, int val) {
         if (nums.Length == 0) return 0;
         int j = 0;

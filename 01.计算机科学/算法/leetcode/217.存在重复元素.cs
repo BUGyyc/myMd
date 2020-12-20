@@ -38,6 +38,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public bool ContainsDuplicate (int[] nums) {
         if (nums.Length <= 1) return false;
         Array.Sort (nums);

@@ -34,6 +34,7 @@
 
 // @lc code=start
 public class Solution {
+    //异或、位运算
     public int SingleNumber (int[] nums) {
         if (nums.Length == 0) return 0;
         if (nums.Length == 1) return nums[0];

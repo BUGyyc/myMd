@@ -33,31 +33,31 @@
 
 // @lc code=start
 public class Solution {
-    public IList<string> GenerateParenthesis(int n) {
-        List<string> list= new List<string> ();
-        BackTrack(list,0,0,n,new StringBuilder());
+    //回溯
+    public IList<string> GenerateParenthesis (int n) {
+        List<string> list = new List<string> ();
+        BackTrack (list, 0, 0, n, new StringBuilder ());
         return list;
     }
 
-    private void BackTrack(List<string> list,int open,int close,int n,StringBuilder sb){
-        if(sb.Length == 2*n){
-            list.Add(sb.ToString());
+    private void BackTrack (List<string> list, int open, int close, int n, StringBuilder sb) {
+        if (sb.Length == 2 * n) {
+            list.Add (sb.ToString ());
             return;
         }
-        if(open<n){
-            sb.Append('(');
-            BackTrack(list,open+1,close,n,sb);
+        if (open < n) {
+            sb.Append ('(');
+            BackTrack (list, open + 1, close, n, sb);
             // str.Remove(str.Length-1);
-            sb.Remove(sb.Length-1,1);
+            sb.Remove (sb.Length - 1, 1);
         }
-        if(close<open){
-            sb.Append(')');
-            BackTrack(list,open,close+1,n,sb);
+        if (close < open) {
+            sb.Append (')');
+            BackTrack (list, open, close + 1, n, sb);
             // str.Remove(str.Length-1);
-            sb.Remove(sb.Length-1,1);
+            sb.Remove (sb.Length - 1, 1);
         }
-        
+
     }
 }
 // @lc code=end
-

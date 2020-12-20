@@ -83,6 +83,7 @@
  * }
  */
 public class Solution {
+    //先判断长度，然后最长的先移动，然后同时移动，如果相交，那么总会有一个节点相等
     public ListNode GetIntersectionNode (ListNode headA, ListNode headB) {
         if (headA == null || headB == null) {
             return null;

@@ -57,9 +57,9 @@
 
 // @lc code=start
 public class Solution {
-    public int[] ThreeEqualParts(int[] A) {
+    //TODO:
+    public int[] ThreeEqualParts (int[] A) {
 
     }
 }
 // @lc code=end
-

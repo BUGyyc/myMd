@@ -43,18 +43,15 @@
  *     public TreeNode(int x) { val = x; }
  * }
  */
-public class Solution
-{
-    public bool HasPathSum(TreeNode root, int sum)
-    {
+public class Solution {
+    //递归计算
+    public bool HasPathSum (TreeNode root, int sum) {
         if (root == null) return false;
-        if (root.left == null && root.right == null)
-        {
+        if (root.left == null && root.right == null) {
             if (root.val == sum) return true;
         }
         sum -= root.val;
-        return HasPathSum(root.left, sum) || HasPathSum(root.right, sum);
+        return HasPathSum (root.left, sum) || HasPathSum (root.right, sum);
     }
 }
 // @lc code=end
-

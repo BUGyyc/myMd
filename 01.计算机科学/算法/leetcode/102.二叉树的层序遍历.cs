@@ -49,38 +49,31 @@
  * }
  */
 
-public class Solution
-{
-    public IList<IList<int>> LevelOrder(TreeNode root)
-    {
-        Queue<TreeNode> queue = new Queue<TreeNode>();
-        List<IList<int>> result = new List<IList<int>>();
-        if (root == null)
-        {
+public class Solution {
+    //TODO:
+    public IList<IList<int>> LevelOrder (TreeNode root) {
+        Queue<TreeNode> queue = new Queue<TreeNode> ();
+        List<IList<int>> result = new List<IList<int>> ();
+        if (root == null) {
             return result;
         }
-        queue.Enqueue(root);
-        while (queue.Count > 0)
-        {
-            List<int> list = new List<int>();
+        queue.Enqueue (root);
+        while (queue.Count > 0) {
+            List<int> list = new List<int> ();
             int count = queue.Count;
-            for (int i = 0; i < count; i++)
-            {
-                TreeNode treeNode = queue.Dequeue();
-                list.Add(treeNode.val);
-                if (treeNode.left != null)
-                {
-                    queue.Enqueue(treeNode.left);
+            for (int i = 0; i < count; i++) {
+                TreeNode treeNode = queue.Dequeue ();
+                list.Add (treeNode.val);
+                if (treeNode.left != null) {
+                    queue.Enqueue (treeNode.left);
                 }
-                if (treeNode.right != null)
-                {
-                    queue.Enqueue(treeNode.right);
+                if (treeNode.right != null) {
+                    queue.Enqueue (treeNode.right);
                 }
             }
-            result.Add(list);
+            result.Add (list);
         }
         return result;
     }
 }
 // @lc code=end
-

@@ -36,6 +36,7 @@
 
 // @lc code=start
 public class Solution {
+    //回溯
     public IList<IList<int>> Subsets (int[] nums) {
         List<IList<int>> result = new List<IList<int>> ();
         int len = nums.Length;
@@ -53,7 +54,7 @@ public class Solution {
     }
 
     private void BackTrack (int[] nums, List<IList<int>> result, List<int> list, int start) {
-        result.Add (list.ToList());
+        result.Add (list.ToList ());
         for (int i = start; i < nums.Length; i++) {
             list.Add (nums[i]);
             BackTrack (nums, result, list, i + 1);

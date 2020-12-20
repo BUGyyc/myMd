@@ -41,6 +41,7 @@
 
 // @lc code=start
 public class Solution {
+    //动态规划
     public int ClimbStairs (int n) {
         int[] dp = new int[n + 1];
         dp[0] = 1;

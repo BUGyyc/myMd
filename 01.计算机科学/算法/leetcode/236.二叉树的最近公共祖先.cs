@@ -60,6 +60,7 @@
  * }
  */
 public class Solution {
+    //TODO:
     public TreeNode LowestCommonAncestor (TreeNode root, TreeNode p, TreeNode q) {
         //记录两条路径
         List<TreeNode> pathP = new List<TreeNode> ();
@@ -75,7 +76,6 @@ public class Solution {
             return path;
         }
 
-        
     }
 }
 // @lc code=end

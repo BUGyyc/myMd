@@ -34,6 +34,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public int FirstUniqChar (string s) {
         Dictionary<char, int> dic = new Dictionary<char, int> ();
         for (int i = 0; i < s.Length; i++) {

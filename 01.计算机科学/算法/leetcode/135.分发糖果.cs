@@ -42,6 +42,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public int Candy(int[] ratings) {
 
     }

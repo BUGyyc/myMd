@@ -70,6 +70,7 @@
  * @return a random integer in the range 1 to 7
  */
 public class Solution : SolBase {
+    //TODO:
     public int Rand10 () {
         int a = Rand7 ();
         int b = Rand7 ();

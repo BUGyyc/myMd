@@ -82,6 +82,7 @@
  */
 public class Solution
 {
+    //快慢指针，如果相遇说明有环
     public bool HasCycle(ListNode head)
     {
         if (head == null) return false;

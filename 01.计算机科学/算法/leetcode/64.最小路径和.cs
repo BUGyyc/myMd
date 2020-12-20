@@ -33,24 +33,25 @@
 
 // @lc code=start
 public class Solution {
+    //动态规划
     public int MinPathSum (int[][] grid) {
-               int row = grid.Length;
+        int row = grid.Length;
         if (row == 0) return 0;
         int col = grid[0].Length;
         int[, ] arr = new int[row, col];
-        arr[0,0] = grid[0][0];
+        arr[0, 0] = grid[0][0];
         for (int i = 1; i < row; i++) {
-            arr[i,0] = grid[i][0] + arr[i - 1,0];
+            arr[i, 0] = grid[i][0] + arr[i - 1, 0];
         }
         for (int j = 1; j < col; j++) {
-            arr[0,j] = grid[0][j] + arr[0,j - 1];
+            arr[0, j] = grid[0][j] + arr[0, j - 1];
         }
         for (int i = 1; i < row; i++) {
             for (int j = 1; j < col; j++) {
-                arr[i,j] = Math.Min (arr[i - 1,j], arr[i,j - 1]) + grid[i][j];
+                arr[i, j] = Math.Min (arr[i - 1, j], arr[i, j - 1]) + grid[i][j];
             }
         }
-        return arr[row - 1,col - 1];
+        return arr[row - 1, col - 1];
     }
 }
 // @lc code=end

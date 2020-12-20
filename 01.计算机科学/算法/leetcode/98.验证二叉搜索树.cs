@@ -58,6 +58,7 @@
  * }
  */
 public class Solution {
+    //递归分析，指定上届和下届
     public bool IsValidBST (TreeNode root) {
         return CompareFunc (root, 0, 0, false, false);
     }

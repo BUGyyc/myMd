@@ -71,9 +71,9 @@
 
 // @lc code=start
 public class Solution {
-    public bool IsScramble(string s1, string s2) {
+    //TODO:
+    public bool IsScramble (string s1, string s2) {
 
     }
 }
 // @lc code=end
-

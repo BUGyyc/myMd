@@ -34,17 +34,18 @@
 
 // @lc code=start
 public class Solution {
+    //动态规划
     public int MaxProduct (int[] nums) {
         int max = int.MinValue;
         int[] result = new int[nums.Length];
         int[] mins = new int[nums.Length];
         result[0] = nums[0];
-        for(int i = 1;i< nums.Length; i++){
-            result[i] = Math.Max(Math.Max(result[i-1]*nums[i],nums[i]) , Math.Max(mins[i-1]*nums[i],nums[i]));
-            mins[i] = Math.Min(Math.Min(result[i-1]*nums[i],nums[i]),Math.Min(mins[i-1]*nums[i],nums[i]));
+        for (int i = 1; i < nums.Length; i++) {
+            result[i] = Math.Max (Math.Max (result[i - 1] * nums[i], nums[i]), Math.Max (mins[i - 1] * nums[i], nums[i]));
+            mins[i] = Math.Min (Math.Min (result[i - 1] * nums[i], nums[i]), Math.Min (mins[i - 1] * nums[i], nums[i]));
         }
-        for(int i = 0;i<result.Length;i++){
-            max = Math.Max(max, result[i]);
+        for (int i = 0; i < result.Length; i++) {
+            max = Math.Max (max, result[i]);
         }
         return max;
     }

@@ -66,6 +66,7 @@
  * }
  */
 public class Solution {
+    //TODO:
     public bool IsSameTree (TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;
@@ -76,7 +77,6 @@ public class Solution {
         } else {
             return IsSameTree (p.left, q.left) && IsSameTree (p.right, q.right);
         }
-
     }
 }
 // @lc code=end

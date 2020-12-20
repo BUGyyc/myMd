@@ -36,6 +36,7 @@
 // @lc code=start
 using System.Collections.Generic;
 public class Solution {
+    //动态规划
     public IList<IList<int>> Generate (int numRows) {
         int[][] result = new int[numRows][];
         int step = 0;

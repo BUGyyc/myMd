@@ -46,6 +46,7 @@
  * }
  */
 public class Solution {
+    //TODO:
     public ListNode RotateRight (ListNode head, int k) {
         if (head == null) return null;
         ListNode fast = head;

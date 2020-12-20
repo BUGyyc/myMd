@@ -50,20 +50,17 @@
  *     public TreeNode(int x) { val = x; }
  * }
  */
-public class Solution
-{
-    public TreeNode InvertTree(TreeNode root)
-    {
-        if (root == null)
-        {
+public class Solution {
+    //TODO:
+    public TreeNode InvertTree (TreeNode root) {
+        if (root == null) {
             return root;
         }
-        TreeNode left = InvertTree(root.left);
-        TreeNode right = InvertTree(root.right);
+        TreeNode left = InvertTree (root.left);
+        TreeNode right = InvertTree (root.right);
         root.left = right;
         root.right = left;
         return root;
     }
 }
 // @lc code=end
-

@@ -36,27 +36,25 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    public bool ContainsNearbyDuplicate(int[] nums, int k)
-    {
-        if(nums.Length == 0)return false;
-        if(k<=0)return false;
-        Dictionary<int,int> dic = new Dictionary<int,int>();
-        for(int i = 0;i<nums.Length;i++){
-            if(dic.ContainsKey(nums[i])){
+public class Solution {
+    //TODO:
+    public bool ContainsNearbyDuplicate (int[] nums, int k) {
+        if (nums.Length == 0) return false;
+        if (k <= 0) return false;
+        Dictionary<int, int> dic = new Dictionary<int, int> ();
+        for (int i = 0; i < nums.Length; i++) {
+            if (dic.ContainsKey (nums[i])) {
                 int value = i - dic[nums[i]];
-                if(value<= k){
+                if (value <= k) {
                     return true;
-                }else{
+                } else {
                     dic[nums[i]] = i;
                 }
-            }else{
-                dic.Add(nums[i],i);
-            }            
+            } else {
+                dic.Add (nums[i], i);
+            }
         }
         return false;
     }
 }
 // @lc code=end
-

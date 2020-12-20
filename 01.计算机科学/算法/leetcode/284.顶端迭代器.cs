@@ -35,6 +35,7 @@
 // https://docs.microsoft.com/en-us/dotnet/api/system.collections.ienumerator?view=netframework-4.8
 
 class PeekingIterator {
+    //TODO:
     List<int> list;
     // iterators refers to the first element of the array.
     public PeekingIterator (IEnumerator<int> iterator) {

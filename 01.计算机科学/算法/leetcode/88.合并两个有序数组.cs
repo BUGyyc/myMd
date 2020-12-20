@@ -48,18 +48,15 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    public void Merge(int[] nums1, int m, int[] nums2, int n)
-    {
+public class Solution {
+    //从后往前比较
+    public void Merge (int[] nums1, int m, int[] nums2, int n) {
         int i = m - 1, j = n - 1, pos = nums1.Length - 1;
-        while (pos >= 0 && j >= 0)
-        {
-            nums1[pos--] = i >= 0 && nums1[i] > nums2[j]
-                ? nums1[i--]
-                : nums2[j--];
+        while (pos >= 0 && j >= 0) {
+            nums1[pos--] = i >= 0 && nums1[i] > nums2[j] ?
+                nums1[i--] :
+                nums2[j--];
         }
     }
 }
 // @lc code=end
-

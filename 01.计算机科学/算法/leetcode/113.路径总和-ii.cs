@@ -50,8 +50,8 @@
  * }
  */
 public class Solution {
+    //递归存储起来
     List<IList<int>> result = new List<IList<int>> ();
-
     public IList<IList<int>> PathSum (TreeNode root, int sum) {
         List<int> path = new List<int> ();
         Func1 (path, root, sum);

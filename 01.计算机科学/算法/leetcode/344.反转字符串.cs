@@ -36,10 +36,11 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public void ReverseString (char[] s) {
         if (s.Length < 2) return;
         int l = 0;
-        int r = s.Length-1;
+        int r = s.Length - 1;
         while (l < r) {
             char c = s[l];
             s[l] = s[r];

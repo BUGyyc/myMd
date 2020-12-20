@@ -59,31 +59,31 @@
 
 // @lc code=start
 public class Solution {
-    public IList<IList<int>> CombinationSum(int[] candidates, int target) {
-        List<IList<int>> result = new List<IList<int>>();
-        List<int> list = new List<int>();
-        BackTrack(result, target, 0,0,list,candidates);
+    //回溯
+    public IList<IList<int>> CombinationSum (int[] candidates, int target) {
+        List<IList<int>> result = new List<IList<int>> ();
+        List<int> list = new List<int> ();
+        BackTrack (result, target, 0, 0, list, candidates);
         return result;
     }
 
-    private void BackTrack(List<IList<int>> result,int target,int step,int sum,List<int> list,int[] candidates) {
-        if(sum>target){
+    private void BackTrack (List<IList<int>> result, int target, int step, int sum, List<int> list, int[] candidates) {
+        if (sum > target) {
             return;
         }
-        if(sum == target){
-            result.Add(list.ToList());
+        if (sum == target) {
+            result.Add (list.ToList ());
             return;
         }
 
-        while(step<candidates.Length){
-            sum+=candidates[step];
-            list.Add(candidates[step]);
-            BackTrack(result,target,step,sum,list,candidates);
-            sum-=candidates[step];
-            list.RemoveAt(list.Count-1);
+        while (step < candidates.Length) {
+            sum += candidates[step];
+            list.Add (candidates[step]);
+            BackTrack (result, target, step, sum, list, candidates);
+            sum -= candidates[step];
+            list.RemoveAt (list.Count - 1);
             step++;
         }
     }
 }
 // @lc code=end
-

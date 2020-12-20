@@ -36,54 +36,41 @@
  *     public ListNode(int x) { val = x; }
  * }
  */
-public class Solution
-{
-    public ListNode Partition(ListNode head, int x)
-    {
+public class Solution {
+    //TODO:
+    public ListNode Partition (ListNode head, int x) {
         if (head == null) return null;
         ListNode s = null;
         ListNode b = null;
         ListNode f = null;
         ListNode sec = null;
         ListNode p = head;
-        while (p != null)
-        {
-            if (p.val < x)
-            {
-                if (s == null)
-                {
-                    s = new ListNode(p.val);
+        while (p != null) {
+            if (p.val < x) {
+                if (s == null) {
+                    s = new ListNode (p.val);
                     f = s;
-                }
-                else
-                {
-                    s.next = new ListNode(p.val);
+                } else {
+                    s.next = new ListNode (p.val);
                     s = s.next;
                 }
-            }
-            else
-            {
-                if (b == null)
-                {
-                    b = new ListNode(p.val);
+            } else {
+                if (b == null) {
+                    b = new ListNode (p.val);
                     sec = b;
-                }
-                else
-                {
-                    b.next = new ListNode(p.val);
+                } else {
+                    b.next = new ListNode (p.val);
                     b = b.next;
                 }
             }
             p = p.next;
         }
-        if (s != null)
-        {
-            s.next = sec; 
+        if (s != null) {
+            s.next = sec;
             return f;
-        }else{
+        } else {
             return sec;
         }
     }
 }
 // @lc code=end
-

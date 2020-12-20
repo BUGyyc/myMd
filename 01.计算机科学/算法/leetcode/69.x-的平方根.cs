@@ -36,23 +36,18 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    public int MySqrt(int x)
-    {
+public class Solution {
+    //TODO:
+    public int MySqrt (int x) {
         int l = 0;
         int r = x;
         int result = 0;
-        while (l <= r)
-        {
+        while (l <= r) {
             int mid = l + (r - l) / 2;
-            if ((long)mid * mid <= x)
-            {
+            if ((long) mid * mid <= x) {
                 result = mid;
                 l = mid + 1;
-            }
-            else
-            {
+            } else {
                 r = mid - 1;
             }
         }
@@ -60,4 +55,3 @@ public class Solution
     }
 }
 // @lc code=end
-

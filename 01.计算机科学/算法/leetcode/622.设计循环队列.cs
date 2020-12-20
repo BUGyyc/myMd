@@ -61,39 +61,39 @@
 
 // @lc code=start
 public class MyCircularQueue {
-
+    //TODO:
     /** Initialize your data structure here. Set the size of the queue to be k. */
-    public MyCircularQueue(int k) {
+    public MyCircularQueue (int k) {
 
     }
-    
+
     /** Insert an element into the circular queue. Return true if the operation is successful. */
-    public bool EnQueue(int value) {
+    public bool EnQueue (int value) {
 
     }
-    
+
     /** Delete an element from the circular queue. Return true if the operation is successful. */
-    public bool DeQueue() {
+    public bool DeQueue () {
 
     }
-    
+
     /** Get the front item from the queue. */
-    public int Front() {
+    public int Front () {
 
     }
-    
+
     /** Get the last item from the queue. */
-    public int Rear() {
+    public int Rear () {
 
     }
-    
+
     /** Checks whether the circular queue is empty or not. */
-    public bool IsEmpty() {
+    public bool IsEmpty () {
 
     }
-    
+
     /** Checks whether the circular queue is full or not. */
-    public bool IsFull() {
+    public bool IsFull () {
 
     }
 }
@@ -109,4 +109,3 @@ public class MyCircularQueue {
  * bool param_6 = obj.IsFull();
  */
 // @lc code=end
-

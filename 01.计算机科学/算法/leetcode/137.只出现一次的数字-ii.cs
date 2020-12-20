@@ -34,19 +34,19 @@
 
 // @lc code=start
 public class Solution {
-    public int SingleNumber(int[] nums) {
-        Dictionary<int,int> result = new Dictionary<int,int>();
+    //TODO:
+    public int SingleNumber (int[] nums) {
+        Dictionary<int, int> result = new Dictionary<int, int> ();
         int all = 0;
         int sum = 0;
-        for(int i = 0;i<nums.Length;i++){
+        for (int i = 0; i < nums.Length; i++) {
             all += nums[i];
-            if(result.ContainsKey(nums[i]) == false){
+            if (result.ContainsKey (nums[i]) == false) {
                 sum += nums[i];
-                result.Add(nums[i],nums[i]);
+                result.Add (nums[i], nums[i]);
             }
         }
-        return (3*sum - all)/2;
+        return (3 * sum - all) / 2;
     }
 }
 // @lc code=end
-

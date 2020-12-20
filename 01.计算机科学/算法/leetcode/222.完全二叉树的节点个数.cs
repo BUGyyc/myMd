@@ -44,12 +44,11 @@
  *     public TreeNode(int x) { val = x; }
  * }
  */
-public class Solution
-{
-    public int CountNodes(TreeNode root)
-    {
+public class Solution {
+    //TODO:
+    public int CountNodes (TreeNode root) {
         if (root == null) return 0;
-        return 1 + CountNodes(root.left) + CountNodes(root.right);
+        return 1 + CountNodes (root.left) + CountNodes (root.right);
     }
 
     // public int GetNum(TreeNode root)
@@ -72,4 +71,3 @@ public class Solution
     // }
 }
 // @lc code=end
-

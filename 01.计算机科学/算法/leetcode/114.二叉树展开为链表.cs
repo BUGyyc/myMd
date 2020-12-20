@@ -56,6 +56,7 @@
  * }
  */
 public class Solution {
+    //栈迭代
     public void Flatten (TreeNode root) {
         List<TreeNode> list = new List<TreeNode> ();
         Stack<TreeNode> stack = new Stack<TreeNode> ();

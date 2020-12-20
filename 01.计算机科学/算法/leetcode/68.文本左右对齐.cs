@@ -1,4 +1,3 @@
-
 /*
  * @lc app=leetcode.cn id=68 lang=csharp
  *
@@ -81,9 +80,9 @@
 
 // @lc code=start
 public class Solution {
-    public IList<string> FullJustify(string[] words, int maxWidth) {
+    //TODO:
+    public IList<string> FullJustify (string[] words, int maxWidth) {
 
     }
 }
 // @lc code=end
-

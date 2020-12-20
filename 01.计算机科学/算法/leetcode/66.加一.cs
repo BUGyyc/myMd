@@ -36,9 +36,10 @@
  */
 // @lc code=start
 public class Solution {
+    //需要单独计一位进位
     public int[] PlusOne (int[] digits) {
-     List<int> result = new List<int> ();
-        int carry =1;
+        List<int> result = new List<int> ();
+        int carry = 1;
         for (int i = digits.Length - 1; i >= 0; i--) {
             int sum = digits[i] + carry;
             int s = sum % 10;
@@ -55,7 +56,7 @@ public class Solution {
         int a = 0;
         foreach (var item in result) {
             newArr[a++] = item;
-        }  
+        }
         return newArr;
     }
 }

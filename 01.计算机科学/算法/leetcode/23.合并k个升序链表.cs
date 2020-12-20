@@ -73,6 +73,7 @@
  * }
  */
 public class Solution {
+    //分治
     public ListNode MergeKLists (ListNode[] lists) {
         return Merge (lists, 0, lists.Length - 1);
     }

@@ -67,6 +67,7 @@
  * }
  */
 public class Solution {
+    //递归判断
     public bool IsBalanced (TreeNode root) {
         if (root == null) {
             return true;

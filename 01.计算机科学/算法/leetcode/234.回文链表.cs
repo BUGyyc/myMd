@@ -41,6 +41,7 @@
  * }
  */
 public class Solution {
+    //TODO:
     public bool IsPalindrome (ListNode head) {
         // if (head == null) return true;
         // if (head.next == null) return true;
@@ -56,14 +57,14 @@ public class Solution {
         // }
         // return true;
         ListNode p = head;
-        Stack<int> stack = new Stack<int>();
-        while(p!=null){
-            stack.Push(p.val);
+        Stack<int> stack = new Stack<int> ();
+        while (p != null) {
+            stack.Push (p.val);
             p = p.next;
         }
 
-        while(head != null){
-            if(head.val != stack.Pop()){
+        while (head != null) {
+            if (head.val != stack.Pop ()) {
                 return false;
             }
             head = head.next;

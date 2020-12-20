@@ -55,14 +55,15 @@
  * }
  */
 public class Solution {
+    //TODO:
     public ListNode InsertionSortList (ListNode head) {
         ListNode newHead = null;
         if (head == null) return newHead;
         ListNode p = head;
         while (p != null) {
-            if(newHead == null){
-                newHead = new ListNode(p.val);
-            }    
+            if (newHead == null) {
+                newHead = new ListNode (p.val);
+            }
             p = p.next;
         }
     }

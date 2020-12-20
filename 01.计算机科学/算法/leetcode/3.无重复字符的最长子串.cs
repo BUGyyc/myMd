@@ -41,18 +41,19 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public int LengthOfLongestSubstring (string s) {
         int left = 0;
         int max = 0;
-        
-        List<char> list = new List<char>();
+
+        List<char> list = new List<char> ();
 
         for (int i = 0; i < s.Length; i++) {
             char c = s[i];
-            if (list.Contains(c)) {
-                list.RemoveRange(0,list.IndexOf(c)+1);
+            if (list.Contains (c)) {
+                list.RemoveRange (0, list.IndexOf (c) + 1);
             }
-            list.Add(c);
+            list.Add (c);
             max = Math.Max (max, list.Count);
         }
         return max;

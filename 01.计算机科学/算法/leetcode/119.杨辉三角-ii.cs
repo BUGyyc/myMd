@@ -33,10 +33,11 @@
 
 // @lc code=start
 public class Solution {
+    //动态规划
     public IList<int> GetRow (int rowIndex) {
-        int[][] result = new int[rowIndex+1][];
+        int[][] result = new int[rowIndex + 1][];
         int step = 0;
-        while (step < rowIndex+1) {
+        while (step < rowIndex + 1) {
             result[step] = new int[step + 1];
             result[step][0] = result[step][step] = 1;
             int j = 1;

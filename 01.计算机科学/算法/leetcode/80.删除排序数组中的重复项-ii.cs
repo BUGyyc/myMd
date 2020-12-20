@@ -70,26 +70,20 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    public int RemoveDuplicates(int[] nums)
-    {
-        if(nums.Length == 0)return 0;
+public class Solution {
+    //TODO:
+    public int RemoveDuplicates (int[] nums) {
+        if (nums.Length == 0) return 0;
         int j = 1;
         int count = 1;
         int i = 1;
-        while (i < nums.Length)
-        {
-            if (nums[i - 1] == nums[i])
-            {
+        while (i < nums.Length) {
+            if (nums[i - 1] == nums[i]) {
                 count++;
-            }
-            else
-            {
+            } else {
                 count = 1;
             }
-            if (count <= 2)
-            {
+            if (count <= 2) {
                 nums[j++] = nums[i];
             }
             i++;
@@ -98,4 +92,3 @@ public class Solution
     }
 }
 // @lc code=end
-

@@ -62,9 +62,9 @@
 
 // @lc code=start
 public class Solution {
-    public bool CanWinNim(int n) {
-        return (n%4 != 0);
+    //TODO:
+    public bool CanWinNim (int n) {
+        return (n % 4 != 0);
     }
 }
 // @lc code=end
-

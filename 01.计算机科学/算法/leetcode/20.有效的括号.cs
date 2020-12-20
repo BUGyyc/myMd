@@ -56,51 +56,37 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    public bool IsValid(string s)
-    {
-        Stack st = new Stack();
-        for (int i = 0; i < s.Length; i++)
-        {
-            string item = s[i].ToString();
-            if (st.Count > 0)
-            {
-                string x = st.Peek().ToString();
-                if (check(item, x))//x.Equals(item))
+public class Solution {
+    //TODO：利用栈
+    public bool IsValid (string s) {
+        Stack st = new Stack ();
+        for (int i = 0; i < s.Length; i++) {
+            string item = s[i].ToString ();
+            if (st.Count > 0) {
+                string x = st.Peek ().ToString ();
+                if (check (item, x)) //x.Equals(item))
                 {
-                    st.Pop();
+                    st.Pop ();
+                } else {
+                    st.Push (item);
                 }
-                else
-                {
-                    st.Push(item);
-                }
-            }
-            else
-            {
-                st.Push(item);
+            } else {
+                st.Push (item);
             }
         }
 
         return st.Count == 0;
     }
 
-    private bool check(string a, string b)
-    {
-        if (a.Equals(")") && b.Equals("("))
-        {
+    private bool check (string a, string b) {
+        if (a.Equals (")") && b.Equals ("(")) {
             return true;
-        }
-        else if (a.Equals("}") && b.Equals("{"))
-        {
+        } else if (a.Equals ("}") && b.Equals ("{")) {
             return true;
-        }
-        else if (a.Equals("]") && b.Equals("["))
-        {
+        } else if (a.Equals ("]") && b.Equals ("[")) {
             return true;
         }
         return false;
     }
 }
 // @lc code=end
-

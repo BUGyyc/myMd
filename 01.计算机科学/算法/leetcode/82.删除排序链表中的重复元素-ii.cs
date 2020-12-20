@@ -37,30 +37,24 @@
  *     public ListNode(int x) { val = x; }
  * }
  */
-public class Solution
-{
-    public ListNode DeleteDuplicates(ListNode head)
-    {
+public class Solution {
+    //TODO:
+    public ListNode DeleteDuplicates (ListNode head) {
         if (head == null || head.next == null) return head;
-        ListNode pre = new ListNode(-1);
+        ListNode pre = new ListNode (-1);
         pre.next = head;
         ListNode newHead = pre;
         ListNode l = null;
         ListNode r = null;
-        while (pre.next != null)
-        {
+        while (pre.next != null) {
             l = pre.next;
             r = pre.next;
-            while (r.next != null && r.next.val == l.val)
-            {
+            while (r.next != null && r.next.val == l.val) {
                 r = r.next;
             }
-            if (l == r)
-            {
+            if (l == r) {
                 pre = pre.next;
-            }
-            else
-            {
+            } else {
                 pre.next = r.next;
             }
         }
@@ -68,4 +62,3 @@ public class Solution
     }
 }
 // @lc code=end
-

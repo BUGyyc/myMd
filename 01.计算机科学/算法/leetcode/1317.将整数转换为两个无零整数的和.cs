@@ -71,9 +71,9 @@
 
 // @lc code=start
 public class Solution {
-    public int[] GetNoZeroIntegers(int n) {
-        
+    //TODO:
+    public int[] GetNoZeroIntegers (int n) {
+
     }
 }
 // @lc code=end
-

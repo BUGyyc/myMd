@@ -6,6 +6,7 @@
 
 // @lc code=start
 public class Solution {
+    //首尾比较
     public bool IsPalindrome (int x) {
         string s = x.ToString ();
         char[] chs = s.ToCharArray ();

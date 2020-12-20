@@ -30,6 +30,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public string AddStrings (string num1, string num2) {
         int a = num1.Length;
         int b = num2.Length;
@@ -50,17 +51,16 @@ public class Solution {
             int sum = x + y + carry;
             carry = sum / 10;
             int val = sum % 10;
-            list.Insert(0,val);
+            list.Insert (0, val);
             i--;
             j--;
         }
-        if (carry > 0) list.Insert (0,carry);
-        StringBuilder sb = new StringBuilder();
-        foreach (var item in list)
-        {       
-            sb.Append(item.ToString());
+        if (carry > 0) list.Insert (0, carry);
+        StringBuilder sb = new StringBuilder ();
+        foreach (var item in list) {
+            sb.Append (item.ToString ());
         }
-        return sb.ToString();
+        return sb.ToString ();
     }
 }
 // @lc code=end

@@ -44,6 +44,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public double MyPow (double x, int n) {
         long m = n;
         return n >= 0 ? Func1 (x, m) : 1 / Func1 (x, -m);

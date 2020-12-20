@@ -70,6 +70,7 @@
 
 // @lc code=start
 public class Solution {
+    //贪心算法
     public bool LemonadeChange (int[] bills) {
         int five = 0;
         int ten = 0;

@@ -48,6 +48,7 @@
  * }
  */
 public class Solution {
+    //递归取值
     public int MinDepth (TreeNode root) {
         if (root == null) {
             return 0;

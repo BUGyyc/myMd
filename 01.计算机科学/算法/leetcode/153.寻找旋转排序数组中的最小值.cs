@@ -35,14 +35,15 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public int FindMin (int[] nums) {
         int len = nums.Length;
         if (len == 0) return 0;
         if (len == 1) return nums[0];
         int min = nums[0];
         for (int i = 0; i < len - 1; i++) {
-            if(nums[i] > nums[i+1]){
-                min = nums[i+1];
+            if (nums[i] > nums[i + 1]) {
+                min = nums[i + 1];
                 break;
             }
         }

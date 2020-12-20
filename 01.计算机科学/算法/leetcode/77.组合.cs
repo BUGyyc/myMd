@@ -32,24 +32,24 @@
 
 // @lc code=start
 public class Solution {
-    public IList<IList<int>> Combine(int n, int k) {
-        List<IList<int>> result = new List<IList<int>>();
-        List<int> list = new List<int>();
-        BackTrack(result,list,n,k,1);
+    //回溯
+    public IList<IList<int>> Combine (int n, int k) {
+        List<IList<int>> result = new List<IList<int>> ();
+        List<int> list = new List<int> ();
+        BackTrack (result, list, n, k, 1);
         return result;
     }
 
-    private void BackTrack(List<IList<int>> result,List<int> list,int n,int k,int start){
-        if(k == 0){
-            result.Add(list.ToList());
-        }else if(k>0){
-            for(int i = start;i<=n;i++){
-                list.Add(i);
-                BackTrack(result,list,n,k-1,i+1);
-                list.RemoveAt(list.Count-1);
+    private void BackTrack (List<IList<int>> result, List<int> list, int n, int k, int start) {
+        if (k == 0) {
+            result.Add (list.ToList ());
+        } else if (k > 0) {
+            for (int i = start; i <= n; i++) {
+                list.Add (i);
+                BackTrack (result, list, n, k - 1, i + 1);
+                list.RemoveAt (list.Count - 1);
             }
         }
     }
 }
 // @lc code=end
-

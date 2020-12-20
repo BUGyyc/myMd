@@ -82,6 +82,7 @@
  * }
  */
 public class Solution {
+    //Stack迭代
     public IList<int> PreorderTraversal (TreeNode root) {
         List<int> result = new List<int> ();
         // PreorderTraversalFunc1(ref result, root);

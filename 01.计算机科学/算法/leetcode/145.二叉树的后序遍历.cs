@@ -45,6 +45,7 @@
  * }
  */
 public class Solution {
+    //Stack迭代
     public IList<int> PostorderTraversal (TreeNode root) {
         List<int> result = new List<int> ();
         if (root == null) {

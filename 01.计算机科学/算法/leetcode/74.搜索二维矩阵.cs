@@ -58,6 +58,7 @@
 
 // @lc code=start
 public class Solution {
+    //二分法、分治
     public bool SearchMatrix (int[][] matrix, int target) {
         int row = matrix.Length;
         if (row == 0) return false;

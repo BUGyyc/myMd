@@ -29,6 +29,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public IList<IList<int>> PermuteUnique (int[] nums) {
         List<IList<int>> result = new List<IList<int>> ();
         LinkedList<int> list = new LinkedList<int> ();
@@ -51,7 +52,7 @@ public class Solution {
             visit[i] = true;
             list.AddLast (nums[i]);
             BackTrack (nums, list, result, visit, deep + 1);
-            list.RemoveLast();
+            list.RemoveLast ();
             visit[i] = false;
         }
     }

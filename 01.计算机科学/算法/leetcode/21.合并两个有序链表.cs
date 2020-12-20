@@ -38,6 +38,7 @@
  * }
  */
 public class Solution {
+    //取节点逐个比较
     public ListNode MergeTwoLists (ListNode l1, ListNode l2) {
         ListNode p = null;
         ListNode head = null;

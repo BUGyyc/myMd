@@ -38,6 +38,7 @@
       bool IsBadVersion(int version); */
 
 public class Solution : VersionControl {
+    //TODO:
     public int FirstBadVersion(int n) {
         
     }

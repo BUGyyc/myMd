@@ -43,6 +43,7 @@
  * }
  */
 public class Solution {
+    //递归分析，将左右子树的高度累计，取最大
     public int MaxDepth (TreeNode root) {
         if (root == null) {
             return 0;

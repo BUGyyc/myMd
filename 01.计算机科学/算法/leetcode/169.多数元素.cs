@@ -34,6 +34,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public int MajorityElement (int[] nums) {
         int len = nums.Length;
         int half = len / 2;

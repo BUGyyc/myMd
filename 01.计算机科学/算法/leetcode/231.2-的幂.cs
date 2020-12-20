@@ -36,6 +36,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:
     public bool IsPowerOfTwo (int n) {
         if (n <= 0) return false;
         int res = 1;

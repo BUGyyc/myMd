@@ -41,6 +41,7 @@
  * }
  */
 public class Solution {
+    //TODO:
     private int result = 0;
     public int SumOfLeftLeaves (TreeNode root) {
         if (root == null) {
@@ -64,10 +65,10 @@ public class Solution {
         if (isLeft && root.left == null && root.right == null) {
             result += root.val;
         }
-        if (root.left!=null) {
+        if (root.left != null) {
             GetLeftSum (root.left, true);
         }
-        if (root.right!=null) {
+        if (root.right != null) {
             GetLeftSum (root.right, false);
         }
     }

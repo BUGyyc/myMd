@@ -41,26 +41,26 @@
 
 // @lc code=start
 public class Solution {
-    public int MinimumTotal(IList<IList<int>> triangle) {
+    //动态规划
+    public int MinimumTotal (IList<IList<int>> triangle) {
         int row = triangle.Count;
-        if(row == 0)return 0;
-        int[,] result = new int[row,row];
+        if (row == 0) return 0;
+        int[, ] result = new int[row, row];
 
-        result[0,0] = triangle[0][0];
+        result[0, 0] = triangle[0][0];
 
-        for(int i = 1;i<row;i++) {
-            result[i,0] = result[i-1,0] + triangle[i][0];
-            for(int j = 1;j<i;j++){
-                result[i,j] = Math.Min(result[i-1,j-1],result[i-1,j]) + triangle[i][j];
+        for (int i = 1; i < row; i++) {
+            result[i, 0] = result[i - 1, 0] + triangle[i][0];
+            for (int j = 1; j < i; j++) {
+                result[i, j] = Math.Min (result[i - 1, j - 1], result[i - 1, j]) + triangle[i][j];
             }
-            result[i,i] = result[i-1,i-1] + triangle[i][i];
+            result[i, i] = result[i - 1, i - 1] + triangle[i][i];
         }
-        int min = result[row-1,0];
-        for(int i = 0;i<row;i++){
-            min = Math.Min(min,result[row-1,i]);
+        int min = result[row - 1, 0];
+        for (int i = 0; i < row; i++) {
+            min = Math.Min (min, result[row - 1, i]);
         }
         return min;
     }
 }
 // @lc code=end
-

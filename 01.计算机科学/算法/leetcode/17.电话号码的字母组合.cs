@@ -32,6 +32,7 @@
 
 // @lc code=start
 public class Solution {
+    //回溯算法
     public IList<string> LetterCombinations (string digits) {
         List<string> result = new List<string> ();
         if (digits.Length == 0) {
@@ -47,7 +48,7 @@ public class Solution {
         dic['7'] = "pqrs";
         dic['8'] = "tuv";
         dic['9'] = "wxyz";
-        backTrack (0,dic,digits,"",result);
+        backTrack (0, dic, digits, "", result);
         return result;
     }
 
@@ -58,8 +59,8 @@ public class Solution {
             string s = dictionary[digits[index]];
             for (int i = 0; i < s.Length; i++) {
                 str += s[i];
-                backTrack(index+1,dictionary,digits,str,result);
-                str = str.Remove(str.Length-1);
+                backTrack (index + 1, dictionary, digits, str, result);
+                str = str.Remove (str.Length - 1);
             }
         }
     }
