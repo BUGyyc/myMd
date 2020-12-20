@@ -40,6 +40,7 @@ public class Solution {
         return list;
     }
 
+    //单独用open close 来计算左右括号的使用数量
     private void BackTrack (List<string> list, int open, int close, int n, StringBuilder sb) {
         if (sb.Length == 2 * n) {
             list.Add (sb.ToString ());
@@ -48,13 +49,11 @@ public class Solution {
         if (open < n) {
             sb.Append ('(');
             BackTrack (list, open + 1, close, n, sb);
-            // str.Remove(str.Length-1);
             sb.Remove (sb.Length - 1, 1);
         }
         if (close < open) {
             sb.Append (')');
             BackTrack (list, open, close + 1, n, sb);
-            // str.Remove(str.Length-1);
             sb.Remove (sb.Length - 1, 1);
         }
 

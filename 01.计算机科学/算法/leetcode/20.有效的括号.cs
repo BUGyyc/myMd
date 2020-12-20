@@ -57,7 +57,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO：利用栈
+    //利用栈。运用进栈出栈的顺序来判断出结果
     public bool IsValid (string s) {
         Stack st = new Stack ();
         for (int i = 0; i < s.Length; i++) {

@@ -45,7 +45,7 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //双指针，第一个指针先走n步，然后第二个指针再开始走，当第一个指针到达尾部，那么第二个指针就是倒数第N个节点
     public ListNode RemoveNthFromEnd (ListNode head, int n) {
         ListNode f = head;
         ListNode e = head;
