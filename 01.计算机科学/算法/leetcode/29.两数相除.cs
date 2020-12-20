@@ -48,7 +48,7 @@
 
 // @lc code=start
 public class Solution {
-    //除数与被除数的处理方式比较特别
+    //除数与被除数的处理方式比较特别，被除数减小，除数扩大，减少计算量
     public int Divide (int dividend, int divisor) {
         int sign = (dividend ^ divisor) >> 31;
         if (dividend > 0) dividend = -dividend;

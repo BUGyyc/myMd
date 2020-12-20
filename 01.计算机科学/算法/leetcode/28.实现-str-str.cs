@@ -40,6 +40,7 @@
 
 // @lc code=start
 public class Solution {
+    //TODO:滑动窗口
     public int StrStr (string haystack, string needle) {
         int n = haystack.Length;
         int step = needle.Length;

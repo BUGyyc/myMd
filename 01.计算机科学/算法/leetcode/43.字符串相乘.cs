@@ -38,7 +38,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //开辟一个新数组存储各位字符相乘的结果，最后将新数组，从后往前进位
     public string Multiply (string num1, string num2) {
         if (num1.Equals ("0") || num2.Equals ("0")) {
             return "0";

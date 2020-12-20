@@ -29,7 +29,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //回溯。需要一个记录是否访问的数组
     public IList<IList<int>> PermuteUnique (int[] nums) {
         List<IList<int>> result = new List<IList<int>> ();
         LinkedList<int> list = new LinkedList<int> ();

@@ -44,24 +44,17 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    //TODO:
-    public int SearchInsert(int[] nums, int target)
-    {
-        if (nums.Length == 0)
-        {
+public class Solution {
+    //二分法查找位置
+    public int SearchInsert (int[] nums, int target) {
+        if (nums.Length == 0) {
             return 0;
         }
 
-        for (int i = 0; i < nums.Length; i++)
-        {
-            if (target < nums[i])
-            {
+        for (int i = 0; i < nums.Length; i++) {
+            if (target < nums[i]) {
                 return i;
-            }
-            else if (target == nums[i])
-            {
+            } else if (target == nums[i]) {
                 return i;
             }
         }
@@ -70,4 +63,3 @@ public class Solution
     }
 }
 // @lc code=end
-
