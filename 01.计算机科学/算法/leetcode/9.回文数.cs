@@ -6,8 +6,21 @@
 
 // @lc code=start
 public class Solution {
-    //首尾比较
+    //除10 与乘10 比较
     public bool IsPalindrome (int x) {
+        if (x < 0 || (x % 10 == 0 && x != 0)) return false;
+        if (x == 0) return true;
+        int y = 0;
+        while (x > y) {
+            int tmp = x % 10;
+            y = y * 10 + tmp;
+            x /= 10;
+        }
+        return x == y || (x == (y / 10));
+    }
+
+    //转字符后判断
+    private bool Func (int x) {
         string s = x.ToString ();
         char[] chs = s.ToCharArray ();
         int i = 0;
@@ -22,5 +35,6 @@ public class Solution {
         }
         return true;
     }
+
 }
 // @lc code=end

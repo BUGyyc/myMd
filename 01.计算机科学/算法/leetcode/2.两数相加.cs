@@ -41,7 +41,7 @@
  * }
  */
 public class Solution {
-    //将节点逐个取下来，然后相互比较
+    //将节点逐个取下来，然后相互比较,carry进位
     public ListNode AddTwoNumbers (ListNode l1, ListNode l2) {
         ListNode p = null;
         ListNode head = null;

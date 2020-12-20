@@ -32,7 +32,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //动态规划判断 是否是 回文子串
     public string LongestPalindrome (string s) {
         //动态规划
         int n = s.Length;
@@ -63,6 +63,30 @@ public class Solution {
                 //当前字符串是回文，并且当前回文长度大于最长回文长度时，修改result
                 if (dp[start, end] && len > str.Length)
                     str = s.Substring (start, len);
+            }
+        }
+        return str;
+    }
+
+    private string Func (string s) {
+        int len = s.Length ();
+        bool[, ] dp = new bool[len, len];
+        string str = "";
+        for (int l = 0; l < len; l++) {
+            for (int i = 0; i + l < len; i++) {
+                int j = i + l;
+                if (l == 0) {
+                    dp[i, j] = true;
+                } else if (l == 1) {
+                    dp[i, j] = s[i] == s[j];
+                } else {
+                    dp[i, j] = s[i] == s[j] && dp[i + 1, i - 1];
+                }
+
+                //最后看长度是否超过之前的
+                if (dp[i, j] && l + 1 > str.Length ()) {
+                    str = s.Substring (i, i + l + 1);
+                }
             }
         }
         return str;

@@ -84,7 +84,6 @@ namespace GameCore
             }
             else
             {
-                //TODO:暂时用距离当作权重
                 edges[key1] = (v1.Data.position - v2.Data.position).magnitude;
             }
         }

@@ -33,7 +33,6 @@ public class RandomTest {
             int x = rand.nextInt(MAX_X);
             int y = rand.nextInt(MAX_Y);
 
-            // TODO:
             while (checkPos(x, y, type) == false) {
                 rand = new Random();
                 x = rand.nextInt(MAX_X);

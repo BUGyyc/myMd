@@ -35,7 +35,7 @@
 
 // @lc code=start
 public class Solution {
-    //首尾比较
+    //首尾比较。根据条件移动首尾索引
     public int MaxArea (int[] height) {
         int max = 0;
         int i = 0;
