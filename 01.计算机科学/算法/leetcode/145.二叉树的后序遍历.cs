@@ -47,19 +47,23 @@
 public class Solution {
     //Stack迭代
     public IList<int> PostorderTraversal (TreeNode root) {
+        return PrintPostorderTraversal (root);
+    }
+
+    public IList<int> PrintPostorderTraversal (TreeNode root) {
         List<int> result = new List<int> ();
         if (root == null) {
             return result;
         }
         Stack<TreeNode> stack = new Stack<TreeNode> ();
-        while (root != null || stack.Count > 0) {
+        while (stack.Count > 0 || root != null) {
             while (root != null) {
                 result.Add (root.val);
                 stack.Push (root);
                 root = root.right;
             }
-            TreeNode curr = stack.Pop ();
-            root = curr.left;
+            root = stack.Pop ();
+            root = root.left;
         }
         result.Reverse ();
         return result;

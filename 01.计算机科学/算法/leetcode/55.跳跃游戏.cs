@@ -37,14 +37,20 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //遍历，刷新记录的最大跳跃步子，如果大于等于数组长度，则说明可以
     public bool CanJump (int[] nums) {
-        if (nums.Length <= 1) return true;
-        int i = 1;
-        int maxStep = nums.Length;
-        while (i < maxStep) {
-
+        int len = nums.Length;
+        if (len <= 1) return true;
+        int max = 0;
+        for (int i = 0; i < len; i++) {
+            if (i <= max) {
+                max = Math.Max (max, i + nums[i]);
+                if (max >= len - 1) {
+                    return true;
+                }
+            }
         }
+        return false;
     }
 }
 // @lc code=end

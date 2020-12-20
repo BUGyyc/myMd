@@ -58,7 +58,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //存储已经被改变的状态
     public void SetZeroes (int[][] matrix) {
         int row = matrix.Length;
         if (row == 0) return;

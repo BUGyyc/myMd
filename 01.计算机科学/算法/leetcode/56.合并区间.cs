@@ -44,7 +44,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //分治算法
     public int[][] Merge (int[][] intervals) {
         List<int[]> result = new List<int[]> ();
         var a = intervals[0];
@@ -58,7 +58,7 @@ public class Solution {
                 a = b;
             }
         }
-        
+
     }
 
     private bool CanMerge (int[] a, int[] b) {

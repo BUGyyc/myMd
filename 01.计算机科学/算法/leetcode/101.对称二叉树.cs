@@ -56,7 +56,7 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //递归判断
     public bool IsSymmetric (TreeNode root) {
         if (root == null) {
             return true;

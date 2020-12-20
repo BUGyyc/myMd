@@ -33,7 +33,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //移动首尾索引
     public bool IsPalindrome (string s) {
         if (s.Length == 0) return true;
         string str = s.ToLower ();

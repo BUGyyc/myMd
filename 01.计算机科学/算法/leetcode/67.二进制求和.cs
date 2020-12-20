@@ -43,7 +43,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //每个字符单独计算
     public string AddBinary (string a, string b) {
         List<string> list = new List<string> ();
         int aLen = a.Length;

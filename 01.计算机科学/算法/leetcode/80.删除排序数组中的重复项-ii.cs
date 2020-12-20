@@ -71,7 +71,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //统计出现次数Count，新索引记录数组长度
     public int RemoveDuplicates (int[] nums) {
         if (nums.Length == 0) return 0;
         int j = 1;

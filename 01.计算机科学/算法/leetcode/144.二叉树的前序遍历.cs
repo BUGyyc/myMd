@@ -84,24 +84,24 @@
 public class Solution {
     //Stack迭代
     public IList<int> PreorderTraversal (TreeNode root) {
-        List<int> result = new List<int> ();
-        // PreorderTraversalFunc1(ref result, root);
-        // PreorderTraversalFunc2(ref result, root);
-        if (root == null) {
-            return result;
-        }
-        Stack<TreeNode> stack = new Stack<TreeNode> ();
-        // stack.Push (root);
-        while (root != null || stack.Count > 0) {
-            while (root != null) {
-                result.Add (root.val);
-                stack.Push (root);
-                root = root.left;
-            }
-            TreeNode curr = stack.Pop ();
-            root = curr.right;
-        }
+        return PrintPreorderTraversal (root);
+    }
 
+    public IList<int> PrintPreorderTraversal (TreeNode root) {
+        List<int> result = new List<int> ();
+        if (root == null) return result;
+        Stack<TreeNode> stack = new Stack<TreeNode> ();
+        stack.Push (root);
+        while (stack.Count > 0) {
+            TreeNode node = stack.Pop ();
+            result.Add (node.val);
+            if (node.right != null) {
+                stack.Push (node.right);
+            }
+            if (node.left != null) {
+                stack.Push (node.left);
+            }
+        }
         return result;
     }
 

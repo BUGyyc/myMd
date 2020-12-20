@@ -66,7 +66,7 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //递归判断
     public bool IsSameTree (TreeNode p, TreeNode q) {
         if (p == null && q == null) {
             return true;

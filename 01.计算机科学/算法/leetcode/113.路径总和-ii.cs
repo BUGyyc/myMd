@@ -62,6 +62,7 @@ public class Solution {
         if (root == null) return;
         sum -= root.val;
 
+        //新建一个，因为是引用类型
         List<int> list = new List<int> (path);
         list.Add (root.val);
 

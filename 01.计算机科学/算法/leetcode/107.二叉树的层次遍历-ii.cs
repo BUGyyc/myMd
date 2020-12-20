@@ -47,8 +47,13 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //list 旋转
     public IList<IList<int>> LevelOrderBottom (TreeNode root) {
+        return PrintLevelOrderBottom (root);
+    }
+
+    //双队列解法
+    public IList<IList<int>> LevelOrderBottom2 (TreeNode root) {
         IList<IList<int>> result = new List<IList<int>> ();
         //队列用来放每一层不为null的节点
         Queue<TreeNode> queue = new Queue<TreeNode> ();
@@ -106,6 +111,30 @@ public class Solution {
                     queue.Enqueue (treeNode.right);
                 }
             }
+        }
+        result.Reverse ();
+        return result;
+    }
+
+    public IList<IList<int>> PrintLevelOrderBottom (TreeNode root) {
+        List<IList<int>> result = new List<IList<int>> ();
+        if (root == null) return result;
+        Queue<TreeNode> queue = new Queue<TreeNode> ();
+        queue.Enqueue (root);
+        while (queue.Count > 0) {
+            List<int> list = new List<int> ();
+            int count = queue.Count;
+            for (int i = 0; i < count; i++) {
+                TreeNode tmp = queue.Dequeue ();
+                list.Add (tmp.val);
+                if (tmp.left != null) {
+                    queue.Enqueue (tmp.left);
+                }
+                if (tmp.right != null) {
+                    queue.Enqueue (tmp.right);
+                }
+            }
+            result.Add (list);
         }
         result.Reverse ();
         return result;

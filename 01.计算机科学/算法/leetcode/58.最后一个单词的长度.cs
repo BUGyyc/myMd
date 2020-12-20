@@ -31,7 +31,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //从后往前数
     public int LengthOfLastWord (string s) {
         if (s.Length == 0) return 0;
         s = s.Trim ();

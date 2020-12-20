@@ -38,7 +38,7 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //判断p与p.next
     public ListNode DeleteDuplicates (ListNode head) {
         if (head == null) {
             return null;

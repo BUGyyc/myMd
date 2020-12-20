@@ -43,7 +43,7 @@
  * }
  */
 public class Solution {
-        //TODO:
+    //递归取数组中间数字，构建
     public TreeNode SortedArrayToBST (int[] nums) {
         return Func (nums, 0, nums.Length - 1);
     }

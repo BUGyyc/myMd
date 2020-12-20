@@ -49,12 +49,13 @@
 public class Solution {
     //TODO:
     public IList<IList<int>> ZigzagLevelOrder (TreeNode root) {
-        List<IList<int>> result = new List<IList<int>> ();
-        if (root == null) {
-            return result;
-        }
-        DFS (root, 0, result);
-        return result;
+        // List<IList<int>> result = new List<IList<int>> ();
+        // if (root == null) {
+        //     return result;
+        // }
+        // DFS (root, 0, result);
+        // return result;
+        return PrintZigzagLevelOrder (root);
     }
 
     private void DFS (TreeNode treeNode, int level, List<IList<int>> result) {
@@ -71,6 +72,35 @@ public class Solution {
         }
         if (treeNode.left != null) DFS (treeNode.left, level + 1, result);
         if (treeNode.right != null) DFS (treeNode.right, level + 1, result);
+    }
+
+    //迭代写法
+    private IList<IList<int>> PrintZigzagLevelOrder (TreeNode root) {
+        List<IList<int>> result = new List<IList<int>> ();
+        if (root == null) {
+            return result;
+        }
+        Queue<TreeNode> queue = new Queue<TreeNode> ();
+        queue.Enqueue (root);
+        int level = 0;
+        while (queue.Count > 0) {
+            List<int> list = new List<int> ();
+            int count = queue.Count;
+            for (int i = 0; i < count; i++) {
+                TreeNode tmp = queue.Dequeue ();
+                list.Add (tmp.val);
+                if (tmp.left != null) {
+                    queue.Enqueue (tmp.left);
+                }
+                if (tmp.right != null) {
+                    queue.Enqueue (tmp.right);
+                }
+            }
+            if (level % 2 == 1) list.Reverse ();
+            level++;
+            result.Add (list);
+        }
+        return result;
     }
 
 }

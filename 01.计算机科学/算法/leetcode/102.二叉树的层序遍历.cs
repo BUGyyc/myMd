@@ -50,25 +50,29 @@
  */
 
 public class Solution {
-    //TODO:
+    //用队列存储，然后遍历
     public IList<IList<int>> LevelOrder (TreeNode root) {
-        Queue<TreeNode> queue = new Queue<TreeNode> ();
+        return PrintLevelOrder (root);
+    }
+
+    private IList<IList<int>> PrintLevelOrder (TreeNode root) {
         List<IList<int>> result = new List<IList<int>> ();
         if (root == null) {
             return result;
         }
+        Queue<TreeNode> queue = new Queue<TreeNode> ();
         queue.Enqueue (root);
         while (queue.Count > 0) {
             List<int> list = new List<int> ();
             int count = queue.Count;
             for (int i = 0; i < count; i++) {
-                TreeNode treeNode = queue.Dequeue ();
-                list.Add (treeNode.val);
-                if (treeNode.left != null) {
-                    queue.Enqueue (treeNode.left);
+                TreeNode tmp = queue.Dequeue ();
+                list.Add (tmp.val);
+                if (tmp.left != null) {
+                    queue.Enqueue (tmp.left);
                 }
-                if (treeNode.right != null) {
-                    queue.Enqueue (treeNode.right);
+                if (tmp.right != null) {
+                    queue.Enqueue (tmp.right);
                 }
             }
             result.Add (list);

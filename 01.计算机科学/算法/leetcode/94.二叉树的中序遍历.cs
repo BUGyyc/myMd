@@ -47,23 +47,40 @@
 
 using System.Collections.Generic;
 public class Solution {
-    //TODO:
+    //迭代方式
     public IList<int> InorderTraversal (TreeNode root) {
-        List<int> list = new List<int> ();
-        Stack<TreeNode> stack = new Stack<TreeNode> ();
+        // List<int> list = new List<int> ();
+        // Stack<TreeNode> stack = new Stack<TreeNode> ();
+        // while (root != null || stack.Count > 0) {
+        //     while (root != null) {
+        //         stack.Push (root);
+        //         root = root.left;
+        //     }
+        //     root = stack.Pop ();
+        //     list.Add (root.val);
+        //     root = root.right;
+        // }
+        // return list;
+        return PrintInOrder (root);
+    }
 
+    private IList<int> PrintInOrder (TreeNode root) {
+        List<int> result = new List<int> ();
+        if (root == null) return result;
+        Stack<TreeNode> stack = new Stack<TreeNode> ();
         while (root != null || stack.Count > 0) {
             while (root != null) {
                 stack.Push (root);
                 root = root.left;
             }
             root = stack.Pop ();
-            list.Add (root.val);
+            result.Add (root.val);
             root = root.right;
         }
-        return list;
+        return result;
     }
 
+    //递归方式
     private IList<int> func1 (TreeNode root) {
         List<int> list = new List<int> ();
         InOrder (ref list, root);
