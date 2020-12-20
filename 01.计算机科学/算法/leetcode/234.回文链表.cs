@@ -41,21 +41,8 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //遍历两遍，第一遍将结果存储到Stack 中，第二遍将Stack与list 比较
     public bool IsPalindrome (ListNode head) {
-        // if (head == null) return true;
-        // if (head.next == null) return true;
-
-        // ListNode halfNode = HalfNode (head);
-        // ListNode newHead = ReverseList (halfNode.next);
-        // while (newHead != null) {
-        //     if (head.val != newHead.val) {
-        //         return false;
-        //     }
-        //     head = head.next;
-        //     newHead = newHead.next;
-        // }
-        // return true;
         ListNode p = head;
         Stack<int> stack = new Stack<int> ();
         while (p != null) {

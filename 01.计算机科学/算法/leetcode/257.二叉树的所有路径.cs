@@ -44,7 +44,7 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //递归一下
     public IList<string> BinaryTreePaths (TreeNode root) {
         List<string> result = new List<string> ();
         Func1 (ref result, root, "");
@@ -56,6 +56,7 @@ public class Solution {
             return;
         }
 
+        //new一个新的，因为引用类型
         StringBuilder sb = new StringBuilder (path);
         sb.Append (root.val.ToString ());
 

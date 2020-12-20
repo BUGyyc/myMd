@@ -60,7 +60,7 @@
  */
 
 public class Solution {
-    //TODO:
+    //二分法
     public TreeNode LowestCommonAncestor (TreeNode root, TreeNode p, TreeNode q) {
         TreeNode curr = root;
         while (true) {

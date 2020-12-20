@@ -31,7 +31,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //用一个新指针记录非0数组长度
     public void MoveZeroes (int[] nums) {
         int j = 0;
         for (int i = 0; i < nums.Length; i++) {
@@ -39,7 +39,7 @@ public class Solution {
                 nums[j++] = nums[i];
             }
         }
-        while(j<nums.Length){
+        while (j < nums.Length) {
             nums[j++] = 0;
         }
     }

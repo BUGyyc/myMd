@@ -51,7 +51,7 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //递归
     public TreeNode InvertTree (TreeNode root) {
         if (root == null) {
             return root;

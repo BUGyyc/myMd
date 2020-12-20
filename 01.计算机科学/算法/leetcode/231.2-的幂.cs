@@ -36,17 +36,12 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //位运算
     public bool IsPowerOfTwo (int n) {
         if (n <= 0) return false;
-        int res = 1;
-        while (res < n) {
-            int tmp = res;
-            while (tmp < n) {
-                tmp <<= 1;
-            }
-        }
-        return false;
+        long x = (long) n;
+        return (x & x - 1) == 0;
     }
+
 }
 // @lc code=end
