@@ -43,6 +43,10 @@
 public class Solution {
     //迭代
     public IList<int> RightSideView (TreeNode root) {
+        return PrintRightSideView (root);
+    }
+
+    public IList<int> PrintRightSideView (TreeNode root) {
         List<int> result = new List<int> ();
         if (root == null) {
             return result;
@@ -50,18 +54,18 @@ public class Solution {
         Queue<TreeNode> queue = new Queue<TreeNode> ();
         queue.Enqueue (root);
         while (queue.Count > 0) {
-            int size = queue.Count;
-            for (int i = 0; i < size; i++) {
-                TreeNode node = queue.Dequeue ();
-                if (node.left != null) {
-                    queue.Enqueue (node.left);
+            int count = queue.Count;
+            for (int i = 0; i < count; i++) {
+                TreeNode tmp = queue.Dequeue ();
+                if (tmp.left != null) {
+                    queue.Enqueue (tmp.left);
                 }
-                if (node.right != null) {
-                    queue.Enqueue (node.right);
+                if (tmp.right != null) {
+                    queue.Enqueue (tmp.right);
                 }
-                //每一层的最后一个就是最右
-                if (i == size - 1) {
-                    result.Add (node.val);
+                //每一层的最后一个，就是右视图的每一项
+                if (i == count - 1) {
+                    result.Add (tmp.val);
                 }
             }
         }

@@ -45,29 +45,10 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //递归求解
     public int CountNodes (TreeNode root) {
         if (root == null) return 0;
         return 1 + CountNodes (root.left) + CountNodes (root.right);
     }
-
-    // public int GetNum(TreeNode root)
-    // {
-    //     if (root == null) return 0;
-    //     if (root.left == null && root.right == null)
-    //     {
-    //         return 1;
-    //     }
-
-    //     if (root.left != null)
-    //     {
-    //         return 1 + GetNum(root.left);
-    //     }
-    //     if (root.right != null)
-    //     {
-    //         return 1 + GetNum(root.right);
-    //     }
-    //     return 0;
-    // }
 }
 // @lc code=end

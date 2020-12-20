@@ -49,7 +49,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //26进制
     public string ConvertToTitle (int n) {
         List<char> list = new List<char> ();
         while (n > 0) {

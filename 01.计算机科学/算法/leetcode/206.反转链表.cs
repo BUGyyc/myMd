@@ -35,12 +35,14 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //递归和迭代写法
     public ListNode ReverseList (ListNode head) {
-        if (head == null || head.next == null) {
-            return head;
-        }
-        ListNode p = ReverseList (head.next);
+        return ReverseListFunc2 (head);
+    }
+
+    private ListNode ReverseListFunc2 (ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode p = ReverseListFunc2 (head.next);
         head.next.next = head;
         head.next = null;
         return p;
@@ -61,6 +63,19 @@ public class Solution {
             pre = p;
             //当前指针往前移
             p = tmp;
+        }
+        return pre;
+    }
+
+    private ListNode ReverseListFunc (ListNode head) {
+        if (head == null || head.next == null) return head;
+        ListNode cur = head;
+        ListNode pre = null;
+        while (cur != null) {
+            ListNode tmp = cur.next;
+            cur.next = pre;
+            pre = cur;
+            cur = tmp;
         }
         return pre;
     }

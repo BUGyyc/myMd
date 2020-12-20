@@ -33,7 +33,7 @@
  * }
  */
 public class Solution {
-    //TODO:
+    //指针操作
     public ListNode RemoveElements (ListNode head, int val) {
         if (head == null) return null;
         ListNode p = head;

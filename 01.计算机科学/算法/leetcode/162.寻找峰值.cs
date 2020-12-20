@@ -46,23 +46,6 @@ public class Solution {
     //TODO:
     public int FindPeakElement (int[] nums) {
         return Search (nums, 0, nums.Length - 1);
-        // int len = nums.Length;
-        // if (len <= 2) return nums[0];
-        // int i = 0;
-        // while (i < len) {
-        //     bool hasUp = false;
-        //     while (i < len - 1 && nums[i] < nums[i + 1]) {
-        //         i++;
-        //         hasUp = true;
-        //     }
-        //     bool hasDown = false;
-        //     while (i < len - 1 && nums[i] > nums[i + 1]) {
-        //         i++;
-        //         hasDown = true;
-        //     }
-        //     i++;
-        // }
-        // return 
     }
 
     private int Search (int[] nums, int l, int r) {
