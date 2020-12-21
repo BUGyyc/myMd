@@ -91,40 +91,34 @@ public class LocalRank{
         return -1;
     }
 
+    public int FindLxMaxSum(int[] array){
+        int max = int.MinValue;
+        int sum = 0;
+        for(int i = 0;i < array.Length;i++){
+            sum = Math.Max(sum,sum+array[i]);
+            max = Math.Max(max,sum);
+        }
+        return max;
+    }
 
+    public bool IsSubTree(TreeNode pRoot1,TreeNode pRoot2){
+        if(pRoot2 == null)return true;
+        if(pRoot1 == null)return false;
+        return IsSubTree(pRoot1.left,pRoot2) || IsSubTree(pRoot1.right,pRoot2) || isSameTree(pRoot1,pRoot2);
+    }
 
-
-
-
-
-
-
-
-
-
+    public bool isSameTree(TreeNode pRoot1, TreeNode pRoot2){
+        if(pRoot1 == null && pRoot2 == null)return true;
+        if(pRoot1 == null || pRoot2 == null)return false;
+        if(pRoot1.val != pRoot2.val)return false;
+        return isSameTree(pRoot1.left,pRoot2.left) && isSameTree(pRoot1.right,pRoot2.right);
+    }
 
 
     private int getTreeHight(TreeNode root){
         if(root == null)return 0;
         return Math.Max(getTreeHight(root.left),getTreeHight(root.right))+1;
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     private bool searchRect(int left,int up,int right,int down,int target,int[][] array){
         if(left > right || up < down)return false;
