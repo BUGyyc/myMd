@@ -44,7 +44,25 @@
 public class Solution {
     //TODO:
     public bool SearchMatrix (int[, ] matrix, int target) {
+        int row = matrix.Length;
+        if(row == 0)return false;
+        int col = matrix[0].Length;
+        return searchRect(0,0,col-1,row-1,target,matrix);
+    }
 
+    private bool searchRect(int left,int up,int right,int down,int target,int[,] array){
+        if(left > right || up > down)return false;
+        if(target < array[up,left])return false;
+        if(target > array[down,right])return false;
+        int mid = left + (right - left)/2;
+        int row = up;
+        while(row <= down && array[row,mid] <= target){
+            if(target == array[row,mid]){
+                return true;
+            }
+            row++;
+        }
+        return searchRect(left,row,mid-1,down,target,array) || searchRect(mid+1,up,right,row-1,target,array);
     }
 }
 // @lc code=end

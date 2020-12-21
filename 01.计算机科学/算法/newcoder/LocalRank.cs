@@ -95,7 +95,7 @@ public class LocalRank{
         int max = int.MinValue;
         int sum = 0;
         for(int i = 0;i < array.Length;i++){
-            sum = Math.Max(sum,sum+array[i]);
+            sum = Math.Max(array[i],sum+array[i]);
             max = Math.Max(max,sum);
         }
         return max;
