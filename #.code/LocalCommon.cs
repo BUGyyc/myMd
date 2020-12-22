@@ -309,4 +309,32 @@ public class LocalCommon
         }
         return max>=nums.Length-1;
     }
+    /// <summary>
+    /// [1,2,3,4,5]
+    // [3,4,5,1,2]
+    /// </summary>
+    /// <param name="gas"></param>
+    /// <param name="cost"></param>
+    /// <returns></returns>
+    public int CanCompleteCircuit(int[] gas, int[] cost) {
+        int start = 0;
+        int len = gas.Length;
+        while(start < len){
+            int step = 0;
+            int carry = 0;
+            int cur = 0;
+            while(step < len){
+                cur = gas[(step+start)%len] + carry;
+                if(cost[(step+start)%len] > cur){
+                    
+                    break;
+                }else{
+                    carry = cur - cost[(step+start)%len];
+                }
+                step++;
+            }
+            start++;
+        }
+        return start;
+    }
 }
