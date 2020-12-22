@@ -326,12 +326,17 @@ public class LocalCommon
             while(step < len){
                 cur = gas[(step+start)%len] + carry;
                 if(cost[(step+start)%len] > cur){
-                    
                     break;
                 }else{
                     carry = cur - cost[(step+start)%len];
                 }
                 step++;
+                if(len == step){
+                    return start;
+                }
+            }
+            if(start == len-1 && step<len){
+                return -1;
             }
             start++;
         }

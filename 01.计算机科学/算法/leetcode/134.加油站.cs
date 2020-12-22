@@ -79,6 +79,12 @@ public class Solution {
                     carry = cur - cost[(step+start)%len];
                 }
                 step++;
+                if(len == step){
+                    return start;
+                }
+            }
+            if(start == len-1 && step<len){
+                return -1;
             }
             start++;
         }
