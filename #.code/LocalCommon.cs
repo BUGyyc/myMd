@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 public class LocalCommon
 {
     private List<IList<int>> CheckNums(int[] nums, int target)
@@ -295,5 +297,16 @@ public class LocalCommon
             if(count>=n)return true;
         }
         return count>=n;
+    }
+
+    public bool CanJump(int[] nums){
+        int max = 0;
+        for(int i = 0;i<nums.Length;i++){
+            if(i<=max){
+                max = Math.Max(i+nums[i],max);
+                if(max>=nums.Length-1)return true;
+            }
+        }
+        return max>=nums.Length-1;
     }
 }
