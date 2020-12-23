@@ -342,4 +342,102 @@ public class LocalCommon
         }
         return start;
     }
+
+    public int WiggleMaxLength(int[] nums) {
+        int len = nums.Length;
+        for(int i = 0;i<len-1;i++){
+            if(nums[i] == nums[i+1]){
+                
+            }else{
+
+            }
+        }
+    }
+
+    private Dictionary<int,int> dic = new Dictionary<int,int>();
+    public TreeNode BuildTree (int[] preorder, int[] inorder) {
+        int len = inorder.Length;
+        for(int i = 0;i<len;i++){
+            dic.Add(inorder[i],i);
+        }
+    }
+
+    private TreeNode MyBuilder(int[] preorder, int[] inorder,int preorder_left,int preorder_right,int inorder_left,int inorder_right) {
+        if(preorder.left > preorder_right){
+            return null;
+        }
+    }
+
+    public Node Connect(Node root) {
+        if(root == null)return root;
+        Queue<Node> queue = new Queue<Node>();
+        queue.Enqueue(root);
+        while(queue.Count >0 ){
+            List<Node> list = new List<Node>();
+            int count = queue.Count;
+            for(int i = 0;i<count;i++){
+                Node tmp = queue.Dequeue();
+                list.Add(tmp);
+                if(tmp.left!=null){
+                    queue.Enqueue(tmp.left);
+                }
+                if(tmp.right!=null){
+                    queue.Enqueue(tmp.right);
+                }
+            }
+            for(int i = 0;i<list.Count-1;i++){
+                list[i].next = list[i+1];
+            }
+            if(list.Count>0)list[list.Count-1].next = null;
+        }
+        return root;
+    }
+
+    public Node CloneGraph(Node node) {
+        if(node == null)return null;
+        Node mapRoot = null;
+        Queue<node> queue = new Queue<Node>();
+        queue.Enqueue(node);
+        while(queue.Count > 0){
+            int count = queue.Count;
+
+            for(int i = 0;i<count;i++){
+                Node tmp = queue.Dequeue ();
+                Node l_node = new Node(tmp.val);
+                foreach(var n in tmp.neighbors) {
+                    Node _node = new Node (n.val);
+                }
+                // l_node.
+            }
+        }
+        
+    }
+    /// <summary>
+    /// 11
+// [1,2,3,4,5]
+    /// </summary>
+    /// <param name="s"></param>
+    /// <param name="nums"></param>
+    /// <returns></returns>
+    public int GetSumNumber(int s,int[] nums){
+        int min = int.MaxValue;
+        int start = 0;
+        int len = nums.Length;
+        if(len == 0)return 0;
+        while(start<len){
+            int sum = 0;
+            for(int i = start;i<len;i++){
+                if(sum + nums[i]>s){
+                    break;
+                }else if(sum + nums[i] == s){
+                    min = Math.Min(i-start+1,min);
+                }else{
+                    sum += nums[i];
+                }
+            }
+            start++;
+        }
+        return min;
+    }
+
 }

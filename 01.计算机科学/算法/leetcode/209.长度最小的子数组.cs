@@ -39,7 +39,24 @@
 public class Solution {
     //TODO:
     public int MinSubArrayLen(int s, int[] nums) {
-
+        int min = int.MaxValue;
+        int start = 0;
+        int len = nums.Length;
+        if(len == 0)return 0;
+        while(start<len){
+            int sum = 0;
+            for(int i = start;i<len;i++){
+                if(sum + nums[i]>s){
+                    break;
+                }else if(sum + nums[i] == s){
+                    min = Math.Min(i-start+1,min);
+                }else{
+                    sum += nums[i];
+                }
+            }
+            start++;
+        }
+        return min;
     }
 }
 // @lc code=end
