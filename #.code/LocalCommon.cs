@@ -462,4 +462,11 @@ public class LocalCommon
         }
         return max;
     }
+
+    public int DealCoin(int[] coins,int amount){
+        Array.Sort(coins);
+        while(amount>0){
+            
+        }
+    }
 }
