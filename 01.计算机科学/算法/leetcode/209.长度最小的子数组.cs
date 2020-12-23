@@ -46,17 +46,16 @@ public class Solution {
         while(start<len){
             int sum = 0;
             for(int i = start;i<len;i++){
-                if(sum + nums[i]>s){
-                    break;
-                }else if(sum + nums[i] == s){
+                if(sum + nums[i]>=s){
                     min = Math.Min(i-start+1,min);
+                    break;
                 }else{
                     sum += nums[i];
                 }
             }
             start++;
         }
-        return min;
+        return min == int.MaxValue?0:min;
     }
 }
 // @lc code=end

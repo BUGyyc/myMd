@@ -427,10 +427,9 @@ public class LocalCommon
         while(start<len){
             int sum = 0;
             for(int i = start;i<len;i++){
-                if(sum + nums[i]>s){
-                    break;
-                }else if(sum + nums[i] == s){
+                if(sum + nums[i]>=s){
                     min = Math.Min(i-start+1,min);
+                    break;
                 }else{
                     sum += nums[i];
                 }
@@ -440,4 +439,27 @@ public class LocalCommon
         return min;
     }
 
+    /// <summary>
+    /// [0,1,0,3,2,3]
+    /// </summary>
+    /// <param name="nums"></param>
+    /// <returns></returns>
+    public int GetMaxLen(int[] nums){
+        int len = nums.Length;
+        int start = 0;
+        int max = 0;
+        while(start<len){
+            int num = 0;
+            int pre = start;
+            for(int i = start+1;i<len;i++){
+                if(nums[i] > nums[pre]){
+                    pre = i;
+                    num = (num == 0)?2:num+1;
+                }
+            }
+            max = Math.Max(num,max);
+            start++;
+        }
+        return max;
+    }
 }
