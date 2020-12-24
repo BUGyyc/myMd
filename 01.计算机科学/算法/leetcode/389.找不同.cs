@@ -62,7 +62,17 @@
 public class Solution {
     //TODO:
     public char FindTheDifference (string s, string t) {
-
+        int sum1 = 0;
+        int sum2 = 0;
+        foreach (var c in s)
+        {
+            sum1+=c;
+        }
+        foreach (var c in t)
+        {
+            sum2+=c;
+        }
+        return (char)(sum2-sum1);
     }
 }
 // @lc code=end

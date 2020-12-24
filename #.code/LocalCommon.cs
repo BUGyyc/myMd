@@ -463,10 +463,127 @@ public class LocalCommon
         return max;
     }
 
-    public int DealCoin(int[] coins,int amount){
-        Array.Sort(coins);
-        while(amount>0){
+    // public int DealCoin(int[] coins,int amount){
+    //     Array.Sort(coins);
+    //     while(amount>0){
             
+    //     }
+    // }
+
+    public bool IsPowerOfFour(int n) {
+        if(n <= 0){
+            return false;
+        }else if(n < 1){
+            return IsPowerOfFour(4*n);
+        }else if(n == 1){
+            return true;
+        }else if(n == 2){
+            return true;
+        }else if(n < 4){
+            return false;
+        }else if(n == 4){
+            return true;
+        }else{
+            return IsPowerOfFour(n%4);
         }
+    }
+
+    public char FindTheDifference (string s, string t) {
+        int sum1 = 0;
+        int sum2 = 0;
+        foreach (var c in s)
+        {
+            sum1+=c;
+        }
+        foreach (var c in t)
+        {
+            sum2+=c;
+        }
+        return sum2-sum1;
+    }
+
+    public void Order1(TreeNode root){
+        List<int> result = new List<int>();
+        if(root == null){
+            return result;
+        }
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while(stack.Count>0 || root!=null){
+            while(root!=null){
+                result.Add(root.val);
+                stack.Push(root);
+                root = root.left;
+            }
+            root = stack.Pop();
+            root = root.right;
+        }
+    }
+
+    public void Order2(TreeNode root){
+        List<int> result = new List<int>();
+        if(root == null)return result;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while(stack.Count > 0 || root!=null){
+            while(root!=null){
+                stack.Push(root);
+                root = root.left;
+            }
+            root = stack.Pop();
+            result.Add(root.val);
+            root = root.right;
+        }
+    }
+
+    public void Order3(TreeNode root){
+        List<int> result = new List<int>();
+        if(root == null)return result;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while(stack.Count > 0 || root!=null){
+            while(root!=null){
+                stack.Push(root);
+                root = root.right;
+            }
+            root = stack.Pop();
+            root = root.left;
+        }
+        result.Resverse();
+    }
+
+    public List<List<int>> LevelOrder(TreeNode root){
+        List<List<int>> result = new List<List<int>>();
+        if(root == null)return result;
+        Queue<TreeNode> queue = new Queue<TreeNode>();
+        queue.Enqueue(root);
+        while(queue.Count>0){
+            List<int> list = new List<int>();
+            int count = queue.Count;
+            for(int i = 0;i<count;i++){
+                TreeNode tmp = queue.Dequeue();
+                list.Add(tmp.val);
+                if(tmp.left!=null)queue.Enqueue(tmp.left);
+                if(tmp.right!=null)queue.Enqueue(tmp.right);
+            }
+            result.Add(list);
+        }
+        return result;
+    }
+
+    public void AddNum(int a,int b){
+        if(b == 0)return a;
+        int a = a ^ b;
+        int carry = (a & b)<<1;
+        return AddNum(a,carry);
+    }
+
+    public void AddNum2(int a,int b){
+        int carry = (a & b)<<1;
+        int sum = a ^ b;
+        while(carry!=0){
+            int num1 = sum;
+            int num2 = carry;
+            carry = (num1 & num2)<<1;
+            sum = (num1 ^ num2);
+        }
+        return sum;
     }
 }
