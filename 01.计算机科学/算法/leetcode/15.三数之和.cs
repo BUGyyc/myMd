@@ -36,7 +36,7 @@
 // @lc code=start
 public class Solution
 {
-    //TODO:
+    //排序数组，然后从第一位开始，再来取首尾指针
     public IList<IList<int>> ThreeSum(int[] nums)
     {
         List<IList<int>> result = new List<IList<int>>();

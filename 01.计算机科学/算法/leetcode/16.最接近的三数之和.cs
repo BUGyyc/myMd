@@ -39,7 +39,7 @@
 
 // @lc code=start
 public class Solution {
-    //TODO:
+    //先排序，再start,left,right
     public int ThreeSumClosest (int[] nums, int target) {
         Array.Sort (nums);
         int result = nums[0] + nums[1] + nums[2];
