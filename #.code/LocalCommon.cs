@@ -586,4 +586,127 @@ public class LocalCommon
         }
         return sum;
     }
+
+    private string Roma2Int(string str)
+    {
+
+    }
+
+    //18
+    private List<int> fourList(int[] nums,int target){
+        List<int> result = new List<int>();
+        int len = nums.Length;
+        if(len < 4)return result;
+        Array.Sort(nums);
+        int step = 0;
+        while(step < len){
+            int res = target - nums[step];
+            if(res <= 0){
+                //
+            }else{
+                for(int start = step+1;start < len-2;start++){
+                    if(res - nums[start] <= 0){
+                        //
+                    }else{
+                        int a = res - nums[start];
+                        int left = start + 1;
+                        int right = len - 1;
+                        while(left < right){
+                            if(a == nums[left] + nums[right]){
+                                result.Add(nums[step],nums[start],nums[left],nums[right]);
+                            }else if(a < nums[left] + nums[right]){
+                                right--;
+                            }else{
+                                left++;
+                            }
+                        }
+                    }
+                }
+            }
+            step++;
+        }
+        return result;
+    }
+
+    //31
+    private void NextNums(int[] nums){
+        if(nums == null || nums.Length <= 1)return;
+        int maxIndex = -1;
+    }
+
+    private void RotationArr(int[][] nums){
+        int row = nums.Length;
+        int col = nums[0].Length;
+
+        List<int> res1 = new List<int>();
+        List<int> res2 = new List<int>();
+        int left = 0;
+        int right = col - 1;
+        int up = 0;
+        int down = row - 1;
+        int step = 0;
+        while(left <= right && up <= down){
+            res1.Clear();
+            step = 0;
+            for(int i = left;i<right;i++){
+                res1.Add(nums[up][i]);
+                nums[up][i] = res2[step++];
+            }
+            res2.Clear();
+            step = 0;
+            for(int i = up;i<down;i++){
+                res2.Add(nums[i][right]);
+                nums[i][right] = res1[step++];
+            }
+            res1.Clear();
+            step = 0;
+            for(int i = right;i>=left;i--){
+                res1.Add(nums[down][i]);
+                nums[down][i] = res2[step++];
+            }
+            res2.Clear();
+            step = 0;
+            for(int i = down;i>=up;i--){
+                res2.Add(nums[i][left]);
+                nums[i][left] = res1[step++];
+            }
+
+            res1.Clear();
+            step = 0;
+            for(int i = left;i<right;i++){
+                res1.Add(nums[up][i]);
+                nums[up][i] = res2[step++];
+            }
+        }
+    }
+
+        private List<IList<int>> PrintZ(TreeNode root){
+            List<IList<int>> result = new List<IList<int>>();
+            if(root == null)return result;
+            int level = 0;
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while(queue.Count > 0){
+                int count = queue.Count;
+                List<int> list = new List<int>();
+                for(int i = 0;i<count;i++){
+                    TreeNode tmp = queue.Dequeue();
+                    list.Add(tmp.val);
+                    if(tmp.left!=null)queue.Enqueue(tmp.left);
+                    if(tmp.right!=null)queue.Enqueue(tmp.right);
+                }
+                if(level%2==1)list.Reverse();
+                result.Add(list);
+                level++;
+            }
+            return result;
+        }
+
+        private int GetSum(int a,int b){
+            if(b == 0)return a;
+            int sum = a ^ b;
+            int carry = (a & b)<<1;
+            return GetSum(sum,carry);
+        }
+    }
 }
