@@ -29,6 +29,68 @@ public struct ListNode
 
 public class Lc300
 {
+    //18
+    public List<IList<int>> FourTarget(int[] nums, int target)
+    {
+        List<IList<int>> result = new List<IList<int>>();
+        int len = nums.Length;
+        if (len < 4) return result;
+        Array.Sort (nums);
+        for (int i = 0; i < len - 3; i++)
+        {
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target)
+            {
+                break;
+            }
+            if (nums[i] + nums[len - 3] + nums[len - 2] + nums[len - 1] < target
+            )
+            {
+                continue;
+            }
+            for (int j = i + 1; j < len - 2; j++)
+            {
+                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
+                if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target)
+                {
+                    break;
+                }
+                if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target)
+                {
+                    continue;
+                }
+                int left = j + 1;
+                int right = len - 1;
+                while (left < right)
+                {
+                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
+                    if (sum == target)
+                    {
+                        List<int> list = new List<int>();
+                        list.Add(nums[i]);
+                        list.Add(nums[j]);
+                        list.Add(nums[left]);
+                        list.Add(nums[right]);
+                        result.Add(list.ToList());
+                        while(left < right && nums[left] == nums[left+1]){
+                            left++;
+                        }
+                        left++;
+                        while(left < right && nums[right] == nums[right-1]){
+                            right--;
+                        }
+                        right--;
+                    }else if(sum > target){
+                        right--;
+                    }else{
+                        left++;
+                    }
+                }
+            }
+        }
+        return result;
+    }
+
     //59
     public void DynamicArr(int n)
     {
@@ -164,9 +226,12 @@ public class Lc300
         if (len == 2) return dp[1];
         if (len == 3)
         {
-            if(dp[1] > dp[0]){
+            if (dp[1] > dp[0])
+            {
                 return dp[1];
-            }else{
+            }
+            else
+            {
                 return dp[0];
             }
         }
@@ -174,7 +239,6 @@ public class Lc300
         {
             dp[i] = Math.Max(dp[i - 1], dp[i - 2] + nums[i]);
         }
-
         if (dp[2] == dp[0] + nums[2])
         {
             return dp[len - 2];
@@ -185,5 +249,30 @@ public class Lc300
         }
 
         Array.Copy();
+    }
+
+    //220
+    private int Check(int[] nums, int k, int t)
+    {
+        int len = nums.Length;
+        for (int i = 0; i < len; i++)
+        {
+            int step = 1;
+            while (i + step < len && step <= k)
+            {
+                if (Math.Abs(nums[i] - nums[i + step]) <= t)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public int
+    ComputeArea(int A, int B, int C, int D, int E, int F, int G, int H)
+    {
+        if (C >= E || G >= A) return 0;
+        if (B >= H || F >= D) return 0;
     }
 }

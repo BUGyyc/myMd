@@ -38,48 +38,61 @@
 public class Solution {
     //TODO:
     public IList<IList<int>> FourSum(int[] nums, int target) {
-        List<IList<int>> result = new List<IList<int>>();
-        if (nums.Length <= 4) return result;
-        Array.Sort(nums);
-        int pre = 0;
-        while (pre < nums.Length - 4)
+                List<IList<int>> result = new List<IList<int>>();
+        int len = nums.Length;
+        if (len < 4) return result;
+        Array.Sort (nums);
+        for (int i = 0; i < len - 3; i++)
         {
-            for (int start = pre + 1; start < nums.Length - 3; start++)
+            if (i > 0 && nums[i] == nums[i - 1]) continue;
+            if (nums[i] + nums[i + 1] + nums[i + 2] + nums[i + 3] > target)
             {
-                int left = start + 1;
-                int right = nums.Length - 1;
+                break;
+            }
+            if (nums[i] + nums[len - 3] + nums[len - 2] + nums[len - 1] < target
+            )
+            {
+                continue;
+            }
+            for (int j = i + 1; j < len - 2; j++)
+            {
+                if (j > i + 1 && nums[j] == nums[j - 1]) continue;
+                if (nums[i] + nums[j] + nums[j + 1] + nums[j + 2] > target)
+                {
+                    break;
+                }
+                if (nums[i] + nums[j] + nums[len - 2] + nums[len - 1] < target)
+                {
+                    continue;
+                }
+                int left = j + 1;
+                int right = len - 1;
                 while (left < right)
                 {
-                    if (target > nums[left] + nums[right])
+                    int sum = nums[i] + nums[j] + nums[left] + nums[right];
+                    if (sum == target)
                     {
-                        left++;
-                    }
-                    else if (target < nums[left] + nums[right])
-                    {
-                        right--;
-                    }
-                    else
-                    {
-                        var list = new List<int>();
-                        list.Add(nums[pre]);
-                        list.Add(nums[start]);
+                        List<int> list = new List<int>();
+                        list.Add(nums[i]);
+                        list.Add(nums[j]);
                         list.Add(nums[left]);
                         list.Add(nums[right]);
-                        result.Add(list);
-
-                        //去除重复元素
-                        while (left < right && nums[left] == list[1])
-                            ++left;
-                        while (left < right && nums[right] == list[2])
-                            --right;
+                        result.Add(list.ToList());
+                        while(left < right && nums[left] == nums[left+1]){
+                            left++;
+                        }
+                        left++;
+                        while(left < right && nums[right] == nums[right-1]){
+                            right--;
+                        }
+                        right--;
+                    }else if(sum > target){
+                        right--;
+                    }else{
+                        left++;
                     }
                 }
-
             }
-            //去除重复元素
-            int currentStartNumber = nums[pre];
-            while (pre < nums.Length - 2 && nums[pre] == currentStartNumber)
-                ++pre;
         }
         return result;
     }
