@@ -72,17 +72,23 @@ public class Lc300
                         list.Add(nums[left]);
                         list.Add(nums[right]);
                         result.Add(list.ToList());
-                        while(left < right && nums[left] == nums[left+1]){
+                        while (left < right && nums[left] == nums[left + 1])
+                        {
                             left++;
                         }
                         left++;
-                        while(left < right && nums[right] == nums[right-1]){
+                        while (left < right && nums[right] == nums[right - 1])
+                        {
                             right--;
                         }
                         right--;
-                    }else if(sum > target){
+                    }
+                    else if (sum > target)
+                    {
                         right--;
-                    }else{
+                    }
+                    else
+                    {
                         left++;
                     }
                 }
@@ -269,10 +275,116 @@ public class Lc300
         return false;
     }
 
-    public int
     ComputeArea(int A, int B, int C, int D, int E, int F, int G, int H)
     {
         if (C >= E || G >= A) return 0;
         if (B >= H || F >= D) return 0;
     }
+
+    private TreeNode List2Tree(ListNode head)
+    {
+        if (head == null) return null;
+        List<int> list = new List<int>();
+        ListNode p = head;
+        while (p != null)
+        {
+            list.Add (p);
+            p = p.next;
+        }
+        return Convert2Tree(list);
+    }
+
+    private TreeNode Convert2Tree(List<int> list)
+    {
+        if (list == null || list.Count == 0) return null;
+        if (list.Count == 1)
+        {
+            TreeNode node = new TreeNode(list[0]);
+            return node;
+        }
+        int left = 0;
+        int right = list.Count - 1;
+        int mid = (left + right) / 2;
+        TreeNode root = new TreeNode(list[mid]);
+        root.left = 
+
+    }
+
+    private TreeNode GetNode(List<int> list,int index){
+        if(index < 0 || index > list.Count-1)return null;
+        TreeNode node = new TreeNode(list[index])
+    }
+
+    class MapNodePro{
+        public Node pre;
+        public Node node;
+        public MapNodePro(Node p,Node n){
+            pre = p;
+            node = n;
+        }
+    }
+    //133
+    private Node CloneMap(Node node){
+        if(node == null)return null;
+        Node head = null;
+        Node curr = null;
+        Queue<MapNodePro> queue = new Queue<MapNodePro>();
+        queue.Enqueue(new (null,node));
+        while(queue.Count > 0){
+            int count = queue.Count;
+            for(int i = 0;i<count;i++){
+                MapNodePro n = queue.Dequeue();
+                if(head == null){
+                    head = new Node(n.val);
+                    curr = head;
+                }else{
+                    curr = new Node(n.val);
+                }
+                foreach(int item in n.neighbors){
+                    curr.Add(new Node(item.val))
+                }
+            }
+        }
+        return head;
+    }
+
+    public int Calculate(string str){
+        List<string> list = new List<string>();
+        StringBuilder sb = new StringBuilder();
+        for(int i = 0;i< str.Length;i++){
+            if(str[i] != ' '){
+                sb.Append(str[i]);
+            }
+        }
+        str = sb.ToString();
+        sb = new StringBuilder();
+        for(int i = 0;i<str.Length;i++){
+            if(str[i] == '+' || str[i] == '-' || str[i] == '*' || str[i] == '/'){
+                list.Add(sb.ToString());
+                list.Add(str[i].ToString());
+                sb = new StringBuilder();
+            }else if(i!=str.Length-1){
+                sb.Append(str[i]);
+            }else{
+                list.Add(sb.ToString());
+            }
+        }
+        List<int> tmp = new List<int>();
+        //先算乘除
+        for(int i = 0;i<list.Count;i++){
+            if(list[i] == "*"){
+                int a = int.Parse(list[i-1]);
+                int b = int.Parse(list[i+1]);
+                a = a*b;
+            }else if(list[i] == "/"){
+                int a = int.Parse(list[i-1]);
+                int b = int.Parse(list[i+1]);
+                a = a*b;
+            }
+        }
+
+
+    }
+
+
 }
