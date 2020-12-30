@@ -67,14 +67,16 @@ public class Solution {
             return IsPowerOfFour(4*n);
         }else if(n == 1){
             return true;
-        }else if(n == 2){
-            return true;
         }else if(n < 4){
             return false;
         }else if(n == 4){
             return true;
         }else{
-            return IsPowerOfFour(n%4);
+            if(n%4==0){
+                return IsPowerOfFour(n/4);
+            }else{
+                return false;
+            }
         }
     }
 }

@@ -382,9 +382,87 @@ public class Lc300
                 a = a*b;
             }
         }
-
-
     }
 
+    //263
+    public bool IsUgly(int n){
+        if(n == 1 || n == 2|| n == 3 || n == 4 || n == 5 || n == 6 || n == 8 || n == 9)return true;
+        if(n == 7 || n == 0)return false;
+        if(n%2 == 0){
+            return IsUgly(n/2);
+        }else if(n%3 == 0){
+            return IsUgly(n/3);
+        }else if(n%5 == 0){
+            return IsUgly(n/5);
+        }
+        return false;
+    }
 
+    public bool IsPowerOfFour(int n) {
+        if(n <= 0){
+            return false;
+        }else if(n < 1){
+            return IsPowerOfFour(4*n);
+        }else if(n == 1){
+            return true;
+        }else if(n < 4){
+            return false;
+        }else if(n == 4){
+            return true;
+        }else{
+            if(n%4==0){
+                return IsPowerOfFour(n/4);
+            }else{
+                return false;
+            }
+        }
+    }
+
+    //345
+    public string ReverseVowels(string s) {
+        int left = 0;
+        int right = s.Length - 1;
+        while(left < right){
+            while(left < right || CheckAeiou(s[left]) == false){
+                left++;
+            }
+            while(left < right || CheckAeiou(s[right]) == false){
+                right--;
+            }
+            if(left < right){
+                char c = s[left];
+                s[left] = s[right];
+                s[right] = c;
+            }
+        }
+        return s;
+    }
+
+    private bool CheckAeiou(char c){
+        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+            return true;
+        }
+        return false;
+    }
+
+    public bool IsPrefectNum(int num){
+        if(num < 0)return false;
+        if(num == 1 || num == 0)return true;
+        long left = 2;
+        long right = num/2;
+        long x = 0;
+        long g = 0;
+        while(left <= right){
+            x = left + (right-left)/2;
+            g = x * x;
+            if(g == num){
+                return true;
+            }else if(g > num){
+                right = x - 1;
+            }else{
+                left = x + 1;
+            }
+        }
+        return false;
+    }
 }

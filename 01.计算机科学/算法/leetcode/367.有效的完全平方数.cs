@@ -34,7 +34,24 @@
 public class Solution {
     //TODO:
     public bool IsPerfectSquare (int num) {
-
+        if(num < 0)return false;
+        if(num == 1 || num == 0)return true;
+        long left = 2;
+        long right = num/2;
+        long x = 0;
+        long g = 0;
+        while(left <= right){
+            x = left + (right-left)/2;
+            g = x * x;
+            if(g == num){
+                return true;
+            }else if(g > num){
+                right = x - 1;
+            }else{
+                left = x + 1;
+            }
+        }
+        return false;
     }
 }
 // @lc code=end
