@@ -509,4 +509,40 @@ public class Lc300
 
     }
 
+    public void Rotate (int[][] matrix) {
+        int row = matrix.Length;
+        int col = matrix[0].Length;
+        Queue<int> queue = new Queue<int>();
+        int left = 0;
+        int right = col - 1;
+        int up = 0;
+        int down = row - 1;
+        while(left < right && up < down){
+            for(int i = left;i<=right;i++){
+                queue.Enqueue(matrix[up][i]);
+            }
+            for(int i = up;i<=down;i++){
+                queue.Enqueue(matrix[i][right]);
+                matrix[i][right] = queue.Dequeue();
+            }
+            
+            for(int i = right;i>=left;i--){
+                queue.Enqueue(matrix[down][i]);
+                matrix[down][i] = queue.Dequeue();
+            }
+            for(int i = down;i>= up;i--){
+                queue.Enqueue(matrix[i][left]);
+                matrix[i][left] = queue.Dequeue();
+            }
+            for(int i = left;i<=right;i++){
+                matrix[up][i] = queue.Dequeue();
+            }
+            queue.Clear();
+            left++;
+            right--;
+            up++;
+            down--;
+        }
+    }
+
 }
