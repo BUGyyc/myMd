@@ -465,4 +465,48 @@ public class Lc300
         }
         return false;
     }
+
+    public int GuessNumber(int n) {
+        int left = 1;
+        int right = n;
+        while(left<=right){
+            int mid = left + (right-left)/2;
+            if(guess(mid) == 0){
+                return mid;
+            }else if(guess(mid) > 0){
+                left = mid + 1;
+            }else{
+                right = mid - 1;
+            }
+        }
+        return n;
+    }
+
+    public IList<IList<int>> LevelOrder(Node root) {
+        List<IList<int>> result = new List<IList<int>>();
+        if(root == null)return result;
+        Queue<Node> queue = new Queue<Node>();
+        queue.Enqueue(root);
+        while(queue.Count > 0){
+            int count = queue.Count;
+            List<int> list = new List<int>();
+            for(int i = 0;i<count;i++){
+                Node tmp = queue.Dequeue();
+                list.Add(tmp.val);
+                if(tmp.children!=null){
+                    foreach(var n in tmp.children){
+                        queue.Enqueue(n);
+                    }
+                }
+            }
+            result.Add(list.ToList());
+        }   
+        return result;
+    }
+
+    //[1,3,2,4,3]
+    public IList<int> FindDisappearedNumbers(int[] nums) {
+
+    }
+
 }
