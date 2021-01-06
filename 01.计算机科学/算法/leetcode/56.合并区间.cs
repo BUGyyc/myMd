@@ -47,18 +47,22 @@ public class Solution {
     //分治算法
     public int[][] Merge (int[][] intervals) {
         List<int[]> result = new List<int[]> ();
-        var a = intervals[0];
-        for (int i = 1; i < intervals.Length; i++) {
-            var b = intervals[i];
-            if (CanMerge (a, b)) {
-                a = MergeFunc1 (a, b);
+        if(intervals.Length == 0)return result.ToArray();
+        for(int i = 0;i<intervals.Length - 1;i++){
+            var a = intervals[i];
+            bool has = false;
+            for(int j = i+1;j<intervals.Length;j++){
+                var b = intervals[j];
+                if(CanMerge(a,b)){
+                    a = MergeFunc1 (a, b);
+                    has = true;
+                }
+            }
+            if(has == false){
                 result.Add (a);
-            } else {
-                result.Add (a);
-                a = b;
             }
         }
-
+        return result.ToArray();
     }
 
     private bool CanMerge (int[] a, int[] b) {
@@ -73,8 +77,8 @@ public class Solution {
     }
 
     private int[] MergeFunc1 (int[] a, int[] b) {
-        int min = Mathf.Min (a[0], b[0]);
-        int max = Mathf.Max (a[1], b[1]);
+        int min = Math.Min (a[0], b[0]);
+        int max = Math.Max (a[1], b[1]);
         return new int[2] { min, max };
     }
 }

@@ -565,4 +565,102 @@ public class Lc300
         return result;
     }
 
+    public TreeNode BuildTree (int[] preorder, int[] inorder) {
+        if(preorder.Length == 0 || inorder.Length == 0)return null;
+        TreeNode root = new TreeNode(preorder[0]);
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.Push(root);
+        int inorderIndex = 0;
+        for(int i = 1;i<preorder.Length;i++){
+            int val = preorder[i];
+            TreeNode node = stack.Peek();
+            if(node.val != inorder[inorderIndex]){
+                node.left = new TreeNode(val);
+                stack.Push(node.left);
+            }else{
+                while(stack.Count > 0 && stack.Peek().val == inorderIndex[inorderIndex]){
+                    inorderIndex++;
+                    node = stack.Pop();
+                }
+                node.right = new TreeNode(val);
+                stack.Push(node.right);
+            }
+        }
+        return root;
+    }
+
+    public void Solve(char[][] board)
+    {
+        int row = board.Length;
+        if(row == 0)return;
+        int col = board[0].Length;
+        for(int i = 0;i<col;i++){
+            DFS(board,0,i,row,col);
+            DFS(board,row-1,i,row,col);
+        }
+        for(int i = 1;i<row-1;i++){
+            DFS(board,i,0,row,col);
+            DFS(board,i,col-1,row,col);
+        }
+        for(int i = 0;i<row;i++){
+            for(int j = 0;j<col;j++){
+                if(board[i][j] == 'A'){
+                    board[i][j] = 'O';
+                }else if(board[i][j] == 'O'){
+                    board[i][j] = 'X';
+                }
+            }
+        }
+    }
+
+    private void DFS(char[][] board,int i,int j,int row,int col){
+        if(i<0 || i>=row || j<0 || j >= col || board[i][j] != 'O')return;
+        board[i][j] = 'A';
+        DFS(board,i,j+1,row,col);
+        DFS(board,i+1,j,row,col);
+        DFS(board,i,j-1,row,col);
+        DFS(board,i-1,j,row,col);
+    }
+
+        public int BulbSwitch(int n) {
+
+    }
+
+    public int[][] Merge (int[][] intervals) {
+        List<int[]> result = new List<int[]> ();
+        if(intervals.Length == 0)return result.ToArray();
+        for(int i = 0;i<intervals.Length - 1;i++){
+            var a = intervals[i];
+            bool has = false;
+            for(int j = i+1;j<intervals.Length;j++){
+                var b = intervals[j];
+                if(CanMerge(a,b)){
+                    a = MergeFunc1 (a, b);
+                    has = true;
+                }
+            }
+            if(has == false){
+                result.Add (a);
+            }
+        }
+        return result.ToArray();
+    }
+
+    private bool CanMerge (int[] a, int[] b) {
+        if (a == null || b == null) {
+            return true;
+        } else if (a[1] < b[0]) {
+            return false;
+        } else if (b[1] < a[0]) {
+            return false;
+        }
+        return true;
+    }
+
+    private int[] MergeFunc1 (int[] a, int[] b) {
+        int min = Math.Min (a[0], b[0]);
+        int max = Math.Max (a[1], b[1]);
+        return new int[2] { min, max };
+    }
+
 }

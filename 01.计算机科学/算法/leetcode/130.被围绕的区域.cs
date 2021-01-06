@@ -46,34 +46,34 @@ public class Solution
     public void Solve(char[][] board)
     {
         int row = board.Length;
+        if(row == 0)return;
         int col = board[0].Length;
-        bool[][] visit = new bool[row][col];
-        for (int i = 0; i < row; i++)
-        {
-            for (int j = 0; j < col; j++)
-            {
-                if (visit[i][j] == false && board[i][j] == 'o')
-                {
-                    visit[i][j] = true;
-                    SetFourDir (board, i, j, row, col);
+        for(int i = 0;i<col;i++){
+            DFS(board,0,i,row,col);
+            DFS(board,row-1,i,row,col);
+        }
+        for(int i = 1;i<row-1;i++){
+            DFS(board,i,0,row,col);
+            DFS(board,i,col-1,row,col);
+        }
+        for(int i = 0;i<row;i++){
+            for(int j = 0;j<col;j++){
+                if(board[i][j] == 'A'){
+                    board[i][j] = 'O';
+                }else if(board[i][j] == 'O'){
+                    board[i][j] = 'X';
                 }
             }
         }
     }
 
-    private void SetFourDir(char[][] arr, int j, int row, int col)
-    {
-        SetVal(arr, i - 1, j, row, col);
-        SetVal(arr, i + 1, j, row, col);
-        SetVal(arr, i, j - 1, row, col);
-        SetVal(arr, i, j + 1, row, col);
-    }
-
-    private void SetVal(char[][] arr, int i, int j, int row, int col)
-    {
-        if (i < 0 || i >= row) return;
-        if (j < 0 || j >= col) return;
-        arr[i][j] = 'o';
+    private void DFS(char[][] board,int i,int j,int row,int col){
+        if(i<0 || i>=row || j<0 || j >= col || board[i][j] != 'O')return;
+        board[i][j] = 'A';
+        DFS(board,i,j+1,row,col);
+        DFS(board,i+1,j,row,col);
+        DFS(board,i,j-1,row,col);
+        DFS(board,i-1,j,row,col);
     }
 }
 // @lc code=end

@@ -46,7 +46,27 @@
 public class Solution {
     //TODO:
     public TreeNode BuildTree (int[] preorder, int[] inorder) {
-
+        if(preorder.Length == 0 || inorder.Length == 0)return null;
+        TreeNode root = new TreeNode(preorder[0]);
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        stack.Push(root);
+        int inorderIndex = 0;
+        for(int i = 1;i<preorder.Length;i++){
+            int val = preorder[i];
+            TreeNode node = stack.Peek();
+            if(node.val != inorder[inorderIndex]){
+                node.left = new TreeNode(val);
+                stack.Push(node.left);
+            }else{
+                while(stack.Count > 0 && stack.Peek().val == inorderIndex[inorderIndex]){
+                    inorderIndex++;
+                    node = stack.Pop();
+                }
+                node.right = new TreeNode(val);
+                stack.Push(node.right);
+            }
+        }
+        return root;
     }
 }
 // @lc code=end
