@@ -43,12 +43,40 @@
 public class Solution {
     //TODO:
     public IList<int> SpiralOrder (int[][] matrix) {
-        List<int> result = new List<int> ();
-        int m = matrix.Length;
-        int n = matrix[0].Length;
+        List<int> list = new List<int>();
+        int row = matrix.Length;
+        int col = matrix[0].Length;//3;
+        int level = 0;
         int i = 0;
         int j = 0;
-        // int endI = 
+        int max = Math.Min(col,row) -1;
+        if(max == 0)max = 1;
+        while(level <= max){
+            j = level + 0;
+            i = level + 0;
+            while(j < col - level - 1 || (level!=0 && j <= col - level -1)){
+                if(list.Count < col*row)list.Add(matrix[i][j]);
+                j++;
+            }
+            j = col - level - 1;
+            while(i < row - level - 1){
+                if(list.Count < col*row)list.Add(matrix[i][j]);
+                i++;
+            }
+            i = row - level - 1;
+            while(j > 0+level){
+                if(list.Count < col*row)list.Add(matrix[i][j]);
+                j--;
+            }
+
+            j = level + 0;
+            while(i > 0 +level){
+                if(list.Count < col*row)list.Add(matrix[i][j]);
+                i--;
+            }
+            level++; 
+        }
+        return list;
     }
 }
 // @lc code=end
