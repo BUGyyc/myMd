@@ -27,42 +27,38 @@
  * 
  */
 // @lc code=start
-public class Solution
-{
-    public int[][] GenerateMatrix(int n)
-    {
-        int[][] arr = new int[n][n];
+public class Solution {
+    public int[][] GenerateMatrix (int n) {
+        int[][] arr = new int[n][];
+        for (int i = 0; i < n; i++) {
+            arr[i] = new int[n];
+        }
         int left = 0;
         int right = n - 1;
         int up = 0;
         int down = n - 1;
-        int level = 1;
-        while (left <= right && up <= down)
-        {
-            for (int i = left; i < right; i++)
-            {
-                arr[up][i] = level;
-                level++;
+        int val = 1;
+        while (val <= n * n) {
+            for (int i = left; i <= right; i++) {
+                arr[up][i] = val;
+                val++;
             }
-            for (int i = up; i < down; i++)
-            {
-                arr[i][right] = level;
-                level++;
+            up++;
+            for (int i = up; i <= down; i++) {
+                arr[i][right] = val;
+                val++;
             }
-            if (left < right && up < down)
-            {
-                for (int i = right; i >= left; i--)
-                {
-                    arr[down][i] = level;
-                    level++;
-                }
-
-                for (int i = down; i >= up; i++)
-                {
-                    arr[i][left] = level;
-                    level++;
-                }
+            right--;
+            for (int i = right; i >= left; i--) {
+                arr[down][i] = val;
+                val++;
             }
+            down--;
+            for (int i = down; i >= up; i--) {
+                arr[i][left] = val;
+                val++;
+            }
+            left++;
         }
         return arr;
     }
