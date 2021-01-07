@@ -70,8 +70,33 @@
 public class Solution {
     //TODO:
     public int CoinChange(int[] coins, int amount) {
+            int step = 0;
+            if(amount<=0)return step;
+            Array.Sort(coins);
+            int res = 0;
+            CalCoin(coins,amount,step,res);
+            return res;
+        }
 
-    }
+        public void CalCoin(int[] coins,int amount,int step,int res){
+            if(amount < 0)return;
+            if(amount == 0)return;
+            for(int i = coins.Length-1;i>=0;i--){
+                if(amount - coins[i] < 0){
+                    continue;
+                }else if(amount - coins[i] == 0){
+                    step++;
+                    res = step;
+                    return;
+                }else{
+                    step++;
+                    amount-=coins[i];
+                    CalCoin(coins,amount,step,res);
+                    step--;
+                    amount+=coins[i];
+                }
+            }
+        }
 }
 // @lc code=end
 

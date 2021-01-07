@@ -148,5 +148,82 @@ namespace LC
             if(i<0||i>=row||j<0||j>=col)return 0;
             return board[i][j];
         }
+// "badc"
+// "baba"
+
+// "egg"
+// "add"
+// "paper"
+// "title"
+        public bool IsIsomorphic(string s, string t) {
+            if(s.Length != t.Length)return false;
+            if(s.Length == 0 && t.Length == 0)return true;
+            Dictionary<char,char> dic = new Dictionary<char,char>();
+            int i = 0;
+            while(i < s.Length){
+                char a = s[i];
+                char b = t[i];
+                if(dic.ContainsKey(a) == false && dic.ContainsKey(b) == false){
+                    dic.Add(a,b);
+                    dic.Add(b,a);
+                }else if(dic.ContainsKey(a) && dic.ContainsKey(b)){
+                    if(dic[dic[a]] != a || dic[dic[b]]!=b){
+                        return false;
+                    }
+                }else{
+                    return false;
+                }
+                i++;
+            }
+            return true;
+        }
+
+        public int CoinChange(int[] coins, int amount) {
+            int step = 0;
+            if(amount<=0)return step;
+            Array.Sort(coins);
+            int res = 0;
+            CalCoin(coins,amount,step,res);
+            return step;
+        }
+
+        public void CalCoin(int[] coins,int amount,int step,int res){
+            if(amount < 0)return;
+            if(amount == 0)return;
+            for(int i = coins.Length-1;i>=0;i--){
+                if(amount - coins[i] < 0){
+                    continue;
+                }else if(amount - coins[i] == 0){
+                    step++;
+                    res = step;
+                    return;
+                }else{
+                    step++;
+                    amount-=coins[i];
+                    CalCoin(coins,amount,step,res);
+                    step--;
+                    amount+=coins[i];
+                }
+            }
+        }
+
+
+        public int[] CheckArr(int[] nums){
+            int len = nums.Length;
+            for(int i = 0;i<len;i++){
+                int val = nums[i];
+                if(val < 0)val *=-1;
+                if(nums[val - 1]>0){
+                    nums[val - 1] *= -1;
+                }
+            }
+            List<int> list = new List<int>();
+            for(int i = 0;i<len;i++){
+                if(nums[i]>0){
+                    list.Add(i+1);
+                }
+            }
+            return list.ToArray();
+        }
     }
 }

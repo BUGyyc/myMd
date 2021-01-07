@@ -34,7 +34,21 @@
 // @lc code=start
 public class Solution {
     public IList<int> FindDisappearedNumbers(int[] nums) {
-
+            int len = nums.Length;
+            for(int i = 0;i<len;i++){
+                int val = nums[i];
+                if(val < 0)val *=-1;
+                if(nums[val - 1]>0){
+                    nums[val - 1] *= -1;
+                }
+            }
+            List<int> list = new List<int>();
+            for(int i = 0;i<len;i++){
+                if(nums[i]>0){
+                    list.Add(i+1);
+                }
+            }
+            return list.ToArray();
     }
 }
 // @lc code=end
