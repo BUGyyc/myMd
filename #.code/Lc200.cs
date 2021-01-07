@@ -98,5 +98,55 @@ namespace LC
             }
             return -result;
         }
+
+        public void GameOfLife(int[][] board) {
+            int row = board.Length;
+            if(row == 0)return;
+            int col = board[0].Length;
+            int[,] states = new int[row,col];
+            for(int i = 0;i<row;i++){
+                for(int j = 0;j<col;j++){
+                    CheckGame(board,i,j,row,col);
+                }
+            }
+
+            for(int i = 0;i<row;i++){
+                for(int j = 0;j<col;j++){
+                    if(states[i,j] == 1&&board[i][j] == 0){
+                        board[i][j] = 1;
+                    }else if(states[i,j] == -1&& board[i][j] == 1){
+                        board[i][j] = 0;
+                    }
+                }
+            }
+        }
+
+        private void CheckGame(int[][] board,int i,int j,int row,int col){
+            int a = GetItemResult(board,i-1,j,row,col);
+            int b = GetItemResult(board,i-1,j+1,row,col);
+            int c = GetItemResult(board,i,j+1,row,col);
+            int d = GetItemResult(board,i+1,j+1,row,col);
+            int e = GetItemResult(board,i+1,j,row,col);
+            int f = GetItemResult(board,i+1,j-1,row,col);
+            int g = GetItemResult(board,i,j-1,row,col);
+            int h = GetItemResult(board,i-1,j-1,row,col);
+            int val = a+b+c+d+e+f+g+h;
+            if(board[i][j] == 1){
+                if(val < 2){
+                    states[i,j] = -1;
+                }else if(val>=2 && val <=3){
+                    states[i,j] = 1;
+                }else{
+                    states[i,j] = -1;
+                }
+            }else{
+                states[i,j] = 1;
+            }
+        }
+
+        private int GetItemResult(int[][] board,int i,int j,int row,int col){
+            if(i<0||i>=row||j<0||j>=col)return 0;
+            return board[i][j];
+        }
     }
 }
