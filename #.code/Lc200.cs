@@ -148,13 +148,7 @@ namespace LC
             if(i<0||i>=row||j<0||j>=col)return 0;
             return board[i][j];
         }
-// "badc"
-// "baba"
 
-// "egg"
-// "add"
-// "paper"
-// "title"
         public bool IsIsomorphic(string s, string t) {
             if(s.Length != t.Length)return false;
             if(s.Length == 0 && t.Length == 0)return true;
@@ -224,6 +218,82 @@ namespace LC
                 }
             }
             return list.ToArray();
+        }
+
+        public int IslandPerimeter (int[][] grid) {
+            int result = 0;
+            int row = grid.Length;
+            int col = row > 0 ? grid[0].Length : 0;
+            int res = 0;
+            for (int i = 0; i < row; i++) {
+                for (int j = 0; j < col; j++) {
+                    if (grid[i][j] == 1) {
+                    //判断四周
+                    }
+                }
+            }
+        }
+
+        private int GetRes(int[][] grid,int i,int j,int row,int col){
+            if(i<0||i>=row||j<0||j>=col)return 0;
+        }
+
+
+        public int PathSum(TreeNode root, int sum) {
+            if(root == null)return 0;
+            int result = 0;
+            SearchPathSum(root,sum,result);
+            return result;
+        }
+
+        private void SearchPathSum(TreeNode root,int sum,int result){
+            if(root == null)return;
+            if(sum < 0)return;
+            if(sum == 0){
+                result++;
+                return;
+            }
+            sum -= root.val;
+            if(root.left!=null){
+                SearchPathSum(root.left,sum,result);
+            }
+            if(root.right!=null){
+                SearchPathSum(root.right,sum,result);
+            }
+        }
+
+        public IList<int> Preorder(Node root) {
+            List<int> list = new List<int>();
+            if(root == null)return list;
+            Stack<Node> stack = new Stack<Node>();
+            while(stack.Count > 0 || root!=null){
+                while(root!=null){
+
+                }
+            }
+        }
+
+        public TreeNode MergeTrees(TreeNode t1, TreeNode t2) {
+            if(t1 == null)return t2;
+            if(t2 == null)return t1;
+            while(t1 != null || t2 != null){
+                
+            }
+            return t1;
+        }
+
+        public int WidthOfBinaryTree(TreeNode root) {
+            if(root == null)return 0;
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(root);
+            while(queue.Count>0){
+                int count = queue.Count;
+                for(int i = 0;i<count;i++){
+                    TreeNode tmp = queue.Dequeue();
+                    if(tmp.left!=null)queue.Enqueue(tmp.left);
+                    if(tmp.right!=null)queue.Enqueue(tmp.right);
+                }
+            }
         }
     }
 }
