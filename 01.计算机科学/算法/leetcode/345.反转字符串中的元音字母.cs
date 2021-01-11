@@ -43,24 +43,29 @@ public class Solution {
     public string ReverseVowels(string s) {
         int left = 0;
         int right = s.Length - 1;
+        char[] cs = s.ToCharArray();
         while(left < right){
-            while(left < right || CheckAeiou(s[left]) == false){
+            while(left < right && CheckAeiou(cs[left]) == false){
                 left++;
             }
-            while(left < right || CheckAeiou(s[right]) == false){
+            while(left < right && CheckAeiou(cs[right]) == false){
                 right--;
             }
             if(left < right){
-                char c = s[left];
-                s[left] = s[right];
-                s[right] = c;
+                char c = cs[left];
+                cs[left] = cs[right];
+                cs[right] = c;
+                left++;
+                right--;
             }
         }
-        return s;
+        return new string(cs);
     }
 
     private bool CheckAeiou(char c){
         if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+            return true;
+        }else if(c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U'){
             return true;
         }
         return false;

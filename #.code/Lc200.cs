@@ -295,5 +295,34 @@ namespace LC
                 }
             }
         }
+
+        public string ReverseVowels(string s) {
+        int left = 0;
+        int right = s.Length - 1;
+        char[] cs = s.ToCharArray();
+        while(left < right){
+            while(left < right || CheckAeiou(s[left]) == false){
+                left++;
+            }
+            while(left < right || CheckAeiou(s[right]) == false){
+                right--;
+            }
+            if(left < right){
+                char c = cs[left];
+                cs[left] = cs[right];
+                cs[right] = c;
+            }
+        }
+        return new string(cs);
+    }
+
+    private bool CheckAeiou(char c){
+        if(c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u'){
+            return true;
+        }else if(c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U'){
+            return true;
+        }
+        return false;
+    }
     }
 }
