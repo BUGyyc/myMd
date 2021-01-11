@@ -324,5 +324,23 @@ namespace LC
         }
         return false;
     }
+
+    public bool IsSubsequence(string s, string t) {
+        int m = s.Length,n=t.Length;
+
+        if(m > n)return false;
+        
+        int i = 0;
+        int j = 0;
+        while (i < m && j < n)
+        {
+            while (s[i] == t[j])
+            {
+                i++;
+            }
+            j++;
+        }
+        return i == m;
+    }
     }
 }
