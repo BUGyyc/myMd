@@ -12,6 +12,44 @@ public class Lc5
 {
     public IList<string> GetAllClock(int n)
     {
-        if(n == 0)
+        // if(n == 0)
+        return null;
+    }
+
+    public int CountSegments(string s) {
+        char[] cs = s.ToCharArray();
+        int i = 0,result = 0,state = 0;
+        while(i<cs.Count){
+            state = 0;
+            while(i < cs.Count && IsWord(cs[i]) == false){
+                i++;
+                if(state == 0)state = 1;
+            }
+            while(i < cs.Count && IsWord(cs[i]) == true){
+                i++;
+                if(state == 1)state = 2;
+            }
+            if(state == 2)result++;
+        }
+        return result;
+    }
+
+    private bool IsWord(char c){
+        if(c >= 'A' && c <= 'Z'){
+            return true;
+        }else if(c >= 'a' && c <= 'z'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    public int ArrangeCoins(int n) {
+        int step = 1;
+        while(n > 0){
+            n -= step;
+            step++;
+        }
+        return (n < 0)?step-1:step;
     }
 }
