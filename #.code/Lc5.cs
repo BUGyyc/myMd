@@ -52,4 +52,29 @@ public class Lc5
         }
         return (n < 0)?step-1:step;
     }
+
+    public int HammingDistance(int x, int y) {
+        int z = x ^ y;
+        int result = 0;
+        while(z!=0){
+            if(z % 2 == 1){
+                result++;
+            }
+            z >>= 1;
+        }
+        return result;
+    }
+
+    public int FindMaxConsecutiveOnes(int[] nums) {
+        int result = 0;
+        int count = 0;
+        for(int i = 0;i<nums.Length;i++){
+            if(nums[i] == 1){
+                count++;
+            }else{
+                result = Math.Max(count,result);
+            }
+        }
+        return result;
+    }
 }
