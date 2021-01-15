@@ -111,4 +111,38 @@ public class Lc5
         }
         return list.ToArray();
     }
+
+    public int Fib(int n) {
+        if(n == 0 || n == 1)return n;
+        int[] dp = new int[n+1];
+        dp[0] = 0;
+        dp[1] = 1;
+        for(int i = 2;i<n+1;i++){
+            dp[i] = dp[i-1]+dp[i-2];
+        }
+        return dp[n];
+    }
+
+    public int GetMinimumDifference(TreeNode root) {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        bool hasVal = false;
+        int pre = 0;
+        int min = 0;
+        while(stack.Count > 0 || root != null){
+            while(root!=null){
+                stack.Push(root);
+                root = root.left;
+            }
+            TreeNode tmp = stack.Pop();
+            if(hasVal){
+                int val = pre - tmp.val;
+                val = Math.Abs(val);
+                min = Math.Max(min,val);
+            }
+            hasVal = true;
+            pre = tmp.val;
+            root = tmp.right;
+        }
+        return min;
+    }
 }
