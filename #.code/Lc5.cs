@@ -77,4 +77,38 @@ public class Lc5
         }
         return result;
     }
+
+    public string[] FindWords(string[] words) {
+        List<string> list = new List<string>();
+        return list.ToArray();
+    }
+
+    public int[] FindMode(TreeNode root) {
+        if(root == null)return null;
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        Dictionary<int,int> dic = new Dictionary<int,int>();
+        int max = 0;
+        while(stack.Count > 0 || root != null){
+            while(root!=null){
+                stack.Push(root);
+                root = root.left;
+            }
+            TreeNode tmp = stack.Pop();
+            if(dic.ContainsKey(tmp.val)){
+                dic[tmp.val]++;
+            }else{
+                dic[tmp.val] = 1;
+            }
+            max = Math.Max(max,dic[tmp.val]);
+            root = tmp.right;
+        }
+        List<int> list = new List<int>();
+        foreach (KeyValuePair<int, int> item in dic)
+        {
+            if(dic.Value == max){
+                list.Add(dic.Key);
+            }
+        }
+        return list.ToArray();
+    }
 }
