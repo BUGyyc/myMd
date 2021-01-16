@@ -61,7 +61,7 @@ public class Solution {
         Stack<TreeNode> stack = new Stack<TreeNode>();
         bool hasVal = false;
         int pre = 0;
-        int min = 0;
+        int min = int.MaxValue;
         while (stack.Count > 0 || root != null)
         {
             while (root != null)
@@ -74,7 +74,7 @@ public class Solution {
             {
                 int val = pre - tmp.val;
                 val = Math.Abs(val);
-                min = Math.Max(min, val);
+                min = Math.Min(min, val);
             }
             hasVal = true;
             pre = tmp.val;

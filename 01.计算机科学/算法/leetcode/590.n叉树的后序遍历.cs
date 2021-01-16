@@ -1,19 +1,19 @@
 /*
- * @lc app=leetcode.cn id=589 lang=csharp
+ * @lc app=leetcode.cn id=590 lang=csharp
  *
- * [589] N叉树的前序遍历
+ * [590] N叉树的后序遍历
  *
- * https://leetcode-cn.com/problems/n-ary-tree-preorder-traversal/description/
+ * https://leetcode-cn.com/problems/n-ary-tree-postorder-traversal/description/
  *
  * algorithms
- * Easy (74.02%)
- * Likes:    128
+ * Easy (75.20%)
+ * Likes:    121
  * Dislikes: 0
- * Total Accepted:    60.6K
- * Total Submissions: 81.9K
+ * Total Accepted:    44.4K
+ * Total Submissions: 59.1K
  * Testcase Example:  '[1,null,3,2,4,null,5,6]'
  *
- * 给定一个 N 叉树，返回其节点值的前序遍历。
+ * 给定一个 N 叉树，返回其节点值的后序遍历。
  * 
  * 例如，给定一个 3叉树 :
  * 
@@ -23,7 +23,7 @@
  * 
  * 
  * 
- * 返回其前序遍历: [1,3,5,6,2,4]。
+ * 返回其后序遍历: [5,6,3,2,4,1].
  * 
  * 
  * 
@@ -43,7 +43,7 @@ public class Node {
         val = _val;
     }
 
-    public Node(int _val,IList<Node> _children) {
+    public Node(int _val, IList<Node> _children) {
         val = _val;
         children = _children;
     }
@@ -51,7 +51,7 @@ public class Node {
 */
 
 public class Solution {
-    public IList<int> Preorder (Node root) {
+    public IList<int> Postorder (Node root) {
         List<int> result = new List<int> ();
         if (root == null) return result;
         Stack<Node> stack = new Stack<Node> ();
@@ -59,12 +59,11 @@ public class Solution {
         while (stack.Count > 0) {
             Node tmp = stack.Pop ();
             result.Add (tmp.val);
-            if (tmp.children != null) {
-                for (int i = tmp.children.Count - 1; i >= 0; i--) {
-                    stack.Push (tmp.children[i]);
-                }
+            foreach (var item in tmp.children) {
+                stack.Push (item);
             }
         }
+        result.Reverse();
         return result;
     }
 }
