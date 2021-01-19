@@ -50,23 +50,21 @@ public class Solution {
             for (int j = 0; j < col; j++) {
                 if (grid[i][j] == 1) {
                     //判断四周
+                    int a = CheckPos (i - 1, j, grid, row, col);
+                    int b = CheckPos (i + 1, j, grid, row, col);
+                    int c = CheckPos (i, j - 1, grid, row, col);
+                    int d = CheckPos (i, j + 1, grid, row, col);
+                    result += a + b + c + d;
                 }
             }
         }
+        return result;
     }
 
-    // private int CheckPos (int x, int y, int[][] grid, int row, int col) {
-    //     int result = 0;
-    //     //上
-    //     if (x == 0) {
-    //         result++;
-    //     } else if (x == row - 1) {
-    //         result++;
-    //     } else {
-
-    //     }
-
-    //     if ()
-    // }
+    private int CheckPos (int x, int y, int[][] grid, int row, int col) {
+        if (x < 0 || x >= row || y < 0 || y >= col) return 1;
+        if (grid[x][y] == 0) return 1;
+        return 0;
+    }
 }
 // @lc code=end

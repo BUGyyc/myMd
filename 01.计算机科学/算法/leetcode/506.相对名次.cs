@@ -39,6 +39,7 @@
 // @lc code=start
 public class Solution {
     public string[] FindRelativeRanks (int[] nums) {
+        Array.Sort(nums);
         List<string> list = new List<string> ();
         for (int i = 0; i < nums.Length; i++) {
             if (i == 0) {

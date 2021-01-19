@@ -50,7 +50,14 @@
 public class Solution {
     //TODO:
     public int FindComplement (int num) {
-
+        int maxBit = 0;
+        int tmp = num;
+        while (tmp > 0) {
+            tmp >>= 1;
+            maxBit++;
+        }
+        int val = num ^ ((1 << maxBit) - 1);
+        return val;
     }
 }
 // @lc code=end
