@@ -46,7 +46,27 @@
 public class Solution {
     //TODO:
     public bool WordPattern (string pattern, string s) {
+        Dictionary<char,string> dic = new Dictionary<char,string>();
+        Dictionary<string,char> dic2 = new Dictionary<string,char>();
+        char[] cs = pattern.ToCharArray();
+        string[] strs = s.Split(" ");
+        if(cs.Length != strs.Length)return false;
+        dic.Add(cs[0],strs[0]);
+        dic2.Add(strs[0],cs[0]);
+        for(int i = 1;i<cs.Length;i++){
+            if(dic.ContainsKey(cs[i]) && dic[cs[i]].Equals(strs[i]) == false){
+                return false;
+            }else if(dic.ContainsKey(cs[i]) == false){
+                dic.Add(cs[i],strs[i]);
+            }
 
+            if(dic2.ContainsKey(strs[i]) && dic2[strs[i]] != cs[i]){
+                return false;
+            }else if(dic2.ContainsKey(strs[i]) == false){
+                dic2.Add(strs[i],cs[i]);
+            }   
+        }
+        return true;
     }
 }
 // @lc code=end
