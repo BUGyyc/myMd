@@ -342,5 +342,22 @@ namespace LC
         }
         return i == m;
     }
+
+    public bool CheckStr(string pattern,string str){
+        Dictionary<char,string> dic = new Dictionary<char,string>();
+        char[] cs = pattern.ToCharArray();
+        string[] strs = str.Split(" ");
+        if(cs.Length != strs.Length)return false;
+        dic.Add(cs[0],strs[0]);
+        for(int i = 1;i<cs.Length;i++){
+            if(dic.ContainsKey(cs[i]) && dic[cs[i]].Equals(strs[i]) == false){
+                return false;
+            }else if(dic.ContainsKey(cs[i]) == false){
+                dic.Add(cs[i],strs[i]);
+            }   
+        }
+        return true;
+    }
+
     }
 }
