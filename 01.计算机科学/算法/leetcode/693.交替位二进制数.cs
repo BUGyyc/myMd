@@ -67,7 +67,15 @@
 public class Solution {
     //TODO:
     public bool HasAlternatingBits (int n) {
-
+        int level = 1;
+        while (n > 0) {
+            if (n % 2 != level) {
+                return false;
+            }
+            n >>= 1;
+            level = (level == 1) ? 0 : 1;
+        }
+        return true;
     }
 }
 // @lc code=end

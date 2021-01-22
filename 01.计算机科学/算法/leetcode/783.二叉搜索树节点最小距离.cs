@@ -58,9 +58,20 @@
  * }
  */
 public class Solution {
-    public int MinDiffInBST(TreeNode root) {
 
+    public int MinDiffInBST (TreeNode root) {
+        if (root == null) return 0;
+        int min = int.MaxValue;
+        Stack<TreeNode> stack = new Stack<TreeNode> ();
+        while (root != null || stack.Count > 0) {
+            while (root != null) {
+                stack.Push (root);
+                root = root.left;
+            }
+            TreeNode tmp = stack.Pop ();
+            root = root.right;
+        }
     }
+
 }
 // @lc code=end
-

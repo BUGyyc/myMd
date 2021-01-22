@@ -83,9 +83,22 @@
  * }
  */
 public class Solution {
-    public int FindTilt(TreeNode root) {
-
+    //TODO:
+    int tiltVal = 0;
+    public int FindTilt (TreeNode root) {
+        if (root == null) return 0;
+        Execute (root);
+        return tiltVal;
     }
+
+    private int Execute (TreeNode root) {
+        if (root == null) return 0;
+        int left = Execute (root.left);
+        int right = Execute (root.right);
+        int val = Math.Abs (left - right);
+        tiltVal += val;
+        return left + right + root.val;
+    }
+
 }
 // @lc code=end
-
