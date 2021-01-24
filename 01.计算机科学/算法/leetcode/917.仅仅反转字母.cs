@@ -52,9 +52,36 @@
 
 // @lc code=start
 public class Solution {
-    public string ReverseOnlyLetters(string S) {
+    public string ReverseOnlyLetters (string S) {
+        char[] cs = S.ToCharArray ();
+        int i = 0, j = cs.Length - 1;
+        while (i < j) {
+            while (i < j && isZm (cs[i]) == false) {
+                i++;
+            }
+            while (i < j && isZm (cs[j]) == false) {
+                j--;
+            }
+            if (i < j) {
+                char c = cs[i];
+                cs[i] = cs[j];
+                cs[j] = c;
+                i++;
+                j--;
+            }
+        }
+        return new string (cs);
+    }
 
+    private bool isZm (char c) {
+        if (c >= 'a' && c <= 'z') {
+            return true;
+        }
+
+        if (c >= 'A' && c <= 'Z') {
+            return true;
+        }
+        return false;
     }
 }
 // @lc code=end
-
