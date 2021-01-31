@@ -71,9 +71,18 @@ public class Solution {
             while (t != null) {
                 stack.Push (t);
                 sb.Append (t.val.ToString ());
-                t = t.val;
+                t = t.left;
+                if (t != null) sb.Append ('(');
+            }
+            TreeNode tmp = stack.Pop ();
+            t = tmp.right;
+            if (stack.Count > 0 || t == null) {
+                sb.Append (')');
+            } else {
+                sb.Append ('(');
             }
         }
+        return sb.ToString ();
     }
 }
 // @lc code=end
