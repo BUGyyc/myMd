@@ -33,9 +33,14 @@
 
 // @lc code=start
 public class Solution {
-    public int TrailingZeroes(int n) {
-
+    //TODO:数学归纳
+    public int TrailingZeroes (int n) {
+        int count = 0;
+        while (n > 0) {
+            count += n / 5;
+            n /= 5;
+        }
+        return count;
     }
 }
 // @lc code=end
-

@@ -52,33 +52,21 @@
  */
 
 // @lc code=start
-public class Solution
-{
-    public bool IsIsomorphic(string s, string t)
-    {
+public class Solution {
+    public bool IsIsomorphic (string s, string t) {
         if (s.Length != t.Length) return false;
         if (s.Length == 0 && t.Length == 0) return true;
-        Dictionary<char, char> dic = new Dictionary<char, char>();
+        Dictionary<char, char> dic = new Dictionary<char, char> ();
+        Dictionary<char, char> dic2 = new Dictionary<char, char> ();
         int i = 0;
-        while (i < s.Length)
-        {
+        while (i < s.Length) {
             char a = s[i];
             char b = t[i];
-            if (dic.ContainsKey(a) == false && dic.ContainsKey(b) == false)
-            {
-                dic.Add(a, b);
-                dic.Add(b, a);
-            }
-            else if (dic.ContainsKey(a) && dic.ContainsKey(b))
-            {
-                if (dic[dic[a]] != a && dic[dic[b]] != b)
-                {
-                    return false;
-                }
-            }
-            else
-            {
+            if((dic.ContainsKey (a) && dic[a] != b) || (dic2.ContainsKey (b) && dic2[b] != a)) {
                 return false;
+            } else if(dic.ContainsKey(a) == false && dic2.ContainsKey(b) == false){
+                dic.Add (a, b);
+                dic2.Add (b, a);
             }
             i++;
         }
@@ -86,4 +74,3 @@ public class Solution
     }
 }
 // @lc code=end
-
