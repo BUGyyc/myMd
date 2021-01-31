@@ -87,9 +87,34 @@
  * }
  */
 public class Solution {
-    public bool LeafSimilar(TreeNode root1, TreeNode root2) {
-        
+    public bool LeafSimilar (TreeNode root1, TreeNode root2) {
+        if (root1 == null && root2 == null) return true;
+        if (root1 == null || root2 == null) return false;
+        List<int> list1 = new List<int> ();
+        List<int> list2 = new List<int> ();
+        Push2List (root1, list1);
+        Push2List (root2, list2);
+        if (list1.Count != list2.Count) return false;
+        for (int i = 0; i < list1.Count; i++) {
+            if (list1[i] != list2[i]) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private void Push2List (TreeNode root, List<int> list) {
+        if (root == null) return;
+        if (root.left == null && root.right == null) {
+            list.Add (root.val);
+            return;
+        }
+        if (root.left != null) {
+            Push2List (root.left, list);
+        }
+        if (root.right != null) {
+            Push2List (root.right, list);
+        }
     }
 }
 // @lc code=end
-
