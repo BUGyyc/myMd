@@ -33,23 +33,32 @@
 public class Solution {
     public int FindLHS (int[] nums) {
         if (nums == null || nums.Length < 1) return 0;
-        if (nums.Length == 1) return 1;
         Array.Sort (nums);
-        int count = 0;
-        int max = 0;
-        for (int i = 1; i < nums.Length; i++) {
-            if (nums[i] - nums[i - 1] <= 1) {
-                if (count == 0) {
-                    count = 1;
-                } else {
-                    count++;
-                }
+        Dictionary<int, int> dic = new Dictionary<int, int> ();
+        List<int> list = new List<int> ();
+        foreach (var item in nums) {
+            if (dic.ContainsKey (item) == false) {
+                dic.Add (item, 1);
+                list.Add (item);
             } else {
-                max = Math.Max (max, count);
-                count = 0;
+                dic[item]++;
             }
         }
-        max = Math.Max (max, count);
+        if (list.Count == 1) return nums.Length;
+        int max = 0;
+        int pre = list[0];
+        int count = dic[pre];
+        for (int i = 1; i < list.Count; i++) {
+            int curr = list[i];
+            if (curr - pre == 1) {
+                count += dic[curr];
+            } else {
+                max = Math.Max (max, count);
+                pre = curr;
+                count = dic[curr];
+            }
+        }
+        if (count != 0) max = Math.Max (max, count);
         return max;
     }
 }
