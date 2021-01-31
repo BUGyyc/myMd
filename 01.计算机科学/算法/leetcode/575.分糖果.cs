@@ -47,9 +47,13 @@
 
 // @lc code=start
 public class Solution {
-    public int DistributeCandies(int[] candyType) {
-
+    public int DistributeCandies (int[] candyType) {
+        HashSet<int> hash = new HashSet<int> ();
+        int index = 0;
+        while (hash.Count < candyType.Length / 2 && index < candyType.Length) {
+            hash.Add (candyType[index++]);
+        }
+        return hash.Count;
     }
 }
 // @lc code=end
-
