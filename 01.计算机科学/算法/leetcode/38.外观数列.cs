@@ -57,7 +57,16 @@
 public class Solution {
     //TODO:
     public string CountAndSay (int n) {
-
+        if (n == 1) return "1";
+        string str = CountAndSay (n - 1) + "0";
+        string temp = "";
+        for (int i = 0, count = 1; i < str.Length - 1; i++, count++) {
+            if (str[i] != str[i + 1]) {
+                temp += count.ToString () + str[i].ToString ();
+                count = 0;
+            }
+        }
+        return temp;
     }
 }
 // @lc code=end
