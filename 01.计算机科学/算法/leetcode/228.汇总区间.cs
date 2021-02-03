@@ -82,29 +82,32 @@
 public class Solution {
     public IList<string> SummaryRanges (int[] nums) {
         List<string> list = new List<string> ();
-        if (nums.Length == 0) return list;
-        if (nums.Length == 1) list.Add (nums[0].ToString ());
+        int len = nums.Length;
+        if (len == 0) return list;
+        if (len== 1){
+            list.Add (nums[0].ToString ());
+            return list;
+        } 
         int pre = nums[0];
         StringBuilder sb = new StringBuilder ();
-        sb.Append (pre.ToString ());
-        int i = 1;
-        while (i < nums.Length) {
-            if (sb.Count == 0) {
-                sb.Append (nums[i]);
-            } else if (nums[i] - pre == 1) {
-                //
-            } else {
-                sb.Append ("->");
-                sb.Append (nums[i].ToString ());
-                list.Add (sb.ToString ());
-                sb.Clear ();
+        int i = 0;
+        while (i < len) {
+            sb.Clear();
+            sb.Append(nums[i].ToString());
+            bool has = false;
+            while(i<len-1 && nums[i] == nums[i+1]-1){
+                i++;
+                has = true;
             }
+            if(has == true){
+                sb.Append("->");
+                sb.Append(nums[i].ToString());
+            }
+            list.Add(sb.ToString());
             i++;
         }
 
-        if (sb.Count > 0) {
-            
-        }
+        return list;
     }
 }
 // @lc code=end
