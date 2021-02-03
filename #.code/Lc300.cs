@@ -663,4 +663,24 @@ public class Lc300
         return new int[2] { min, max };
     }
 
+    private void Test(){
+        
+    }
+
+    public bool IsCousins(TreeNode root, int x, int y) {
+        Dictionary<int,int> levelDic = new Dictionary<int,int>();
+        Dictionary<int,TreeNode> parentDic = new Dictionary<int,TreeNode>();
+        dfs(root,null);
+        return (levelDic[x] == levelDic[y]) && (parentDic[x] == parentDic[y]);
+    }
+
+    private void dfs(TreeNode root,TreeNode parent){
+        if(root!=null){
+            levelDic.Add(root.val,parent == null?0:1+levelDic(root.val));
+            parentDic.Add(root.val,parent);
+            dfs(root.left,root);
+            dfs(root.right,root);
+        }
+    }
+
 }

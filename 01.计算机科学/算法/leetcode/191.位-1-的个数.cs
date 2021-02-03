@@ -76,6 +76,7 @@
 // @lc code=start
 public class Solution
 {
+    //TODO:
     public int HammingWeight(uint n)
     {
         int sum = 0;
