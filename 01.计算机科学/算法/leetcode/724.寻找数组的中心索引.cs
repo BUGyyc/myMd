@@ -54,11 +54,23 @@
 public class Solution {
     public int PivotIndex (int[] nums) {
         if (nums.Length == 0) return -1;
-        if (nums.Length == 1) return 0;
-        int i = 0, j = nums.Length - 1, left = nums[i], right = nums[j];
-        while (i < j){
-            // if(left)
+        int[] leftSum = new int[nums.Length];
+        int[] rightSum = new int[nums.Length];
+        for (int i = 1; i < nums.Length; i++) {
+            leftSum[i] = leftSum[i - 1] + nums[i - 1];
         }
+        for (int i = nums.Length - 2; i >= 0; i--) {
+            rightSum[i] = rightSum[i + 1] + nums[i + 1];
+        }
+
+        int step = 0;
+        while (step < nums.Length) {
+            if (leftSum[step] == rightSum[step]) {
+                return step;
+            }
+            step++;
+        }
+        return -1;
     }
 }
 // @lc code=end

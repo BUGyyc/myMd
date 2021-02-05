@@ -64,7 +64,9 @@ public class MyHashSet {
     }
 
     public void Remove (int key) {
-        if()
+        if(Contains (key) == true){
+            list.Remove()
+        }
     }
 
     /** Returns true if this set contains the specified element */
