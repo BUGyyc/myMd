@@ -674,7 +674,7 @@ public class Lc300
         return (levelDic[x] == levelDic[y]) && (parentDic[x] == parentDic[y]);
     }
 
-    private void dfs(TreeNode root,TreeNode parent){
+    private void dfs(TreeNode root,TreeNode parent){ 
         if(root!=null){
             levelDic.Add(root.val,parent == null?0:1+levelDic(root.val));
             parentDic.Add(root.val,parent);
