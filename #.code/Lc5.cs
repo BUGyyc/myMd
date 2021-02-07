@@ -249,7 +249,7 @@ public class Lc5
                 return false;
             }
             n = n/2;
-            pre = cur
+            pre = cur;
         }
         return true;
     }
