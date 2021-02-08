@@ -253,4 +253,21 @@ public class Lc5
         }
         return true;
     }
+
+    
+    public int[] FindErrorNums(int[] nums) {
+        int len = nums.Length;
+        int sum = (1+len)*len/2;
+        List<int> list = new List<int>();
+        int target = -1;
+        foreach(var item in nums){
+            if(list.Contains(item) == false){
+                sum -= item;
+                list.Add(item);
+            }else{
+                target = item;
+            }
+        }
+        return new int[2]{target,sum};
+    }
 }
