@@ -270,4 +270,18 @@ public class Lc5
         }
         return new int[2]{target,sum};
     }
+
+    public int NumberOfSteps (int num) {
+        if(num == 0)return 0;
+        int step = 0;
+        while(num > 0){
+            if(num%2==1){
+                num -= 1;
+            }else{
+                num /=2;
+            }
+            step++;
+        }
+        return  step;
+    }
 }
