@@ -51,16 +51,36 @@
 // @lc code=start
 public class Solution {
     public string[] FindRestaurant (string[] list1, string[] list2) {
-        HashSet<string> hash = new HashSet<string> ();
-        foreach (var item in list1) {
-            hash.Add (item);
+        Dictionary<string,int> dic = new Dictionary<string,int>();
+        for(int i = 0;i<list1.Length;i++){
+            dic.Add(list1[i],-1*(i+1));
         }
-        foreach (var item in list2) {
-            if (hash.Contains (item)) {
-                return new string[1] { item };
+
+        for(int i = 0;i<list2.Length;i++){
+            if(dic.ContainsKey(list2[i])){
+                dic[list2[i]] = -1*(dic[list2[i]]-1) + i;
             }
         }
-        return new string[0];
+        
+        int min = int.MaxValue;
+        string minStr = "";
+        List<string> list = new List<string>();
+        foreach(var item in dic){
+            if(item.Value >= 0){
+                if(item.Value < min){
+                    minStr = item.Key;
+                    min = item.Value;
+                }
+            }
+        }
+
+        foreach(var item in dic){
+            if(item.Value == min){
+                list.Add(item.Key);
+            }
+        }
+
+        return list.ToArray();
     }
 }
 // @lc code=end

@@ -59,19 +59,48 @@
  */
 public class Solution {
 
+    // int minValue = int.MaxValue;
+
     public int MinDiffInBST (TreeNode root) {
+        int minValue = int.MaxValue;
         if (root == null) return 0;
-        int min = int.MaxValue;
-        Stack<TreeNode> stack = new Stack<TreeNode> ();
-        while (root != null || stack.Count > 0) {
-            while (root != null) {
-                stack.Push (root);
+        List<int> list = new List<int>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while(stack.Count > 0 || root!=null){
+            while(root!=null){
+                stack.Push(root);
                 root = root.left;
             }
-            TreeNode tmp = stack.Pop ();
-            root = root.right;
+            TreeNode tmp = stack.Pop();
+            list.Add(tmp.val);
+            root = tmp.right;
         }
+
+        for(int i = 0;i<list.Count-1;i++){
+            int v = Math.Abs(list[i] - list[i+1]);
+            minValue = Math.Min(v,minValue);
+        }
+        return minValue;
     }
+
+    // private void FindMin(TreeNode root){
+    //     if(root == null)return;
+    //     if(root.left == null && root.right == null){
+    //         return;
+    //     }
+
+    //     if(root.left!=null){
+    //         int val = Math.Abs(root.val - root.left.val);
+    //         minValue = Math.Min(minValue,val);
+    //         FindMin(root.left);
+    //     }
+
+    //     if(root.right!=null){
+    //         int val = Math.Abs(root.val - root.right.val);
+    //         minValue = Math.Min(minValue,val);
+    //         FindMin(root.right);
+    //     }
+    // }
 
 }
 // @lc code=end

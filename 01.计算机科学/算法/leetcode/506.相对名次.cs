@@ -39,20 +39,29 @@
 // @lc code=start
 public class Solution {
     public string[] FindRelativeRanks (int[] nums) {
-        Array.Sort(nums);
-        List<string> list = new List<string> ();
-        for (int i = 0; i < nums.Length; i++) {
-            if (i == 0) {
-                list.Add ("Gold Medal");
-            } else if (i == 1) {
-                list.Add ("Silver Medal");
-            } else if (i == 2) {
-                list.Add ("Bronze Medal");
+        int len = nums.Length;
+        int[] tmp = new int[nums.Length];
+        for(int i = 0;i<nums.Length;i++){
+            tmp[i] = nums[i];
+        }
+        Array.Sort(tmp);
+        Dictionary<int,string> dic = new Dictionary<int,string>();
+        for (int i = 0; i < tmp.Length; i++) {
+            if (i == len-1) {
+                dic.Add (tmp[i],"Gold Medal");
+            } else if (i == len-2) {
+                dic.Add (tmp[i],"Silver Medal");
+            } else if (i == len-3) {
+                dic.Add (tmp[i],"Bronze Medal");
             } else {
-                list.Add ((i + 1).ToString ());
+                dic.Add (tmp[i],(len-i).ToString ());
             }
         }
-        return list.ToArray ();
+        List<string> list = new List<string>();
+        for(int i = 0;i<nums.Length;i++){
+            list.Add(dic[nums[i]]);
+        }
+        return list.ToArray();
     }
 }
 // @lc code=end

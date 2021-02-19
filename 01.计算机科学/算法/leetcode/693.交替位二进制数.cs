@@ -67,13 +67,18 @@
 public class Solution {
     //TODO:
     public bool HasAlternatingBits (int n) {
-        int level = 1;
-        while (n > 0) {
-            if (n % 2 != level) {
+        if(n == 0 || n == 1)return true;
+        if(n == 2)return true;
+        
+        int pre = n%2;
+        n = n/2;
+        while(n > 0){   
+            int cur = n%2;
+            if(cur + pre != 1){
                 return false;
             }
-            n >>= 1;
-            level = (level == 1) ? 0 : 1;
+            n = n/2;
+            pre = cur;
         }
         return true;
     }

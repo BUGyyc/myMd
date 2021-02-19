@@ -145,4 +145,143 @@ public class Lc5
         }
         return min;
     }
+
+    public string[] FindRelativeRanks (int[] nums) {
+        int[] tmp = new int[nums.Length];
+        for(int i = 0;i<nums.Length;i++){
+            tmp[i] = nums[i];
+        }
+        Array.Sort(tmp);
+        Dictionary<int,string> dic = new Dictionary<int,string>();
+        for (int i = 0; i < tmp.Length; i++) {
+            if (i == 0) {
+                dic.Add (tmp[i],"Gold Medal");
+            } else if (i == 1) {
+                dic.Add (tmp[i],"Silver Medal");
+            } else if (i == 2) {
+                dic.Add (tmp[i],"Bronze Medal");
+            } else {
+                dic.Add (tmp[i],(i + 1).ToString ());
+            }
+        }
+        List<string> list = new List<string>();
+        for(int i = 0;i<nums.Length;i++){
+            list.Add(dic[nums[i]]);
+        }
+        return list.ToArray();
+    }
+
+    public string[] FindRestaurant (string[] list1, string[] list2) {
+        Dictionary<string,int> dic = new Dictionary<string,int>();
+        for(int i = 0;i<list1.Length;i++){
+            dic.Add(list1[i],-1*i);
+        }
+
+        for(int i = 0;i<list2.Length;i++){
+            if(dic.ContainsKey(list2[i])){
+                dic[list2[i]] = -1*dic[list2[i]] + i;
+            }
+        }
+        
+        int min = int.MaxValue;
+        string minStr = "";
+        foreach(var item in dic){
+            if(item.Value >= 0 && item.Value < min){
+                minStr = item.Key;
+            
+            }
+        }
+        return new string[1]{minStr};
+    }
+
+    int minValue = int.MaxValue;
+
+    public int MinDiffInBST (TreeNode root) {
+        int minValue = int.MaxValue;
+        if (root == null) return 0;
+        List<int> list = new List<int>();
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        while(stack.Count > 0 || root!=null){
+            while(root!=null){
+                stack.Push(root);
+                root = root.left;
+            }
+            TreeNode tmp = stack.Pop();
+            list.Add(tmp.val);
+            root = tmp.right;
+        }
+
+        for(int i = 0;i<list.Count-1;i++){
+            int v = Math.Abs(list[i] - list[i+1]);
+            minValue = Math.Min(v,minValue);
+        }
+        return minValue;
+    }
+
+    private void FindMin(TreeNode root){
+        if(root == null)return;
+        if(root.left == null && root.right == null){
+            return;
+        }
+
+        if(root.left!=null){
+            int val = Math.Abs(root.val - root.left.val);
+            minValue = Math.Min(minValue,val);
+            FindMin(root.left);
+        }
+
+        if(root.right!=null){
+            int val = Math.Abs(root.val - root.right.val);
+            minValue = Math.Min(minValue,val);
+            FindMin(root.right);
+        }
+    }
+
+    public bool HasAlternatingBits (int n) {
+        if(n == 0 || n == 1)return true;
+        if(n == 2)return false;
+        
+        int pre = n%2;
+        n = n/2;
+        while(n > 0){   
+            int cur = n%2;
+            if(cur + pre != 1){
+                return false;
+            }
+            n = n/2;
+            pre = cur;
+        }
+        return true;
+    }
+
+    
+    public int[] FindErrorNums(int[] nums) {
+        int len = nums.Length;
+        int sum = (1+len)*len/2;
+        List<int> list = new List<int>();
+        int target = -1;
+        foreach(var item in nums){
+            if(list.Contains(item) == false){
+                sum -= item;
+                list.Add(item);
+            }else{
+                target = item;
+            }
+        }
+        return new int[2]{target,sum};
+    }
+
+    public int NumberOfSteps (int num) {
+        if(num == 0)return 0;
+        int step = 0;
+        while(num > 0){
+            if(num%2==1){
+                num -= 1;
+            }else{
+                num /=2;
+            }
+            step++;
+        }
+        return  step;
+    }
 }
