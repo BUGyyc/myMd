@@ -22,6 +22,11 @@ System 是逻辑执行的主要区域，System是根据不同的ComponentData来
 - 组合更优于继承。
 - 适合做网络同步，数据的回滚其实就是直接回滚ComponentData
 
+![picture 3](../../images/a0944c93a351ec30c038c7acc6b99f2a8b354f4b1f66f27818c9ad8c2b8ca7e7.png)  
+
+
+![picture 4](../../images/adbdd50d03fd11c6fa4b05dea7758a0966a73496276a3b2002bc3290ad325ae3.png)  
+
 
 
 ## 在ECS中进行逻辑与表现分离
