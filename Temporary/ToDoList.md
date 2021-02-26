@@ -58,3 +58,15 @@ LOD剔除
 
 
 
+
+
+canvas camera
+
+lod
+
+https://blog.uwa4d.com/archives/USparkle_Multi_process.html
+
+DOTS
+
+shader
+
