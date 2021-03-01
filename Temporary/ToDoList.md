@@ -54,12 +54,15 @@ LOD剔除
 双帧缓冲
 
 
+Jobsystem
 
+simd
 
-
-
-
-
+bt、playmaker code
+AB
+atlas
+ugui
+il2cpp
 canvas camera
 
 lod
@@ -70,3 +73,7 @@ DOTS
 
 shader
 
+-------------
+
+-------------
+ECS
