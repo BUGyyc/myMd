@@ -111,9 +111,22 @@ public class Node {
 */
 
 public class Solution {
-    public Node CloneGraph(Node node) {
-        
+    //TODO:
+    public Node CloneGraph (Node node) {
+        if (node == null) return node;
+        Dictionary<Node, Node> dic = new Dictionary<Node, Node> ();
+        return dfs (node, dic);
+    }
+
+    private Node dfs (Node node, Dictionary<Node, Node> dic) {
+        if (node == null) return node;
+        if (dic.ContainsKey (node)) return dic[node];
+        Node copy = new Node (node.val);
+        dic.Add (node, copy);
+        foreach (var item in node.neighbors) {
+            copy.neighbors.Add (dfs (item, dic));
+        }
+        return copy;
     }
 }
 // @lc code=end
-

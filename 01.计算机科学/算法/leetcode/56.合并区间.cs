@@ -44,42 +44,64 @@
 
 // @lc code=start
 public class Solution {
-    //分治算法
+    //TODO:
     public int[][] Merge (int[][] intervals) {
-        List<int[]> result = new List<int[]> ();
-        if(intervals.Length == 0)return result.ToArray();
-        for(int i = 0;i<intervals.Length - 1;i++){
-            var a = intervals[i];
-            bool has = false;
-            for(int j = i+1;j<intervals.Length;j++){
-                var b = intervals[j];
-                if(CanMerge(a,b)){
-                    a = MergeFunc1 (a, b);
-                    has = true;
+        if (intervals.Length == 0) {
+            return intervals;
+        }
+
+        intervals = intervals.OrderBy (p => p[0]).ToArray ();
+        List<int[]> list = new List<int[]> ();
+        for (int i = 0; i < intervals.Length - 1; i++) {
+            if (intervals[i][1] >= intervals[i + 1][0]) {
+                intervals[i + 1][0] = intervals[i][0];
+                if (intervals[i][1] >= intervals[i + 1][1]) {
+                    intervals[i + 1][1] = intervals[i][1];
                 }
-            }
-            if(has == false){
-                result.Add (a);
+            } else {
+                list.Add (intervals[i]);
             }
         }
-        return result.ToArray();
+        list.Add (intervals[intervals.Length - 1]);
+        int[][] result = list.ToArray ();
+        return result;
     }
 
-    private bool CanMerge (int[] a, int[] b) {
-        if (a == null || b == null) {
-            return true;
-        } else if (a[1] < b[0]) {
-            return false;
-        } else if (b[1] < a[0]) {
-            return false;
-        }
-        return true;
-    }
+    // private void Func (int[][] intervals) {
+    //     List<int[]> result = new List<int[]> ();
+    //     if (intervals.Length == 0) return result.ToArray ();
+    //     for (int i = 0; i < intervals.Length - 1; i++) {
+    //         var a = intervals[i];
+    //         bool has = false;
+    //         for (int j = i + 1; j < intervals.Length; j++) {
+    //             var b = intervals[j];
+    //             if (CanMerge (a, b)) {
+    //                 a = MergeFunc1 (a, b);
+    //                 has = true;
+    //             }
+    //         }
+    //         if (has == false) {
+    //             result.Add (a);
+    //         }
+    //     }
+    //     return result.ToArray ();
+    // }
 
-    private int[] MergeFunc1 (int[] a, int[] b) {
-        int min = Math.Min (a[0], b[0]);
-        int max = Math.Max (a[1], b[1]);
-        return new int[2] { min, max };
-    }
+    // private bool CanMerge (int[] a, int[] b) {
+    //     if (a == null || b == null) {
+    //         return true;
+    //     } else if (a[1] < b[0]) {
+    //         return false;
+    //     } else if (b[1] < a[0]) {
+    //         return false;
+    //     }
+    //     return true;
+    // }
+
+    // private int[] MergeFunc1 (int[] a, int[] b) {
+    //     int min = Math.Min (a[0], b[0]);
+    //     int max = Math.Max (a[1], b[1]);
+    //     return new int[2] { min, max };
+    // }
 }
 // @lc code=end
