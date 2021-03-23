@@ -4,6 +4,7 @@
 
 ## Nav 寻路方式
 
+很多游戏都是采取Nav构建行走区域，然后再通过漏斗算法，给定一个可达点，那么NavAgent就可以按照Nav得出移动
 
 ### Nav 可走区域的构建
 场景模型体素化（Voxelization），或者叫“栅格化”（Rasterization）。
