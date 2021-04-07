@@ -1,7 +1,4 @@
----
-typora-root-url: #.res\pic
----
-[TOC]
+
 
 # myMd
 
