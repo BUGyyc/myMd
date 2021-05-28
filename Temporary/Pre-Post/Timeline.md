@@ -10,7 +10,7 @@
 
 ### PlayableDirector（控制器）
 
-- 创建一个Track的方式(感谢。。。。。大佬)
+- 创建一个Track的方式
   - PlayableDirector.playableAsset as TimelineAsset;
   - TimelineAsset.CreateTrack
 
