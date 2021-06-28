@@ -40,6 +40,7 @@ VFX 允许外部通过事件传递信息给VFX内部
     vf?.SendEvent("SetBlue");
 ```
 
+
 ## VFX 实例
 
 如下，以固定速率生成粒子，每秒100000
@@ -63,6 +64,26 @@ VFX 允许外部通过事件传递信息给VFX内部
 
 
 
+## VFX  new Features
+
+
+### Output Event
+
+即上文提到的外部发送Event给VFX
+
+![img](Visual%20Effect%20Graph.assets/banner-cpu-output-event.png)
+
+### LOD 
+
+使用LOD优化Mesh粒子
+
+![img](Visual%20Effect%20Graph.assets/banner-space-scene-2.png)
+
+### Static mesh sampling
+
+静态网格采样
+
+![img](Visual%20Effect%20Graph.assets/banner-mesh-sampling.png)
 
 
 
@@ -70,6 +91,7 @@ VFX 允许外部通过事件传递信息给VFX内部
 
 
 ---
+
 https://zhuanlan.zhihu.com/p/61570237
 
 https://docs.unity3d.com/Packages/com.unity.visualeffectgraph@10.4/manual/index.html
