@@ -10,3 +10,5 @@ https://docs.unity3d.com/cn/Packages/com.unity.render-pipelines.high-definition@
 
 
 https://forum.unity.com/threads/how-is-ui-supposed-to-work-in-hdrp-with-one-camera.794850/
+
+![img](https://docs.unity3d.com/cn/Packages/com.unity.render-pipelines.high-definition@10.4/manual/images/HDRP-frame-graph-diagram.png)
