@@ -62,14 +62,3 @@ https://www.cnblogs.com/murongxiaopifu/default.html?page=1
 
 
 
-int[] arr = new int[100000000]
-
-int[1000] list = new int[1000]
-
-foreach(var i in arr){
-  //i取下来和 list首位比较
-  
-
-  //然后list排序
-
-}
