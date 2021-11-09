@@ -50,3 +50,6 @@
 Track 绑定 GameObject
 
   playableDirector.SetGenericBinding(timelineEventTrack, gameObject);
+
+
+  https://docs.unity3d.com/Packages/com.unity.timeline@1.4/api/UnityEngine.Timeline.TimelinePlayable.html
