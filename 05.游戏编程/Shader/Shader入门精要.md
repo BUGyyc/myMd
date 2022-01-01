@@ -79,3 +79,5 @@ Trilinear
 ![image-20220101173818578](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101173818578.png)
 
 ![image-20220101174056488](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101174056488.png)
+
+![image-20220101205835593](Shader入门精要.assets/image-20220101205835593.png)
