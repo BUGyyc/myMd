@@ -1,0 +1,32 @@
+![image-20220101130511819](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101130511819.png)
+
+![image-20220101131732667](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101131732667.png)
+
+![image-20220101140251584](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101140251584.png)
+
+Standard Surface Shader
+
+Unlit Shader
+
+Image Effect Shader
+
+Computer Shader
+
+
+
+![image-20220101145446181](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101145446181.png)
+
+![image-20220101145457960](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101145457960.png)
+
+Pass
+
+UsePass
+
+GrabPass
+
+![image-20220101150330811](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101150330811.png)
+
+![image-20220101151406434](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101151406434.png)
+
+![image-20220101151716199](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101151716199.png)
+
