@@ -30,3 +30,52 @@ GrabPass
 
 ![image-20220101151716199](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101151716199.png)
 
+![image-20220101154525915](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101154525915.png)
+
+![image-20220101154706655](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101154706655.png)
+
+![image-20220101160821932](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101160821932.png)
+
+![image-20220101160928020](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101160928020.png)
+
+![image-20220101161454143](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101161454143.png)
+
+![image-20220101161559078](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101161559078.png)
+
+
+
+
+
+BRDF
+
+https://www.sardinefish.com/blog/338
+
+
+
+![image-20220101163539417](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101163539417.png)
+
+
+
+
+
+兰伯特光照模型
+
+![image-20220101170627417](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101170627417.png)
+
+
+
+
+
+Texture  滤波模型
+
+Filter Mode
+
+Point
+
+Bilinear
+
+Trilinear
+
+![image-20220101173818578](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101173818578.png)
+
+![image-20220101174056488](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101174056488.png)
