@@ -79,3 +79,27 @@ Trilinear
 ![image-20220101173818578](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101173818578.png)
 
 ![image-20220101174056488](Shader%E5%85%A5%E9%97%A8%E7%B2%BE%E8%A6%81.assets/image-20220101174056488.png)
+
+
+
+
+
+双向分布函数BRDF
+
+
+
+http://www.realtimerendering.com/
+
+https://www.turiyaware.com/blog/unity-ui-blur-in-hdrp
+
+
+
+https://cloud.tencent.com/developer/news/98239
+
+http://www.codebaoku.com/it-csharp/it-csharp-215989.html
+
+https://www.dbhc-doman.club/archives/255/game-performance-optimization/
+
+
+
+https://juejin.cn/post/6844904038408912909

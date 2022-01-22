@@ -1,3 +1,9 @@
+
+
+
+
+
+
 POSITION 与 SV_POSITION
 
 
@@ -11,3 +17,26 @@ POSITION 与 SV_POSITION
 
 
 UnityObjectToClipPos
+
+
+
+
+
+step
+
+Step(a,x):如果x<a返回0；如果x>或=a返回1
+
+tex2D
+
+采样输出颜色
+
+
+
+Shader 内置变量
+
+https://docs.unity3d.com/cn/2020.3/Manual/SL-UnityShaderVariables.html
+
+UnityGet2DClipping
+
+判断是否在矩形范围内
+
