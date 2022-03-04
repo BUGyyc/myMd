@@ -48,11 +48,61 @@ IComponentData structs must not contain references to managed objects. This is b
 ![](../../pic.res/2022-03-03-20-37-56.png)
 
 
+
+
 ## Shared ComponentData
+
+Shared components allow your systems to process like entities together. For example, the shared component Rendering.RenderMesh, which is part of the Hybrid.rendering package, defines several fields, including mesh, material, and receiveShadows. When your application renders, it is most efficient to process all of the 3D objects that have the same value for those fields together. Because a shared component specifies these properties, the EntityManager places the matching entities together in memory so that the rendering system can efficiently iterate over them.
+
+
+If you over-use shared components, it might lead to poor chunk utilization. This is because when you use a shared component it involves a combinatorial expansion of the number of memory chunks based on archetype and every unique value of each shared component field. As such, avoid adding any fields that aren't needed to sort entities into a category to a shared component. To view chunk utilization, use the Entity Debugger.
+
+
+![](../../pic.res/2022-03-04-11-06-33.png)
+
+## System State ComponentData
+
+
+## Dynamic Buffer ComponentData
+
+
+## Chunk ComponentData
 
 
 
 # System
+
+You can view the system configuration using the Entity Debugger window (menu: Window > Analysis > Entity Debugger).
+
+
+![](../../pic.res/2022-03-04-12-36-14.png)
+
+
+## initializationSystem
+
+![](../../pic.res/2022-03-04-16-06-59.png)
+
+## SimulationSystem
+
+需要确认一下Timeline 的 Update 是否在这个System 之前
+
+![](../../pic.res/2022-03-04-16-07-58.png)
+
+## PresentationSystem
+
+![](../../pic.res/2022-03-04-16-08-46.png)
+
+
+## Job调度的有序控制
+
+
+## 数据查询
+
+### Query
+
+### Job
+
+
 
 
 # GameObject Convert To ECS
