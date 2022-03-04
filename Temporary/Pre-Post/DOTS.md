@@ -102,6 +102,17 @@ You can view the system configuration using the Entity Debugger window (menu: Wi
 
 ### Job
 
+## EntityCommandBuffer
+
+![](../../pic.res/2022-03-04-16-46-13.png)
+
+
+
+
+---
+
+SubScene 转化 ECS 的基础
+
 
 
 
@@ -119,6 +130,17 @@ For example, it creates an Editor world for entities and systems that run only i
 
 
 Your code is then responsible for creating any needed worlds, as well as instantiating and updating systems. You can use the Unity scriptable PlayerLoop to modify the normal Unity player loop so that your systems are updated when required.
+
+
+
+
+
+# Entity Debug
+
+![](../../pic.res/2022-03-04-18-37-04.png)
+
+
+
 
 https://docs.unity3d.com/2020.1/Documentation/ScriptReference/LowLevel.PlayerLoop.html
 
