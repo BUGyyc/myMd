@@ -150,3 +150,6 @@ https://docs.unity3d.com/2020.1/Documentation/ScriptReference/LowLevel.PlayerLoo
 
 
 https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/ecs_components.html
+
+
+https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/index.html
