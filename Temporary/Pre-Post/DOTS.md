@@ -110,8 +110,24 @@ You can view the system configuration using the Entity Debugger window (menu: Wi
 
 
 ---
+- Write Group ：为了标记一些情况，例如方便搜索时过滤一部分携带WriteGroup的数据
+- Serializeable Struct :
+- GameObjectConversionSystem
+- ConverterVersion
+- IConvertGameObjectToEntity  
+- Convert 
+- BurstCompile  
+- IJobParallelFor
+- IDeclareReferencedPrefabs  
+- NativeArray
+
+
+
+
+---
 
 SubScene 转化 ECS 的基础
+
 
 
 
