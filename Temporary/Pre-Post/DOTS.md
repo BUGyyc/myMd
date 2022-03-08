@@ -1,4 +1,19 @@
+# 实测数据
 
+- 100万 个 Entity 处理纯数据
+- 同屏 100 万 个 Entity (Unity Cube 模型) 移动旋转
+- 10 万 个 Entity (带 Animator)，LOD处理
+
+    //DOING
+    
+- 5 万 个 Entity (带 Animator) 及数据处理、LOD处理
+
+    //TODO
+
+
+
+
+---
 
 - Create an entity with no components and then add components to it. (You can add components immediately or when additional components are needed.)
 
@@ -108,12 +123,22 @@ You can view the system configuration using the Entity Debugger window (menu: Wi
 
 
 
+# DOTS + LOD + Hybrid Render V2
+
+1000 个 GameObject 转化为32 万个Entity
+
+![](../../pic.res/2022-03-08-12-02-46.png)
+
+
+
 
 ---
 - Write Group ：为了标记一些情况，例如方便搜索时过滤一部分携带WriteGroup的数据
 - Serializeable Struct :
 - GameObjectConversionSystem
-- ConverterVersion
+- ConverterVersion：
+https://docs.unity3d.com/Packages/com.unity.entities@0.17/api/Unity.Entities.ConverterVersionAttribute.-ctor.html
+
 - IConvertGameObjectToEntity  
 - Convert 
 - BurstCompile  
@@ -148,21 +173,64 @@ For example, it creates an Editor world for entities and systems that run only i
 Your code is then responsible for creating any needed worlds, as well as instantiating and updating systems. You can use the Unity scriptable PlayerLoop to modify the normal Unity player loop so that your systems are updated when required.
 
 
+# Blob Asset To Share ComponentData
 
 
 
-# Entity Debug
+# Entity Debugger
 
 ![](../../pic.res/2022-03-04-18-37-04.png)
 
+https://docs.unity3d.com/Packages/com.unity.entities@0.9/manual/ecs_debugging.html
 
+https://www.youtube.com/watch?v=0y05nw5zET0
 
 
 https://docs.unity3d.com/2020.1/Documentation/ScriptReference/LowLevel.PlayerLoop.html
 
+# SubScene 加载大场景的方案
 
+To Create a Sub Scene
+- In the Unity Hierarchy window, right-click on empty space, or on a GameObject that you want to create the Sub Scene next to.
+
+- Select New Sub Scene > Empty Scene... in the context menu. Unity then creates an empty Sub Scene and creates a corresponding Scene Asset file in your project.
 
 ---
+
+# DOTS 与 传统方式对比
+
+10000 个 Prefab 创建
+
+
+
+![](../../pic.res/2022-03-07-11-09-04.png)
+
+
+
+10000 个 带 SkinMeshRender Prefab 
+
+
+下图 转化出了66 万个 Entity
+
+![](../../pic.res/2022-03-07-14-42-55.png)
+
+
+计算压力主要集中在MeshRender上，也就是DOTS 内 最后一个System Group 内，和渲染相关性很大，加上LOD估计可以减缓
+
+![](../../pic.res/2022-03-07-14-47-01.png)
+
+---
+
+# DOTS 案例
+
+
+![](../../pic.res/2022-03-07-20-23-34.png)
+
+
+https://developer.unity.cn/projects/5e607e06edbc2a2000accf83
+
+---
+
 
 
 https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/ecs_components.html
