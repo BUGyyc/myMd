@@ -1,14 +1,18 @@
 # 实测数据
+当前机器配置：
+- CPU - (英特尔)Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz(3000 MHz)
+- 内存 - 32.00 GB (2400 MHz)
+- 显卡 - NVIDIA GeForce RTX 2060
 
-- 100万 个 Entity 处理纯数据
-- 同屏 100 万 个 Entity (Unity Cube 模型) 移动旋转
-- 10 万 个 Entity (带 Animator)，LOD处理
+实测以下情况，期望 60 FPS以上，有部分情况挑战较高
 
-    //DOING
-    
-- 5 万 个 Entity (带 Animator) 及数据处理、LOD处理
+- 100万 个 Entity 处理纯数据、无实体显示。实测结果保持在200FPS以上
 
-    //TODO
+    ![](../../pic.res/2022-03-08-15-54-08.png)
+
+- 同屏 10 万 个 Entity (Unity Cube 模型) 移动旋转
+- 同屏 10 万 个 Entity (带 Animator、Mesh)，LOD处理等
+- 5 万 个 Entity (带 Animator、Mesh) 及数据处理、LOD处理
 
 
 
@@ -218,6 +222,14 @@ To Create a Sub Scene
 计算压力主要集中在MeshRender上，也就是DOTS 内 最后一个System Group 内，和渲染相关性很大，加上LOD估计可以减缓
 
 ![](../../pic.res/2022-03-07-14-47-01.png)
+
+---
+
+- GameObject To Entity:
+    https://docs.unity3d.com/Packages/com.unity.entities@0.17/api/Unity.Entities.IConvertGameObjectToEntity.html
+
+- Attr GenerateAuthoringComponent : 将ComponentData 暴露在 Inspector 上,即使是Editor下也可行
+- 
 
 ---
 
