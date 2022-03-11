@@ -19,6 +19,44 @@
 
 ---
 
+当前工程内的问题：
+- Entity 不够纯粹，是以GameObject为载体，没用上真正的ECS思想
+- Timeline Execute 与 System Execute 目前没有确定一个执行顺序
+- 游戏内的数据不支持可重入，无法掉线重连后完整恢复游戏
+- 业务上的 EntityType 有部分Type划分比较模糊，不清晰，需要达成一致
+- Entity 的 Disable下，依然可以被遍历到，引发一些空指针问题，需要排查一下 Entity
+
+
+当前游戏内的性能瓶颈主要集中在，现世场景下大量NPC的模拟。这也是 DOTS 的接入需要直接解决的问题，
+整个接入大致分为两部分，数据层面和渲染层面上的DOTS化。
+
+数据层面：
+- 真正意义上的 Entity，解决当前Entitas框架下，Entity挂载于GameObject 下的问题；
+- 大量NPC的 Component 是相似的，很适合 Archetype 的划分，生成Chunk Memory；
+- 可以协助解决 Timeline Execute 与 System Execute 的确定性顺序，保障掉线重连的底层支持；
+
+数据层面会遇到的问题：
+- 在业务上，Entitas 与 DOTS 下的 Entities 代码上差别较大，需要时间整理，Entities代码要求严谨；
+- StateMsg 是当前最大的数据块，需要把 Pb 的导出，尽可能导出为 Struct 型，这样才能把 Chunk 使用起来；
+
+渲染层面：
+- Hybrid Render V2;
+- DOTS 下的LOD;
+- DOTS 下的 SubScene，有助于解决大场景资源加卸载的问题;
+
+
+渲染层面遇到的问题：
+- 目前官方给出的Animator解决方案是Preview 版本，不建议接入这个模块，还不够稳定。
+
+---
+
+
+
+
+DOTS 有部分模块是Preview版本，Preview 模块是不建议接入
+
+---
+
 - Create an entity with no components and then add components to it. (You can add components immediately or when additional components are needed.)
 
 
