@@ -20,11 +20,13 @@
 
 ## DOTS化
 
-- 对AC项目下，用的是Entitas会哪些已知的问题（Entitas Git：）
-  - AC项目中对Entitas的使用，怀疑有一定的误区：
+- 对AC项目下，用的是Entitas会哪些已知的问题
+  - AC项目中对Entitas的使用，是否没有发挥出Entitas的真正性能
     - 每一个Entity(LogicEntity 或 ViewEntity)都是和一个GameObject对应的，
       单纯从ECS设计上来说，这不是纯粹的Entity，这个造成了GameObject的浪费，
-   当然，Editor下有GameObject更加方便调试，另外从数量上来说，客户端是服务器的两倍；
+	    当然，Editor下有GameObject更加方便调试，另外从数量上来说，客户端是服务器的两倍；
+
+
 - 依据官方DOTS中的描述，托管类型的数据，不支持Chunk Memory。
   那么首先需要确定的是 AC 中 ProtocolBuf 是否可以导出 Struct 类型，
   游戏中ComponentData 的大头也是在Pb中集中，如果导出 Struct 类型可行，
@@ -38,6 +40,16 @@
   - Animator 也是在大量NPC场景下的重点，数量大，本身消耗也大
 
 ---
+
+https://zhuanlan.zhihu.com/p/110802975
+
+![](../../pic.res/2022-03-16-22-05-27.png)
+
+https://www.jianshu.com/p/39e76364c60a
+
+Entitas Git：<https://github.com/sschmid/Entitas-CSharp>
+Entitas Doc: <http://sschmid.github.io/Entitas-CSharp/>
+
 
 Entitas 使用规则
 <https://github.com/mzaks/EntitasCookBook>
