@@ -1,4 +1,7 @@
 {
     "code-runner.runInTerminal": true,
     "code-runner.ignoreSelection": true,
+    "cSpell.words": [
+        "Struct"
+    ],
 }
