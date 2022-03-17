@@ -9,6 +9,7 @@ AC 的问题：
 - 游戏内的数据不支持可重入，无法掉线重连后完整恢复游戏;
 - Entity 的 Disable下，依然可以被遍历到，引发一些空指针问题，需要排查一下 Entity;
 - 业务上的 EntityType 有一小部分 Type 划分比较模糊，不清晰，需要达成一致;
+- ...
 
 最理想的状态是，通过 DOTS + Hybrid Renderer V2 配合，Hybrid Renderer 是为了解决在ECS下渲染物体。
 整个接入大致分为两部分，数据层面和渲染层面。
@@ -71,6 +72,46 @@ ECS 构建下，ChunkMemory 的分配整齐，将同种类型的ComponentData组
 Burst 编译器，更高效的执行Job中的代码，如下图：
 
 ![](../../pic.res/2022-03-17-17-13-14.png)
+
+---
+
+# 实测数据
+
+当前机器配置：
+
+- CPU - (英特尔)Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz(3000 MHz)
+- 内存 - 32.00 GB (2400 MHz)
+- 显卡 - NVIDIA GeForce RTX 2060
+
+10000 个 Prefab 创建
+
+![](../../pic.res/2022-03-07-11-09-04.png)
+
+10000 个 带 SkinMeshRender Prefab
+
+下图 转化出了66 万个 Entity
+
+![](../../pic.res/2022-03-07-14-42-55.png)
+
+计算压力主要集中在MeshRender上，也就是DOTS 内 最后一个System Group 内，和渲染相关性很大，加上LOD估计可以减缓
+
+![](../../pic.res/2022-03-07-14-47-01.png)
+
+- 100万 个 Entity 处理纯数据、无实体显示。
+
+    实测结果保持在 200FPS 以上
+
+    ![](../../pic.res/2022-03-08-15-54-08.png)
+
+- 同屏 10 万 个 Entity (Unity Cube 模型) 移动旋转。
+
+    实测结果，维持在 100FPS 左右 
+
+    ![](../../pic.res/2022-03-08-18-16-03.png)
+
+- 1000 个 GameObject 转化为32 万个Entity
+
+![](../../pic.res/2022-03-08-12-02-46.png)
 
 ---
 
@@ -189,64 +230,22 @@ To Create a Sub Scene
 
 ---
 
-# 实测数据
+参考
 
-当前机器配置：
 
-- CPU - (英特尔)Intel(R) Core(TM) i7-9700 CPU @ 3.00GHz(3000 MHz)
-- 内存 - 32.00 GB (2400 MHz)
-- 显卡 - NVIDIA GeForce RTX 2060
-
-10000 个 Prefab 创建
-
-![](../../pic.res/2022-03-07-11-09-04.png)
-
-10000 个 带 SkinMeshRender Prefab
-
-下图 转化出了66 万个 Entity
-
-![](../../pic.res/2022-03-07-14-42-55.png)
-
-计算压力主要集中在MeshRender上，也就是DOTS 内 最后一个System Group 内，和渲染相关性很大，加上LOD估计可以减缓
-
-![](../../pic.res/2022-03-07-14-47-01.png)
-
-- 100万 个 Entity 处理纯数据、无实体显示。
-
-    实测结果保持在 200FPS 以上
-
-    ![](../../pic.res/2022-03-08-15-54-08.png)
-
-- 同屏 10 万 个 Entity (Unity Cube 模型) 移动旋转。
-
-    实测结果，维持在 100FPS 左右 
-
-    ![](../../pic.res/2022-03-08-18-16-03.png)
-
-- 1000 个 GameObject 转化为32 万个Entity
-
-![](../../pic.res/2022-03-08-12-02-46.png)
-
----
-
-# DOTS 案例
-
-![](../../pic.res/2022-03-07-20-23-34.png)
 
 <https://developer.unity.cn/projects/5e607e06edbc2a2000accf83>
 
----
 
 <https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/ecs_components.html>
 
 <https://docs.unity3d.com/Packages/com.unity.entities@0.17/manual/index.html>
 
 
----
 
-https://zhuanlan.zhihu.com/p/110802975
+<https://zhuanlan.zhihu.com/p/110802975>
 
-https://www.jianshu.com/p/39e76364c60a
+<https://www.jianshu.com/p/39e76364c60a>
 
 Entitas Git：<https://github.com/sschmid/Entitas-CSharp>
 Entitas Doc: <http://sschmid.github.io/Entitas-CSharp/>
@@ -256,17 +255,3 @@ Entitas 使用规则
 <https://www.youtube.com/watch?v=0y05nw5zET0>
 
 <https://docs.unity3d.com/Packages/com.unity.entities@0.9/manual/ecs_debugging.html>
-
-
-- Write Group ：为了标记一些情况，例如方便搜索时过滤一部分携带WriteGroup的数据
-- Serializeable Struct :
-- GameObjectConversionSystem
-- ConverterVersion：
-<https://docs.unity3d.com/Packages/com.unity.entities@0.17/api/Unity.Entities.ConverterVersionAttribute.-ctor.html>
-
-- IConvertGameObjectToEntity  
-- Convert
-- BurstCompile  
-- IJobParallelFor
-- IDeclareReferencedPrefabs  
-- NativeArray
