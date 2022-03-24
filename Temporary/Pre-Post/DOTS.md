@@ -6,12 +6,22 @@
 
 实测以下情况，期望 60 FPS以上，有部分情况挑战较高
 
-- 100万 个 Entity 处理纯数据、无实体显示。实测结果保持在200FPS以上
+- 100万 个 Entity 处理纯数据、无实体显示。
+
+    实测结果保持在 200FPS 以上
 
     ![](../../pic.res/2022-03-08-15-54-08.png)
 
-- 同屏 10 万 个 Entity (Unity Cube 模型) 移动旋转
+- 同屏 10 万 个 Entity (Unity Cube 模型) 移动旋转。
+
+    实测结果，维持在 100FPS 左右 
+
+    ![](../../pic.res/2022-03-08-18-16-03.png)
+
+
 - 同屏 10 万 个 Entity (带 Animator、Mesh)，LOD处理等
+
+
 - 5 万 个 Entity (带 Animator、Mesh) 及数据处理、LOD处理
 
 
