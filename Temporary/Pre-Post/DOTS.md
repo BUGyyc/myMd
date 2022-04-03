@@ -14,6 +14,20 @@ AC 的问题：
 最理想的状态是，通过 DOTS + Hybrid Renderer V2 配合，Hybrid Renderer 是为了解决在ECS下渲染物体。
 整个接入大致分为两部分，数据层面和渲染层面。
 
+
+# TO DO List
+
+- DOTS CharacterController: Physic Shape 做 Collider
+- DOTS Animator:
+
+RigComponent
+![](../../pic.res/2022-03-24-14-08-00.png)
+
+![](../../pic.res/2022-03-24-14-08-41.png)
+
+
+https://docs.unity3d.com/Packages/com.unity.animation@0.9/manual/nodes_index.html
+
 ## 数据层面
 
 - 真正意义上的 Entity，解决当前Entitas框架下，Entity挂载于GameObject 下的问题；
