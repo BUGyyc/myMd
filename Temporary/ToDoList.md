@@ -40,7 +40,7 @@ Buff系统设计
 Shader 
 渲染管线
 
-基于物理渲染
+
 
 物理碰撞
 
@@ -76,3 +76,58 @@ shader
 
 -------------
 ECS
+
+---
+
+2022.4.29
+
+
+
+- DOTS
+- Addressable:
+
+https://www.jianshu.com/p/2b531e11322d
+
+- HDRP:
+
+https://docs.unity3d.com/Packages/com.unity.render-pipelines.high-definition@14.0/manual/index.html
+
+
+- Profile      
+- Puppet
+- LOD
+- Timeline
+- GPU Instance
+
+animation:
+
+https://zhuanlan.zhihu.com/p/136971426
+
+
+https://zhuanlan.zhihu.com/p/70123645
+
+- Prefab :https://zhuanlan.zhihu.com/p/23733044
+
+Shader 预加载
+
+https://blog.csdn.net/qq_36383623/article/details/103327389
+
+内存
+
+https://zhuanlan.zhihu.com/p/191647476
+
+https://www.bilibili.com/read/cv13569699?from=articleDetail
+
+https://zhuanlan.zhihu.com/p/370467923
+
+https://juejin.cn/post/6966954993869914119
+
+https://zhuanlan.zhihu.com/p/63611314
+
+优化
+
+https://zhuanlan.zhihu.com/p/362941227#:~:text=Unity%E5%86%85%E5%AD%98%E6%8C%89%E7%85%A7%E5%88%86%E9%85%8D%E6%96%B9%E5%BC%8F%E5%88%86%E4%B8%BA%EF%BC%9A%20Native%20Memory,%EF%BC%88%E5%8E%9F%E7%94%9F%E5%86%85%E5%AD%98%EF%BC%89%E5%92%8C%20Managed%20Memory%20%EF%BC%88%E6%89%98%E7%AE%A1%E5%86%85%E5%AD%98%EF%BC%89%E3%80%82
+
+https://www.zhihu.com/people/ming-ming-guang-yu-ying/posts
+
+https://zhuanlan.zhihu.com/p/445820208
