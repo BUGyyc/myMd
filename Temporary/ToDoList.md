@@ -131,3 +131,29 @@ https://zhuanlan.zhihu.com/p/362941227#:~:text=Unity%E5%86%85%E5%AD%98%E6%8C%89%
 https://www.zhihu.com/people/ming-ming-guang-yu-ying/posts
 
 https://zhuanlan.zhihu.com/p/445820208
+
+
+全局光照
+
+https://docs.unity.cn/cn/2018.4/Manual/GIIntro.html
+
+
+protocol 
+
+https://zhuanlan.zhihu.com/p/36554982
+
+https://developers.google.cn/protocol-buffers/docs/overview
+
+https://cloud.tencent.com/developer/article/1394349
+
+Pb GC
+
+
+
+Camera
+
+
+Decal 
+
+
+VFX
