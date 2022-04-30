@@ -101,8 +101,8 @@ BRDF
 - DOTS
 - Addressable:
 
-https://www.jianshu.com/p/2b531e11322d
 
+https://zhuanlan.zhihu.com/p/77600079
 
 
 
