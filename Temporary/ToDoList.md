@@ -116,9 +116,17 @@ Puppet
 http://root-motion.com/puppetmasterdox/html/index.html
 
 
-- LOD
-- GPU Instance
-- DOTS
+ LOD
+
+ https://docs.unity3d.com/Manual/class-LODGroup.html
+
+
+GPU Instance
+
+https://docs.unity3d.com/Manual/GPUInstancing.html
+
+
+
 animation:
 
 https://zhuanlan.zhihu.com/p/136971426
@@ -181,3 +189,7 @@ Decal
 VFX
 
 plipot Game Engine;
+
+
+
+DOTS
