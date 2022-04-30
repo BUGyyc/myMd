@@ -98,7 +98,7 @@ BRDF
 
 
 
-- DOTS
+
 - Addressable:
 
 
@@ -106,12 +106,19 @@ https://zhuanlan.zhihu.com/p/77600079
 
 
 
-- Profile      
-- Puppet
-- LOD
-- Timeline
-- GPU Instance
+Timeline
 
+https://docs.unity3d.com/Packages/com.unity.timeline@1.7/manual/tl_gloss.html
+
+
+Puppet
+
+http://root-motion.com/puppetmasterdox/html/index.html
+
+
+- LOD
+- GPU Instance
+- DOTS
 animation:
 
 https://zhuanlan.zhihu.com/p/136971426
@@ -144,6 +151,8 @@ https://zhuanlan.zhihu.com/p/362941227#:~:text=Unity%E5%86%85%E5%AD%98%E6%8C%89%
 https://www.zhihu.com/people/ming-ming-guang-yu-ying/posts
 
 https://zhuanlan.zhihu.com/p/445820208
+
+- Profile      
 
 
 全局光照
