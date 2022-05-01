@@ -14,3 +14,8 @@ GameObject.Instantiate 的底层过程
 ![](../../myMd/pic.res/20220430171946.png)  
 
 先序列化、再反序列化
+
+
+---
+
+https://www.bilibili.com/read/cv13569699?from=articleDetail
