@@ -64,3 +64,5 @@ Early-Z 的最小单位不是一个像素，而已一个像素块（如 2x2）
 https://www.cnblogs.com/timlly/p/11471507.html#nvidia-turing%E6%9E%B6%E6%9E%84
 
 https://cache.one/read/3519270#1GPUCPU_16
+
+https://zhuanlan.zhihu.com/p/139118900
