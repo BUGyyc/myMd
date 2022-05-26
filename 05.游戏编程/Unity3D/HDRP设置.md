@@ -16,10 +16,7 @@ Player Settings、Graphic Settings、HDRP Asset、Frame Setting、Volume
 
 # Rendering Debug 查看结果
 
-- Default : HDRP Global Settings 下 Frame Settings
-- Overridden ： Camera 下 Custom Frame Settings，配置可覆盖Default
-- Sanitized：结合 HDRP Asset 得到 最终结果
-- Debug：当前Editor下调试结果
+
 
 ![](../../pic.res/20220524200958.png)  
 
