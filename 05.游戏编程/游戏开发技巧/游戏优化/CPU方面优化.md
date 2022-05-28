@@ -14,6 +14,8 @@ DrawCall是CPU对底层图形接口的调用，目的是在设备上绘制出对
 -- 能使用对象池就使用对象池
 -- 能用Struct就使用Struct，而不是Class
 
+ProtocolBuff GC 问题
+
 
 
 drawcall是啥？其实就是对底层图形程序（比如：OpenGL ES)接口的调用，以在屏幕上画出东西。所以，是谁去调用这些接口呢？CPU。
