@@ -61,6 +61,11 @@ JSON 的字段是用字符串指定的，相比之下字符串比对应该比基
     相比于JSON，JSON需要通过Key,因为Key是字符串，需要先从字符串中识别出数据类型，最后才能知道数据的长度，速度是不如protobuf.
 
 
+
+# protocol buffer GC 
+
+<https://www.cnblogs.com/SChivas/p/7898166.html>
+
 ---
 参考
 
