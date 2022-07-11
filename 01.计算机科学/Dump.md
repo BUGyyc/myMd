@@ -1,6 +1,6 @@
 关于 Dump 文件
 
-# 生成 Dump 
+# 生成 Dump 文件
 
 https://docs.microsoft.com/en-us/windows/client-management/generate-kernel-or-complete-crash-dump
 
