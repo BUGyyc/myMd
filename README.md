@@ -38,6 +38,7 @@
 
 ### LeetCode
 
+[Leet刷题记录](01.%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%A7%91%E5%AD%A6/算法/LeetCode)
 
 ### 十大排序
 
