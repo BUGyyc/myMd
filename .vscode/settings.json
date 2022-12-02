@@ -2,7 +2,9 @@
     "code-runner.runInTerminal": true,
     "code-runner.ignoreSelection": true,
     "cSpell.words": [
+        "AABB",
         "HDRP",
+        "Mipmap",
         "Occluder",
         "Struct"
     ],
