@@ -3,6 +3,7 @@
     "code-runner.ignoreSelection": true,
     "cSpell.words": [
         "AABB",
+        "BRDF",
         "HDRP",
         "Mipmap",
         "Occluder",
