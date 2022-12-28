@@ -43,7 +43,7 @@
 public class Solution {
     //TODO:
     public int LengthOfLongestSubstring (string s) {
-        int left = 0;
+        // int left = 0;
         int max = 0;
 
         List<char> list = new List<char> ();
@@ -51,6 +51,8 @@ public class Solution {
         for (int i = 0; i < s.Length; i++) {
             char c = s[i];
             if (list.Contains (c)) {
+
+                //清理掉 重复之前的字符，不希望被 list.Count 统计到长度
                 list.RemoveRange (0, list.IndexOf (c) + 1);
             }
             list.Add (c);
