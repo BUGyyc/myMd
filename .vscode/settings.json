@@ -6,6 +6,7 @@
         "BRDF",
         "HDRP",
         "Mipmap",
+        "nums",
         "Occluder",
         "Struct"
     ],

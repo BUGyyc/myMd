@@ -1,3 +1,9 @@
+
+
+cancel
+
+---
+
 # HexHero
 - 阅读Hex源码
 - 战争迷雾
@@ -8,6 +14,11 @@
 - 战斗效果
 - AI
 - 优化
+
+
+-----
+
+cancel
 
 # CandyBoom
 - 导出安卓包

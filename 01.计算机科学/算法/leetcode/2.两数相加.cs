@@ -40,29 +40,37 @@
  *     }
  * }
  */
-public class Solution {
+public class Solution
+{
+    //! 这题比较常规，对齐节点，一个个的求和并且进位，最后得到结果
     //将节点逐个取下来，然后相互比较,carry进位
-    public ListNode AddTwoNumbers (ListNode l1, ListNode l2) {
+    public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+    {
         ListNode p = null;
         ListNode head = null;
         int carry = 0;
-        while (l1 != null || l2 != null) {
-            int a = l1 == null?0 : l1.val;
-            int b = l2 == null?0 : l2.val;
+        while (l1 != null || l2 != null)
+        {
+            int a = l1 == null ? 0 : l1.val;
+            int b = l2 == null ? 0 : l2.val;
             int sum = carry + a + b;
-            if (head == null) {
-                head = new ListNode (sum % 10);
+            if (head == null)
+            {
+                head = new ListNode(sum % 10);
                 p = head;
-            } else {
-                p.next = new ListNode (sum % 10);
+            }
+            else
+            {
+                p.next = new ListNode(sum % 10);
                 p = p.next;
             }
             carry = sum / 10;
             if (l1 != null) l1 = l1.next;
             if (l2 != null) l2 = l2.next;
         }
-        if (carry > 0) {
-            p.next = new ListNode (1);
+        if (carry > 0)
+        {
+            p.next = new ListNode(1);
         }
         return head;
     }

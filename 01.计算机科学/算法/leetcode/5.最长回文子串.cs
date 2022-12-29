@@ -32,6 +32,7 @@
 
 // @lc code=start
 public class Solution {
+    //!  唯一可以理解的是 若一串为回文串，如果存在子串，那么子串也一定是回文串，所以可以用动态规划，自底向上推导
     //动态规划判断 是否是 回文子串
     public string LongestPalindrome (string s) {
         //动态规划
@@ -39,6 +40,7 @@ public class Solution {
         if (n < 2) return s;
         bool[, ] dp = new bool[n, n];
         string str = "";
+        //! 这里是对角线数组，且字符长度是1，所以一定是回文串
         for (int i = 0; i < n; i++) {
             dp[i, i] = true;
         }
