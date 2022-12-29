@@ -37,34 +37,44 @@
  */
 
 // @lc code=start
-public class Solution {
+public class Solution
+{
     //分治，分组比较，减少比较次数
-    public string LongestCommonPrefix (string[] strs) {
-        if (strs == null || strs.Length == 0) {
+    public string LongestCommonPrefix(string[] strs)
+    {
+        if (strs == null || strs.Length == 0)
+        {
             return "";
         }
-        return LongestCommonPrefix (strs, 0, strs.Length - 1);
+        return LongestCommonPrefix(strs, 0, strs.Length - 1);
     }
 
-    private string LongestCommonPrefix (string[] strs, int start, int end) {
-        if (start == end) {
+    private string LongestCommonPrefix(string[] strs, int start, int end)
+    {
+        if (start == end)
+        {
             return strs[start];
-        } else {
+        }
+        else
+        {
             int mid = (start + end) / 2;
-            string left = LongestCommonPrefix (strs, start, mid);
-            string right = LongestCommonPrefix (strs, mid + 1, end);
-            return GetCommonPrefix (left, right);
+            string left = LongestCommonPrefix(strs, start, mid);
+            string right = LongestCommonPrefix(strs, mid + 1, end);
+            return GetCommonPrefix(left, right);
         }
     }
 
-    private string GetCommonPrefix (string a, string b) {
-        int minLen = Math.Min (a.Length, b.Length);
-        for (int i = 0; i < minLen; i++) {
-            if (a[i] != b[i]) {
-                return a.Substring (0, i);
+    private string GetCommonPrefix(string a, string b)
+    {
+        int minLen = Math.Min(a.Length, b.Length);
+        for (int i = 0; i < minLen; i++)
+        {
+            if (a[i] != b[i])
+            {
+                return a.Substring(0, i);
             }
         }
-        return a.Substring (0, minLen);
+        return a.Substring(0, minLen);
     }
 
 
@@ -74,24 +84,28 @@ public class Solution {
 
 
 
-    private string Func1 (string[] strs) {
+    private string Func1(string[] strs)
+    {
         if (strs.Length == 0) return "";
         if (strs.Length == 1) return strs[0];
         int len = 1;
         int max = strs[0].Length;
-        while (len <= max) {
-            string s = strs[0].Substring (0, len);
-            if (Check (strs, s, len) == false) return strs[0].Substring (0, len - 1);
+        while (len <= max)
+        {
+            string s = strs[0].Substring(0, len);
+            if (Check(strs, s, len) == false) return strs[0].Substring(0, len - 1);
             len++;
         }
         return strs[0];
     }
 
-    private bool Check (string[] strs, string s, int len) {
-        for (int i = 1; i < strs.Length; i++) {
+    private bool Check(string[] strs, string s, int len)
+    {
+        for (int i = 1; i < strs.Length; i++)
+        {
             string item = strs[i];
             if (item.Length < len) return false;
-            if (item.Substring (0, len).Equals (s) == false) return false;
+            if (item.Substring(0, len).Equals(s) == false) return false;
         }
         return true;
     }

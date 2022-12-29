@@ -38,23 +38,34 @@
  */
 
 // @lc code=start
-public class Solution {
+public class Solution
+{
     //先排序，再start,left,right
-    public int ThreeSumClosest (int[] nums, int target) {
-        Array.Sort (nums);
+    public int ThreeSumClosest(int[] nums, int target)
+    {
+        Array.Sort(nums);
         int result = nums[0] + nums[1] + nums[2];
-        for (int i = 0; i < nums.Length; i++) {
+        for (int i = 0; i < nums.Length; i++)
+        {
             int l = i + 1;
             int r = nums.Length - 1;
-            while (l < r) {
+            while (l < r)
+            {
                 int sum = nums[i] + nums[l] + nums[r];
-                if (target == sum) {
+                if (target == sum)
+                {
                     return target;
-                } else if (Math.Abs(target - sum)<Math.Abs(target - result)) {
+                }
+                else if (Math.Abs(target - sum) < Math.Abs(target - result))
+                {
                     result = sum;
-                } else if (target > sum) {
+                }
+                else if (target > sum)
+                {
                     l++;
-                } else if (target < sum) {
+                }
+                else if (target < sum)
+                {
                     r--;
                 }
             }

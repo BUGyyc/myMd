@@ -49,6 +49,7 @@
 
 // @lc code=start
 public class Solution {
+    //!  这里其实是表示 字符间隔，不用太在意图形表象
     //TODO:
     public string Convert (string s, int numRows) {
         if (numRows == 1) return s;

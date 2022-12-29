@@ -59,14 +59,18 @@
  */
 
 // @lc code=start
-public class Solution {
+public class Solution
+{
     //TODO:
-    public int RemoveDuplicates (int[] nums) {
+    public int RemoveDuplicates(int[] nums)
+    {
         if (nums.Length == 0) return 0;
         int j = 1;
         int cur = nums[0];
-        for (int i = 0; i < nums.Length; i++) {
-            if (nums[i] != cur) {
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (nums[i] != cur)
+            {
                 nums[j++] = nums[i];
                 cur = nums[i];
             }

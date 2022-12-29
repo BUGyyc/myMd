@@ -34,18 +34,25 @@
  */
 
 // @lc code=start
-public class Solution {
+public class Solution
+{
+    //! 这个比较有意思，通过首位两个指针，小的一项先移动
     //首尾比较。根据条件移动首尾索引
-    public int MaxArea (int[] height) {
+    public int MaxArea(int[] height)
+    {
         int max = 0;
         int i = 0;
         int j = height.Length - 1;
-        while (i < j) {
-            int result = Math.Min (height[i], height[j]) * (j - i);
-            max = Math.Max (result, max);
-            if (height[i] > height[j]) {
+        while (i < j)
+        {
+            int result = Math.Min(height[i], height[j]) * (j - i);
+            max = Math.Max(result, max);
+            if (height[i] > height[j])
+            {
                 j--;
-            } else {
+            }
+            else
+            {
                 i++;
             }
         }

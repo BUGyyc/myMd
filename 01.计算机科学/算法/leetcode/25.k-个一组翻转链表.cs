@@ -52,17 +52,23 @@
  *     }
  * }
  */
-public class Solution {
+public class Solution
+{
+    //! -----:C
     //TODO:
-    public ListNode ReverseKGroup (ListNode head, int k) {
-        ListNode hair = new ListNode (0);
+    public ListNode ReverseKGroup(ListNode head, int k)
+    {
+        ListNode hair = new ListNode(0);
         hair.next = head;
         ListNode pre = hair;
-        while (head != null) {
+        while (head != null)
+        {
             ListNode tail = pre;
-            for (int i = 0; i < k; i++) {
+            for (int i = 0; i < k; i++)
+            {
                 tail = tail.next;
-                if (tail == null) {
+                if (tail == null)
+                {
                     return hair.next;
                 }
             }

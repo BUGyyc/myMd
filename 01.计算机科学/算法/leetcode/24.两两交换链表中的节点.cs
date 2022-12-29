@@ -63,14 +63,17 @@
  *     }
  * }
  */
-public class Solution {
+public class Solution
+{
     //TODO:
-    public ListNode SwapPairs (ListNode head) {
-        ListNode pre = new ListNode (0);
+    public ListNode SwapPairs(ListNode head)
+    {
+        ListNode pre = new ListNode(0);
         pre.next = head;
         ListNode p = pre;
         //连取两个点
-        while (p.next != null && p.next.next != null) {
+        while (p.next != null && p.next.next != null)
+        {
             ListNode start = p.next;
             ListNode end = p.next.next;
             p.next = end;

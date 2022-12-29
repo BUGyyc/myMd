@@ -32,29 +32,35 @@
  */
 
 // @lc code=start
-public class Solution {
+public class Solution
+{
     //回溯
-    public IList<string> GenerateParenthesis (int n) {
-        List<string> list = new List<string> ();
-        BackTrack (list, 0, 0, n, new StringBuilder ());
+    public IList<string> GenerateParenthesis(int n)
+    {
+        List<string> list = new List<string>();
+        BackTrack(list, 0, 0, n, new StringBuilder());
         return list;
     }
 
     //单独用open close 来计算左右括号的使用数量
-    private void BackTrack (List<string> list, int open, int close, int n, StringBuilder sb) {
-        if (sb.Length == 2 * n) {
-            list.Add (sb.ToString ());
+    private void BackTrack(List<string> list, int open, int close, int n, StringBuilder sb)
+    {
+        if (sb.Length == 2 * n)
+        {
+            list.Add(sb.ToString());
             return;
         }
-        if (open < n) {
-            sb.Append ('(');
-            BackTrack (list, open + 1, close, n, sb);
-            sb.Remove (sb.Length - 1, 1);
+        if (open < n)
+        {
+            sb.Append('(');
+            BackTrack(list, open + 1, close, n, sb);
+            sb.Remove(sb.Length - 1, 1);
         }
-        if (close < open) {
-            sb.Append (')');
-            BackTrack (list, open, close + 1, n, sb);
-            sb.Remove (sb.Length - 1, 1);
+        if (close < open)
+        {
+            sb.Append(')');
+            BackTrack(list, open, close + 1, n, sb);
+            sb.Remove(sb.Length - 1, 1);
         }
 
     }
