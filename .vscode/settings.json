@@ -4,10 +4,12 @@
     "cSpell.words": [
         "AABB",
         "BRDF",
+        "CUDA",
         "HDRP",
         "Mipmap",
         "nums",
         "Occluder",
+        "SIMD",
         "Struct",
         "TBDR"
     ],
