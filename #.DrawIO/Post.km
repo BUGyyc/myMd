@@ -256,6 +256,14 @@
                                 "children": []
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "cpuxw6yuceg0",
+                            "created": 1674006825256,
+                            "text": "抗锯齿"
+                        },
+                        "children": []
                     }
                 ]
             },
@@ -562,7 +570,7 @@
             }
         ]
     },
-    "template": "default",
+    "template": "right",
     "theme": "fresh-blue",
     "version": "1.4.43"
 }
