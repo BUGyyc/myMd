@@ -245,13 +245,137 @@
                                     "created": 1673963644919,
                                     "text": "几何阶段"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cpvuc6txjdk0",
+                                            "created": 1674098354303,
+                                            "text": "顶点着色器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvucjr3vao0",
+                                            "created": 1674098382430,
+                                            "text": "曲面细分"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvucnwlkco0",
+                                            "created": 1674098391469,
+                                            "text": "几何着色器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvucqbpufs0",
+                                            "created": 1674098396737,
+                                            "text": "裁剪"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvucs9upmo0",
+                                            "created": 1674098400978,
+                                            "text": "映射"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
                                     "id": "cpuil9wghwg0",
                                     "created": 1673963652988,
                                     "text": "光栅化阶段"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cpvud33oyy00",
+                                            "created": 1674098424550,
+                                            "text": "三角形设置"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvud6geun40",
+                                            "created": 1674098431849,
+                                            "text": "三角形遍历"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvud8vv62o0",
+                                            "created": 1674098437137,
+                                            "text": "提前深度测试"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvudl7jfsg0",
+                                            "created": 1674098463965,
+                                            "text": "像素着色器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvudocinlc0",
+                                            "created": 1674098470796,
+                                            "text": "深度测试"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvudqiq8680",
+                                            "created": 1674098475525,
+                                            "text": "混合"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cpvv13esjw00",
+                            "created": 1674100305961,
+                            "text": "渲染路径"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cpvv19mbeao0",
+                                    "created": 1674100319477,
+                                    "text": "前向渲染"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cpvv2fpqo600",
+                                            "created": 1674100411109,
+                                            "text": "一种传统的渲染方式"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cpvv1eg4e8g0",
+                                    "created": 1674100329986,
+                                    "text": "延迟渲染"
                                 },
                                 "children": []
                             }
@@ -264,6 +388,83 @@
                             "text": "抗锯齿"
                         },
                         "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cpvu4l3tse80",
+                            "created": 1674097758463,
+                            "text": "BRDF"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cpvu4nrdz5s0",
+                                    "created": 1674097764241,
+                                    "text": "出射方向的辐射亮度微分 与 入射方向的辐射照度微分的比值",
+                                    "priority": null,
+                                    "background": "#f79646"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cpvuihhok2o0",
+                                    "created": 1674098847692,
+                                    "text": "经验模型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cpvuiwq6tns0",
+                                            "created": 1674098880858,
+                                            "text": "Lambert"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvuizz04c80",
+                                            "created": 1674098887921,
+                                            "text": "Phong"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cpvuj38293k0",
+                                            "created": 1674098894999,
+                                            "text": "Blinn-Phong"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cpvuilpn4tc0",
+                                    "created": 1674098856880,
+                                    "text": "数据驱动模型"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cpvuio5qdpk0",
+                                    "created": 1674098862207,
+                                    "text": "物理模型"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cpvuoeouza80",
+                                            "created": 1674099311780,
+                                            "text": "PBR"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -455,6 +656,47 @@
                             "text": "topic"
                         },
                         "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cpvtk2wpxa00",
+                            "created": 1674096151568,
+                            "text": "纹理压缩"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cpvtk829bns0",
+                            "created": 1674096162786,
+                            "text": "性能优化"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cpvtkb8dmp40",
+                                    "created": 1674096169687,
+                                    "text": "内存"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cpvtkey9yo80",
+                                    "created": 1674096177783,
+                                    "text": "CPU"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cpvtkhzl0bc0",
+                                    "created": 1674096184393,
+                                    "text": "GPU"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             },

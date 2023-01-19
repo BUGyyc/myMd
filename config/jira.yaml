@@ -1,0 +1,37 @@
+# 目的：方便用户直接在mindmap中提交jira缺陷
+# 获取地址步骤：jira-》选择项目-》查看全部问题-》选择你的模块或者需求链接”，复制地址即可
+# 参数说明： 
+
+  # BU: 24车事业部(事业部名称，新建项目设置选择，不必手动增加)
+  # department: 营销赋能（业务线名称，新建项目设置选择，不必手动增加）
+  # username: jira用户名
+  # password: jira密码
+  # reporter: jira用户名
+  # giturl: 选填，在分享mindmap时，如果自动获取到的地址不正确，可以在这里填写giturl
+  # gitbranch: 选填，默认为master分支，在分享mindmap时如果分享的脑图在其他分支，可以在这里填写分支名称
+  # isNewJira: 选填，默认是flase，如果是新创建的jira项目这里配置为true
+  # project:
+    # - projectName: 项目一，自定义，对jiraurl的一个昵称，方便多个项目时筛选
+    # jiraUrl: https://jira.souche-inc.com/projects/TESTPROJEC/issues/TESTPROJEC-15?filter=allopenissues （jira-》选择项目-》查看全部问题-》选择你的模块或者需求链接”，复制地址即可）
+    # assignee: liuwen（单个指派人）
+    # - projectName: 项目二，自定义，对jiraurl的一个昵称，方便多个项目时筛选；有多个就设置多组
+    # jiraUrl: https://jira.souche-inc.com/projects/TESTPROJEC/issues/TESTPROJEC-15?filter=allopenissues（jira-》选择项目-》查看全部问题-》选择你的模块或者需求链接”，复制地址即可）
+    # assignee: 多个指派人
+    # - liujing
+    # - liuwenjing
+    # issueLinks: TESTPROJEC-728,TESTPROJEC-728（单项选择问题关联，id为jira链接上ssues/browse/projects层级后面的id。例如：https://jira.souche-inc.com/projects/TESTPROJEC/issues/TESTPROJEC-718，配置id=TESTPROJEC时表示关联项目，id=TESTPROJEC-718时表示关联bug）
+    # issueLinks: （多项选择问题关联，id填写方式同上）
+    # - TESTPROJEC-728,TESTPROJEC-728
+    # - TESTPROJEC-728
+    # - TESTPROJEC-729
+
+BU:
+department: 
+username: 
+password: 
+reporter: 
+project:
+  - projectName: 
+    jiraUrl: 
+    assignee: 
+    issueLinks: 
