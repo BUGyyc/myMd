@@ -6,9 +6,11 @@
         "BRDF",
         "CUDA",
         "HDRP",
+        "HLSL",
         "Mipmap",
         "nums",
         "Occluder",
+        "Phong",
         "SIMD",
         "Struct",
         "TBDR"
