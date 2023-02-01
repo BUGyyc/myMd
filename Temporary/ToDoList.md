@@ -264,6 +264,7 @@ C# 反射  GM
 2023/1/3
 《全局光照技术：从离线到实时渲染》5%
 《计算机网络》20%
+《垃圾回收算法》70%
 
 1/4
 《全局光照技术：从离线到实时渲染》10%
@@ -291,23 +292,36 @@ C# 反射  GM
 1/17
 《实时计算机图形学（第二版）》100%
 
+1/20
+《Games101 Reading》90%
 
-《Games101 Reading》
+1/21
+《计算机图形学》70%
 
-《计算机图形学》
+
+---
+
+《寻路算法》90%
+《GPU架构》60%
+《CPU架构》60%
+
+
+
+
+
+ready to
+
 《物理光学》
-《Games101 Reading》
 《Games202 Reading》
 
-《垃圾回收算法》
+
 《3D游戏中的几何数学》
-《寻路算法》
+
 《游戏中的AI算法》
 《渲染管线》
 《基于物理渲染》
 《物理光学基础》
-《GPU架构》
-《CPU架构》
+
 《移动设备的硬件架构》
 《URP》
 《HDRP》
@@ -316,3 +330,11 @@ C# 反射  GM
 《Games101 Reading》
 《Games104 Reading》
 《Games202 Reading》
+
+
+-[ ] Games 101
+-[ ] Games 202
+-[ ] Games 104
+-[ ] TA reading 、SomeOne Git\zhihu
+-[ ] milo books list
+-[ ] write posts
