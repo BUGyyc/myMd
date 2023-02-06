@@ -22,3 +22,11 @@ Tile Based Deferred rendering
 <https://www.cnblogs.com/timlly/p/11471507.html#nvidia-turing%E6%9E%B6%E6%9E%84>
 
 ## 可见性裁剪
+
+
+
+# Dynamic Global Illumination
+
+## RSM
+
+##
