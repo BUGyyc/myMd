@@ -221,6 +221,10 @@
                     "layout_mind_offset": {
                         "x": -1,
                         "y": -86
+                    },
+                    "layout_right_offset": {
+                        "x": 229.00001056194287,
+                        "y": 165
                     }
                 },
                 "children": [
@@ -519,9 +523,18 @@
                                         "data": {
                                             "id": "cqc6ask91rc0",
                                             "created": 1675757057504,
-                                            "text": "Shadow Map"
+                                            "text": "Shadow Mapping"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqc7mogo1rs0",
+                                                    "created": 1675760810060,
+                                                    "text": "传统多光源，如果要用Shadow Mapping 产生每个阴影，那么一定是逐个处理，所以及其耗时。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             },
@@ -553,6 +566,14 @@
                                                             "text": "通过周围的平均计算，避免只有0、1值得情况，可以更加高精度得描述阴影度"
                                                         },
                                                         "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cqc7c8wfyqw0",
+                                                            "created": 1675759992544,
+                                                            "text": "PCF 缺点：特别慢"
+                                                        },
+                                                        "children": []
                                                     }
                                                 ]
                                             },
@@ -573,10 +594,26 @@
                                                 "children": []
                                             }
                                         ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqc840fq25k0",
+                                            "created": 1675762168315,
+                                            "text": "VSSM (Variance Soft Shadow Mapping)"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqc8a5kslqo0",
+                            "created": 1675762649691,
+                            "text": "全局光照（GI）"
+                        },
+                        "children": []
                     }
                 ]
             },
@@ -924,7 +961,7 @@
             }
         ]
     },
-    "template": "right",
+    "template": "default",
     "theme": "fresh-blue",
     "version": "1.4.43"
 }
