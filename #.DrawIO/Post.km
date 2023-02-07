@@ -368,6 +368,14 @@
                                             "text": "一种传统的渲染方式"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqbyiuvtv3c0",
+                                            "created": 1675735120592,
+                                            "text": "缺点：OverDraw 比较明显，即使 提前深度测试，图元与像素也无法完全排序好之后才进行深度写入和深度测试，所以提前深度测试也无法完全避免OverDraw"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },
@@ -377,7 +385,17 @@
                                     "created": 1674100329986,
                                     "text": "延迟渲染"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqbyk6gz7w00",
+                                            "created": 1675735224179,
+                                            "text": "缺点：MRT 的硬件要求，会消耗更多的显存和显存带宽",
+                                            "priority": null
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -387,7 +405,24 @@
                             "created": 1674006825256,
                             "text": "抗锯齿"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqbykrvztnc0",
+                                    "created": 1675735270800,
+                                    "text": "空间性锯齿"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqbykxkmpts0",
+                                    "created": 1675735283173,
+                                    "text": "时间性锯齿"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
@@ -461,6 +496,83 @@
                                             "text": "PBR"
                                         },
                                         "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqc6aglbazk0",
+                            "created": 1675757031447,
+                            "text": "阴影"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqc6am6frh40",
+                                    "created": 1675757043608,
+                                    "text": "硬阴影"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqc6ask91rc0",
+                                            "created": 1675757057504,
+                                            "text": "Shadow Map"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqc6apjfg4w0",
+                                    "created": 1675757050924,
+                                    "text": "软阴影"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqc6bi5bb480",
+                                            "created": 1675757113197,
+                                            "text": "PCSS (Percentage closer soft shadow)"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqc6cer3xog0",
+                                                    "created": 1675757184172,
+                                                    "text": "关联：（Percentage Closer Filtering）主要解决阴影锯齿  "
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cqc6kg810o00",
+                                                            "created": 1675757814285,
+                                                            "text": "通过周围的平均计算，避免只有0、1值得情况，可以更加高精度得描述阴影度"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqc6klmpwcw0",
+                                                    "created": 1675757826057,
+                                                    "text": "PCSS 思路：定义和遮挡物的深度距离，距离越远，越糊"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqc6ph0c2400",
+                                                    "created": 1675758207817,
+                                                    "text": "粗略公式：Wpenumbra = (Dreceiver - Dblocker) * Wlight/Dblocker "
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             }
