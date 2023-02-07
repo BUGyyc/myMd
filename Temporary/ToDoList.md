@@ -332,7 +332,7 @@ ready to
 《Games202 Reading》
 
 
--[ ] Games 101
+-[X] Games 101
 -[ ] Games 202
 -[ ] Games 104
 -[ ] TA reading 、SomeOne Git\zhihu
