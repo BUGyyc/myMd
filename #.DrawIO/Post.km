@@ -30,7 +30,41 @@
                                     "created": 1673963308741,
                                     "text": "CPU"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqcwdkuos3k0",
+                                            "created": 1675830624671,
+                                            "text": "多级缓存"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqcwdnqpad40",
+                                            "created": 1675830630960,
+                                            "text": "指令流水线"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqcwe40fu9s0",
+                                                    "created": 1675830666377,
+                                                    "text": "分支预测"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqcwe6mreq00",
+                                                    "created": 1675830672081,
+                                                    "text": "数据前递"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -38,7 +72,24 @@
                                     "created": 1673963326131,
                                     "text": "GPU"
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqcweswcrkw0",
+                                            "created": 1675830720550,
+                                            "text": "流多处理器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqcwexa0xzc0",
+                                            "created": 1675830730085,
+                                            "text": "共享存储"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             }
                         ]
                     },
@@ -209,7 +260,24 @@
                             "created": 1673963590143,
                             "text": "Java"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqcwgoxo2cg0",
+                                    "created": 1675830868651,
+                                    "text": "JVM"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqcwgrdv5sw0",
+                                    "created": 1675830873984,
+                                    "text": "Java 字节码"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             },
@@ -613,7 +681,97 @@
                             "created": 1675762649691,
                             "text": "全局光照（GI）"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqcw8jzmsps0",
+                                    "created": 1675830230972,
+                                    "text": "Static GI"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqcwt13g0i00",
+                                            "created": 1675831835491,
+                                            "text": "RayTracing"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqcwt5w6f2g0",
+                                                    "created": 1675831845936,
+                                                    "text": "Whitted Ray Tracing"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqcwtbe50c80",
+                                                    "created": 1675831857906,
+                                                    "text": "Path Tracing"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqcwti56gpc0",
+                                            "created": 1675831872601,
+                                            "text": "Photon Mapping"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqcw8p9x45c0",
+                                    "created": 1675830242478,
+                                    "text": "Dynamic GI"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqcw8si2k080",
+                                            "created": 1675830249501,
+                                            "text": "Reflective Shadow Maps (RSM)"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqcw91mcqag0",
+                                                    "created": 1675830269351,
+                                                    "text": "两个Pass 处理，和传统的 Shadow Map 方式相似，",
+                                                    "layout_right_offset": {
+                                                        "x": 112.99998782475814,
+                                                        "y": 0
+                                                    },
+                                                    "note": "第一个pass：记录光源视角下的深度信息，并且还有法线信息、光照能量信息，相邻的像素、比较深度，检验空间相邻，相当于漫反射更加关注空间相邻的表面。"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqcwcpu9om80",
+                                                    "created": 1675830557165,
+                                                    "text": "缺点：很明显，光源很多的情况下，每个光源都做 RSM的话，消耗很大。"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqcwtv05jd40",
+                                            "created": 1675831900596,
+                                            "text": "Light Propagation Volumes (LPV)"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
@@ -652,7 +810,16 @@
                                             "created": 1673963895099,
                                             "text": "HTTPS"
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqcwh56oam00",
+                                                    "created": 1675830904024,
+                                                    "text": "SSL"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -961,7 +1128,7 @@
             }
         ]
     },
-    "template": "default",
+    "template": "right",
     "theme": "fresh-blue",
     "version": "1.4.43"
 }
