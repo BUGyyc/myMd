@@ -597,6 +597,14 @@
                         "children": [
                             {
                                 "data": {
+                                    "id": "cqd377i5hb40",
+                                    "created": 1675849873199,
+                                    "text": "从连续空间上采样，得到离散空间。然后再从离散空间重建。重建产生走样。"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
                                     "id": "cqbykrvztnc0",
                                     "created": 1675735270800,
                                     "text": "空间性锯齿",
@@ -706,7 +714,58 @@
                                             "expandState": "expand",
                                             "layout": null
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqd48nfb2m80",
+                                                    "created": 1675852807330,
+                                                    "text": "BRDF 的 详细解释"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cqd4a62g7k00",
+                                                            "created": 1675852926275,
+                                                            "text": "FGD 三项"
+                                                        },
+                                                        "children": [
+                                                            {
+                                                                "data": {
+                                                                    "id": "cqd4acgbl1s0",
+                                                                    "created": 1675852940175,
+                                                                    "text": "菲涅尔"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cqd4afq0eu80",
+                                                                    "created": 1675852947291,
+                                                                    "text": "几何遮挡关系"
+                                                                },
+                                                                "children": []
+                                                            },
+                                                            {
+                                                                "data": {
+                                                                    "id": "cqd4al516880",
+                                                                    "created": 1675852959083,
+                                                                    "text": "法线分布"
+                                                                },
+                                                                "children": []
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqd495r6jqg0",
+                                                    "created": 1675852847230,
+                                                    "text": "次表面散射"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     }
                                 ]
                             }
@@ -1490,6 +1549,23 @@
                                     "id": "cqcz4w0eg740",
                                     "created": 1675838407013,
                                     "text": "积分"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqd2uodg7fk0",
+                            "created": 1675848891186,
+                            "text": "卷积"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqd38vt7pqw0",
+                                    "created": 1675850004475,
+                                    "text": "约等于：局部范围内的 加权平均"
                                 },
                                 "children": []
                             }
