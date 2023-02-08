@@ -3,7 +3,8 @@
         "data": {
             "id": "c58gp8nlko00",
             "created": 1598600833664,
-            "text": "游戏客户端"
+            "text": "游戏客户端",
+            "expandState": "expand"
         },
         "children": [
             {
@@ -14,28 +15,36 @@
                     "layout_mind_offset": {
                         "x": -69,
                         "y": -200
-                    }
+                    },
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
                             "id": "cpuifoz7hbs0",
                             "created": 1673963215621,
-                            "text": "计算机体系架构"
+                            "text": "计算机体系架构",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuigvr8x3c0",
                                     "created": 1673963308741,
-                                    "text": "CPU"
+                                    "text": "CPU",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cqcwdkuos3k0",
                                             "created": 1675830624671,
-                                            "text": "多级缓存"
+                                            "text": "多级缓存",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -43,14 +52,18 @@
                                         "data": {
                                             "id": "cqcwdnqpad40",
                                             "created": 1675830630960,
-                                            "text": "指令流水线"
+                                            "text": "指令流水线",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": [
                                             {
                                                 "data": {
                                                     "id": "cqcwe40fu9s0",
                                                     "created": 1675830666377,
-                                                    "text": "分支预测"
+                                                    "text": "分支预测",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             },
@@ -58,9 +71,21 @@
                                                 "data": {
                                                     "id": "cqcwe6mreq00",
                                                     "created": 1675830672081,
-                                                    "text": "数据前递"
+                                                    "text": "数据前递",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
-                                                "children": []
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cqd0efbg1400",
+                                                            "created": 1675841975427,
+                                                            "text": "这种办法可以节省数据写回和数据再写入的耗时",
+                                                            "background": "#f79646"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
                                             }
                                         ]
                                     }
@@ -70,14 +95,18 @@
                                 "data": {
                                     "id": "cpuih3qug6o0",
                                     "created": 1673963326131,
-                                    "text": "GPU"
+                                    "text": "GPU",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cqcweswcrkw0",
                                             "created": 1675830720550,
-                                            "text": "流多处理器"
+                                            "text": "流多处理器",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -85,7 +114,9 @@
                                         "data": {
                                             "id": "cqcwexa0xzc0",
                                             "created": 1675830730085,
-                                            "text": "共享存储"
+                                            "text": "共享存储",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -97,14 +128,18 @@
                         "data": {
                             "id": "cpuifwngudk0",
                             "created": 1673963232325,
-                            "text": "操作系统"
+                            "text": "操作系统",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuih9tu58o0",
                                     "created": 1673963339373,
-                                    "text": "虚拟化"
+                                    "text": "虚拟化",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -112,7 +147,9 @@
                                 "data": {
                                     "id": "cpuihlkap8w0",
                                     "created": 1673963364917,
-                                    "text": "持久化"
+                                    "text": "持久化",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             }
@@ -122,14 +159,18 @@
                         "data": {
                             "id": "cpuig0tm1680",
                             "created": 1673963241404,
-                            "text": "算法"
+                            "text": "算法",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuihpvt8ag0",
                                     "created": 1673963374321,
-                                    "text": "动态规划"
+                                    "text": "动态规划",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -137,7 +178,9 @@
                                 "data": {
                                     "id": "cpuihzogp9k0",
                                     "created": 1673963395644,
-                                    "text": "回溯"
+                                    "text": "回溯",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -145,7 +188,9 @@
                                 "data": {
                                     "id": "cpuii59go1c0",
                                     "created": 1673963407798,
-                                    "text": "分治"
+                                    "text": "分治",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -153,7 +198,9 @@
                                 "data": {
                                     "id": "cpuiiahw2080",
                                     "created": 1673963419191,
-                                    "text": "贪心算法"
+                                    "text": "贪心算法",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -161,14 +208,18 @@
                                 "data": {
                                     "id": "cpuiieu88vk0",
                                     "created": 1673963428644,
-                                    "text": "寻路算法"
+                                    "text": "寻路算法",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cpuiiicvm9k0",
                                             "created": 1673963436302,
-                                            "text": "A 星"
+                                            "text": "A 星",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -176,7 +227,9 @@
                                         "data": {
                                             "id": "cpuiilyslhk0",
                                             "created": 1673963444158,
-                                            "text": "Branch 寻路"
+                                            "text": "Branch 寻路",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -184,7 +237,9 @@
                                         "data": {
                                             "id": "cpuiiv5dw080",
                                             "created": 1673963464148,
-                                            "text": "Dynamic A 星"
+                                            "text": "Dynamic A 星",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -192,7 +247,9 @@
                                         "data": {
                                             "id": "cpuij2zenc80",
                                             "created": 1673963481200,
-                                            "text": "漏斗算法"
+                                            "text": "漏斗算法",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -200,7 +257,9 @@
                                         "data": {
                                             "id": "cpuijeq0tsw0",
                                             "created": 1673963506754,
-                                            "text": "跳点寻路"
+                                            "text": "跳点寻路",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -212,7 +271,9 @@
                         "data": {
                             "id": "cpuig3ojnvk0",
                             "created": 1673963247628,
-                            "text": "编译原理"
+                            "text": "编译原理",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     }
@@ -226,21 +287,27 @@
                     "layout_mind_offset": {
                         "x": -4,
                         "y": -120
-                    }
+                    },
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
                             "id": "cpuijp51crk0",
                             "created": 1673963529430,
-                            "text": "。Net"
+                            "text": "。Net",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuik0e3ug80",
                                     "created": 1673963553923,
-                                    "text": "CIL 与 CLR关系"
+                                    "text": "CIL 与 CLR关系",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -248,7 +315,9 @@
                                 "data": {
                                     "id": "cpuikc2la9s0",
                                     "created": 1673963579348,
-                                    "text": "托管堆"
+                                    "text": "托管堆",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             }
@@ -258,14 +327,18 @@
                         "data": {
                             "id": "cpuikh144m80",
                             "created": 1673963590143,
-                            "text": "Java"
+                            "text": "Java",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cqcwgoxo2cg0",
                                     "created": 1675830868651,
-                                    "text": "JVM"
+                                    "text": "JVM",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -273,7 +346,9 @@
                                 "data": {
                                     "id": "cqcwgrdv5sw0",
                                     "created": 1675830873984,
-                                    "text": "Java 字节码"
+                                    "text": "Java 字节码",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             }
@@ -290,24 +365,26 @@
                         "x": -1,
                         "y": -86
                     },
-                    "layout_right_offset": {
-                        "x": 229.00001056194287,
-                        "y": 165
-                    }
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
                             "id": "cpuikq0eoy80",
                             "created": 1673963609691,
-                            "text": "渲染管线"
+                            "text": "渲染管线",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuil0sw8fk0",
                                     "created": 1673963633181,
-                                    "text": "应用阶段"
+                                    "text": "应用阶段",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -315,14 +392,18 @@
                                 "data": {
                                     "id": "cpuil670b540",
                                     "created": 1673963644919,
-                                    "text": "几何阶段"
+                                    "text": "几何阶段",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cpvuc6txjdk0",
                                             "created": 1674098354303,
-                                            "text": "顶点着色器"
+                                            "text": "顶点着色器",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -330,7 +411,9 @@
                                         "data": {
                                             "id": "cpvucjr3vao0",
                                             "created": 1674098382430,
-                                            "text": "曲面细分"
+                                            "text": "曲面细分",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -338,7 +421,9 @@
                                         "data": {
                                             "id": "cpvucnwlkco0",
                                             "created": 1674098391469,
-                                            "text": "几何着色器"
+                                            "text": "几何着色器",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -346,7 +431,9 @@
                                         "data": {
                                             "id": "cpvucqbpufs0",
                                             "created": 1674098396737,
-                                            "text": "裁剪"
+                                            "text": "裁剪",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -354,7 +441,9 @@
                                         "data": {
                                             "id": "cpvucs9upmo0",
                                             "created": 1674098400978,
-                                            "text": "映射"
+                                            "text": "映射",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -364,14 +453,18 @@
                                 "data": {
                                     "id": "cpuil9wghwg0",
                                     "created": 1673963652988,
-                                    "text": "光栅化阶段"
+                                    "text": "光栅化阶段",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cpvud33oyy00",
                                             "created": 1674098424550,
-                                            "text": "三角形设置"
+                                            "text": "三角形设置",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -379,7 +472,9 @@
                                         "data": {
                                             "id": "cpvud6geun40",
                                             "created": 1674098431849,
-                                            "text": "三角形遍历"
+                                            "text": "三角形遍历",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -387,7 +482,9 @@
                                         "data": {
                                             "id": "cpvud8vv62o0",
                                             "created": 1674098437137,
-                                            "text": "提前深度测试"
+                                            "text": "提前深度测试",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -395,7 +492,9 @@
                                         "data": {
                                             "id": "cpvudl7jfsg0",
                                             "created": 1674098463965,
-                                            "text": "像素着色器"
+                                            "text": "像素着色器",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -403,7 +502,9 @@
                                         "data": {
                                             "id": "cpvudocinlc0",
                                             "created": 1674098470796,
-                                            "text": "深度测试"
+                                            "text": "深度测试",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -411,7 +512,9 @@
                                         "data": {
                                             "id": "cpvudqiq8680",
                                             "created": 1674098475525,
-                                            "text": "混合"
+                                            "text": "混合",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -423,21 +526,27 @@
                         "data": {
                             "id": "cpvv13esjw00",
                             "created": 1674100305961,
-                            "text": "渲染路径"
+                            "text": "渲染路径",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpvv19mbeao0",
                                     "created": 1674100319477,
-                                    "text": "前向渲染"
+                                    "text": "前向渲染",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cpvv2fpqo600",
                                             "created": 1674100411109,
-                                            "text": "一种传统的渲染方式"
+                                            "text": "一种传统的渲染方式",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -445,7 +554,9 @@
                                         "data": {
                                             "id": "cqbyiuvtv3c0",
                                             "created": 1675735120592,
-                                            "text": "缺点：OverDraw 比较明显，即使 提前深度测试，图元与像素也无法完全排序好之后才进行深度写入和深度测试，所以提前深度测试也无法完全避免OverDraw"
+                                            "text": "缺点：OverDraw 比较明显，即使 提前深度测试，图元与像素也无法完全排序好之后才进行深度写入和深度测试，所以提前深度测试也无法完全避免OverDraw",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -455,7 +566,9 @@
                                 "data": {
                                     "id": "cpvv1eg4e8g0",
                                     "created": 1674100329986,
-                                    "text": "延迟渲染"
+                                    "text": "延迟渲染",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
@@ -463,7 +576,9 @@
                                             "id": "cqbyk6gz7w00",
                                             "created": 1675735224179,
                                             "text": "缺点：MRT 的硬件要求，会消耗更多的显存和显存带宽",
-                                            "priority": null
+                                            "priority": null,
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -475,14 +590,18 @@
                         "data": {
                             "id": "cpuxw6yuceg0",
                             "created": 1674006825256,
-                            "text": "抗锯齿"
+                            "text": "抗锯齿",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cqbykrvztnc0",
                                     "created": 1675735270800,
-                                    "text": "空间性锯齿"
+                                    "text": "空间性锯齿",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -490,7 +609,9 @@
                                 "data": {
                                     "id": "cqbykxkmpts0",
                                     "created": 1675735283173,
-                                    "text": "时间性锯齿"
+                                    "text": "时间性锯齿",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             }
@@ -500,7 +621,9 @@
                         "data": {
                             "id": "cpvu4l3tse80",
                             "created": 1674097758463,
-                            "text": "BRDF"
+                            "text": "BRDF",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
@@ -509,7 +632,9 @@
                                     "created": 1674097764241,
                                     "text": "出射方向的辐射亮度微分 与 入射方向的辐射照度微分的比值",
                                     "priority": null,
-                                    "background": "#f79646"
+                                    "background": "#f79646",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -517,14 +642,18 @@
                                 "data": {
                                     "id": "cpvuihhok2o0",
                                     "created": 1674098847692,
-                                    "text": "经验模型"
+                                    "text": "经验模型",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cpvuiwq6tns0",
                                             "created": 1674098880858,
-                                            "text": "Lambert"
+                                            "text": "Lambert",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -532,7 +661,9 @@
                                         "data": {
                                             "id": "cpvuizz04c80",
                                             "created": 1674098887921,
-                                            "text": "Phong"
+                                            "text": "Phong",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     },
@@ -540,7 +671,9 @@
                                         "data": {
                                             "id": "cpvuj38293k0",
                                             "created": 1674098894999,
-                                            "text": "Blinn-Phong"
+                                            "text": "Blinn-Phong",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -550,7 +683,9 @@
                                 "data": {
                                     "id": "cpvuilpn4tc0",
                                     "created": 1674098856880,
-                                    "text": "数据驱动模型"
+                                    "text": "数据驱动模型",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -558,14 +693,18 @@
                                 "data": {
                                     "id": "cpvuio5qdpk0",
                                     "created": 1674098862207,
-                                    "text": "物理模型"
+                                    "text": "物理模型",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cpvuoeouza80",
                                             "created": 1674099311780,
-                                            "text": "PBR"
+                                            "text": "PBR",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -577,28 +716,36 @@
                         "data": {
                             "id": "cqc6aglbazk0",
                             "created": 1675757031447,
-                            "text": "阴影"
+                            "text": "阴影",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cqc6am6frh40",
                                     "created": 1675757043608,
-                                    "text": "硬阴影"
+                                    "text": "硬阴影",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cqc6ask91rc0",
                                             "created": 1675757057504,
-                                            "text": "Shadow Mapping"
+                                            "text": "Shadow Mapping",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": [
                                             {
                                                 "data": {
                                                     "id": "cqc7mogo1rs0",
                                                     "created": 1675760810060,
-                                                    "text": "传统多光源，如果要用Shadow Mapping 产生每个阴影，那么一定是逐个处理，所以及其耗时。"
+                                                    "text": "传统多光源，如果要用Shadow Mapping 产生每个阴影，那么一定是逐个处理，所以及其耗时。",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             }
@@ -610,28 +757,36 @@
                                 "data": {
                                     "id": "cqc6apjfg4w0",
                                     "created": 1675757050924,
-                                    "text": "软阴影"
+                                    "text": "软阴影",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cqc6bi5bb480",
                                             "created": 1675757113197,
-                                            "text": "PCSS (Percentage closer soft shadow)"
+                                            "text": "PCSS (Percentage closer soft shadow)",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": [
                                             {
                                                 "data": {
                                                     "id": "cqc6cer3xog0",
                                                     "created": 1675757184172,
-                                                    "text": "关联：（Percentage Closer Filtering）主要解决阴影锯齿  "
+                                                    "text": "关联：（Percentage Closer Filtering）主要解决阴影锯齿  ",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": [
                                                     {
                                                         "data": {
                                                             "id": "cqc6kg810o00",
                                                             "created": 1675757814285,
-                                                            "text": "通过周围的平均计算，避免只有0、1值得情况，可以更加高精度得描述阴影度"
+                                                            "text": "通过周围的平均计算，避免只有0、1值得情况，可以更加高精度得描述阴影度",
+                                                            "expandState": "expand",
+                                                            "layout": null
                                                         },
                                                         "children": []
                                                     },
@@ -639,7 +794,9 @@
                                                         "data": {
                                                             "id": "cqc7c8wfyqw0",
                                                             "created": 1675759992544,
-                                                            "text": "PCF 缺点：特别慢"
+                                                            "text": "PCF 缺点：特别慢",
+                                                            "expandState": "expand",
+                                                            "layout": null
                                                         },
                                                         "children": []
                                                     }
@@ -649,7 +806,9 @@
                                                 "data": {
                                                     "id": "cqc6klmpwcw0",
                                                     "created": 1675757826057,
-                                                    "text": "PCSS 思路：定义和遮挡物的深度距离，距离越远，越糊"
+                                                    "text": "PCSS 思路：定义和遮挡物的深度距离，距离越远，越糊",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             },
@@ -657,7 +816,9 @@
                                                 "data": {
                                                     "id": "cqc6ph0c2400",
                                                     "created": 1675758207817,
-                                                    "text": "粗略公式：Wpenumbra = (Dreceiver - Dblocker) * Wlight/Dblocker "
+                                                    "text": "粗略公式：Wpenumbra = (Dreceiver - Dblocker) * Wlight/Dblocker ",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             }
@@ -667,7 +828,9 @@
                                         "data": {
                                             "id": "cqc840fq25k0",
                                             "created": 1675762168315,
-                                            "text": "VSSM (Variance Soft Shadow Mapping)"
+                                            "text": "VSSM (Variance Soft Shadow Mapping)",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -679,28 +842,36 @@
                         "data": {
                             "id": "cqc8a5kslqo0",
                             "created": 1675762649691,
-                            "text": "全局光照（GI）"
+                            "text": "全局光照（GI）",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cqcw8jzmsps0",
                                     "created": 1675830230972,
-                                    "text": "Static GI"
+                                    "text": "Static GI",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cqcwt13g0i00",
                                             "created": 1675831835491,
-                                            "text": "RayTracing"
+                                            "text": "RayTracing",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": [
                                             {
                                                 "data": {
                                                     "id": "cqcwt5w6f2g0",
                                                     "created": 1675831845936,
-                                                    "text": "Whitted Ray Tracing"
+                                                    "text": "Whitted Ray Tracing",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             },
@@ -708,7 +879,9 @@
                                                 "data": {
                                                     "id": "cqcwtbe50c80",
                                                     "created": 1675831857906,
-                                                    "text": "Path Tracing"
+                                                    "text": "Path Tracing",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             }
@@ -718,7 +891,9 @@
                                         "data": {
                                             "id": "cqcwti56gpc0",
                                             "created": 1675831872601,
-                                            "text": "Photon Mapping"
+                                            "text": "Photon Mapping",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -728,14 +903,18 @@
                                 "data": {
                                     "id": "cqcw8p9x45c0",
                                     "created": 1675830242478,
-                                    "text": "Dynamic GI"
+                                    "text": "Dynamic GI",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cqcw8si2k080",
                                             "created": 1675830249501,
-                                            "text": "Reflective Shadow Maps (RSM)"
+                                            "text": "Reflective Shadow Maps (RSM)",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": [
                                             {
@@ -743,11 +922,9 @@
                                                     "id": "cqcw91mcqag0",
                                                     "created": 1675830269351,
                                                     "text": "两个Pass 处理，和传统的 Shadow Map 方式相似，",
-                                                    "layout_right_offset": {
-                                                        "x": 112.99998782475814,
-                                                        "y": 0
-                                                    },
-                                                    "note": "第一个pass：记录光源视角下的深度信息，并且还有法线信息、光照能量信息，相邻的像素、比较深度，检验空间相邻，相当于漫反射更加关注空间相邻的表面。"
+                                                    "note": "第一个pass：记录光源视角下的深度信息，并且还有法线信息、光照能量信息，相邻的像素、比较深度，检验空间相邻，相当于漫反射更加关注空间相邻的表面。",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             },
@@ -755,7 +932,9 @@
                                                 "data": {
                                                     "id": "cqcwcpu9om80",
                                                     "created": 1675830557165,
-                                                    "text": "缺点：很明显，光源很多的情况下，每个光源都做 RSM的话，消耗很大。"
+                                                    "text": "缺点：很明显，光源很多的情况下，每个光源都做 RSM的话，消耗很大。",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             }
@@ -765,7 +944,235 @@
                                         "data": {
                                             "id": "cqcwtv05jd40",
                                             "created": 1675831900596,
-                                            "text": "Light Propagation Volumes (LPV)"
+                                            "text": "Light Propagation Volumes (LPV)",
+                                            "expandState": "expand",
+                                            "layout": null
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqcx5id9izk0",
+                                                    "created": 1675832813460,
+                                                    "text": "SH 计算 Radiance (辐射亮度)",
+                                                    "expandState": "expand",
+                                                    "layout": null
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqcx606zt2o0",
+                                                    "created": 1675832852263,
+                                                    "text": "缺点：格子Size 容易出现 漏光",
+                                                    "expandState": "expand",
+                                                    "layout": null
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqcxasme2sg0",
+                                            "created": 1675833227601,
+                                            "text": "Voxel Global Illumination (VXGI) ",
+                                            "expandState": "expand",
+                                            "layout": null
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqcz1dg0kmo0",
+                                                    "created": 1675838131506,
+                                                    "text": "体素、Cone Trace",
+                                                    "expandState": "expand",
+                                                    "layout": null
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqczi4qvxtk0",
+                                    "created": 1675839444763,
+                                    "text": "Screen Space Ambient Occlusion   SSAO (一种近似全局光照)"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqd0412euhs0",
+                                            "created": 1675841160764,
+                                            "text": "在半球内随机取点，然后把随机点的投影到相机，得到深度，然后把深度去和深度图比较，得到这一个遮挡值"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqd0wa422xs0",
+                                    "created": 1675843374651,
+                                    "text": "Screen Space Directional Occlusion (SSDO)"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqd1d9c7qds0",
+                                    "created": 1675844705159,
+                                    "text": "Screen Space Reflection (SSR)"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqd1etj5e9s0",
+                                            "created": 1675844827478,
+                                            "text": "虽然名称是 屏幕空间反射，但其实是在做屏幕空间光线追踪"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqd1u8bd8s80",
+                            "created": 1675846035121,
+                            "text": "渲染方程"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqd1ucbvd1k0",
+                            "created": 1675846043859,
+                            "text": "辐射度量学"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqd1ze7oyj40",
+                                    "created": 1675846439781,
+                                    "text": "辐射能量 Radiant Energy"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqd1zppe5lc0",
+                                            "created": 1675846464796,
+                                            "text": "J  焦耳"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqd1zvxeso00",
+                                            "created": 1675846478341,
+                                            "text": "符号 Q"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqd2027wp9k0",
+                                    "created": 1675846492037,
+                                    "text": "辐射通量 Radiant Flux"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqd208eg55s0",
+                                            "created": 1675846505493,
+                                            "text": "W  瓦特"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqd20ctalmw0",
+                                            "created": 1675846515098,
+                                            "text": "符号  Φ "
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqd21qgxqo80",
+                                    "created": 1675846623189,
+                                    "text": "辐射照度  Irradiance"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqd21xkmyjs0",
+                                            "created": 1675846638651,
+                                            "text": "W/m2   单位面积下的W"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqd22w4ko8o0",
+                                            "created": 1675846713867,
+                                            "text": "符号  E"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqd233gby2o0",
+                                    "created": 1675846729815,
+                                    "text": "辐射强度  Radiant Intensity"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqd23g8r4yg0",
+                                            "created": 1675846757655,
+                                            "text": "W/sr   单位立体角的W"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqd23oz3aeo0",
+                                            "created": 1675846776662,
+                                            "text": "符号   I"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqd23srlik80",
+                                    "created": 1675846784916,
+                                    "text": "辐射亮度  Radiance"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqd243hgkpk0",
+                                            "created": 1675846808248,
+                                            "text": "W/m2*sr   单位立体角单位面积下的W"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqd249zufjc0",
+                                            "created": 1675846822420,
+                                            "text": "符号   L"
                                         },
                                         "children": []
                                     }
@@ -779,21 +1186,27 @@
                 "data": {
                     "id": "cpuigfc3sb40",
                     "created": 1673963272997,
-                    "text": "网络"
+                    "text": "网络",
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
                             "id": "cpuin5lhsco0",
                             "created": 1673963800346,
-                            "text": "应用层"
+                            "text": "应用层",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuio2i78u80",
                                     "created": 1673963871981,
-                                    "text": "FTP"
+                                    "text": "FTP",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -801,21 +1214,27 @@
                                 "data": {
                                     "id": "cpuio7zr4o80",
                                     "created": 1673963883926,
-                                    "text": "HTTP"
+                                    "text": "HTTP",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": [
                                     {
                                         "data": {
                                             "id": "cpuiod4j4m80",
                                             "created": 1673963895099,
-                                            "text": "HTTPS"
+                                            "text": "HTTPS",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": [
                                             {
                                                 "data": {
                                                     "id": "cqcwh56oam00",
                                                     "created": 1675830904024,
-                                                    "text": "SSL"
+                                                    "text": "SSL",
+                                                    "expandState": "expand",
+                                                    "layout": null
                                                 },
                                                 "children": []
                                             }
@@ -825,7 +1244,9 @@
                                         "data": {
                                             "id": "cpuiogomj0g0",
                                             "created": 1673963902844,
-                                            "text": "WebSocket"
+                                            "text": "WebSocket （这是一个抽象层）",
+                                            "expandState": "expand",
+                                            "layout": null
                                         },
                                         "children": []
                                     }
@@ -837,7 +1258,9 @@
                         "data": {
                             "id": "cpuinalde480",
                             "created": 1673963811223,
-                            "text": "表示层"
+                            "text": "表示层",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -845,7 +1268,9 @@
                         "data": {
                             "id": "cpuinbq6z0g0",
                             "created": 1673963813691,
-                            "text": "会话层"
+                            "text": "会话层",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -853,14 +1278,18 @@
                         "data": {
                             "id": "cpuincgdnls0",
                             "created": 1673963815274,
-                            "text": "传输层"
+                            "text": "传输层",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuiopj0tkw0",
                                     "created": 1673963922096,
-                                    "text": "TCP"
+                                    "text": "TCP",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -868,7 +1297,9 @@
                                 "data": {
                                     "id": "cpuios8lo740",
                                     "created": 1673963927997,
-                                    "text": "UDP "
+                                    "text": "UDP ",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             }
@@ -878,14 +1309,18 @@
                         "data": {
                             "id": "cpuindgfa1s0",
                             "created": 1673963817454,
-                            "text": "网络层"
+                            "text": "网络层",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpuiox8c56o0",
                                     "created": 1673963938865,
-                                    "text": "路由控制"
+                                    "text": "路由控制",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             }
@@ -895,7 +1330,9 @@
                         "data": {
                             "id": "cpuinedd0eo0",
                             "created": 1673963819445,
-                            "text": "数据链路层"
+                            "text": "数据链路层",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -903,7 +1340,9 @@
                         "data": {
                             "id": "cpuinty5fdk0",
                             "created": 1673963853354,
-                            "text": "物理层"
+                            "text": "物理层",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     }
@@ -917,14 +1356,18 @@
                     "layout_mind_offset": {
                         "x": -1,
                         "y": 28
-                    }
+                    },
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
                             "id": "cpuipajk1s00",
                             "created": 1673963967841,
-                            "text": "MVC"
+                            "text": "MVC",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -932,7 +1375,9 @@
                         "data": {
                             "id": "cpuipenpbeg0",
                             "created": 1673963976799,
-                            "text": "MVVM"
+                            "text": "MVVM",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -940,7 +1385,9 @@
                         "data": {
                             "id": "cpuiphznwm80",
                             "created": 1673963984053,
-                            "text": "ECS"
+                            "text": "ECS",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     }
@@ -954,30 +1401,18 @@
                     "layout_mind_offset": {
                         "x": 10,
                         "y": -89
-                    }
+                    },
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
-                            "id": "cpuilkocxq00",
-                            "created": 1673963676443,
-                            "text": "topic"
-                        },
-                        "children": []
-                    },
-                    {
-                        "data": {
-                            "id": "cpuilofwl6g0",
-                            "created": 1673963684639,
-                            "text": "topic"
-                        },
-                        "children": []
-                    },
-                    {
-                        "data": {
                             "id": "cpvtk2wpxa00",
                             "created": 1674096151568,
-                            "text": "纹理压缩"
+                            "text": "纹理压缩",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -985,14 +1420,18 @@
                         "data": {
                             "id": "cpvtk829bns0",
                             "created": 1674096162786,
-                            "text": "性能优化"
+                            "text": "性能优化",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": [
                             {
                                 "data": {
                                     "id": "cpvtkb8dmp40",
                                     "created": 1674096169687,
-                                    "text": "内存"
+                                    "text": "内存",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -1000,7 +1439,9 @@
                                 "data": {
                                     "id": "cpvtkey9yo80",
                                     "created": 1674096177783,
-                                    "text": "CPU"
+                                    "text": "CPU",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             },
@@ -1008,7 +1449,9 @@
                                 "data": {
                                     "id": "cpvtkhzl0bc0",
                                     "created": 1674096184393,
-                                    "text": "GPU"
+                                    "text": "GPU",
+                                    "expandState": "expand",
+                                    "layout": null
                                 },
                                 "children": []
                             }
@@ -1020,22 +1463,45 @@
                 "data": {
                     "id": "cpuie78clxs0",
                     "created": 1673963098627,
-                    "text": "计算机数学"
+                    "text": "计算机数学",
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
                             "id": "cpuilr4469c0",
                             "created": 1673963690456,
-                            "text": "微积分"
+                            "text": "微积分",
+                            "expandState": "expand",
+                            "layout": null
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqcz4t6fcn40",
+                                    "created": 1675838400847,
+                                    "text": "微分"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqcz4w0eg740",
+                                    "created": 1675838407013,
+                                    "text": "积分"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
                             "id": "cpuiltvhpmw0",
                             "created": 1673963696465,
-                            "text": "大数定律"
+                            "text": "大数定律",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -1043,7 +1509,9 @@
                         "data": {
                             "id": "cpuilxx1zm80",
                             "created": 1673963705267,
-                            "text": "贝叶斯公式"
+                            "text": "贝叶斯公式",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -1051,7 +1519,9 @@
                         "data": {
                             "id": "cpuim1z1hug0",
                             "created": 1673963714094,
-                            "text": "傅里叶变换"
+                            "text": "傅里叶变换",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -1059,7 +1529,9 @@
                         "data": {
                             "id": "cpuim93cxgg0",
                             "created": 1673963729592,
-                            "text": "线性代数"
+                            "text": "线性代数",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -1067,7 +1539,9 @@
                         "data": {
                             "id": "cpuimdelzn40",
                             "created": 1673963738980,
-                            "text": "概率论"
+                            "text": "概率论",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     },
@@ -1075,7 +1549,9 @@
                         "data": {
                             "id": "cpuimkb91ug0",
                             "created": 1673963754014,
-                            "text": "博弈论"
+                            "text": "博弈论",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     }
@@ -1089,14 +1565,18 @@
                     "layout_mind_offset": {
                         "x": 5,
                         "y": 0
-                    }
+                    },
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": [
                     {
                         "data": {
                             "id": "cpuimt5848o0",
                             "created": 1673963773241,
-                            "text": "游戏引擎架构设计"
+                            "text": "游戏引擎架构设计",
+                            "expandState": "expand",
+                            "layout": null
                         },
                         "children": []
                     }
@@ -1110,9 +1590,44 @@
                     "layout_mind_offset": {
                         "x": 13,
                         "y": 22.00000000000003
-                    }
+                    },
+                    "expandState": "expand",
+                    "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqcz3x6c1g80",
+                            "created": 1675838331184,
+                            "text": "布料模拟"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqcz3zk5g140",
+                            "created": 1675838336373,
+                            "text": "流体模拟"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqcz426venk0",
+                            "created": 1675838342101,
+                            "text": "布娃娃"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqcz44deelc0",
+                            "created": 1675838346849,
+                            "text": "Motion Match"
+                        },
+                        "children": []
+                    }
+                ]
             },
             {
                 "data": {
@@ -1122,7 +1637,9 @@
                     "layout_mind_offset": {
                         "x": 8,
                         "y": 65
-                    }
+                    },
+                    "expandState": "expand",
+                    "layout": null
                 },
                 "children": []
             }

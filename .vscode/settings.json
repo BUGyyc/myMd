@@ -13,7 +13,8 @@
         "Phong",
         "SIMD",
         "Struct",
-        "TBDR"
+        "TBDR",
+        "zhihu"
     ],
     "editor.detectIndentation": false,
     "editor.tabSize": 4,
