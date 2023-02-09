@@ -743,15 +743,68 @@
                                                                     "created": 1675852947291,
                                                                     "text": "几何遮挡关系"
                                                                 },
-                                                                "children": []
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cqdnql25c0w0",
+                                                                            "created": 1675907813823,
+                                                                            "text": "微表面遮挡，产生阴影"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "data": {
                                                                     "id": "cqd4al516880",
                                                                     "created": 1675852959083,
-                                                                    "text": "法线分布"
+                                                                    "text": "法线分布",
+                                                                    "note": "参考 Games202"
                                                                 },
-                                                                "children": []
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cqdnjjontu80",
+                                                                            "created": 1675907262282,
+                                                                            "text": "Bechmann"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cqdno4s1fts0",
+                                                                                    "created": 1675907621655,
+                                                                                    "text": "边缘渐变小，有明显差别"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cqdnjmw7by00",
+                                                                            "created": 1675907269268,
+                                                                            "text": "GGX"
+                                                                        },
+                                                                        "children": [
+                                                                            {
+                                                                                "data": {
+                                                                                    "id": "cqdnnv6h2js0",
+                                                                                    "created": 1675907600760,
+                                                                                    "text": "边缘拖尾，有长过渡"
+                                                                                },
+                                                                                "children": []
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cqds4rgt1xk0",
+                                                                            "created": 1675920209308,
+                                                                            "text": "GTR"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
                                                             }
                                                         ]
                                                     }
@@ -762,6 +815,14 @@
                                                     "id": "cqd495r6jqg0",
                                                     "created": 1675852847230,
                                                     "text": "次表面散射"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqdsx11i3ao0",
+                                                    "created": 1675922424347,
+                                                    "text": "LTC"
                                                 },
                                                 "children": []
                                             }
