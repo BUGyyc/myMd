@@ -306,6 +306,10 @@ Games202 10%
 2/8
 Games202 20%
 
+2/10
+Games202 60%
+
+
 
 ---
 
@@ -341,7 +345,7 @@ ready to
 
 
 -[X] Games 101
--[ ] Games 202
+-[X] Games 202
 -[ ] Games 104
 -[ ] TA reading 、SomeOne Git\zhihu
 -[ ] milo books list

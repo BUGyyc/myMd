@@ -662,8 +662,45 @@
                                                     "text": "在像素上偏移一点点位置，然后打出多个采样（例如四个采样点），最后加权平均到一个像素点"
                                                 },
                                                 "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqejln45eqo0",
+                                                    "created": 1675997701994,
+                                                    "text": "可以通过相邻像素共用部分采样点，可以减少采样"
+                                                },
+                                                "children": []
                                             }
                                         ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqejn7i4na80",
+                                            "created": 1675997824739,
+                                            "text": "FXAA"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqejndxynww0",
+                                            "created": 1675997838757,
+                                            "text": "MLAA",
+                                            "expandState": "expand"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqejn5ejcg80",
+                                            "created": 1675997820169,
+                                            "text": "SMAA",
+                                            "layout_right_offset": {
+                                                "x": 1,
+                                                "y": 0
+                                            }
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },
