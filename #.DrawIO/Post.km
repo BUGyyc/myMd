@@ -35,7 +35,11 @@
                                     "created": 1673963308741,
                                     "text": "CPU",
                                     "expandState": "expand",
-                                    "layout": null
+                                    "layout": null,
+                                    "layout_right_offset": {
+                                        "x": -17,
+                                        "y": 9
+                                    }
                                 },
                                 "children": [
                                     {
@@ -46,7 +50,16 @@
                                             "expandState": "expand",
                                             "layout": null
                                         },
-                                        "children": []
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqdw2cvvqrs0",
+                                                    "created": 1675931305280,
+                                                    "text": "从硬件角度理解 缓存命中率 问题"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
                                     },
                                     {
                                         "data": {
@@ -63,7 +76,12 @@
                                                     "created": 1675830666377,
                                                     "text": "分支预测",
                                                     "expandState": "expand",
-                                                    "layout": null
+                                                    "layout": null,
+                                                    "layout_right_offset": {
+                                                        "x": -7,
+                                                        "y": 4
+                                                    },
+                                                    "note": "在硬件上的预测指令"
                                                 },
                                                 "children": []
                                             },
@@ -73,19 +91,10 @@
                                                     "created": 1675830672081,
                                                     "text": "数据前递",
                                                     "expandState": "expand",
-                                                    "layout": null
+                                                    "layout": null,
+                                                    "note": "这种办法可以节省数据写回和数据再写入的耗时"
                                                 },
-                                                "children": [
-                                                    {
-                                                        "data": {
-                                                            "id": "cqd0efbg1400",
-                                                            "created": 1675841975427,
-                                                            "text": "这种办法可以节省数据写回和数据再写入的耗时",
-                                                            "background": "#f79646"
-                                                        },
-                                                        "children": []
-                                                    }
-                                                ]
+                                                "children": []
                                             }
                                         ]
                                     }
@@ -106,7 +115,8 @@
                                             "created": 1675830720550,
                                             "text": "流多处理器",
                                             "expandState": "expand",
-                                            "layout": null
+                                            "layout": null,
+                                            "note": "SM、Shader Core\n"
                                         },
                                         "children": []
                                     },
@@ -116,7 +126,8 @@
                                             "created": 1675830730085,
                                             "text": "共享存储",
                                             "expandState": "expand",
-                                            "layout": null
+                                            "layout": null,
+                                            "note": "SM 拥有共同读写的小部分存储"
                                         },
                                         "children": []
                                     }
@@ -140,6 +151,14 @@
                                     "text": "虚拟化",
                                     "expandState": "expand",
                                     "layout": null
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqei8tewih40",
+                                    "created": 1675993875861,
+                                    "text": "并发"
                                 },
                                 "children": []
                             },
@@ -640,7 +659,7 @@
                                     "created": 1674097764241,
                                     "text": "出射方向的辐射亮度微分 与 入射方向的辐射照度微分的比值",
                                     "priority": null,
-                                    "background": "#f79646",
+                                    "background": "#ffffff",
                                     "expandState": "expand",
                                     "layout": null
                                 },
@@ -1299,6 +1318,47 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqdw1k123mo0",
+                            "created": 1675931242466,
+                            "text": "实时光线追踪"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqei615ezkw0",
+                                    "created": 1675993657609,
+                                    "text": "屏幕空间的降噪是关键"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqei6inw4y80",
+                                    "created": 1675993695732,
+                                    "text": "GBuff 协助降噪"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqei6vj9seg0",
+                                    "created": 1675993723751,
+                                    "text": "topic"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqei7abst1s0",
+                                    "created": 1675993755951,
+                                    "text": "RAE"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             },
@@ -1714,6 +1774,22 @@
                             "text": "游戏引擎架构设计",
                             "expandState": "expand",
                             "layout": null
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqdvzswjmlc0",
+                            "created": 1675931105056,
+                            "text": "Nanite"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqdvzwtebfk0",
+                            "created": 1675931113573,
+                            "text": "Lumen"
                         },
                         "children": []
                     }
