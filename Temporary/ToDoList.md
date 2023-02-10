@@ -308,7 +308,7 @@ Games202 20%
 
 2/10
 Games202 60%
-
+Games104 40%
 
 
 ---
@@ -335,7 +335,7 @@ ready to
 《物理光学基础》
 
 《移动设备的硬件架构》
-《URP》
+《URP》 
 《HDRP》
 《光线追踪》
 
@@ -350,3 +350,11 @@ ready to
 -[ ] TA reading 、SomeOne Git\zhihu
 -[ ] milo books list
 -[ ] write posts
+
+
+water 模拟
+布料
+确定性物理
+C++
+
+preview: 计算机图形学、渲染管线、Box2D物理系统、帧同步、状态同步、ECS、水体渲染、头发模拟、皮肤模拟、3D数学、光线追踪、全局光照、寻路算法
