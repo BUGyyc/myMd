@@ -600,8 +600,32 @@
                                             "layout": null
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqenrbxuw800",
+                                            "created": 1676009432294,
+                                            "text": "缺点: 无法做常规的抗锯齿，只能做TAA，因为不能对GBuffer做抗锯齿"
+                                        },
+                                        "children": []
                                     }
                                 ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqekg1u7r5k0",
+                                    "created": 1676000084970,
+                                    "text": "Tiled Shading"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqekitnbjh40",
+                                    "created": 1676000302232,
+                                    "text": "Clustered Shading"
+                                },
+                                "children": []
                             }
                         ]
                     },
@@ -1873,7 +1897,32 @@
                             "created": 1675996837905,
                             "text": "可见性算法优化"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqentdznm3k0",
+                                    "created": 1676009593484,
+                                    "text": "针对物体"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqentiaxfpk0",
+                                    "created": 1676009602873,
+                                    "text": "针对图元"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqentkoyj1c0",
+                                    "created": 1676009608075,
+                                    "text": "针对像素"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
@@ -1908,6 +1957,39 @@
                 "children": [
                     {
                         "data": {
+                            "id": "cqemm694eg80",
+                            "created": 1676006206984,
+                            "text": "碰撞检测"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqemmgtbd1s0",
+                                    "created": 1676006229972,
+                                    "text": "连续碰撞"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqemmjnwrg80",
+                                    "created": 1676006236176,
+                                    "text": "离散碰撞"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqemmc5v5ls0",
+                            "created": 1676006219847,
+                            "text": "Character Controller"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
                             "id": "cqcz3x6c1g80",
                             "created": 1675838331184,
                             "text": "布料模拟"
@@ -1935,6 +2017,92 @@
                             "id": "cqcz44deelc0",
                             "created": 1675838346849,
                             "text": "Motion Match"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqeo55w7l600",
+                            "created": 1676010516232,
+                            "text": "运动计算"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqeo5bh0idk0",
+                                    "created": 1676010528374,
+                                    "text": "显式欧拉方法"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqeo5ec3tn40",
+                                    "created": 1676010534607,
+                                    "text": "隐式欧拉方法"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqeo5r6pci80",
+                                    "created": 1676010562579,
+                                    "text": "半隐式方法"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqeowoshl7c0",
+                            "created": 1676012673198,
+                            "text": "相交检测（凸包）"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqeowrrtlo00",
+                                    "created": 1676012679688,
+                                    "text": "GJK"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqeowu2g3lc0",
+                                    "created": 1676012684684,
+                                    "text": "STA",
+                                    "layout_right_offset": {
+                                        "x": -4,
+                                        "y": 4
+                                    }
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqes4c0omzk0",
+                            "created": 1676021735639,
+                            "text": "拉格朗日力学"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqerv55par40",
+                            "created": 1676021015427,
+                            "text": "PBD （Position Based Dyanmic）"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqerw7zf6v40",
+                            "created": 1676021099942,
+                            "text": "XPBD"
                         },
                         "children": []
                     }
