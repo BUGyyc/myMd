@@ -608,6 +608,43 @@
                                             "text": "缺点: 无法做常规的抗锯齿，只能做TAA，因为不能对GBuffer做抗锯齿"
                                         },
                                         "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqj74wbudi00",
+                                            "created": 1676470336324,
+                                            "text": "优点： 复杂度更小，能处理更多光源"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqj76n8bnew0",
+                                            "created": 1676470473249,
+                                            "text": "Tiled Deferred Rendering",
+                                            "layout_right_offset": {
+                                                "x": 11,
+                                                "y": -5
+                                            }
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqj76v3rko00",
+                                                    "created": 1676470490387,
+                                                    "text": "改进 延迟渲染 的显存带宽占用过大问题，用更小的Tiled Item 去减小 Size"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqj799e30pc0",
+                                            "created": 1676470678215,
+                                            "text": "Deferred Lighting"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },
@@ -781,6 +818,14 @@
                                 "children": [
                                     {
                                         "data": {
+                                            "id": "cqj6gaqrow80",
+                                            "created": 1676468408598,
+                                            "text": "简洁的表达光照交互公式"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
                                             "id": "cqj16yftcsg0",
                                             "created": 1676453570987,
                                             "text": "高光项 表达 直接光照，漫反射 表达 间接光照"
@@ -791,7 +836,7 @@
                                         "data": {
                                             "id": "cpvuiwq6tns0",
                                             "created": 1674098880858,
-                                            "text": "Lambert",
+                                            "text": "Lambert 漫反射模型",
                                             "expandState": "expand",
                                             "layout": null
                                         },
@@ -801,7 +846,7 @@
                                         "data": {
                                             "id": "cpvuizz04c80",
                                             "created": 1674098887921,
-                                            "text": "Phong",
+                                            "text": "Phong 模型",
                                             "expandState": "expand",
                                             "layout": null
                                         },
@@ -811,7 +856,7 @@
                                         "data": {
                                             "id": "cpvuj38293k0",
                                             "created": 1674098894999,
-                                            "text": "Blinn-Phong",
+                                            "text": "Blinn-Phong 模型",
                                             "expandState": "expand",
                                             "layout": null
                                         },
@@ -827,7 +872,24 @@
                                     "expandState": "expand",
                                     "layout": null
                                 },
-                                "children": []
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqj6f7gtig00",
+                                            "created": 1676468323101,
+                                            "text": "采集真实的材质表面数据，建立查找表，记录在数据库中，以便快速的查找和计算"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqj6sij27vs0",
+                                            "created": 1676469365916,
+                                            "text": "缺点： 没有可供调整的参数"
+                                        },
+                                        "children": []
+                                    }
+                                ]
                             },
                             {
                                 "data": {
@@ -867,7 +929,16 @@
                                                                     "created": 1675852940175,
                                                                     "text": "菲涅尔"
                                                                 },
-                                                                "children": []
+                                                                "children": [
+                                                                    {
+                                                                        "data": {
+                                                                            "id": "cqj6xjp4efs0",
+                                                                            "created": 1676469760280,
+                                                                            "text": "折射与反射"
+                                                                        },
+                                                                        "children": []
+                                                                    }
+                                                                ]
                                                             },
                                                             {
                                                                 "data": {
@@ -946,7 +1017,7 @@
                                                 "data": {
                                                     "id": "cqd495r6jqg0",
                                                     "created": 1675852847230,
-                                                    "text": "次表面散射"
+                                                    "text": "次表面散射（SubSurface Scattering）"
                                                 },
                                                 "children": []
                                             },
@@ -1483,6 +1554,49 @@
                                             "id": "cqeidp779m80",
                                             "created": 1675994258509,
                                             "text": "神经网络降噪"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqj58oahed40",
+                            "created": 1676464990065,
+                            "text": "纹理压缩"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqj5ew7p5t40",
+                                    "created": 1676465477495,
+                                    "text": "DXTC"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqj5ezitjhc0",
+                                            "created": 1676465484698,
+                                            "text": "有损"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqj5moc4hdk0",
+                                    "created": 1676466087262,
+                                    "text": "ETC"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqj5mv4ll0w0",
+                                            "created": 1676466102045,
+                                            "text": "快速解码，随机访问，无间接查找，速率固定"
                                         },
                                         "children": []
                                     }

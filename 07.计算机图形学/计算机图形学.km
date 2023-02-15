@@ -1,0 +1,48 @@
+{
+    "root": {
+        "data": {
+            "id": "cqj969vut140",
+            "created": 1676476086416,
+            "text": "计算机图形学（虎书第二版）"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cqj98ibkriw0",
+                    "created": 1676476261510,
+                    "text": "1.图形学简介"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqj98o8vg740",
+                            "created": 1676476274407,
+                            "text": "略"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqj99919yc00",
+                    "created": 1676476319660,
+                    "text": "2.3D数学"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqj9a5xoi4g0",
+                            "created": 1676476391277,
+                            "text": "略"
+                        },
+                        "children": []
+                    }
+                ]
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
