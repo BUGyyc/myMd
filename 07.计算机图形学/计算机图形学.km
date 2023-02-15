@@ -39,6 +39,31 @@
                         "children": []
                     }
                 ]
+            },
+            {
+                "data": {
+                    "id": "cqj9bnlhogw0",
+                    "created": 1676476508085,
+                    "text": "3.光栅化"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqj9br8z1vs0",
+                            "created": 1676476516036,
+                            "text": "三角形光栅化"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqj9cadnlpc0",
+                            "created": 1676476557678,
+                            "text": "抗锯齿"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },
