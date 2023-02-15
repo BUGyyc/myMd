@@ -781,6 +781,14 @@
                                 "children": [
                                     {
                                         "data": {
+                                            "id": "cqj16yftcsg0",
+                                            "created": 1676453570987,
+                                            "text": "高光项 表达 直接光照，漫反射 表达 间接光照"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
                                             "id": "cpvuiwq6tns0",
                                             "created": 1674098880858,
                                             "text": "Lambert",
@@ -1235,6 +1243,14 @@
                                                 "children": []
                                             }
                                         ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqizs8qystk0",
+                                            "created": 1676449596857,
+                                            "text": "Screen Space Global Illumination (SSGI)"
+                                        },
+                                        "children": []
                                     }
                                 ]
                             },
