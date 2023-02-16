@@ -2250,7 +2250,40 @@
                     "expandState": "expand",
                     "layout": null
                 },
-                "children": []
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjmlywbahk0",
+                            "created": 1676513990755,
+                            "text": "贝叶斯公式"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjmm24o2d40",
+                            "created": 1676513997790,
+                            "text": "博弈论"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjmm76dln40",
+                            "created": 1676514008778,
+                            "text": "卷积"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjmmacqoog0",
+                            "created": 1676514015693,
+                            "text": "梯度"
+                        },
+                        "children": []
+                    }
+                ]
             }
         ]
     },

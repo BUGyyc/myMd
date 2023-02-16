@@ -53,7 +53,16 @@
                             "created": 1676476516036,
                             "text": "三角形光栅化"
                         },
-                        "children": []
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjm2nf009c0",
+                                    "created": 1676512476844,
+                                    "text": "通过重心坐标计算采样点"
+                                },
+                                "children": []
+                            }
+                        ]
                     },
                     {
                         "data": {
@@ -62,6 +71,98 @@
                             "text": "抗锯齿"
                         },
                         "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjm4tt7d6g0",
+                    "created": 1676512647492,
+                    "text": "4.信号处理"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjm6nh9m8w0",
+                            "created": 1676512790438,
+                            "text": "连续信号上进行离散采样，得到离散信号，这叫采样"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjm8az738o0",
+                            "created": 1676512919952,
+                            "text": "离散信号重建成连续信号，这叫呈像"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjm9rys3u80",
+                            "created": 1676513035297,
+                            "text": "图像锯齿的主要原因"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjm9xm89280",
+                                    "created": 1676513047598,
+                                    "text": "采样过少"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjma1ew0c00",
+                                    "created": 1676513055862,
+                                    "text": "重构干扰"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjmb8pt4fk0",
+                            "created": 1676513150124,
+                            "text": "抗走样的整体思路"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjmbgt3luo0",
+                                    "created": 1676513167737,
+                                    "text": "采样前滤波，然后再采样，重构前滤波，然后再重构"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjmcgxagmg0",
+                            "created": 1676513246354,
+                            "text": "卷积"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjmciyx0yo0",
+                                    "created": 1676513250806,
+                                    "text": "粗糙理解：光滑一个目标函数"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjmct721340",
+                                    "created": 1676513273066,
+                                    "text": "在高斯模糊中，也有一个卷积核的运用，大概的思想就是光滑图像信号，加权平均得到光滑的图像"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
             }
