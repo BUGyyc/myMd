@@ -163,6 +163,31 @@
                                 "children": []
                             }
                         ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjn1kfxv9s0",
+                            "created": 1676515213117,
+                            "text": "傅里叶变换"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjn1r2cuag0",
+                                    "created": 1676515227533,
+                                    "text": "主要思想：用所有频率的正弦波之和，来表示任意函数"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjn9o4jedc0",
+                            "created": 1676515848048,
+                            "text": "傅里叶逆变换"
+                        },
+                        "children": []
                     }
                 ]
             }
