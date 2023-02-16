@@ -1,1 +1,617 @@
-﻿
+{
+    "root": {
+        "data": {
+            "id": "cqjsli9dnio0",
+            "created": 1676530881199,
+            "text": "全局光照技术：从离线到实时渲染"
+        },
+        "children": [
+            {
+                "data": {
+                    "id": "cqjsnodprhc0",
+                    "created": 1676531051250,
+                    "text": "1.光与表面的交互"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjsu8pkxbs0",
+                            "created": 1676531565688,
+                            "text": "全局光照的大概理解： 所有通过渲染方程来表达光与表面交互效果的方式，都是全局光照"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjsya06zc00",
+                            "created": 1676531881964,
+                            "text": "高光项 与 漫反射项"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjsyl3wj1c0",
+                                    "created": 1676531906132,
+                                    "text": "高光项可以理解为：直接光照，一般情况下，场景内的光源有限，所以直接光照计算特别快，直接连接光源方向去计算高光项即可"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjszq239dk0",
+                                    "created": 1676531995271,
+                                    "text": "漫反射项，是全局光照中最复杂耗时的，他的来源不确定，可以认为是空间半球的所有方向，等同于无穷的方向来源，所以很耗时的计算"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjt12m3w5k0",
+                                            "created": 1676532100967,
+                                            "text": "通常也可以用一些预计算的方式，提前把光照结果计算出来"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqjt1qnqjcw0",
+                                                    "created": 1676532153308,
+                                                    "text": "Light Map"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjt2rsc1lc0",
+                                                    "created": 1676532234127,
+                                                    "text": "Light Probe"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjt3qav94w0",
+                            "created": 1676532309258,
+                            "text": "辐射度量学"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjt3ychenk0",
+                                    "created": 1676532326770,
+                                    "text": "辐射能量"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjt41eakog0",
+                                    "created": 1676532333410,
+                                    "text": "辐射通量"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjt445xb200",
+                                    "created": 1676532339434,
+                                    "text": "Irrandiance"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjt4bga7x40",
+                                    "created": 1676532355298,
+                                    "text": "Radiant Intensity"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjt4gfvkc80",
+                                    "created": 1676532366158,
+                                    "text": "Radiance"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjt3vt2suo0",
+                            "created": 1676532321243,
+                            "text": "采样"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjt7msorps0",
+                                    "created": 1676532615085,
+                                    "text": "傅里叶变换"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjt7r5xxcw0",
+                                            "created": 1676532624594,
+                                            "text": "图像是空间域变化，因为是静态图片"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqjt82wnefc0",
+                                                    "created": 1676532650153,
+                                                    "text": "所以是空间域 变换到 频域，这个是傅里叶变换"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjtc46xxyo0",
+                                    "created": 1676532966409,
+                                    "text": "卷积"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjvflfixug0",
+                                            "created": 1676538881246,
+                                            "text": "光滑信号，数学上表示一种加权平均的概念"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjtc6m46pc0",
+                                    "created": 1676532971680,
+                                    "text": "冲激函数"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjvfy2f6s00",
+                                            "created": 1676538908752,
+                                            "text": "衍生出间隔采样"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjt62ioyjk0",
+                            "created": 1676532492581,
+                            "text": "反走样"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjvg7b3rr40",
+                                    "created": 1676538928868,
+                                    "text": "离散空间 数据 重构 出连续空间数据"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjvggeatio0",
+                                    "created": 1676538948652,
+                                    "text": "重构时，可能因为采样过少，或者干扰过多，导致走样"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjtzj05sps0",
+                            "created": 1676534801027,
+                            "text": "PBR"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqju18bww940",
+                                    "created": 1676534934521,
+                                    "text": "BSDF"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjufbg4dnc0",
+                                            "created": 1676536038404,
+                                            "text": "BRDF = 漫反射项 + 高光项"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqjuflpwphc0",
+                                                    "created": 1676536060764,
+                                                    "text": "漫反射项几乎是常数，因为选点着色点后，漫反射的系数是和观察方向无关的"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cqjuhh9eyhk0",
+                                                            "created": 1676536207788,
+                                                            "text": "计算系数是：材质系数 除以 π"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjugbar11c0",
+                                                    "created": 1676536116444,
+                                                    "text": "高光项需要 FGD 来表达"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cqju4hkgeuo0",
+                                                            "created": 1676535189721,
+                                                            "text": "菲涅尔"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cqju4jx81t40",
+                                                            "created": 1676535194847,
+                                                            "text": "几何遮挡关系",
+                                                            "layout_right_offset": {
+                                                                "x": 6,
+                                                                "y": -2
+                                                            },
+                                                            "background": "#ffffff"
+                                                        },
+                                                        "children": []
+                                                    },
+                                                    {
+                                                        "data": {
+                                                            "id": "cqju4q8bvmo0",
+                                                            "created": 1676535208579,
+                                                            "text": "法线分布函数"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjunv2aqe80",
+                                            "created": 1676536708017,
+                                            "text": "BTDF"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjunxnin6o0",
+                                    "created": 1676536713654,
+                                    "text": "BSSDF"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjus3xcfwo0",
+                            "created": 1676537040765,
+                            "text": "渲染方程"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjut8979x40",
+                                    "created": 1676537128554,
+                                    "text": "能量传输过程的计算方式，通常情况下，计算机不可能去真实的计算每一项"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjuv9rn2xs0",
+                    "created": 1676537288574,
+                    "text": "2.并行处理器架构"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjuy5hcdy00",
+                            "created": 1676537514336,
+                            "text": "CPU"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjuy8xfwtc0",
+                                    "created": 1676537521840,
+                                    "text": "控制器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjuym02mts0",
+                                            "created": 1676537550297,
+                                            "text": "负责取指令等操作"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjuygjpb3c0",
+                                    "created": 1676537538424,
+                                    "text": "运算器"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjuyzjla740",
+                                            "created": 1676537579776,
+                                            "text": "进行运算"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjuzaawyo80",
+                                    "created": 1676537603196,
+                                    "text": "多核CPU 才存在并行"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjuzztzfi80",
+                                            "created": 1676537658768,
+                                            "text": "对比GPU的多核，虽然CPU多核有加速，但是有种种原因导致 多核CPU 不如 GPU速度快"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqjv0ificqo0",
+                                                    "created": 1676537699252,
+                                                    "text": "内存读写的速度消耗"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjv0q0nn880",
+                                                    "created": 1676537715768,
+                                                    "text": "即使有多级缓存，多核之间的同步缓存数据，也是繁琐，拖慢速度"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjv1vly9h40",
+                                                    "created": 1676537806305,
+                                                    "text": "时间连续、空间连续的内存分布，可以提高缓存命中率，但是这对编程要求又比较高"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cqjv2f872ds0",
+                                                            "created": 1676537849008,
+                                                            "text": "类似与ECS的概念，或者 Unity DOTS 的思想"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjv3v2ph480",
+                                                    "created": 1676537961869,
+                                                    "text": "另外缓存的硬件所在位置，通常是CPU上，这导致硬件空间的位置占用，需要把CPU芯片做到更小"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjv4qimy1s0",
+                                                    "created": 1676538030312,
+                                                    "text": "指令与数据的预取，例如数据被写回目标寄存器之前，如果已经知道下一个指令可能要用上数据，那么可以把数据前递给下一个运算器所在的寄存器"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjv68v0ols0",
+                                                    "created": 1676538148607,
+                                                    "text": "分支预测"
+                                                },
+                                                "children": [
+                                                    {
+                                                        "data": {
+                                                            "id": "cqjv6dgthgg0",
+                                                            "created": 1676538158632,
+                                                            "text": "硬件上猜测指令的分支情况"
+                                                        },
+                                                        "children": []
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjv91v22yg0",
+                                    "created": 1676538368464,
+                                    "text": "指令流水线"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjv94et11s0",
+                                            "created": 1676538374012,
+                                            "text": "取指"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjv98uukio0",
+                                            "created": 1676538383689,
+                                            "text": "解码"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjv9atqvls0",
+                                            "created": 1676538387976,
+                                            "text": "执行"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjv9cc6ils0",
+                                            "created": 1676538391268,
+                                            "text": "读取内存，如果需要的话，或者说这一步应该在 执行 内"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjv9tadkdk0",
+                                            "created": 1676538428164,
+                                            "text": "写回寄存器"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjuz4a0cjs0",
+                            "created": 1676537590080,
+                            "text": "GPU"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjvct4dhe00",
+                                    "created": 1676538662893,
+                                    "text": "GPU的并行设计思路来源于 CPU 多线程的思路"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjvd3feuhs0",
+                                            "created": 1676538685329,
+                                            "text": "CPU 的多线程 存在部分缺点，因此 GPU 在设计的时候，特别做了处理"
+                                        },
+                                        "children": [
+                                            {
+                                                "data": {
+                                                    "id": "cqjvdiba5jk0",
+                                                    "created": 1676538717731,
+                                                    "text": "CPU 多线程 的线程切换，会导致需要从缓存或内存中，来回切换数据至寄存器中"
+                                                },
+                                                "children": []
+                                            },
+                                            {
+                                                "data": {
+                                                    "id": "cqjve4blego0",
+                                                    "created": 1676538765639,
+                                                    "text": "而GPU 天然拥有大量 寄存器，因此，即使发生线程 切换，也不会立刻导致 数据读取延迟"
+                                                },
+                                                "children": []
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjwivo1ycw0",
+                                    "created": 1676541959732,
+                                    "text": "GPU 存储器的种类"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjwj4gx1ow0",
+                                            "created": 1676541978891,
+                                            "text": "寄存器"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjwjas7n0w0",
+                                            "created": 1676541992635,
+                                            "text": "共享内存"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjwjejd5340",
+                                            "created": 1676542000807,
+                                            "text": "纹理内存"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqjwjgra0140",
+                                            "created": 1676542005640,
+                                            "text": "全局内存"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjwi7sqknk0",
+                    "created": 1676541907772,
+                    "text": "3.着色管线"
+                },
+                "children": []
+            }
+        ]
+    },
+    "template": "right",
+    "theme": "fresh-blue",
+    "version": "1.4.43"
+}
