@@ -188,8 +188,454 @@
                             "text": "傅里叶逆变换"
                         },
                         "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjndbt30vk0",
+                            "created": 1676516134690,
+                            "text": "卷积与傅里叶变换"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjndh11zeo0",
+                                    "created": 1676516146056,
+                                    "text": "时域与频域"
+                                },
+                                "children": []
+                            }
+                        ]
                     }
                 ]
+            },
+            {
+                "data": {
+                    "id": "cqjngmc88rk0",
+                    "created": 1676516392708,
+                    "text": "5.线性代数"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjnhmf50uw0",
+                            "created": 1676516471248,
+                            "text": "略"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjnhqref4w0",
+                    "created": 1676516480697,
+                    "text": "6.矩阵变换"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjnitzlwt40",
+                            "created": 1676516566088,
+                            "text": "略"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjnivu8i9k0",
+                    "created": 1676516570116,
+                    "text": "7.观察"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjnl17z4z40",
+                            "created": 1676516738559,
+                            "text": "略"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjnl3p9tm00",
+                    "created": 1676516743959,
+                    "text": "8.隐藏面消除"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjnljmn4xk0",
+                            "created": 1676516778628,
+                            "text": "空间划分"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjnnstm5eo0",
+                                    "created": 1676516955369,
+                                    "text": "BSP树"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjnpklq3cg0",
+                    "created": 1676517094206,
+                    "text": "9.表面明暗处理"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjnr8q7dtk0",
+                            "created": 1676517225084,
+                            "text": "Lambert 模型"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjnrto2ma00",
+                            "created": 1676517270668,
+                            "text": "Phong"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjnrw570fc0",
+                            "created": 1676517276056,
+                            "text": "Blinn-Phong"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjnss9cbq00",
+                    "created": 1676517345964,
+                    "text": "10.光线追踪"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjnzxjp8rk0",
+                            "created": 1676517906024,
+                            "text": "光线与图元的求交"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjo05k6yqg0",
+                                    "created": 1676517923468,
+                                    "text": "粗粒度的空间划分，求交包围盒"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjo4066qm80",
+                            "created": 1676518225194,
+                            "text": "轻松实现软阴影"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjo7xjhppc0",
+                    "created": 1676518532924,
+                    "text": "11.纹理映射"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjoczo9ovc0",
+                    "created": 1676518929388,
+                    "text": "12.完整的图形流水线"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjohs4d07k0",
+                            "created": 1676519304767,
+                            "text": "可见性算法"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjonk71oc00",
+                    "created": 1676519757700,
+                    "text": "13.图形学的数据结构"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjooi81y3k0",
+                    "created": 1676519831772,
+                    "text": "14.采样"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjqta8l3hs0",
+                            "created": 1676525848430,
+                            "text": "从数学期望到积分"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqjqvojvqt40",
+                            "created": 1676526036317,
+                            "text": "估计均值"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjqvu6n0vs0",
+                                    "created": 1676526048577,
+                                    "text": "通过增加随机样本，来逼近最终的期望"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjqwl0h1680",
+                                            "created": 1676526106977,
+                                            "text": "这个理论来自于大数定律"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjqxhf7q480",
+                            "created": 1676526177525,
+                            "text": "蒙特卡洛积分",
+                            "background": "#ff0000"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjrrq1q4x40",
+                    "created": 1676528547226,
+                    "text": "15.曲线"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjrul4biko0",
+                    "created": 1676528771591,
+                    "text": "16.计算机动画"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjrv0t9lcw0",
+                    "created": 1676528805751,
+                    "text": "17.图形硬件"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjrzb930jc0",
+                    "created": 1676529141932,
+                    "text": "18.构建交互式图形应用程序"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjs1486qow0",
+                    "created": 1676529283369,
+                    "text": "19.光照"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjs1ghoq800",
+                            "created": 1676529310065,
+                            "text": "辐射度量学"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjs1nkwldc0",
+                                    "created": 1676529325497,
+                                    "text": "辐射能量"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjs1tlgn5c0",
+                                    "created": 1676529338591,
+                                    "text": "辐射通量"
+                                },
+                                "children": []
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjs1ws6kps0",
+                                    "created": 1676529345528,
+                                    "text": "Irradiance"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjs2b4uw880",
+                                            "created": 1676529376769,
+                                            "text": "辐射照度"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjs217h9000",
+                                    "created": 1676529355160,
+                                    "text": "Radiant Intensity"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjs2jafu600",
+                                            "created": 1676529394521,
+                                            "text": "辐射强度"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqjs278lm0g0",
+                                    "created": 1676529368288,
+                                    "text": "Radiance"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqjs2gcskw80",
+                                            "created": 1676529388133,
+                                            "text": "辐射亮度"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqjs1j47pz40",
+                            "created": 1676529315780,
+                            "text": "BRDF"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjs3ai7s600",
+                                    "created": 1676529453764,
+                                    "text": "大致理解：辐射亮度 与 辐射照度 的比值"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjs6ik7wz40",
+                    "created": 1676529706392,
+                    "text": "20.颜色"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjs7np8eio0",
+                    "created": 1676529795943,
+                    "text": "21.视觉感知"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjs8qtm97k0",
+                    "created": 1676529881103,
+                    "text": "22.色调再现"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjs97kx5fs0",
+                    "created": 1676529917582,
+                    "text": "23.全局光照"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqjsa4zry5c0",
+                            "created": 1676529990314,
+                            "text": "路径追踪"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqjsamvfiew0",
+                                    "created": 1676530029234,
+                                    "text": "随机选择光线反射方向"
+                                },
+                                "children": []
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqjsdmznpuo0",
+                    "created": 1676530264582,
+                    "text": "24.反射模型"
+                },
+                "children": []
+            },
+            {
+                "data": {
+                    "id": "cqjsg5ccers0",
+                    "created": 1676530461259,
+                    "text": "25.基于图像的绘制"
+                },
+                "children": []
             }
         ]
     },
