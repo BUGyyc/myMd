@@ -1,28 +1,34 @@
 using System.Collections.Generic;
 
-public struct TreeNode {
+public struct TreeNode
+{
     public int val;
     public TreeNode left;
     public TreeNode right;
 }
 
-public struct ListNode {
+public struct ListNode
+{
     public int val;
     public ListNode next;
 }
 
-public class LocalTry {
-    public void Dived (int dividend, int divisor) {
+public class LocalTry
+{
+    public void Dived(int dividend, int divisor)
+    {
         bool sign = (dividend ^ divisor) >> 31;
         if (dividend > 0) dividend = -dividend;
         if (divisor > 0) divisor = -divisor;
-        long lDividend = (long) dividend;
-        long lDivisor = (long) divisor;
+        long lDividend = (long)dividend;
+        long lDivisor = (long)divisor;
         long res = 0;
-        while (lDividend >= lDivisor) {
+        while (lDividend >= lDivisor)
+        {
             long temp = lDivisor;
             long i = 1;
-            while (lDividend >= temp) {
+            while (lDividend >= temp)
+            {
                 lDividend -= temp;
                 res += i;
                 i <<= 1;
@@ -30,11 +36,16 @@ public class LocalTry {
             }
         }
         if (sign == -1) res = -res;
-        if (res > int.MaxValue) {
+        if (res > int.MaxValue)
+        {
             return int.MaxValue;
-        } else if (res < int.MinValue) {
+        }
+        else if (res < int.MinValue)
+        {
             return int.MinValue;
-        } else {
+        }
+        else
+        {
             return res;
         }
     }
@@ -44,36 +55,44 @@ public class LocalTry {
     /// </summary>
     /// <param name="root"></param>
     /// <returns></returns>
-    public IList<int> PreorderTraversal (TreeNode root) {
-        List<int> result = new List<int> ();
-        PreorderTraversalFunc1 (ref result, root);
+    public IList<int> PreorderTraversal(TreeNode root)
+    {
+        List<int> result = new List<int>();
+        PreOrderTraversalFunc1(ref result, root);
     }
 
-    private void PreorderTraversalFunc1 (ref List<int> result, TreeNode root) {
+    private void PreOrderTraversalFunc1(ref List<int> result, TreeNode root)
+    {
         if (root == null) return;
-        result.Add (root.val);
-        if (root.left != null) PreorderTraversalFunc1 (ref result, root.left);
-        if (root.right != null) PreorderTraversalFunc1 (ref result, root.right);
+        result.Add(root.val);
+        if (root.left != null) PreOrderTraversalFunc1(ref result, root.left);
+        if (root.right != null) PreOrderTraversalFunc1(ref result, root.right);
     }
 
-    private void PreorderTraversalFunc2 (ref List<int> result, TreeNode root) {
-        Stack<TreeNode> stack = new Stack<TreeNode> ();
-        if (root != null) {
-            stack.Push (root);
+    private void PreorderTraversalFunc2(ref List<int> result, TreeNode root)
+    {
+        Stack<TreeNode> stack = new Stack<TreeNode>();
+        if (root != null)
+        {
+            stack.Push(root);
         }
-        while (stack.Count > 0) {
-            TreeNode node = stack.Pop ();
-            result.Add (node.val);
-            if (node.left != null) {
-                stack.Push (node.left);
+        while (stack.Count > 0)
+        {
+            TreeNode node = stack.Pop();
+            result.Add(node.val);
+            if (node.left != null)
+            {
+                stack.Push(node.left);
             }
-            if (node.right != null) {
-                stack.Push (node.right);
+            if (node.right != null)
+            {
+                stack.Push(node.right);
             }
         }
     }
 
-    private void StrMulti (string a, string b) {
+    private void StrMulti(string a, string b)
+    {
 
     }
     /// <summary>
@@ -81,40 +100,50 @@ public class LocalTry {
     /// </summary>
     /// <param name="head"></param>
     /// <returns></returns>
-    private ListNode DeleteMultiNode (ListNode head) {
+    private ListNode DeleteMultiNode(ListNode head)
+    {
         if (head == null || head.next == null) return head;
-        ListNode pre = new ListNode (-1);
+        ListNode pre = new ListNode(-1);
         pre.next = head;
         ListNode newHead = pre;
         ListNode l = null;
         ListNode r = null;
-        while (pre.next != null) {
+        while (pre.next != null)
+        {
             l = pre.next;
             r = pre.next;
-            while (r.next != null && r.next.val == l.val) {
+            while (r.next != null && r.next.val == l.val)
+            {
                 r = r.next;
             }
-            if (l == r) {
+            if (l == r)
+            {
                 pre = pre.next;
-            } else {
+            }
+            else
+            {
                 pre.next = r.next;
             }
         }
         return newHead.next;
     }
 
-    private ListNode ChangeList (ListNode list, int m, int n) {
+    private ListNode ChangeList(ListNode list, int m, int n)
+    {
         if (list == null || list.next == null) return list;
         int step = 0;
         ListNode p = list;
         ListNode pre1 = null;
         ListNode pre2 = null;
-        while (p != null) {
+        while (p != null)
+        {
             step++;
-            if (step == m - 1) {
+            if (step == m - 1)
+            {
                 pre1 = p;
             }
-            if (step == n - 1) {
+            if (step == n - 1)
+            {
                 pre2 = p;
             }
         }
@@ -133,41 +162,54 @@ public class LocalTry {
     /// <param name="nums"></param>
     /// <param name="k"></param>
     /// <returns></returns>
-    private bool FindTarget (int[] nums, int k) {
+    private bool FindTarget(int[] nums, int k)
+    {
         if (nums.Length == 0) return false;
         if (k <= 0) return false;
-        Dictionary<int, int> dic = new Dictionary<int, int> ();
-        for (int i = 0; i < nums.Length; i++) {
-            if (dic.ContainsKey (nums[i])) {
+        Dictionary<int, int> dic = new Dictionary<int, int>();
+        for (int i = 0; i < nums.Length; i++)
+        {
+            if (dic.ContainsKey(nums[i]))
+            {
                 int value = i - dic[nums[i]];
-                if (value <= k) {
+                if (value <= k)
+                {
                     return true;
-                } else {
+                }
+                else
+                {
                     dic[nums[i]] = i;
                 }
-            } else {
-                dic.Add (nums[i], i);
+            }
+            else
+            {
+                dic.Add(nums[i], i);
             }
         }
         return false;
     }
 
-    private TreeNode Exchange (TreeNode root) {
-        if (root == null) {
+    private TreeNode Exchange(TreeNode root)
+    {
+        if (root == null)
+        {
             return null;
         }
-        root.left = Exchange (root.right);
-        root.right = Exchange (root.left);
+        root.left = Exchange(root.right);
+        root.right = Exchange(root.left);
         return root;
     }
 
-    private IList<string> MergeList (int[] nums) {
-        List<string> result = new List<string> ();
-        if (nums.Length == 0) {
+    private IList<string> MergeList(int[] nums)
+    {
+        List<string> result = new List<string>();
+        if (nums.Length == 0)
+        {
             return result;
         }
-        if (nums.Lenght == 1) {
-            result.Add (nums[0].ToString ());
+        if (nums.Lenght == 1)
+        {
+            result.Add(nums[0].ToString());
             return result;
         }
         int pre = nums[0];
@@ -177,44 +219,54 @@ public class LocalTry {
         // }
     }
 
-    public int FurthestBuilding (int[] heights, int bricks, int ladders) {
-        
+    public int FurthestBuilding(int[] heights, int bricks, int ladders)
+    {
+
     }
 
-    public void NextArray(int[] nums){
+    public void NextArray(int[] nums)
+    {
         int len = nums.Length;
-        if(len <= 1)return;
+        if (len <= 1) return;
     }
 
-    public void DFS(ref List<string> result,TreeNode root,string str){
-        if(root == null){
+    public void DFS(ref List<string> result, TreeNode root, string str)
+    {
+        if (root == null)
+        {
             return;
         }
         StringBuilder sb = new StringBuilder(str);
         sb.Append(root.val.ToString());
 
-        if(root.left == null && root.right == null){
-            result.Add (sb.ToString());
+        if (root.left == null && root.right == null)
+        {
+            result.Add(sb.ToString());
             return;
         }
 
         sb.Append("->");
-        if(root.left!=null){
-            DFS(ref result,root.left,sb.ToString());
+        if (root.left != null)
+        {
+            DFS(ref result, root.left, sb.ToString());
         }
 
-        if(root.right!=null){
-            DFS(ref result,root.right,sb.ToString());
+        if (root.right != null)
+        {
+            DFS(ref result, root.right, sb.ToString());
         }
     }
 
-    public void Func(TreeNode root){
-        if(root == null)return;
+    public void Func(TreeNode root)
+    {
+        if (root == null) return;
         List<TreeNode> list = new List<TreeNode>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
         TreeNode node = root;
-        while(node!=null || stack.Count > 0){
-            while(node!=null){
+        while (node != null || stack.Count > 0)
+        {
+            while (node != null)
+            {
                 list.Add(node);
                 stack.Push(node);
                 node = node.left;
@@ -223,7 +275,8 @@ public class LocalTry {
             node = node.right;
         }
         TreeNode pre = list[0];
-        for(i=1;i<list.Count;i++){
+        for (i = 1; i < list.Count; i++)
+        {
             TreeNode curr = list[i];
             pre.left = null;
             pre.right = curr;
@@ -231,11 +284,14 @@ public class LocalTry {
         }
     }
 
-    private void Func2(TreeNode node){
+    private void Func2(TreeNode node)
+    {
         List<TreeNode> list = new List<TreeNode>();
         Stack<TreeNode> stack = new Stack<TreeNode>();
-        while(node!=null || stack.Count > 0){
-            while(node!=null){
+        while (node != null || stack.Count > 0)
+        {
+            while (node != null)
+            {
                 list.Add(node);
                 stack.Push(node);
                 node = node.left;
@@ -245,22 +301,27 @@ public class LocalTry {
         }
     }
     int all;
-    private void GetPathSum(TreeNode root,int sum){
-        if(root == null){
+    private void GetPathSum(TreeNode root, int sum)
+    {
+        if (root == null)
+        {
             return;
         }
-        sum = sum*10+root.val;
+        sum = sum * 10 + root.val;
 
-        if(root.left == null && root.right == null){
+        if (root.left == null && root.right == null)
+        {
             all += sum;
         }
 
-        if(root.left!=null){
-            GetPathSum(root.left,sum);
+        if (root.left != null)
+        {
+            GetPathSum(root.left, sum);
         }
 
-        if(root.right!=null){
-            GetPathSum(root.right,sum);
+        if (root.right != null)
+        {
+            GetPathSum(root.right, sum);
         }
     }
 }
