@@ -607,6 +607,194 @@
                     "created": 1676541907772,
                     "text": "3.着色管线"
                 },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqk0lhnn3080",
+                            "created": 1676553448764,
+                            "text": "前向渲染"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqk0llgv0fc0",
+                            "created": 1676553457061,
+                            "text": "延迟渲染"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqk0lr69fmo0",
+                                    "created": 1676553469481,
+                                    "text": "GBuffer"
+                                },
+                                "children": [
+                                    {
+                                        "data": {
+                                            "id": "cqk0lx3simg0",
+                                            "created": 1676553482392,
+                                            "text": "Normal"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqk0m0xr9dk0",
+                                            "created": 1676553490734,
+                                            "text": "Depth"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqk0m2u4ils0",
+                                            "created": 1676553494868,
+                                            "text": "Specual"
+                                        },
+                                        "children": []
+                                    },
+                                    {
+                                        "data": {
+                                            "id": "cqk0m8hqlbs0",
+                                            "created": 1676553507180,
+                                            "text": "Albedo"
+                                        },
+                                        "children": []
+                                    }
+                                ]
+                            },
+                            {
+                                "data": {
+                                    "id": "cqk0luptra80",
+                                    "created": 1676553477194,
+                                    "text": "topic"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqk0mvft7d40",
+                            "created": 1676553557130,
+                            "text": "延迟光照",
+                            "priority": null,
+                            "background": "#ff0000"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqk0ncpqqu00",
+                            "created": 1676553594735,
+                            "text": "分块着色"
+                        },
+                        "children": [
+                            {
+                                "data": {
+                                    "id": "cqk0nhronmo0",
+                                    "created": 1676553605737,
+                                    "text": "降低带宽消耗"
+                                },
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "data": {
+                            "id": "cqk0npj8poo0",
+                            "created": 1676553622641,
+                            "text": "Clustered Shading",
+                            "background": "#ff0000"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqk0pj1mqq00",
+                    "created": 1676553765243,
+                    "text": "4.蒙特卡洛方法",
+                    "background": "#ff0000"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqk167qyq9c0",
+                            "created": 1676555072845,
+                            "text": "大数定律"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqk16x9n3o00",
+                            "created": 1676555128393,
+                            "text": "数学期望"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqk1qahe4yo0",
+                            "created": 1676556646079,
+                            "text": "马尔卡夫链"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqk1qtz6rrc0",
+                    "created": 1676556688514,
+                    "text": "5.路径追踪技术",
+                    "background": "#ff0000"
+                },
+                "children": [
+                    {
+                        "data": {
+                            "id": "cqk1s0ire8o0",
+                            "created": 1676556781123,
+                            "text": "渲染方程的路径积分形式"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqk1w0oxu5c0",
+                            "created": 1676557094953,
+                            "text": "俄罗斯轮盘赌"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqk1zq0tqeg0",
+                            "created": 1676557385184,
+                            "text": "双向路径追踪"
+                        },
+                        "children": []
+                    },
+                    {
+                        "data": {
+                            "id": "cqk20rmiq000",
+                            "created": 1676557467036,
+                            "text": "降噪"
+                        },
+                        "children": []
+                    }
+                ]
+            },
+            {
+                "data": {
+                    "id": "cqk22mrjcf40",
+                    "created": 1676557613184,
+                    "text": "6.光子映射",
+                    "background": "#ff0000"
+                },
                 "children": []
             }
         ]
