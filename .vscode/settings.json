@@ -8,6 +8,7 @@
         "HDRP",
         "HLSL",
         "Mipmap",
+        "Nanite",
         "nums",
         "Occluder",
         "Phong",
