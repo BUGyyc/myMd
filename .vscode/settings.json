@@ -12,6 +12,7 @@
         "nums",
         "Occluder",
         "Phong",
+        "Retargeting",
         "SIMD",
         "Struct",
         "TBDR",
