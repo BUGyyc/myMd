@@ -5,8 +5,15 @@
 - [传球技能筛选的流程，应该怎么做](#传球技能筛选的流程应该怎么做)
 - [二维世界下，圆与矩形的物理碰撞模拟](#二维世界下圆与矩形的物理碰撞模拟)
 
+---
 
+网页预览版，好像查找不到图片，如果看不到图片就查看 已经导出的pdf版 
 
+![](./readme.pdf)
+
+<https://github.com/BUGyyc/myMd/blob/master/Temporary/Pre-Post/QA/readme.pdf>
+
+---
 
 # BTree 内 Running 实现方式
 
